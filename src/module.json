@@ -1,6 +1,6 @@
 {
-  "id": "revolutionary-starter",
-  "title": "Foundry VTT Module Starter",
+  "id": "revolutionary-antillia",
+  "title": "Shadows of Antillia",
   "description": "",
   "version": "#{VERSION}#",
   "compatibility": {
@@ -22,31 +22,76 @@
   ],
   "packs": [
     {
-      "name": "macros",
-      "label": "Foundry VTT Module Starter Macros",
-      "path": "packs/macros",
-      "type": "Macro",
+      "name": "demo",
+      "label": "Shadows of Antillia (Demo Content)",
+      "path": "packs/demo",
+      "type": "Adventure",
       "ownership": {
-        "GAMEMASTER": "OWNER"
-      }
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pirateborg",
+      "flags": {}
     },
     {
-      "name": "rolltables",
-      "label": "Foundry VTT Module Starter Roll Tables",
-      "path": "packs/rolltables",
-      "type": "RollTable",
+      "name": "base",
+      "label": "Shadows of Antillia (Base Content)",
+      "path": "packs/demo",
+      "type": "Adventure",
       "ownership": {
-        "GAMEMASTER": "OWNER"
-      }
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pirateborg",
+      "flags": {}
+    },
+    {
+      "name": "premium",
+      "label": "Shadows of Antillia (Premium Content)",
+      "path": "packs/demo",
+      "type": "Adventure",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pirateborg",
+      "flags": {}
+    },
+    {
+      "name": "historical",
+      "label": "Shadows of Antillia (Historical Content)",
+      "path": "packs/demo",
+      "type": "Adventure",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pirateborg",
+      "flags": {}
+    },
+    {
+      "name": "historical-premium",
+      "label": "Shadows of Antillia (Historical + Premium Content)",
+      "path": "packs/demo",
+      "type": "Adventure",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "pirateborg",
+      "flags": {}
     }
   ],
   "packFolders": [
     {
-      "name": "Foundry VTT Module Starter",
+      "name": "Shadows of Antillia",
       "sorting": "a",
       "packs": [
-        "macros",
-        "rolltables"
+        "demo",
+        "base",
+        "premium",
+        "historical",
+        "premium-historical"
       ]
     }
   ],
