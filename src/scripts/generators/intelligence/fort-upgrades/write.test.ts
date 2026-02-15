@@ -1,29 +1,23 @@
-import { describe, it, expect, beforeEach, afterEach } from '@jest/globals'
+import { describe, it, expect } from '@jest/globals'
 import writeFortUpgradeReport from './write.ts'
 
 describe('writeFortUpgradeReport', () => {
-  beforeEach(() => {
-    const documentUuid = 'JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z'
-    const mockResult = { documentUuid, name: 'Fort Charles' }
-    const mockTable = { draw: async () => ({ results: [mockResult] }) };
-    (global as any).fromUuid = async () => mockTable
-  })
+  const fort = {
+    documentUuid: 'JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z',
+    name: 'Fort Charles'
+  } as TableResult
 
-  afterEach(() => {
-    delete (global as any).fromUuid
-  })
-
-  it('writes a fort upgrade report', async () => {
-    const expected = ['tunnels', 'expansion', 'armor', 'undead.base']
-      .map(t => `revolutionary-antillia.intelligence.fort-upgrades.upgrade.${t}`)
-    const actual = await writeFortUpgradeReport()
-    expect(expected).toContain(actual)
-  })
-
-  it('writes a fort upgrade report with premium content', async () => {
-    const expected = ['tunnels', 'expansion', 'armor', 'undead.premium']
-      .map(t => `revolutionary-antillia.intelligence.fort-upgrades.upgrade.${t}`)
-    const actual = await writeFortUpgradeReport(true)
-    expect(expected).toContain(actual)
+  it.each([
+    ['tunnels', false, 'tunnels'],
+    ['tunnels', true, 'tunnels'],
+    ['expansion', false, 'expansion'],
+    ['expansion', true, 'expansion'],
+    ['armor', false, 'armor'],
+    ['armor', true, 'armor'],
+    ['undead', false, 'undead.base'],
+    ['undead', true, 'undead.premium'],
+  ] as [string, boolean, string][])('writes a report for %s (premium %s)', (upgrade, premium, expected) => {
+    const actual = writeFortUpgradeReport(fort, upgrade, premium)
+    expect(actual).toBe(`revolutionary-antillia.intelligence.fort-upgrades.upgrade.${expected}`)
   })
 })

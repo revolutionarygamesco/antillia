@@ -12,7 +12,7 @@ revolutionary-antillia:
           other purveyors, enough to deduce
         heard: |
           I have heard persist rumors
-      type:
+      upgrade:
         tunnels: |
           <p>Your Excellency,</p>
           <p>{evidence} that secret tunnels are being built beneath {fort}.</p>
@@ -47,3 +47,12 @@ revolutionary-antillia:
               release these skeletons, ensuring that if they cannot maintain
               control of the fort then no one will.</p>
             <p>Ever your faithful servant,<br />Agent {agent}</p>
+        mechanics:
+          tunnels: <p><strong>Mechanics:</strong> None</p>
+          expansion: |
+            <p><strong>Mechanics:</strong> If true, the fort will have +50 HP and
+              one additional die in its broadsides attack.</p>
+          armor: |
+            <p><strong>Mechanics:</strong> If true, the fort has tier
+              1 armor.</p>
+          undead: <p><strong>Mechanics:</strong> None</p>
