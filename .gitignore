@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Don't save built files
+dist
+packs/demo/adventure
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
