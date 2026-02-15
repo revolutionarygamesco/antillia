@@ -13,8 +13,8 @@ const writeFortUpgradeReport = async (
   const ev = selectRandomElement(['verified', 'observation', 'money', 'heard'])
   const evidence = localize([...prefix, 'evidence', ev])
   const undead = premium ? 'undead.premium' : 'undead.base'
-  const type = selectRandomElement(['tunnels', 'expansion', 'armor', undead])
-  return localize([...prefix, 'type', type], { fort, agent, evidence })
+  const upgrade = selectRandomElement(['tunnels', 'expansion', 'armor', undead])
+  return localize([...prefix, 'upgrade', upgrade], { fort, agent, evidence })
 }
 
 export default writeFortUpgradeReport

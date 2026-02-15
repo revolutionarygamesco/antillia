@@ -15,14 +15,14 @@ describe('writeFortUpgradeReport', () => {
 
   it('writes a fort upgrade report', async () => {
     const expected = ['tunnels', 'expansion', 'armor', 'undead.base']
-      .map(t => `revolutionary-antillia.intelligence.fort-upgrades.type.${t}`)
+      .map(t => `revolutionary-antillia.intelligence.fort-upgrades.upgrade.${t}`)
     const actual = await writeFortUpgradeReport()
     expect(expected).toContain(actual)
   })
 
   it('writes a fort upgrade report with premium content', async () => {
     const expected = ['tunnels', 'expansion', 'armor', 'undead.premium']
-      .map(t => `revolutionary-antillia.intelligence.fort-upgrades.type.${t}`)
+      .map(t => `revolutionary-antillia.intelligence.fort-upgrades.upgrade.${t}`)
     const actual = await writeFortUpgradeReport(true)
     expect(expected).toContain(actual)
   })
