@@ -1,9 +1,9 @@
-const moduleName = 'Module'
+import { MODULE_NAME } from './settings.ts'
 
 Hooks.on('init', () => {
-  console.log(`Initializing ${moduleName}...`)
+  console.log(`Initializing ${MODULE_NAME}...`)
 })
 
 Hooks.on('ready', () => {
-  console.log(`${moduleName} is ready`)
+  console.log(`${MODULE_NAME} is ready`)
 })
