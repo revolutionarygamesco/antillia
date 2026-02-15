@@ -26,6 +26,17 @@ interface Collection<K, V> extends Map<K, V> {
   contents: V[]
 }
 
+interface Document {
+  id: string
+  name: string
+  uuid(): string
+}
+
+interface TableResult extends Document {
+  type: string
+  documentUuid?: string
+}
+
 interface User {
   id: string
 }
