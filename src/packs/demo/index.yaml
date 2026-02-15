@@ -9,11 +9,14 @@ description: |
     the full adventure, visit TODO: Add URL here.</p>
 actors: []
 items: []
-journal: []
+journal:
+  include: ./src/packs/demo/journal/index.yaml
 scenes: []
-tables: []
+tables:
+  include: ./src/packs/demo/rolltables/index.yaml
 macros: []
 combats: []
 cards: []
 playlists: []
-folders: []
+folders:
+  include: ./src/packs/demo/folders/index.yaml

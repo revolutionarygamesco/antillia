@@ -1,0 +1,4 @@
+- include: ./src/packs/demo/folders/journal/root.yaml
+- include: ./src/packs/demo/folders/journal/settlements/root.yaml
+- include: ./src/packs/demo/folders/journal/settlements/greater/root.yaml
+- include: ./src/packs/demo/folders/journal/settlements/greater/jamaica.yaml

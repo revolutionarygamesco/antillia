@@ -1,0 +1,19 @@
+_id: XleTdybFWP2znvEq
+_key: "!tables!XleTdybFWP2znvEq"
+name: Forts
+description: Forts in the Caribbean controlled by one of the imperial powers of
+  the Old World.
+img: icons/svg/d20-grey.svg
+formula: 1d20
+folder: ibX58S6se3bOulpl
+results:
+  - _id: TjnUlNPkifO1i1sr
+    _key: "!tables.results!XleTdybFWP2znvEq.TjnUlNPkifO1i1sr"
+    range:
+      - 1
+      - 20
+    weight: 20
+    img: modules/revolutionary-pbshipgen/images/british.png
+    type: document
+    documentUuid: JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z
+    name: Fort Charles
