@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && vite build && npm run build:content",
+    "build": "tsc -p tsconfig.build.json && vite build && npm run build:content && npm run build:i18n",
     "build:yaml": "node scripts/yaml.js",
     "build:pack": "node scripts/pack.js",
     "build:content": "npm run build:yaml && npm run build:pack",
+    "build:i18n": "node scripts/localize.js",
     "complete-table": "node ./scripts/complete-table.js",
     "test": "jest",
     "test:watch": "jest --watch",
