@@ -4,7 +4,9 @@ name: Shadows of Antillia
 img: modules/revolutionary-antillia/img/banner.jpg
 caption: Shadows of Antillia
 description: |
-  <p>TBW</p>
+  <p><strong>Demo Version:</strong> This is the free demo version of the
+    adventure. It contains just enough to show how the API methods work. For
+    the full adventure, visit TODO: Add URL here.</p>
 actors: []
 items: []
 journal: []

@@ -23,7 +23,7 @@
   "packs": [
     {
       "name": "demo",
-      "label": "Shadows of Antillia (Demo Content)",
+      "label": "Demo Content",
       "path": "packs/demo",
       "type": "Adventure",
       "ownership": {
@@ -35,8 +35,8 @@
     },
     {
       "name": "base",
-      "label": "Shadows of Antillia (Base Content)",
-      "path": "packs/demo",
+      "label": "Core Content",
+      "path": "packs/base",
       "type": "Adventure",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -47,8 +47,8 @@
     },
     {
       "name": "premium",
-      "label": "Shadows of Antillia (Premium Content)",
-      "path": "packs/demo",
+      "label": "Premium Content",
+      "path": "packs/premium",
       "type": "Adventure",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -59,8 +59,8 @@
     },
     {
       "name": "historical",
-      "label": "Shadows of Antillia (Historical Content)",
-      "path": "packs/demo",
+      "label": "Historical Content",
+      "path": "packs/historical",
       "type": "Adventure",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -70,9 +70,9 @@
       "flags": {}
     },
     {
-      "name": "historical-premium",
-      "label": "Shadows of Antillia (Historical + Premium Content)",
-      "path": "packs/demo",
+      "name": "premium-historical",
+      "label": "Premium + Historical Content",
+      "path": "packs/premium-historical",
       "type": "Adventure",
       "ownership": {
         "PLAYER": "OBSERVER",
