@@ -14,26 +14,36 @@ revolutionary-antillia:
           I have heard persist rumors
       type:
         tunnels: |
+          <p>Your Excellency,</p>
           <p>{evidence} that secret tunnels are being built beneath {fort}.</p>
+          <p>Ever your faithful servant,<br />Agent {agent}</p>
         expansion: |
+          <p>Your Excellency,</p>
           <p>{evidence} that a new battery is being added to {fort}.</p>
+          <p>Ever your faithful servant,<br />Agent {agent}</p>
           <p><strong>Mechanics:</strong> If true, the fort will have +50 HP and
             one additional die in its broadsides attack.</p>
         armor: |
+          <p>Your Excellency,</p>
           <p>{evidence} that the walls of {fort} are being rebuilt with coral
             stone. As your excellency well knows, such stone compresses under
             cannon fire rather than shattering.</p>
+          <p>Ever your faithful servant,<br />Agent {agent}</p>
           <p><strong>Mechanics:</strong> If true, the fort has tier 1 armor.</p>
         undead:
           premium: |
+            <p>Your Excellency,</p>
             <p>{evidence} that several chambers have been dug beneath {fort},
-              and these chambers have been stocked with @UUID[Actor.h7zfo0id60XazmVT]{skeletons}.
+              and these chambers have been stocked with @UUID[Actor.h7zfo0id60XazmVT].
               If the garrison believes that all is lost, a lever can be pulled
               to release these skeletons, ensuring that if they cannot maintain
               control of the fort then no one will.</p>
+            <p>Ever your faithful servant,<br />Agent {agent}</p>
           base: |
+            <p>Your Excellency,</p>
             <p>{evidence} that several chambers have been dug beneath {fort},
               and these chambers have been stocked with skeletons. If the
               garrison believes that all is lost, a lever can be pulled to
               release these skeletons, ensuring that if they cannot maintain
               control of the fort then no one will.</p>
+            <p>Ever your faithful servant,<br />Agent {agent}</p>
