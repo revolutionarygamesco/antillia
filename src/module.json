@@ -1,7 +1,7 @@
 {
   "id": "revolutionary-antillia",
   "title": "Shadows of Antillia",
-  "description": "",
+  "description": "A wave crawl adventure for Pirate Borg and Foundry VTT.",
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "13",
