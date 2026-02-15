@@ -14,7 +14,7 @@ dist-ssr
 
 # Don't save built files
 dist
-packs/demo/adventure
+src/packs/demo/adventure
 
 # Editor directories and files
 .vscode/*
