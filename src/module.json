@@ -102,7 +102,27 @@
       "path": "lang/en.json"
     }
   ],
-  "relationships": {},
+  "relationships": {
+    "systems": [
+      {
+        "id": "pirateborg",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "requires": [
+      {
+        "id": "limithron-landingpagekit",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "revolutionary-pbshipgen",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
   "socket": false,
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
