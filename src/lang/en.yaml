@@ -1,2 +1,39 @@
 revolutionary-antillia:
-  test: This is a test.
+  intelligence:
+    fort-upgrades:
+      evidence:
+        verified: |
+          I have personally verified
+        observation: |
+          I have carefully watched the comings and goings at the fort for
+          several weeks now, and have seen enough to confidently report
+        money: |
+          I have observed ledgers and followed up with local merchants and
+          other purveyors, enough to deduce
+        heard: |
+          I have heard persist rumors
+      type:
+        tunnels: |
+          <p>{evidence} that secret tunnels are being built beneath {fort}.</p>
+        expansion: |
+          <p>{evidence} that a new battery is being added to {fort}.</p>
+          <p><strong>Mechanics:</strong> If true, the fort will have +50 HP and
+            one additional die in its broadsides attack.</p>
+        armor: |
+          <p>{evidence} that the walls of {fort} are being rebuilt with coral
+            stone. As your excellency well knows, such stone compresses under
+            cannon fire rather than shattering.</p>
+          <p><strong>Mechanics:</strong> If true, the fort has tier 1 armor.</p>
+        undead:
+          premium: |
+            <p>{evidence} that several chambers have been dug beneath {fort},
+              and these chambers have been stocked with @UUID[Actor.h7zfo0id60XazmVT]{skeletons}.
+              If the garrison believes that all is lost, a lever can be pulled
+              to release these skeletons, ensuring that if they cannot maintain
+              control of the fort then no one will.</p>
+          base: |
+            <p>{evidence} that several chambers have been dug beneath {fort},
+              and these chambers have been stocked with skeletons. If the
+              garrison believes that all is lost, a lever can be pulled to
+              release these skeletons, ensuring that if they cannot maintain
+              control of the fort then no one will.</p>
