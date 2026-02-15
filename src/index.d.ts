@@ -32,6 +32,10 @@ interface Document {
   uuid(): string
 }
 
+interface RollTable extends Document {
+  draw(options?: any): Promise<any>
+}
+
 interface TableResult extends Document {
   type: string
   documentUuid?: string
