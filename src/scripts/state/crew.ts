@@ -1,7 +1,7 @@
 import generateID from '../utilities/generate-id.ts'
 import isObject from '../utilities/guards/object.ts'
 
-interface CrewStateData {
+export interface CrewStateData {
   id: string
 }
 

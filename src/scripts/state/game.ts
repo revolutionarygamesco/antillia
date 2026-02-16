@@ -1,4 +1,10 @@
-import CrewState from './crew.ts'
+import CrewState, { CrewStateData } from './crew.ts'
+
+export interface GameStateData {
+  at: number
+  chapter: number
+  crews: CrewStateData[]
+}
 
 class GameState {
   at: number
@@ -19,6 +25,14 @@ class GameState {
     if (at === 0 && this.crews.size === 0) {
       const init = new CrewState()
       this.crews.set(init.id, init)
+    }
+  }
+
+  toObject (): GameStateData {
+    return {
+      at: this.at,
+      chapter: this.chapter,
+      crews: Array.from(this.crews.values()).map(crew => crew.toObject())
     }
   }
 }

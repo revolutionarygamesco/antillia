@@ -58,4 +58,19 @@ describe('GameState', () => {
       expect(crews.size).toBe(1)
     })
   })
+
+  describe('Instance methods', () => {
+    describe('toObject', () => {
+      it('returns an object', () => {
+        const state = new GameState()
+        const actual = state.toObject()
+
+        expect(actual.at).toBe(state.at)
+        expect(actual.chapter).toBe(state.chapter)
+        expect(actual.crews.every((({ id }) => {
+          return state.crews.has(id)
+        }))).toBe(true)
+      })
+    })
+  })
 })
