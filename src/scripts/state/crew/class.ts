@@ -1,11 +1,10 @@
 import generateID from '../../utilities/generate-id.ts'
-import isObject from '../../utilities/guards/object.ts'
-import { type CrewStateData } from './data.ts'
+import { type CrewStateData, isCrewStateData } from './data.ts'
 
 class CrewState {
   id: string
 
-  constructor(data?: Record<string, unknown>) {
+  constructor(data?: CrewStateData) {
     this.id = typeof data?.id === 'string' ? data.id : generateID()
   }
 
@@ -22,8 +21,8 @@ class CrewState {
   static deserialize(serialized: string): CrewState | null {
     try {
       const data = JSON.parse(serialized)
-      if (!isObject(data)) return null
-      return new CrewState(data as Record<string, unknown>)
+      if (!isCrewStateData(data)) return null
+      return new CrewState(data)
     } catch (_err) { return null }
   }
 }
