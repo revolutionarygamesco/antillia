@@ -21,4 +21,19 @@ describe('CrewState', () => {
       })
     })
   })
+
+  describe('Class methods', () => {
+    describe('deserialize', () => {
+      it('returns null if given an invalid string', () => {
+        const actual = CrewState.deserialize('lol nope')
+        expect(actual).toBeNull()
+      })
+
+      it('deserializes crew state', () => {
+        const before = new CrewState()
+        const actual = CrewState.deserialize(before.serialize())
+        expect(actual).toEqual(before)
+      })
+    })
+  })
 })
