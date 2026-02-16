@@ -1,5 +1,5 @@
 import CrewState from '../crew/class.ts'
-import { type GameStateData } from './data.ts'
+import { type GameStateData, isGameStateData } from './data.ts'
 
 class GameState {
   at: number
@@ -33,6 +33,19 @@ class GameState {
 
   serialize (): string {
     return JSON.stringify(this.toObject())
+  }
+
+  static deserialize(serialized: string): GameState | null {
+    try {
+      const data = JSON.parse(serialized)
+      if (!isGameStateData(data)) return null
+      const obj = data as GameStateData
+
+      const crews = obj.crews
+        .map(data => new CrewState(data))
+
+      return new GameState(obj.at, obj, ...crews)
+    } catch (_err) { return null }
   }
 }
 

@@ -92,4 +92,19 @@ describe('GameState', () => {
       })
     })
   })
+
+  describe('Class methods', () => {
+    describe('deserialize', () => {
+      it('returns null if given an invalid string', () => {
+        const actual = GameState.deserialize('lol nope')
+        expect(actual).toBeNull()
+      })
+
+      it('deserializes crew state', () => {
+        const before = new GameState()
+        const actual = GameState.deserialize(before.serialize())
+        expect(actual).toEqual(before)
+      })
+    })
+  })
 })
