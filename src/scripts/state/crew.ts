@@ -6,6 +6,10 @@ class CrewState {
   constructor() {
     this.id = generateID()
   }
+
+  serialize (): string {
+    return JSON.stringify(this)
+  }
 }
 
 export default CrewState

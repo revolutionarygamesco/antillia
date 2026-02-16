@@ -11,4 +11,14 @@ describe('CrewState', () => {
       expect(crew.id).toHaveLength(16)
     })
   })
+
+  describe('Instance methods', () => {
+    describe('serialize', () => {
+      it('serializes crew state', () => {
+        const crew = new CrewState()
+        const actual = crew.serialize()
+        expect(actual).toContain(`{"id":"${crew.id}"`)
+      })
+    })
+  })
 })
