@@ -51,6 +51,13 @@ describe('GameState', () => {
       expect(chapter).toBe(2)
     })
 
+    it('can pick up from a previous state data object', () => {
+      const prev = new GameState()
+      prev.chapter = 2
+      const { chapter } = new GameState(60, prev.toObject())
+      expect(chapter).toBe(2)
+    })
+
     it('moves forward with the crews specified', () => {
       const prev = new GameState()
       const [newCrew] = addCrews(prev, 1)

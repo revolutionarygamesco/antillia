@@ -8,7 +8,7 @@ class GameState {
 
   constructor (
     at: number = 0,
-    prev?: GameState,
+    prev?: GameState | GameStateData,
     ...crews: CrewState[]
   ) {
     this.at = at
