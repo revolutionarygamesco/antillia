@@ -1,6 +1,10 @@
 import generateID from '../utilities/generate-id.ts'
 import isObject from '../utilities/guards/object.ts'
 
+interface CrewStateData {
+  id: string
+}
+
 class CrewState {
   id: string
 
@@ -8,8 +12,14 @@ class CrewState {
     this.id = typeof data?.id === 'string' ? data.id : generateID()
   }
 
+  toObject (): CrewStateData {
+    return {
+      id: this.id
+    }
+  }
+
   serialize (): string {
-    return JSON.stringify(this)
+    return JSON.stringify(this.toObject())
   }
 
   static deserialize(serialized: string): CrewState | null {

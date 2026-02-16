@@ -13,6 +13,15 @@ describe('CrewState', () => {
   })
 
   describe('Instance methods', () => {
+    describe('toObject', () => {
+      it('returns an object', () => {
+        const crew = new CrewState()
+        const actual = crew.toObject()
+
+        expect(actual.id).toBe(crew.id)
+      })
+    })
+
     describe('serialize', () => {
       it('serializes crew state', () => {
         const crew = new CrewState()
