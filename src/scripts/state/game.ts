@@ -1,4 +1,4 @@
-import CrewState, { CrewStateData } from './crew.ts'
+import CrewState, { type CrewStateData } from './crew.ts'
 
 export interface GameStateData {
   at: number
@@ -34,6 +34,10 @@ class GameState {
       chapter: this.chapter,
       crews: Array.from(this.crews.values()).map(crew => crew.toObject())
     }
+  }
+
+  serialize (): string {
+    return JSON.stringify(this.toObject())
   }
 }
 

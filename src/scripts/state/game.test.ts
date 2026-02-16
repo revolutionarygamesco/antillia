@@ -72,5 +72,17 @@ describe('GameState', () => {
         }))).toBe(true)
       })
     })
+
+    describe('serialize', () => {
+      it('serializes game state', () => {
+        const state = new GameState()
+        const [newCrew] = addCrews(state, 1)
+        const actual = state.serialize()
+
+        expect(actual).toContain('"at":0')
+        expect(actual).toContain('"chapter":1')
+        expect(actual).toContain(`"id":"${newCrew.id}"`)
+      })
+    })
   })
 })
