@@ -1,4 +1,4 @@
-import CrewState from './crew.ts'
+import CrewState from './class.ts'
 
 describe('CrewState', () => {
   describe('constructor', () => {

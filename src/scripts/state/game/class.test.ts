@@ -1,6 +1,6 @@
-import selectRandomBetween from '../random/between.ts'
-import CrewState from './crew.ts'
-import GameState from './game.ts'
+import selectRandomBetween from '../../random/between.ts'
+import CrewState from '../crew/class.ts'
+import GameState from './class.ts'
 
 const addCrews = (
   state: GameState,

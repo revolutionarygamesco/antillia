@@ -1,4 +1,4 @@
-import CrewState, { type CrewStateData } from './crew.ts'
+import CrewState, { type CrewStateData } from '../crew/class.ts'
 
 export interface GameStateData {
   at: number
