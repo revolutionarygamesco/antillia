@@ -1,5 +1,21 @@
 import selectRandomBetween from '../random/between.ts'
+import CrewState from './crew.ts'
 import GameState from './game.ts'
+
+const addCrews = (
+  state: GameState,
+  n: number
+): CrewState[] => {
+  const crews: CrewState[] = []
+
+  for (let i = 0; i < n; i++) {
+    const crew = new CrewState()
+    crews.push(crew)
+    state.crews.set(crew.id, crew)
+  }
+
+  return crews
+}
 
 describe('GameState', () => {
   describe('constructor', () => {
@@ -33,6 +49,13 @@ describe('GameState', () => {
       prev.chapter = 2
       const { chapter } = new GameState(60, prev)
       expect(chapter).toBe(2)
+    })
+
+    it('moves forward with the crews specified', () => {
+      const prev = new GameState()
+      const [newCrew] = addCrews(prev, 1)
+      const { crews } = new GameState(60, prev, newCrew)
+      expect(crews.size).toBe(1)
     })
   })
 })

@@ -12,7 +12,7 @@ class GameState {
   ) {
     this.at = at
     this.chapter = prev?.chapter ?? 1
-    this.crews = prev?.crews ?? new Map<string, CrewState>()
+    this.crews = new Map<string, CrewState>()
     for (const crew of crews) this.crews.set(crew.id, crew)
 
     // If we're starting a new adventure, add a crew to start with.
