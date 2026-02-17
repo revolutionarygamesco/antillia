@@ -3,7 +3,7 @@ import getDoM from './dom.ts'
 import getMonth from './month.ts'
 import getYear from './year.ts'
 
-interface GetDayOptions {
+export interface GetDayOptions {
   format?: 'American' | 'International'
   weekday?: boolean
 }

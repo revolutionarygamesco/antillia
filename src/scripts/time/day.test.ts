@@ -1,19 +1,27 @@
-import getDay from './day.ts'
+import { MODULE_ID } from '../settings.ts'
+import getDay, { type GetDayOptions } from './day.ts'
 
 describe('getDay', () => {
   it('returns the date', () => {
-    expect(getDay()).toBe('21 December 1721')
+    const expected = `21 ${MODULE_ID}.dates.months.m12 1721`
+    expect(getDay()).toBe(expected)
   })
 
   it('can return the date in American format', () => {
-    expect(getDay(0, { format: 'American' })).toBe('December 21, 1721')
+    const expected = `${MODULE_ID}.dates.months.m12 21, 1721`
+    const options: GetDayOptions = { format: 'American' }
+    expect(getDay(0, options)).toBe(expected)
   })
 
   it('can include the weekday', () => {
-    expect(getDay(0, { weekday: true })).toBe('Sunday, 21 December 1721')
+    const expected = `${MODULE_ID}.dates.days.d1, 21 ${MODULE_ID}.dates.months.m12 1721`
+    const options: GetDayOptions = { weekday: true }
+    expect(getDay(0, options)).toBe(expected)
   })
 
   it('can include the weekday and use American format', () => {
-    expect(getDay(0, { weekday: true, format: 'American' })).toBe('Sunday, December 21, 1721')
+    const expected = `${MODULE_ID}.dates.days.d1, ${MODULE_ID}.dates.months.m12 21, 1721`
+    const options: GetDayOptions = { weekday: true, format: 'American' }
+    expect(getDay(0, options)).toBe(expected)
   })
 })

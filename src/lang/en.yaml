@@ -6,6 +6,28 @@ revolutionary-antillia:
     ch4: Chapter IV.
     ch5: Chapter V.
     ch6: Chapter VI.
+  dates:
+    months:
+      m01: January
+      m02: February
+      m03: March
+      m04: April
+      m05: May
+      m06: June
+      m07: July
+      m08: August
+      m09: September
+      m10: October
+      m11: November
+      m12: December
+    days:
+      d1: Sunday
+      d2: Monday
+      d3: Tuesday
+      d4: Wednesday
+      d5: Thursday
+      d6: Friday
+      d7: Saturday
   log:
     title: Adventure Log
     first: |
