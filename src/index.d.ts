@@ -32,6 +32,8 @@ interface Document {
   uuid(): string
 }
 
+interface JournalEntry extends Document {}
+
 interface RollTable extends Document {
   draw(options?: any): Promise<any>
 }
