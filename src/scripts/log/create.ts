@@ -26,7 +26,7 @@ const createLog = async (): Promise<JournalEntry> => {
         title: { show: true, level: 1 },
         text: {
           format: 1,
-          content: `<dl><dt data-at="0">${getDay()}</dt><dd>${first}</dd></dl>`
+          content: `<dl><dt data-at="0">${getDay(0, { weekday: true })}</dt><dd>${first}</dd></dl>`
         }
       }
     ]
