@@ -1,9 +1,10 @@
 import { describe, it, expect } from '@jest/globals'
+import { UUIDS } from '../../../settings.ts'
 import writeFortUpgradeReport from './write.ts'
 
 describe('writeFortUpgradeReport', () => {
   const fort = {
-    documentUuid: 'JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z',
+    documentUuid: UUIDS.JOURNAL_FORT_CHARLES,
     name: 'Fort Charles'
   } as TableResult
 

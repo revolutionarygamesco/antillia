@@ -1,13 +1,10 @@
 import { describe, it, expect, beforeEach, afterEach } from '@jest/globals'
+import { UUIDS } from '../../../settings.ts'
 import selectFort from './select-fort.ts'
 
 describe('selectFort', () => {
-  const kingston = 'JournalEntry.swgzi8mEAgfLJOEk'
-  const fort = 'JournalEntryPage.zPBtUYuNIxPTAZ1z'
-  const uuid = [kingston, fort].join('.')
-
   beforeEach(() => {
-    const mockResult = { documentUuid: uuid, name: 'Fort Charles' }
+    const mockResult = { documentUuid: UUIDS.JOURNAL_FORT_CHARLES, name: 'Fort Charles' }
     const mockTable = { draw: async () => ({ results: [mockResult] }) };
     (global as any).fromUuid = async () => mockTable
   })
@@ -18,6 +15,6 @@ describe('selectFort', () => {
 
   it('selects a fort', async () => {
     const actual = await selectFort()
-    expect(actual).toBe(`@UUID[${uuid}]{Fort Charles}`)
+    expect(actual).toBe(`@UUID[${UUIDS.JOURNAL_FORT_CHARLES}]{Fort Charles}`)
   })
 })
