@@ -32,7 +32,9 @@ interface Document {
   uuid(): string
 }
 
-interface JournalEntry extends Document {}
+interface JournalEntry extends Document {
+  create(data?: any, operation?: any): Promise<JournalEntry>
+}
 
 interface RollTable extends Document {
   draw(options?: any): Promise<any>
@@ -64,4 +66,10 @@ declare const game: {
   },
   modules: Collection<string, Module>,
   user: User
+}
+
+declare const foundry: {
+  documents: {
+    JournalEntry: JournalEntry
+  }
 }

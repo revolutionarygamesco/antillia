@@ -1,4 +1,19 @@
 revolutionary-antillia:
+  chapters:
+    ch1: Chapter I.
+    ch2: Chapter II.
+    ch3: Chapter III.
+    ch4: Chapter IV.
+    ch5: Chapter V.
+    ch6: Chapter VI.
+  log:
+    title: Adventure Log
+    first: |
+      Winter solstice. Two years ago today the world ended. The Abyss opened
+      and the Scourge fell upon us. It is no longer sugar or spice that drives
+      the world mad, but ash — and the Caribbean is the only place where it can
+      be found. For now, at least. How long will it be before the Scourge
+      spreads to burn the whole world to ash?
   intelligence:
     fort-upgrades:
       evidence:
