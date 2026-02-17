@@ -1,1 +1,2 @@
+- include: ./src/packs/demo/journal/how-to.yaml
 - include: ./src/packs/demo/journal/settlements/greater-antilles/jamaica/kingston.yaml

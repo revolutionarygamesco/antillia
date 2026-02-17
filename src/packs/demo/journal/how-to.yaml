@@ -1,0 +1,158 @@
+_id: LF0tUW5xSU8tn8cz
+name: How to Run Shadows of Antillia
+folder: lGxWU3hj8j30VY0P
+ownership:
+  default: 0
+pages:
+  - _id: woSCZnMC67RNawLv
+    name: Introduction
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <div id="version-info" data-version="demo"></div>
+        <p>Insert introduction here.</p>
+  - _id: b4aS9uEHeTlDt5NL
+    name: Fire
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p>Think of fire in terms of adjacent zones. If you’re using a map
+          with five-foot squares, then think of each square as a zone. If
+          you’re not using such a map, keep track of the zones that the fire
+          might spread to. Think of the fire in each zone as its own,
+          independent fire when it comes to spreading, going out, or being
+          put out.</p>
+        <ul>
+          <li><strong>Origin point:</strong> The fire starts in a particular zone.</li>
+          <li><strong>Water:</strong> Throw a bucket of water on a zone that’s on
+            fire to put out the fire in that zone.</li>
+          <li><strong>Smother:</strong> Test Agility DR 12 to smother the fire in
+            a zone.</li>
+          <li><strong>Burning:</strong> Something that’s burning takes [[/r 1d6]]
+            damage.</li>
+          <li><strong>Spreading:</strong> Each round, each zone that’s on fire
+            @UUID[RollTable.zdm2uK2nh1052TQL]{could spread} to an adjacent
+            zone.</li>
+          <li><strong>Barrel of Gunpowder:</strong> If a barrel of gunpowder
+            burns, it explodes. If you’re within 15 feet, test Agility DR 12
+            to take [[/r 3d6]] damage or take [[/r 6d6]] damage. If you’re
+            between 15 and 30 feet away, test Agility DR 12 or take [[/r 3d6]]
+            damage. Everything within that area is now on fire.</li>
+          <li><strong>Magazine:</strong> If the fire reaches the magazine, the
+            entire ship explodes. Anyone who’s in a position to jump overboard
+            can test Agility DR 12 to save their lives. Everyone else on board
+            is killed instantly by the blast.</li>
+        </ul>
+        <h2>Notes</h2>
+        <ul>
+          <li>Something that’s burning takes [[/r 1d6]] damage. That means a
+            person that’s on fire takes that damage. If a ship is on fire, it
+            takes that damage, though the 1:5 damage scaling mentioned on p. 73
+            applies here, so your sloop with 30 HP has 150 HP for this. Don’t
+            let that lure you into a false sense of security, though; when
+            you’ve got 20 zones on board on fire and you’re taking 20d6 damage
+            every round, you’re going to go down quick.</li>
+          <li>Since you treat each zone as its own fire, when you put out the
+            fire in one zone, there may still be fires burning in others.</li>
+          <li>If you don’t have something to smother the fire with, you can
+            try to stop, drop, and roll, but that means getting burned, and
+            that means taking [[/r 1d6]] damage.</li>
+          <li>If a creature is on fire, that fire can spread to the zone
+            they’re in just like any other fire. Unlike any other fire, that
+            creature can move, spreading the fire a lot more quickly than
+            usual.</li>
+        </ul>
+  - _id: HskPSdNSB8HyLxis
+    name: Overboard
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p>When someone falls overboard, you can:</p>
+        <ul>
+          <li>Just narrate what happens (usually that person is lost to Davy
+            Jones’s locker).</li>
+          <li>Resolve it quickly with a few dice rolls (<em>see</em>
+            <strong>Quick Version</strong>).</li>
+          <li>Zoom in on it and make it a full encounter (<em>see</em>
+            <strong>Encounter</strong>).</li>
+        </ul>
+        <h2>Sharks</h2>
+        <p>It’s not just your bad luck that you
+          always happen to fall overboard when sharks are near. Sharks have
+          learned that tasty things fall off ships all the time, and trail
+          behind them hoping for just such an opportunity. Use the 
+          @UUID[Macro.4QefoHlHz8SQCOvh]{Feeding Frenzy macro} to determine
+          how many (and what kind of) sharks are trailing your ship when it
+          matters.</p>
+        <h2>Quick Version</h2>
+        <p><strong>Swim:</strong> A conscious person in the water can swim back
+          to the ship by testing Agility DR 10 (plus complications).</p>
+        <p><strong>Rescue:</strong> Anyone who is near the gunwale on the side
+          the person fell (port or starboard) can throw a line and test
+          Strength DR 10 to pull the person aboard (plus complications).</p>
+        <p><strong>Sharks:</strong> If they’re conscious, the person can
+          attempt to swim back. Then anyone who’s in position can attempt to
+          throw a line, but if each of those fail and the person is still in
+          the water, the sharks arrive, and each one attacks.</p>
+        <table>
+          <caption>Overboard Complications</caption>
+          <thead>
+            <tr>
+              <th>Complication</th>
+              <th>Penalty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ship is moving at half-speed.</td>
+              <td>DR +2</td>
+            </tr>
+            <tr>
+              <td>Ship is moving at full speed.</td>
+              <td>DR +4</td>
+            </tr>
+            <tr>
+              <td>You’re in the middle of a storm.</td>
+              <td>DR +4</td>
+            </tr>
+            <tr>
+              <td>Each shark that is attacking you.</td>
+              <td>DR +1</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Encounter</h2>
+        <p>You can play out the situation as a full encounter. Set up a map
+          with the ship, the person overboard in the water, and everyone on the
+          ship. Use the @UUID[Macro.4QefoHlHz8SQCOvh]{Feeding Frenzy macro} to
+          determine the number and kinds of sharks following the ship and place
+          each of them on the map, then play it out in rounds as you would any
+          other encounter.</p>
+        <p><strong>Ship movement:</strong> If the ship continues to move, it
+          moves a number of feet each round equal to its speed &times; 10. So a
+          sloop (speed 5) at full speed moves forward 50 feet each turn, though
+          if it’s moving at half-speed it would only be 25. If the order is
+          given to drop anchor, it will take five rounds to stop the ship. Each
+          round, move the ship and everyone on it the appropriate distance.</p>
+        <p><strong>Swimming:</strong> If you know how to swim (and most pirates
+          don’t; falling overboard is often considered a death sentence so many
+          consider it useless to learn how to swim), test Agility DR 10 to swim
+          your speed (DR 14 during a storm).</p>
+        <p><strong>Throwing a line:</strong> Anyone on the ship can throw a
+          line to someone in the water if they’re less than 30 feet away. Once
+          they have it, the person on board holding the line can test Strength
+          DR 10 (or DR 14 in a storm) to pull them 30 feet closer to the ship.
+          While holding on to the line, the person in the water moves forward
+          with the ship.</p>
