@@ -25,6 +25,10 @@ class AdventureState {
       history: this.history.map(state => state.toObject())
     }
   }
+
+  serialize (): string {
+    return JSON.stringify(this.toObject())
+  }
 }
 
 export default AdventureState

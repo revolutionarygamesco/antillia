@@ -26,5 +26,16 @@ describe('AdventureState', () => {
         }
       })
     })
+
+    describe('serialize', () => {
+      it('serializes game state', () => {
+        const state = new AdventureState()
+        const actual = state.serialize()
+
+        expect(actual).toContain(`"playing":"${state.playing}"`)
+        expect(actual).toContain('"chapter":1')
+        expect(actual).toContain(`"id":"${state.playing}"`)
+      })
+    })
   })
 })
