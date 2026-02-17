@@ -1,8 +1,8 @@
 import GameState from '../game/class.ts'
 import CrewState from '../crew/class.ts'
 import { type AdventureStateData, isAdventureStateData } from './data.ts'
-import fromUuid from '../../utilities/wrappers/from-uuid.ts'
-import { MODULE_ID, ADVENTURE_STATE_FLAG, UUIDS } from '../../settings.ts'
+import getLog from '../../log/get.ts'
+import { MODULE_ID, ADVENTURE_STATE_FLAG } from '../../settings.ts'
 
 class AdventureState {
   playing: string
@@ -38,9 +38,9 @@ class AdventureState {
 
   async save (): Promise<boolean> {
     try {
-      const log = await fromUuid(UUIDS.LOG)
+      const log = await getLog()
       if (!log?.setFlag) return false
-      await log.setFlag(MODULE_ID, ADVENTURE_STATE_FLAG, this.serialize())
+      log.setFlag(MODULE_ID, ADVENTURE_STATE_FLAG, this.serialize())
       return true
     } catch (_err) { return false }
   }
@@ -55,11 +55,13 @@ class AdventureState {
 
   static async load (): Promise<AdventureState> {
     try {
-      const log = await fromUuid(UUIDS.LOG)
+      const log = await getLog()
       if (!log?.getFlag) return new AdventureState()
-      const data = log.getFlag(MODULE_ID, ADVENTURE_STATE_FLAG)
-      if (!isAdventureStateData(data)) return new AdventureState()
-      return new AdventureState(data)
+      const flag = log.getFlag(MODULE_ID, ADVENTURE_STATE_FLAG)
+      const data = typeof flag === 'string' ? JSON.parse(flag) : flag
+      return isAdventureStateData(data)
+        ? new AdventureState(data)
+        : new AdventureState()
     } catch (_err) { return new AdventureState() }
   }
 }

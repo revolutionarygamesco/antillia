@@ -30,6 +30,8 @@ interface Document {
   id: string
   name: string
   uuid(): string
+  getFlag<T>(scope: string, key: string): T
+  setFlag<T>(scope: string, key: string, value: T): void
 }
 
 interface JournalEntry extends Document {
