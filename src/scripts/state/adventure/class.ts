@@ -18,6 +18,13 @@ class AdventureState {
 
     this.playing = Array.from(this.history[this.history.length - 1].crews.keys())[0]
   }
+
+  toObject (): AdventureStateData {
+    return {
+      playing: this.playing,
+      history: this.history.map(state => state.toObject())
+    }
+  }
 }
 
 export default AdventureState
