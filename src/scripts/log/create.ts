@@ -29,7 +29,7 @@ const createLog = async (): Promise<JournalEntry> => {
         }
       }
     ]
-  })
+  }, { keepId: true })
 }
 
 export default createLog
