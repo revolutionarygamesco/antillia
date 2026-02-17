@@ -36,6 +36,15 @@ class AdventureState {
     return JSON.stringify(this.toObject())
   }
 
+  async save (): Promise<boolean> {
+    try {
+      const log = await fromUuid(UUIDS.LOG)
+      if (!log?.setFlag) return false
+      await log.setFlag(MODULE_ID, ADVENTURE_STATE_FLAG, this.serialize())
+      return true
+    } catch (_err) { return false }
+  }
+
   static deserialize (serialized: string): AdventureState | null {
     try {
       const data = JSON.parse(serialized)
