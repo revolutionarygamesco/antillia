@@ -1,6 +1,6 @@
 import GameState from '../game/class.ts'
-import { type AdventureStateData } from './data.ts'
 import CrewState from '../crew/class.ts'
+import { type AdventureStateData, isAdventureStateData } from './data.ts'
 
 class AdventureState {
   playing: string
@@ -11,7 +11,11 @@ class AdventureState {
       ? data.history
           .map(item => {
             if (item instanceof GameState) return item
-            return new GameState(item.at, item, ...item.crews.map(crew => new CrewState(crew)))
+            return new GameState(
+              item.at,
+              item,
+              ...item.crews.map(crew => new CrewState(crew))
+            )
           })
           .sort((a, b) => a.at - b.at)
       : [new GameState()]
@@ -28,6 +32,14 @@ class AdventureState {
 
   serialize (): string {
     return JSON.stringify(this.toObject())
+  }
+
+  static deserialize(serialized: string): AdventureState | null {
+    try {
+      const data = JSON.parse(serialized)
+      if (!isAdventureStateData(data)) return null
+      return new AdventureState(data)
+    } catch (_err) { return null }
   }
 }
 

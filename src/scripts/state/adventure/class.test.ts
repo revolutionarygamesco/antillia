@@ -38,4 +38,19 @@ describe('AdventureState', () => {
       })
     })
   })
+
+  describe('Class methods', () => {
+    describe('deserialize', () => {
+      it('returns null if given an invalid string', () => {
+        const actual = AdventureState.deserialize('lol nope')
+        expect(actual).toBeNull()
+      })
+
+      it('deserializes adventure state', () => {
+        const before = new AdventureState()
+        const actual = AdventureState.deserialize(before.serialize())
+        expect(actual).toEqual(before)
+      })
+    })
+  })
 })
