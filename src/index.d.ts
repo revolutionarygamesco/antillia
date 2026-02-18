@@ -38,6 +38,10 @@ interface JournalEntry extends Document {
   create(data?: any, operation?: any): Promise<JournalEntry>
 }
 
+interface Item extends Document {
+  create(data?: any, operation?: any): Promise<Item>
+}
+
 interface RollTable extends Document {
   draw(options?: any): Promise<any>
 }
@@ -67,11 +71,21 @@ declare const game: {
     localize: (key: string) => string
   },
   modules: Collection<string, Module>,
+  time: {
+    worldTime: number
+  },
   user: User
 }
 
 declare const foundry: {
   documents: {
+    Item: Item,
     JournalEntry: JournalEntry
   }
+}
+
+interface BottleMessage {
+  description?: string
+  with?: string
+  contents: Item[]
 }

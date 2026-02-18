@@ -36,7 +36,31 @@ revolutionary-antillia:
       the world mad, but ash — and the Caribbean is the only place where it can
       be found. For now, at least. How long will it be before the Scourge
       spreads to burn the whole world to ash?
+  bottle-messages:
+    recovered:
+      base: |
+        <p>You found this note inside a bottle that you plucked from the sea on
+        {date}.</p>
+      with: |
+        <p>You found this note inside a bottle that you plucked from the sea on
+        {date}, along with {contents}.</p>
+      described: |
+        <p>You found this note inside a bottle {description} that you plucked
+        from the sea on {date}.</p>
+      described-with: |
+        <p>You found this note inside a bottle {description} that you plucked
+        from the sea on {date}, along with {contents}.</p>
   intelligence:
+    encrypted:
+      name: Encrypted Message
+      link: Decrypted Message
+      description: |
+        <p><strong>Encrypted:</strong> Test Presence DR 14 to decrypt this
+        encoded message <em>if you can read the language it’s written
+        in</em>.</p>
+    decrypted: |
+      <p><strong>Decrypted:</strong> This message was written in a cipher,
+        but you decoded it.</p>
     fort-upgrades:
       title: Report on Upgrades to {fort}
       evidence:
