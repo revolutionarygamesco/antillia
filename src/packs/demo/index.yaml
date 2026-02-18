@@ -8,7 +8,8 @@ description: |
     adventure. It contains just enough to show how the API methods work. For
     the full adventure, visit TODO: Add URL here.</p>
 actors: []
-items: []
+items:
+  include: ./src/packs/demo/items/index.yaml
 journal:
   include: ./src/packs/demo/journal/index.yaml
 scenes: []

@@ -1,0 +1,19 @@
+_id: 2UylOEF2C19GfRNF
+name: Bottle
+type: container
+img: icons/consumables/potions/bottle-bulb-empty-glass.webp
+folder: 4f6meXITP9unkx36
+system:
+  capacity:
+    max: 1
+    value: 0
+  price: 2
+  description: |
+    <p>An onion-shaped bottle made of dark olive-green blown glass, slightly
+      irregular with a rough pontil scar on the base. These bottles are almost
+      always produced in England and imported to the Caribbean, which has
+      little glass-blowing industry of its own. Bottles like this are somewhat
+      valuable in their own right, even when empty. They are usually refilled,
+      reused, and repaired with wax or pitch if they’re cracked.</p>
+ownership:
+  default: 0
