@@ -29,7 +29,7 @@ interface Collection<K, V> extends Map<K, V> {
 interface Document {
   id: string
   name: string
-  uuid(): string
+  uuid: string
   getFlag<T>(scope: string, key: string): T
   setFlag<T>(scope: string, key: string, value: T): void
 }

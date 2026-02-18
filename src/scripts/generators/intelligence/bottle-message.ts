@@ -40,7 +40,7 @@ const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
     img: 'icons/sundries/documents/paper-plain-white.webp',
     folder: UUIDS.DECRYPTED_INTEL_MESSAGES,
     system: {
-      description: p.recovered + p.encrypted + `<p>@UUID[Item.${decrypted.uuid()}]{${p.link}}</p>`,
+      description: p.recovered + p.encrypted + `<p>@UUID[Item.${decrypted.uuid}]{${p.link}}</p>`,
       value: 0,
       carryWeight: 0
     },

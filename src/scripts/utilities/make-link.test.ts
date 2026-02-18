@@ -5,7 +5,7 @@ describe('makeLink', () => {
   it('makes a link', () => {
     const uuid = 'swgzi8mEAgfLJOEk'
     const name = 'Kingston'
-    const actual = makeLink({ uuid: () => uuid, name } as Document)
+    const actual = makeLink({ uuid, name } as Document)
     expect(actual).toBe(`@UUID[${uuid}]{${name}}`)
   })
 
@@ -13,7 +13,7 @@ describe('makeLink', () => {
     const uuid = 'swgzi8mEAgfLJOEk'
     const name = 'Fort Charles'
     const documentUuid = `JournalEntry.${uuid}.JournalEntryPage.zPBtUYuNIxPTAZ1z`
-    const actual = makeLink({ uuid: () => uuid, name, documentUuid } as TableResult)
+    const actual = makeLink({ uuid, name, documentUuid } as TableResult)
     expect(actual).toBe(`@UUID[${documentUuid}]{${name}}`)
   })
 })
