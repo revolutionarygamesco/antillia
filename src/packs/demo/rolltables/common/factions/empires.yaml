@@ -1,0 +1,45 @@
+_id: pK3FfgibC1HfBefV
+_key: "!tables!pK3FfgibC1HfBefV"
+name: Empires
+description: |
+  The imperial powers of the Old World that claim parts of the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d12
+folder: EiDbIfT55yJaolFf
+results:
+  - _id: dmUOGoa8J1GA9eFE
+    _key: "!tables.results!pK3FfgibC1HfBefV.dmUOGoa8J1GA9eFE"
+    range:
+      - 1
+      - 5
+    weight: 5
+    type: text
+    img: modules/revolutionary-pbshipgen/images/spanish.png
+    name: The Spanish Empire
+  - _id: jD8F9URq0sCEl4jS
+    _key: "!tables.results!pK3FfgibC1HfBefV.jD8F9URq0sCEl4jS"
+    range:
+      - 6
+      - 9
+    weight: 4
+    type: text
+    img: modules/revolutionary-pbshipgen/images/british.png
+    name: The British Empire
+  - _id: Z8NF95SJ8ehsn8mu
+    _key: "!tables.results!pK3FfgibC1HfBefV.Z8NF95SJ8ehsn8mu"
+    range:
+      - 10
+      - 11
+    weight: 2
+    type: text
+    img: modules/revolutionary-pbshipgen/images/french.png
+    name: The Kingdom of France
+  - _id: MBHu5cXNyrhBrZ6W
+    _key: "!tables.results!pK3FfgibC1HfBefV.MBHu5cXNyrhBrZ6W"
+    range:
+      - 12
+      - 12
+    weight: 1
+    type: text
+    img: modules/revolutionary-pbshipgen/images/dutch.png
+    name: The Dutch West India Company

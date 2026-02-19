@@ -1,1 +1,2 @@
+- include: ./src/packs/demo/rolltables/common/factions/empires.yaml
 - include: ./src/packs/demo/rolltables/common/factions/forts/any.yaml
