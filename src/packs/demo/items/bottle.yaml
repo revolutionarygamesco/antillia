@@ -4,9 +4,7 @@ type: container
 img: icons/consumables/potions/bottle-bulb-empty-glass.webp
 folder: 4f6meXITP9unkx36
 system:
-  capacity:
-    max: 1
-    value: 0
+  capacity: 1
   price: 2
   description: |
     <p>An onion-shaped bottle made of dark olive-green blown glass, slightly
