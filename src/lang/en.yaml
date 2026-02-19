@@ -36,6 +36,23 @@ revolutionary-antillia:
       the world mad, but ash — and the Caribbean is the only place where it can
       be found. For now, at least. How long will it be before the Scourge
       spreads to burn the whole world to ash?
+  factions:
+    spanish:
+      name: The Spanish Empire
+      adj: Spanish
+      lang: Spanish
+    british:
+      name: The British Empire
+      adj: British
+      lang: English
+    french:
+      name: The Kingdom of France
+      adj: French
+      lang: French
+    dutch:
+      name: The Dutch West India Company
+      adj: Dutch
+      lang: Dutch
   bottle-messages:
     recovered:
       base: |
