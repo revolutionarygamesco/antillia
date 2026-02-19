@@ -1,4 +1,10 @@
 revolutionary-antillia:
+  lookout: Lookout
+  sides:
+    Port: Port
+    port: port
+    Starboard: Starboard
+    starboard: starboard
   chapters:
     ch1: Chapter I.
     ch2: Chapter II.
@@ -54,6 +60,33 @@ revolutionary-antillia:
       adj: Dutch
       lang: Dutch
   bottle-messages:
+    bottle: bottle
+    flavor: Message in a Bottle
+    content: |
+      <p><em>Glass bottle off the {side} bow!</em></p>
+      <p><strong>Recovery:</strong> Spend 10 minutes to recover the bottle from
+        the sea.</p>
+      <p><em>{description} The cork is swollen shut.</em></p>
+      <p><strong>Uncork It:</strong> Strength DR 14, or you can always just
+        break it open.</p>
+      {additional}
+      {contents}
+    description:
+      base: |
+        You have recovered an onion-shaped {bottle} of dark olive glass from
+        the sea. There seems to be some paper rolled up inside of it.
+      with: |
+        You have recovered an onion-shaped {bottle} of dark olive glass from
+        the sea. There seems to be some paper rolled up inside of it, as well
+        as {hint}.
+      described: |
+        You have recovered an onion-shaped {bottle} of dark olive glass
+        {description} from the sea. There seems to be some paper rolled up
+        inside of it.
+      describedWith: |
+        You have recovered an onion-shaped bottle of dark olive glass
+        {description} from the sea. There seems to be some paper rolled up
+        inside of it, as well as {hint}.
     recovered:
       base: |
         <p>You found this note inside a bottle that you plucked from the sea on
@@ -93,45 +126,50 @@ revolutionary-antillia:
           I have heard persist rumors
       upgrade:
         tunnels: |
-          <p>Your Excellency,</p>
-          <p>{evidence} that secret tunnels are being built beneath {fort}.</p>
-          <p>Ever your faithful servant,<br />Agent {agent}</p>
+          <p><strong>Language:</strong> The report is written in {lang}.</p>
+          <hr />
+          <p><em>Your Excellency,</em></p>
+          <p><em>{evidence} that secret tunnels are being built beneath
+            {fort}.</em></p>
+          <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
         expansion: |
-          <p>Your Excellency,</p>
-          <p>{evidence} that a new battery is being added to {fort}.</p>
-          <p>Ever your faithful servant,<br />Agent {agent}</p>
+          <p><strong>Language:</strong> The report is written in {lang}.</p>
           <p><strong>Mechanics:</strong> If true, the fort will have +50 HP and
             one additional die in its broadsides attack.</p>
+          <hr />
+          <p><em>Your Excellency,</em></p>
+          <p><em>{evidence} that a new battery is being added to
+            {fort}.</em></p>
+          <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
         armor: |
-          <p>Your Excellency,</p>
-          <p>{evidence} that the walls of {fort} are being rebuilt with coral
-            stone. As your excellency well knows, such stone compresses under
-            cannon fire rather than shattering.</p>
-          <p>Ever your faithful servant,<br />Agent {agent}</p>
-          <p><strong>Mechanics:</strong> If true, the fort has tier 1 armor.</p>
+          <p><strong>Language:</strong> The report is written in {lang}.</p>
+          <p><strong>Mechanics:</strong> If true, the fort has tier
+            1 armor.</p>
+          <hr />
+          <p><em>Your Excellency,</em></p>
+          <p><em>{evidence} that the walls of {fort} are being rebuilt with
+            coral stone. As your excellency well knows, such stone compresses
+            under cannon fire rather than shattering.</em></p>
+          <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
         undead:
           premium: |
-            <p>Your Excellency,</p>
-            <p>{evidence} that several chambers have been dug beneath {fort},
-              and these chambers have been stocked with @UUID[Actor.h7zfo0id60XazmVT].
+            <p><strong>Language:</strong> The report is written in {lang}.</p>
+            <hr />
+            <p><em>Your Excellency,</em></p>
+            <p><em>{evidence} that several chambers have been dug beneath
+              {fort}, and these chambers have been stocked with
+              @UUID[Actor.h7zfo0id60XazmVT].
               If the garrison believes that all is lost, a lever can be pulled
               to release these skeletons, ensuring that if they cannot maintain
-              control of the fort then no one will.</p>
-            <p>Ever your faithful servant,<br />Agent {agent}</p>
+              control of the fort then no one will.</em<</p>
+            <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
           base: |
-            <p>Your Excellency,</p>
-            <p>{evidence} that several chambers have been dug beneath {fort},
-              and these chambers have been stocked with skeletons. If the
-              garrison believes that all is lost, a lever can be pulled to
+            <p><strong>Language:</strong> The report is written in {lang}.</p>
+            <hr />
+            <p><em>Your Excellency,</em></p>
+            <p><em>{evidence} that several chambers have been dug beneath
+              {fort}, and these chambers have been stocked with skeletons. If
+              the garrison believes that all is lost, a lever can be pulled to
               release these skeletons, ensuring that if they cannot maintain
-              control of the fort then no one will.</p>
-            <p>Ever your faithful servant,<br />Agent {agent}</p>
-        mechanics:
-          tunnels: <p><strong>Mechanics:</strong> None</p>
-          expansion: |
-            <p><strong>Mechanics:</strong> If true, the fort will have +50 HP and
-              one additional die in its broadsides attack.</p>
-          armor: |
-            <p><strong>Mechanics:</strong> If true, the fort has tier
-              1 armor.</p>
-          undead: <p><strong>Mechanics:</strong> None</p>
+              control of the fort then no one will.</em></p>
+            <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>

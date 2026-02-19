@@ -1,13 +1,16 @@
 import AdventureState from './state/adventure/class.ts'
 import createLog from './log/create.ts'
-import { MODULE_NAME } from './settings.ts'
+import { MODULE_ID } from './settings.ts'
 
-Hooks.on('init', () => {
-  console.log(`Initializing ${MODULE_NAME}...`)
-})
+import generateBottleMessage from './generators/bottle-messages.ts'
 
-Hooks.on('ready', () => {
-  console.log(`${MODULE_NAME} is ready`)
+Hooks.once('init', async () => {
+  const antillia = game.modules.get(MODULE_ID)
+  if (!antillia) return
+
+  antillia.api = {
+    generateBottleMessage
+  }
 })
 
 Hooks.once('ready', async () => {

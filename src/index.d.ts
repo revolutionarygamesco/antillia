@@ -9,6 +9,10 @@ declare class ApplicationV2 {
   _onClose(options: any): void
 }
 
+declare class ChatMessage {
+  create(data?: any, operation?: any): Promise<any>
+}
+
 declare class DialogV2 extends ApplicationV2 {
   element: HTMLElement
   constructor(options?: any)
@@ -79,13 +83,16 @@ declare const game: {
 
 declare const foundry: {
   documents: {
+    ChatMessage: ChatMessage,
     Item: Item,
     JournalEntry: JournalEntry
   }
 }
 
 interface BottleMessage {
-  description?: string
-  with?: string
-  contents: Item[]
+  description?: string // Any additional description of the bottle
+  with?: string // What else was found with the note
+  hint?: string // Hint as to what else besides paper may be inside
+  additional?: string // Additional items to show in chat
+  contents: Item[] // The items found in the bottle; usually at least the message
 }

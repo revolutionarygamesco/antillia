@@ -7,9 +7,11 @@ export const UUIDS: Record<string, string> = {
   TIMELINE: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.ONIKQ49Szsbcy0J3',
   INTRO: 'JournalEntry.LF0tUW5xSU8tn8cz.JournalEntryPage.woSCZnMC67RNawLv',
   JOURNAL_ROOT: 'lGxWU3hj8j30VY0P',
-  DECRYPTED_INTEL_MESSAGES: 'KuEv3MNMmKAf1hRy',
+  DECRYPTED_INTEL_MESSAGES: 'qqrvDHxpjZn5FYW2',
   ENCRYPTED_INTEL_MESSAGES: 'etmda0JUHwKk4vfl',
+  EMPIRES: 'RollTable.pK3FfgibC1HfBefV',
   FORTS: 'RollTable.XleTdybFWP2znvEq',
   JOURNAL_KINGSTON: 'JournalEntry.swgzi8mEAgfLJOEk',
-  JOURNAL_FORT_CHARLES: 'JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z'
+  JOURNAL_FORT_CHARLES: 'JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z',
+  BOTTLE: 'Item.2UylOEF2C19GfRNF'
 }

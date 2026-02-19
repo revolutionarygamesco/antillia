@@ -1,6 +1,7 @@
 import selectRandomBetween from '../../../random/between.ts'
 import selectRandomElement from '../../../random/el.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
+import makeLink from '../../../utilities/make-link.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 export const getUpgradeNode = (upgrade: string, premium: boolean): string => {
@@ -11,6 +12,7 @@ export const getUpgradeNode = (upgrade: string, premium: boolean): string => {
 const writeFortUpgradeReport = (
   fort: TableResult,
   upgrade: string,
+  lang: string,
   premium: boolean = false
 ): string => {
   const prefix = [MODULE_ID, 'intelligence', 'fort-upgrades']
@@ -18,7 +20,7 @@ const writeFortUpgradeReport = (
   const evidence = localize([...prefix, 'evidence', ev])
   const agent = selectRandomBetween(1, 50)
   const node = getUpgradeNode(upgrade, premium)
-  return localize([...prefix, 'upgrade', node], { fort, agent, evidence })
+  return localize([...prefix, 'upgrade', node], { fort: makeLink(fort), lang, agent, evidence })
 }
 
 export default writeFortUpgradeReport
