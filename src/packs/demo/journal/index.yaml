@@ -1,2 +1,17 @@
 - include: ./src/packs/demo/journal/how-to.yaml
+- include: ./src/packs/demo/journal/settlements/europe/amsterdam.yaml
+- include: ./src/packs/demo/journal/settlements/europe/bordeaux.yaml
+- include: ./src/packs/demo/journal/settlements/europe/cadiz.yaml
+- include: ./src/packs/demo/journal/settlements/europe/la-rochelle.yaml
+- include: ./src/packs/demo/journal/settlements/europe/le-havre.yaml
+- include: ./src/packs/demo/journal/settlements/europe/london.yaml
+- include: ./src/packs/demo/journal/settlements/europe/lorient.yaml
+- include: ./src/packs/demo/journal/settlements/europe/nantes.yaml
+- include: ./src/packs/demo/journal/settlements/greater-antilles/cuba/havana.yaml
+- include: ./src/packs/demo/journal/settlements/greater-antilles/hispaniola/cap-francais.yaml
 - include: ./src/packs/demo/journal/settlements/greater-antilles/jamaica/kingston.yaml
+- include: ./src/packs/demo/journal/settlements/lesser-antilles/basse-terre.yaml
+- include: ./src/packs/demo/journal/settlements/lesser-antilles/basseterre.yaml
+- include: ./src/packs/demo/journal/settlements/lesser-antilles/bridgetown.yaml
+- include: ./src/packs/demo/journal/settlements/lesser-antilles/st-johns.yaml
+- include: ./src/packs/demo/journal/settlements/lesser-antilles/st-pierre.yaml
