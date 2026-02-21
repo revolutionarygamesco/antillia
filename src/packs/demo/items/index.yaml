@@ -1,1 +1,3 @@
 - include: ./src/packs/demo/items/bottle.yaml
+- include: ./src/packs/demo/items/cargo/ash.yaml
+- include: ./src/packs/demo/items/cargo/sugar.yaml

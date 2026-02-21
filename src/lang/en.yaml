@@ -34,6 +34,22 @@ revolutionary-antillia:
       d5: Thursday
       d6: Friday
       d7: Saturday
+  places:
+    Basse-Terre: Basse-Terre
+    Basseterre: Basseterre
+    Bridgetown: Bridgetown
+    Bordeaux: Bordeaux
+    Cadiz: Cádiz
+    Cap-Francais: Cap-Français
+    Havana: Havana
+    Kingston: Kingston
+    La-Rochelle: La Rochelle
+    Le-Havre: Le Havre
+    London: London
+    Lorient: Lorient
+    Nantes: Nantes
+    St-Johns: Saint John’s
+    St-Pierre: Saint-Pierre
   log:
     title: Adventure Log
     first: |
@@ -173,3 +189,6 @@ revolutionary-antillia:
               release these skeletons, ensuring that if they cannot maintain
               control of the fort then no one will.</em></p>
             <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
+    convoy-goods:
+      ash: ash
+      sugar: sugar
