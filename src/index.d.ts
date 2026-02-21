@@ -1,7 +1,3 @@
-declare class ChatMessage {
-  create(data?: any, operation?: any): Promise<any>
-}
-
 declare class ApplicationV2 {
   render: (options: boolean) => Promise<ApplicationV2>
   close: (options?: any) => Promise<ApplicationV2>
@@ -18,6 +14,18 @@ declare class DialogV2 extends ApplicationV2 {
   constructor(options?: any)
   close: (options?: any) => Promise<DialogV2>
 }
+
+declare class Roll {
+  constructor(formula: string, data?: Record<string, any>)
+  evaluate(options?: {
+    allowInteractive?: boolean,
+    allowStrings?: boolean,
+    maximize?: boolean,
+    minimize?: boolean
+  }): Promise<Roll>
+  result: number
+}
+
 
 interface Collection<K, V> extends Map<K, V> {
   find(predicate: (value: V, key: K, collection: this) => boolean): V | undefined
