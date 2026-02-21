@@ -4,9 +4,10 @@ import selectRandomElement from '../../../random/el.ts'
 import drawFirst from '../../../utilities/draw-first.ts'
 import getImperialLanguage from '../imperial-language.ts'
 import writeFortUpgradeReport from './write.ts'
+import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
-const generateRandomFortUpgradeReport = async (): Promise<{ title: string, report: string }> => {
+const generateRandomFortUpgradeReport = async (): Promise<BottleMessageIntel> => {
   let fort = await drawFirst(UUIDS.FORTS)
   if (!fort) fort = { type: 'document', documentUuid: UUIDS.JOURNAL_FORT_CHARLES, name: 'Fort Charles' } as TableResult
 

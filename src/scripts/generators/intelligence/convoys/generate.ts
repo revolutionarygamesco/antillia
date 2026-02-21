@@ -6,6 +6,7 @@ import selectRandomElement from '../../../random/el.ts'
 import roll from '../../../utilities/roll.ts'
 import routes, { type ConvoyRouteRef } from './routes.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
+import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 const makeLinkFromRef = (ref: ConvoyRouteRef): string => {
@@ -13,7 +14,7 @@ const makeLinkFromRef = (ref: ConvoyRouteRef): string => {
   return `@UUID[${ref.uuid}]{${name}}`
 }
 
-const generateRandomConvoySchedule = async (): Promise<{  title: string, report: string }> => {
+const generateRandomConvoySchedule = async (): Promise<BottleMessageIntel> => {
   const present = getTime()
 
   // How old is this intelligence?

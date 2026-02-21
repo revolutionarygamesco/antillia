@@ -1,13 +1,14 @@
 import getDay from '../../time/day.ts'
 import localize from '../../utilities/wrappers/localize.ts'
 import selectRandomElement from '../../random/el.ts'
+import { type BottleMessageIntel } from './bottle-message-intel.ts'
 import { MODULE_ID, UUIDS } from '../../settings.ts'
 
 import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
 import generateRandomConvoySchedule from './convoys/generate.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
-  const reporters: Array<() => Promise<{ title: string, report: string }>> = [
+  const reporters: Array<() => Promise<BottleMessageIntel>> = [
     generateRandomConvoySchedule,
     generateRandomConvoySchedule,
     generateRandomFortUpgradeReport
