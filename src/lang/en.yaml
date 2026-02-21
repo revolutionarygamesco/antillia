@@ -5,6 +5,27 @@ revolutionary-antillia:
     port: port
     Starboard: Starboard
     starboard: starboard
+  numbers:
+    1: One
+    2: Two
+    3: Three
+    4: Four
+    5: Five
+    6: Six
+    7: Seven
+    8: Eight
+    9: Nine
+    10: Ten
+    11: Eleven
+    12: Twelve
+    13: Thirteen
+    14: Fourteen
+    15: Fifteen
+    16: Sixteen
+    17: Seventeen
+    18: Eighteen
+    19: Nineteen
+    20: Twenty
   chapters:
     ch1: Chapter I.
     ch2: Chapter II.
@@ -189,6 +210,14 @@ revolutionary-antillia:
               release these skeletons, ensuring that if they cannot maintain
               control of the fort then no one will.</em></p>
             <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
-    convoy-goods:
-      ash: ash
-      sugar: sugar
+    convoys:
+      goods:
+        ash: ash
+        sugar: sugar
+      title: Convoy Schedule
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        <p><strong>Convoy Schedule:</strong> The report provides intelligence
+          on a convoy of {size} {colors} merchant frigates loaded with {good},
+          scheduled to depart {origin} for {dest} on {day}, with {escort} naval
+          ships in escort.</p>

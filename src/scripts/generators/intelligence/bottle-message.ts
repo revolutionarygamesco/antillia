@@ -4,9 +4,12 @@ import selectRandomElement from '../../random/el.ts'
 import { MODULE_ID, UUIDS } from '../../settings.ts'
 
 import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
+import generateRandomConvoySchedule from './convoys/generate.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
   const reporters: Array<() => Promise<{ title: string, report: string }>> = [
+    generateRandomConvoySchedule,
+    generateRandomConvoySchedule,
     generateRandomFortUpgradeReport
   ]
 

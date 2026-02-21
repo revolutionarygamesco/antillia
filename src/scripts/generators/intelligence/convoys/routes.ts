@@ -1,9 +1,8 @@
-import localize from '../../../utilities/wrappers/localize.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 export interface ConvoyRouteRef {
   uuid: string
-  name: string
+  name: string[]
 }
 
 interface ConvoyRoute {
@@ -17,12 +16,12 @@ interface ConvoyRoute {
 
 const goods: Record<string, ConvoyRouteRef> = {
   ash: {
-    uuid: 'Compendium.pirateborg.equipment-gear.Item.AshItem000000001',
-    name: localize([MODULE_ID, 'intelligence', 'convoy-goods', 'ash'])
+    uuid: 'Item.lDAchtutyqcPJq1h',
+    name: [MODULE_ID, 'intelligence', 'convoys', 'goods', 'ash']
   },
   sugar: {
     uuid: 'Item.Q9clnxDy1Otm00Ed',
-    name: localize([MODULE_ID, 'intelligence', 'convoy-goods', 'sugar'])
+    name: [MODULE_ID, 'intelligence', 'convoys', 'goods', 'sugar']
   }
 }
 
@@ -30,63 +29,63 @@ const placePrefix = [MODULE_ID, 'places']
 const ports: Record<string, ConvoyRouteRef> = {
   basseTerre: {
     uuid: UUIDS.JOURNAL_BASSE_TERRE,
-    name: localize([...placePrefix, 'Basse-Terre'])
+    name: [...placePrefix, 'Basse-Terre']
   },
   basseterre: {
     uuid: UUIDS.JOURNAL_BASSETERRE,
-    name: localize([...placePrefix, 'Basseterre'])
+    name: [...placePrefix, 'Basseterre']
   },
   bridgetown: {
     uuid: UUIDS.JOURNAL_BRIDGETOWN,
-    name: localize([...placePrefix, 'Bridgetown'])
+    name: [...placePrefix, 'Bridgetown']
   },
   bordeaux: {
     uuid: UUIDS.JOURNAL_BORDEAUX,
-    name: localize([...placePrefix, 'Bordeaux'])
+    name: [...placePrefix, 'Bordeaux']
   },
   cadiz: {
     uuid: UUIDS.JOURNAL_CADIZ,
-    name: localize([...placePrefix, 'Cadiz'])
+    name: [...placePrefix, 'Cadiz']
   },
   capFrancais: {
     uuid: UUIDS.JOURNAL_CAP_FRANCAIS,
-    name: localize([...placePrefix, 'Cap-Francais'])
+    name: [...placePrefix, 'Cap-Francais']
   },
   havana: {
     uuid: UUIDS.JOURNAL_HAVANA,
-    name: localize([...placePrefix, 'Havana'])
+    name: [...placePrefix, 'Havana']
   },
   kingston: {
     uuid: UUIDS.JOURNAL_KINGSTON,
-    name: localize([...placePrefix, 'Kingston'])
+    name: [...placePrefix, 'Kingston']
   },
   laRochelle: {
     uuid: UUIDS.JOURNAL_LA_ROCHELLE,
-    name: localize([...placePrefix, 'La-Rochelle'])
+    name: [...placePrefix, 'La-Rochelle']
   },
   leHavre: {
     uuid: UUIDS.JOURNAL_LE_HAVRE,
-    name: localize([...placePrefix, 'Le-Havre'])
+    name: [...placePrefix, 'Le-Havre']
   },
   london: {
     uuid: UUIDS.JOURNAL_LONDON,
-    name: localize([...placePrefix, 'London'])
+    name: [...placePrefix, 'London']
   },
   lorient: {
     uuid: UUIDS.JOURNAL_LORIENT,
-    name: localize([...placePrefix, 'Lorient'])
+    name: [...placePrefix, 'Lorient']
   },
   nantes: {
     uuid: UUIDS.JOURNAL_NANTES,
-    name: localize([...placePrefix, 'Nantes'])
+    name: [...placePrefix, 'Nantes']
   },
   stjohn: {
     uuid: UUIDS.JOURNAL_ST_JOHNS,
-    name: localize([...placePrefix, 'St-Johns'])
+    name: [...placePrefix, 'St-Johns']
   },
   stpierre: {
     uuid: UUIDS.JOURNAL_ST_PIERRE,
-    name: localize([...placePrefix, 'St-Pierre'])
+    name: [...placePrefix, 'St-Pierre']
   }
 }
 
