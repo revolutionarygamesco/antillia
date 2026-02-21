@@ -1,0 +1,11 @@
+_id: PZoDlj39qmuygrCH
+name: Generate Message in a Bottle
+type: script
+img: systems/pirateborg/icons/equipment/gear/bottle-fine-rum.png
+folder: TSVdZoDBj2RxMAlX
+scope: global
+author: ZL7SvFl0k87mx0B1
+command: |
+  const scope = 'revolutionary-antillia'
+  const api = game.modules.get(scope).api
+  await api.generateBottleMessage()

@@ -15,7 +15,8 @@ journal:
 scenes: []
 tables:
   include: ./src/packs/demo/rolltables/index.yaml
-macros: []
+macros:
+  include: ./src/packs/demo/macros/index.yaml
 combats: []
 cards: []
 playlists: []
