@@ -1,3 +1,5 @@
+import selectRandomElement from '../../../random/el.ts'
+import stockArray from '../../../random/stock.ts'
 import { UUIDS } from '../../../settings.ts'
 
 export interface EmpireData {
@@ -52,6 +54,15 @@ const empires: Record<string, EmpireData> = {
     ports: UUIDS.PORTS_DUTCH,
     settlements: UUIDS.SETTLEMENTS_DUTCH
   }
+}
+
+export const pickRandomEmpire = (): EmpireData => {
+  return selectRandomElement(stockArray([
+    { n: 5, item: empires.spanish },
+    { n: 4, item: empires.british },
+    { n: 2, item: empires.french },
+    { n: 1, item: empires.dutch }
+  ]))
 }
 
 export default empires

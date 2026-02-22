@@ -1,7 +1,7 @@
 import getDay from '../../time/day.ts'
 import localize from '../../utilities/wrappers/localize.ts'
 import selectRandomElement from '../../random/el.ts'
-import { type BottleMessageIntel } from './bottle-message-intel.ts'
+import stockArray from '../../random/stock.ts'
 import { MODULE_ID, UUIDS } from '../../settings.ts'
 
 import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
@@ -11,19 +11,13 @@ import generateOutbreakReport from './outbreak/generate.ts'
 import generateSpyList from './spies/generate.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
-  const reporters: Array<() => Promise<BottleMessageIntel>> = [
-    generateRandomConvoySchedule,
-    generateRandomConvoySchedule,
-    generateRandomConvoySchedule,
-    generateRandomConvoySchedule,
-    generateCorruptionReport,
-    generateCorruptionReport,
-    generateRandomFortUpgradeReport,
-    generateRandomFortUpgradeReport,
-    generateOutbreakReport,
-    generateOutbreakReport,
-    generateSpyList
-  ]
+  const reporters = stockArray([
+    { n: 4, item: generateRandomConvoySchedule },
+    { n: 2, item: generateCorruptionReport },
+    { n: 2, item: generateRandomFortUpgradeReport },
+    { n: 2, item: generateOutbreakReport },
+    { n: 1, item: generateSpyList }
+  ])
 
   const reporter = selectRandomElement(reporters)
   const { title, report } = await reporter()

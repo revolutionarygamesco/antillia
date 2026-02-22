@@ -2,6 +2,7 @@ import drawFirst from '../../../utilities/draw-first.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import selectRandomElement from '../../../random/el.ts'
+import stockArray from '../../../random/stock.ts'
 import empires from '../shared-data/empires.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
@@ -21,8 +22,11 @@ const generateCorruptionReport = async (): Promise<{ title: string, report: stri
     'embezzlement', 'ash', 'arms', 'privateers', 'pardons', 'probate',
     'illegal-trade', 'extortion-scourge', 'extortion-pirates', 'harboring',
     'imprisonment'])
-  const ev = selectRandomElement(['solid', 'testimony', 'testimony',
-    'hearsay', 'hearsay', 'hearsay'])
+  const ev = selectRandomElement(stockArray([
+    { n: 1, item: 'solid' },
+    { n: 2, item: 'testimony' },
+    { n: 3, item: 'hearsay' }
+  ]))
   const l = selectRandomElement(Object.keys(empires))
   const lang = localize([MODULE_ID, 'factions', l, 'lang'])
 

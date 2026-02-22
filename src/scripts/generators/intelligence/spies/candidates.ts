@@ -1,3 +1,4 @@
+import stockArray from '../../../random/stock.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 const prefix = [MODULE_ID, 'intelligence', 'spies']
@@ -36,16 +37,12 @@ export const positions: Array<Position | Position[]> = [
   ]
 ]
 
-export const rewards: string[][] = [
-  [...prefix, 'motivation', 'reward', 'money'],
-  [...prefix, 'motivation', 'reward', 'money'],
-  [...prefix, 'motivation', 'reward', 'money'],
-  [...prefix, 'motivation', 'reward', 'money'],
-  [...prefix, 'motivation', 'reward', 'pardon'],
-  [...prefix, 'motivation', 'reward', 'pardon'],
-  [...prefix, 'motivation', 'reward', 'promise', 'fulfilled'],
-  [...prefix, 'motivation', 'reward', 'promise', 'unfulfilled']
-]
+export const rewards: string[][] = stockArray([
+  { n: 4, item: [...prefix, 'motivation', 'reward', 'money'] },
+  { n: 2, item: [...prefix, 'motivation', 'reward', 'pardon'] },
+  { n: 1, item: [...prefix, 'motivation', 'reward', 'promise', 'fulfilled'] },
+  { n: 1, item: [...prefix, 'motivation', 'reward', 'promise', 'unfulfilled'] }
+])
 
 export const baseCoercion: string[][] = [
   [...prefix, 'motivation', 'coercion', 'affair'],

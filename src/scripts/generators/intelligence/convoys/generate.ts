@@ -3,7 +3,9 @@ import getTime from '../../../time/get.ts'
 import isNumber from '../../../utilities/guards/number.ts'
 import selectRandomBetween from '../../../random/between.ts'
 import selectRandomElement from '../../../random/el.ts'
+import stockArray from '../../../random/stock.ts'
 import roll from '../../../utilities/roll.ts'
+import generateReportAge from '../shared-data/age.ts'
 import routes, { type ConvoyRouteRef } from './routes.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
@@ -18,20 +20,17 @@ const generateRandomConvoySchedule = async (): Promise<BottleMessageIntel> => {
   const present = getTime()
 
   // How old is this intelligence?
-  const fresh: [number, number] = [10, 30]
-  const dated: [number, number] = [30, 90]
-  const old: [number, number] = [90, 700]
-  const brackets: Array<[number, number]> = [fresh, dated, dated, old, old, old]
-  const bracket = selectRandomElement(brackets)
-  const age = selectRandomBetween(...bracket)
+  const age = generateReportAge()
 
   // And how far out was it predicting?
   const high: [number, number] = [60, 90]
   const mid: [number, number] = [30, 60]
   const low: [number, number] = [5, 30]
-  const qualities: Array<[number, number]> = [high, mid, mid, low, low, low]
-  const quality = selectRandomElement(qualities)
-  const intel = selectRandomBetween(...quality)
+  const intel = selectRandomBetween(...selectRandomElement(stockArray([
+    { n: 1, item: high },
+    { n: 2, item: mid },
+    { n: 3, item: low }
+  ])))
 
   // So the convoy is leaving...
   const days = intel - age
