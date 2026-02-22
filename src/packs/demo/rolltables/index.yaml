@@ -1,5 +1,13 @@
 - include: ./src/packs/demo/rolltables/common/factions/empires.yaml
+- include: ./src/packs/demo/rolltables/common/factions/forts/british.yaml
+- include: ./src/packs/demo/rolltables/common/factions/forts/dutch.yaml
+- include: ./src/packs/demo/rolltables/common/factions/forts/french.yaml
+- include: ./src/packs/demo/rolltables/common/factions/forts/spanish.yaml
 - include: ./src/packs/demo/rolltables/common/factions/forts/any.yaml
+- include: ./src/packs/demo/rolltables/common/factions/governors/british.yaml
+- include: ./src/packs/demo/rolltables/common/factions/governors/dutch.yaml
+- include: ./src/packs/demo/rolltables/common/factions/governors/french.yaml
+- include: ./src/packs/demo/rolltables/common/factions/governors/spanish.yaml
 - include: ./src/packs/demo/rolltables/common/factions/governors/all.yaml
 - include: ./src/packs/demo/rolltables/common/diseases/early.yaml
 - include: ./src/packs/demo/rolltables/common/diseases/late.yaml
@@ -11,4 +19,9 @@
 - include: ./src/packs/demo/rolltables/common/settlements/dutch.yaml
 - include: ./src/packs/demo/rolltables/common/settlements/french.yaml
 - include: ./src/packs/demo/rolltables/common/settlements/spanish.yaml
+- include: ./src/packs/demo/rolltables/common/ports/any.yaml
+- include: ./src/packs/demo/rolltables/common/ports/british.yaml
+- include: ./src/packs/demo/rolltables/common/ports/dutch.yaml
+- include: ./src/packs/demo/rolltables/common/ports/french.yaml
+- include: ./src/packs/demo/rolltables/common/ports/spanish.yaml
 - include: ./src/packs/demo/rolltables/common/islands/any.yaml

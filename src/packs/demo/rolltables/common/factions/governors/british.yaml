@@ -1,0 +1,18 @@
+_id: 8vhF6q953mMFPfUW
+_key: "!tables!8vhF6q953mMFPfUW"
+name: British Royal Governors
+description: Representatives of the King of England in the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d20
+folder: sA9TxoBm65wTEzP6
+results:
+  - _id: fNoBGbZQSpUhn5sM
+    _key: "!tables.results!8vhF6q953mMFPfUW.fNoBGbZQSpUhn5sM"
+    range:
+      - 1
+      - 20
+    weight: 20
+    type: document
+    img: modules/revolutionary-pbshipgen/images/british.png
+    documentUuid: JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV
+    name: The Governor of Jamaica

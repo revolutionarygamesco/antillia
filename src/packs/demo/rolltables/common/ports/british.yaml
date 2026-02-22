@@ -1,0 +1,18 @@
+_id: lgjwe1CZm74yN1iy
+_key: "!tables!lgjwe1CZm74yN1iy"
+name: British Ports
+description: A selection of major ports in the Caribbean that remain loyal to
+  the British crown.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: Cl2euPeJxooNOC6M
+results:
+  - _id: I0v3f82bqnPOMnOq
+    _key: "!tables.results!lgjwe1CZm74yN1iy.I0v3f82bqnPOMnOq"
+    range:
+      - 1
+      - 6
+    weight: 6
+    type: document
+    documentUuid: JournalEntry.swgzi8mEAgfLJOEk
+    name: Kingston

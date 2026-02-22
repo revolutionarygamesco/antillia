@@ -1,0 +1,17 @@
+_id: x9k31Vvq3Jtp4QPS
+_key: "!tables!x9k31Vvq3Jtp4QPS"
+name: Spanish Ports
+description: A selection of major ports in the Caribbean that remain loyal to Spain.
+img: icons/svg/d20-grey.svg
+formula: 1d8
+folder: Cl2euPeJxooNOC6M
+results:
+  - _id: P6YzntLTlulbuKza
+    _key: "!tables.results!UugXd5EFP55zrlQN.P6YzntLTlulbuKza"
+    range:
+      - 1
+      - 8
+    weight: 8
+    type: document
+    documentUuid: JournalEntry.d2FyewZyG7hc4RgP
+    name: Havana

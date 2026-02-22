@@ -11,8 +11,35 @@ results:
     _key: "!tables.results!eEVExp6HIqtAc2w9.ONXX9spWG4QJwg06"
     range:
       - 1
+      - 5
+    weight: 5
+    type: document
+    documentUuid: RollTable.GAL66zLQMb5ArdWa
+    name: Captains-General of New Spain
+  - _id: WCs0uK2WyTKQlcSg
+    _key: "!tables.results!eEVExp6HIqtAc2w9.WCs0uK2WyTKQlcSg"
+    range:
+      - 6
+      - 9
+    weight: 4
+    type: document
+    documentUuid: RollTable.8vhF6q953mMFPfUW
+    name: British Royal Governors
+  - _id: rr1ia5SPQupRb8cr
+    _key: "!tables.results!eEVExp6HIqtAc2w9.rr1ia5SPQupRb8cr"
+    range:
+      - 10
+      - 11
+    weight: 2
+    type: document
+    documentUuid: RollTable.78dgsDO5noFLif8J
+    name: Governors of the French West Indies
+  - _id: URNotfjqMpSDsQX7
+    _key: "!tables.results!eEVExp6HIqtAc2w9.URNotfjqMpSDsQX7"
+    range:
       - 12
-    weight: 12
-    img: modules/revolutionary-pbshipgen/images/british.png
-    documentUuid: JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV
-    name: The Governor of Jamaica
+      - 12
+    weight: 1
+    type: document
+    documentUuid: RollTable.6RRExTZxFrMtwZN5
+    name: Commanders of the Dutch West India Company

@@ -1,0 +1,18 @@
+_id: eBy9oCxCQwjCEoVR
+_key: "!tables!eBy9oCxCQwjCEoVR"
+name: Spanish Forts
+description: Forts controlled by the Spanish Empire.
+img: icons/svg/d20-grey.svg
+formula: 1d20
+folder: ibX58S6se3bOulpl
+results:
+  - _id: kO6PFfllIZsVf3N4
+    _key: "!tables.results!eBy9oCxCQwjCEoVR.kO6PFfllIZsVf3N4"
+    range:
+      - 1
+      - 20
+    weight: 20
+    img: modules/revolutionary-pbshipgen/images/spanish.png
+    type: document
+    documentUuid: JournalEntry.d2FyewZyG7hc4RgP.JournalEntryPage.PDWyS8fvu1JstVkx
+    name: Castillo de la Real Fuerza

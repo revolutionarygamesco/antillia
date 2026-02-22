@@ -1,0 +1,19 @@
+_id: 78dgsDO5noFLif8J
+_key: "!tables!78dgsDO5noFLif8J"
+name: Governors of the French West Indies
+description: Representatives of the King of France in the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d8
+descriptions: Representatives of the King of France in the Caribbean.
+folder: sA9TxoBm65wTEzP6
+results:
+  - _id: zrPLgPJesdzVtn6u
+    _key: "!tables.results!78dgsDO5noFLif8J.zrPLgPJesdzVtn6u"
+    range:
+      - 1
+      - 8
+    weight: 8
+    type: document
+    img: modules/revolutionary-pbshipgen/images/french.png
+    documentUuid: JournalEntry.mumcAXUh50KDVQkx.JournalEntryPage.HRN57CI38OzUCqtU
+    name: The Governor-General of Saint-Domingue

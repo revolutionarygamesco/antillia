@@ -1,0 +1,18 @@
+_id: ZCdLm4jmEhR52eKP
+_key: "!tables!ZCdLm4jmEhR52eKP"
+name: Dutch Forts
+description: Forts controlled by the Dutch West India Company.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: ibX58S6se3bOulpl
+results:
+  - _id: 9rSfea661C9GGOoL
+    _key: "!tables.results!ZCdLm4jmEhR52eKP.9rSfea661C9GGOoL"
+    range:
+      - 1
+      - 6
+    weight: 6
+    img: modules/revolutionary-pbshipgen/images/dutch.png
+    type: document
+    documentUuid: JournalEntry.Oadp1TwWnPo1A1O3.JournalEntryPage.vCJVYOJvuKpBdp6X
+    name: Fort Amsterdam

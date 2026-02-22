@@ -1,0 +1,18 @@
+_id: tfjKw6DW67kDPt2u
+_key: "!tables!tfjKw6DW67kDPt2u"
+name: French Forts
+description: Forts controlled by the Kingdom of France.
+img: icons/svg/d20-grey.svg
+formula: 1d10
+folder: ibX58S6se3bOulpl
+results:
+  - _id: TFTzhK1UY4dAS6bF
+    _key: "!tables.results!tfjKw6DW67kDPt2u.TFTzhK1UY4dAS6bF"
+    range:
+      - 1
+      - 10
+    weight: 10
+    img: modules/revolutionary-pbshipgen/images/french.png
+    type: document
+    documentUuid: JournalEntry.XYpQ6xk1leHVMX2p.JournalEntryPage.k0yvmeMESU4EwkuG
+    name: Fort Royal

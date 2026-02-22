@@ -1,0 +1,18 @@
+_id: KCXH64t3GaYANr2n
+_key: "!tables!KCXH64t3GaYANr2n"
+name: Dutch Settlements
+description: A selection of ports in the Caribbean controlled by the Dutch West
+  India Company.
+img: icons/svg/d20-grey.svg
+formula: 1d10
+folder: Cl2euPeJxooNOC6M
+results:
+  - _id: 0gd68Z0jcgTVAA4N
+    _key: "!tables.results!KCXH64t3GaYANr2n.0gd68Z0jcgTVAA4N"
+    range:
+      - 1
+      - 10
+    weight: 10
+    type: document
+    documentUuid: JournalEntry.Oadp1TwWnPo1A1O3
+    name: Willemstad

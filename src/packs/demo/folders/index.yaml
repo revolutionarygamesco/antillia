@@ -17,6 +17,7 @@
 - include: ./src/packs/demo/folders/rolltables/common/factions/governors.yaml
 - include: ./src/packs/demo/folders/rolltables/common/islands.yaml
 - include: ./src/packs/demo/folders/rolltables/common/settlements.yaml
+- include: ./src/packs/demo/folders/rolltables/common/ports.yaml
 - include: ./src/packs/demo/folders/items/root.yaml
 - include: ./src/packs/demo/folders/items/cargo.yaml
 - include: ./src/packs/demo/folders/items/messages/root.yaml

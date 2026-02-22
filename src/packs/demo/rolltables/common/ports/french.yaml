@@ -1,0 +1,18 @@
+_id: 1G1lRoA0PwKOQ3Q3
+_key: "!tables!1G1lRoA0PwKOQ3Q3"
+name: French Ports
+description: A selection of major ports in the Caribbean that remain loyal to
+  the Kingdom of France.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: Cl2euPeJxooNOC6M
+results:
+  - _id: jOYinID7YZTBItGW
+    _key: "!tables.results!1G1lRoA0PwKOQ3Q3.jOYinID7YZTBItGW"
+    range:
+      - 1
+      - 6
+    weight: 6
+    type: document
+    documentUuid: JournalEntry.KaFKJRXB9Zv8MxQd
+    name: Cap-Français

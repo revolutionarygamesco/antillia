@@ -1,0 +1,18 @@
+_id: GAL66zLQMb5ArdWa
+_key: "!tables!GAL66zLQMb5ArdWa"
+name: Captains-General of New Spain
+description: Captains-General of the Spanish Empire in the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d10
+folder: sA9TxoBm65wTEzP6
+results:
+  - _id: qS4kvW3zaQ7y9so1
+    _key: "!tables.results!GAL66zLQMb5ArdWa.qS4kvW3zaQ7y9so1"
+    range:
+      - 1
+      - 10
+    weight: 10
+    type: document
+    img: modules/revolutionary-pbshipgen/images/spanish.png
+    documentUuid: JournalEntry.qU25PDde9rA46YMk.JournalEntryPage.Qafy4KDQF8nj3Ct6
+    name: The Viceroy of New Spain

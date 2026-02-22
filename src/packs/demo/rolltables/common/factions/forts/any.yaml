@@ -11,9 +11,39 @@ results:
     _key: "!tables.results!XleTdybFWP2znvEq.TjnUlNPkifO1i1sr"
     range:
       - 1
-      - 20
-    weight: 20
+      - 3
+    weight: 3
+    img: modules/revolutionary-pbshipgen/images/dutch.png
+    type: document
+    documentUuid: RollTable.ZCdLm4jmEhR52eKP
+    name: Dutch Forts
+  - _id: t0KsNuBhPLhvDhkf
+    _key: "!tables.results!XleTdybFWP2znvEq.t0KsNuBhPLhvDhkf"
+    range:
+      - 4
+      - 6
+    weight: 3
+    img: modules/revolutionary-pbshipgen/images/french.png
+    type: document
+    documentUuid: RollTable.tfjKw6DW67kDPt2u
+    name: French Forts
+  - _id: cwQCFqaYRFRE6col
+    _key: "!tables.results!XleTdybFWP2znvEq.cwQCFqaYRFRE6col"
+    range:
+      - 7
+      - 10
+    weight: 4
     img: modules/revolutionary-pbshipgen/images/british.png
     type: document
-    documentUuid: JournalEntry.swgzi8mEAgfLJOEk.JournalEntryPage.zPBtUYuNIxPTAZ1z
-    name: Fort Charles
+    documentUuid: RollTable.oEfVP1A8NzEEPpvA
+    name: British Forts
+  - _id: i2TCX5dY3E35OxDB
+    _key: "!tables.results!XleTdybFWP2znvEq.i2TCX5dY3E35OxDB"
+    range:
+      - 11
+      - 20
+    weight: 10
+    img: modules/revolutionary-pbshipgen/images/spanish.png
+    type: document
+    documentUuid: RollTable.eBy9oCxCQwjCEoVR
+    name: Spanish Forts

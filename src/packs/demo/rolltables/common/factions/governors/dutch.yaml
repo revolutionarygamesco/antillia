@@ -1,0 +1,19 @@
+_id: 6RRExTZxFrMtwZN5
+_key: "!tables!6RRExTZxFrMtwZN5"
+name: Commanders of the Dutch West India Company
+description: Commanders appointed by the Dutch West India Company to oversee its
+  holdings in the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d12
+folder: sA9TxoBm65wTEzP6
+results:
+  - _id: plzKueuj69PbiLgJ
+    _key: "!tables.results!6RRExTZxFrMtwZN5.plzKueuj69PbiLgJ"
+    range:
+      - 1
+      - 12
+    weight: 12
+    type: document
+    img: modules/revolutionary-pbshipgen/images/dutch.png
+    documentUuid: JournalEntry.d1uYZURbQutyN9hX.JournalEntryPage.5Dpv3GLppTDdKCz8
+    name: The Director of Curaçao
