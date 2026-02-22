@@ -1,0 +1,35 @@
+_id: WZMvRX9isEtiUHBG
+_key: "!tables!WZMvRX9isEtiUHBG"
+name: Unnatural Diseases
+description: A selection of unnatural epidemic diseases unique to the Dark Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: 49r7Vz1ZztsaAnad
+results:
+  - _id: 6vAzku5JXyKGastz
+    _key: "!tables.results!WZMvRX9isEtiUHBG.6vAzku5JXyKGastz"
+    range:
+      - 1
+      - 2
+    weight: 2
+    type: document
+    name: The Red Death
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.oNd0U0TaA6X6aO5J
+  - _id: 5BODPSuDmj7BFrju
+    _key: "!tables.results!WZMvRX9isEtiUHBG.5BODPSuDmj7BFrju"
+    range:
+      - 3
+      - 4
+    weight: 2
+    type: document
+    name: Shivers
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.tuPzQzLaVATgffSq
+  - _id: br9qP4Tlv8u25lJY
+    _key: "!tables.results!WZMvRX9isEtiUHBG.br9qP4Tlv8u25lJY"
+    range:
+      - 5
+      - 6
+    weight: 2
+    type: document
+    name: Midas’s Touch
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.A9Fn5nrUTNvUhdug

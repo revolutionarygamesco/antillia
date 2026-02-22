@@ -1,0 +1,378 @@
+_id: IfI5rrlxoD82fxdt
+name: Diseases
+folder: lGxWU3hj8j30VY0P
+ownership:
+  default: 0
+pages:
+  - _id: 3WH5uuWuDFVp3mJU
+    name: Introduction
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Pirate Borg</em> has some nice, simple rules for sickness on
+          p. 31, but with specific tropical diseases being such a critical part
+          of life in the Caribbean during the Golden Age of Piracy, we’ve added
+          some other rules that you can use. There are some elements in our
+          random tables that refer to these, but you can always fall back to
+          the standard rules for sickness if you prefer to keep things
+          simple.</p>
+        <p><strong>Exposure:</strong> When you’re exposed to the disease,
+          you’ll make a test (usually Toughness) to see if you get sick. If
+          someone on board the ship has a contagious disease, you’ve definitely
+          been exposed to it. Only count one exposure per disease per day.</p>
+        <p><strong>Effect:</strong> The toll that the disease takes per long
+          rest. The standard is losing [[/r d6]] HP instead of regaining HP.</p>
+        <p><strong>Long Rest:</strong> <em>Pirate Borg</em> specifies that a
+          “long rest” is <em>overnight</em>, but the watch system had pirates
+          typically working and resting in four-hour shifts, so you get a
+          “long rest” if you’re able to get 8 hours of rest during a 24-hour
+          period, even if that’s broken up by work shifts or other activity.
+          You can only complete one long rest per 24-hour period.</p>
+        <p><strong>Recovery:</strong> The character isn’t sick anymore. Until
+          you recover, you’re still suffering the <strong>effect</strong> at
+          least once a day (even if you don’t get a long rest).</p>
+        <p><strong>Immunity:</strong> This varies from one disease to the next.
+          Sometimes when you recover from a disease you get total, life-long
+          immunity. Sometimes the immunity will last for some number of years
+          or months. Sometimes it isn’t total immunity at all, just bonuses to
+          the DR for exposure or recovery.</p>
+  - _id: oo0LeabCcf1Vib9w
+    name: Yellow Jack
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as yellow fever.</em></p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 12 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Fever, chills, muscle pain, headache,
+          nausea, vomiting, fatigue, loss of appetite, yellow skin</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose [[/r 2d6]]
+          HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 16 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> Once you recover from yellow jack, you
+          can never get it again (you are, in local parlance, “seasoned”).</p>
+  - _id: yBC12Z0MuObM2lxV
+    name: The Ague
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as malaria.</em></p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 14 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Paroxysm of chills followed by fever
+          lasting for six hours occurring every other day; headache, vomitting,
+          joint pain, jaundice and blood in urine the rest of the time.</p>
+        <p><strong>Effect:</strong> Take [[/r d4]] damage from each paroxysm.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 14 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> After recovering from the ague, you take
+          a DR -2 bonus to exposure and recovery checks for it for the next
+          [[/r d4]] years.</p>
+  - _id: keMo9a93hahm40rj
+    name: Bloody Flux
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as dysentery.</em></p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 14 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Bloody diarrhea, abdominal pain,
+          fever.</p>
+        <p><strong>Regular Effect:</strong> At the end of each long rest, lose
+          [[/r d6]] HP instead of recovering HP.</p>
+        <p><strong>Dry Effect:</strong> At the end of each long rest, lose
+          [[/r d6]] HP if you pass on your regular rum ration.</p>
+        <p><strong>Hydrated Effect:</strong> At the end of each long rest, if
+          you took two fresh water rations, you don’t lose any HP.</p>
+        <p><strong>Recovery:</strong> After any of the effects above, test
+          Toughness DR 10 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> After recovering from the bloody flux,
+          you have a DR -2 bonus to exposure and recovery checks for the
+          next [[/r d4]] months.</p>
+  - _id: XLQWptX0pkKVua1C
+    name: The Pox
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as smallpox.</em></p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 16 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Initially fever, vomitting, mouth sores,
+          followed by fluid-filled blisters which scab over.</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose
+          [[/r d6]] HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 12 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> When you recover from the pox, you can
+          never get it again.</p>
+  - _id: OJ8TxsWXxPKvdBK0
+    name: Measles
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 16 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Fever, cough, runny nose, red eyes,
+          rash.</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose
+          [[/r d6]] HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 10 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> When you recover from measles, you can
+          never get it again.</p>
+  - _id: EPDXHrUqpzidD5Uc
+    name: The Grippe
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as influenza.</em></p>
+        <p><strong>Seasonality:</strong> The grippe is a seasonal virus,
+          usually only occurring in December, January, and February.</p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 14 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Fever, runny nose, sore throat, muscle
+          pain, headache, coughing, fatigue</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose
+          [[/r d4]] HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 10 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> When you recover from the grippe, you
+          gain immunity until the next season.</p>
+  - _id: wuocwzON6uBUBDKg
+    name: Chin Cough
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as whooping cough.</em></p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 14 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Initially runny nose, red eyes, fever,
+          cough, escalating to vomiting, a red or blue face, extreme fatigue,
+          and a high-pitched “whoop” sound when breathing.</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose [[/r d4]]
+          HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 12 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> Once you recover from chin cough, you
+          can never get it again.</p>
+  - _id: 2VMr6j2n0ybVy0XF
+    name: Boulogne Sore Throat
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><em>Known today as diptheria.</em></p>
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 12 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Fever, headache, vomiting, muscle and joint
+          pain, rash.</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose [[/r d6]]
+          HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 14 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> Once you recover from Boulogne sore throat,
+          you are immune to it for the next [[/r d10]] years.</p>
+  - _id: wSmiS4CUbjm9c0DF
+    name: Yaws
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 8 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Hard swelling of the skin, ulcer, joint
+          and bone pain</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose [[/r d4]]
+          HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 14 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> DR -2 to exposure test for each time that
+          you have recovered from yaws.</p>
+  - _id: oNd0U0TaA6X6aO5J
+    name: The Red Death
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 12 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Sharp pains, and sudden dizziness, and then
+          profuse bleeding at the pores.</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose [[/r d8]]
+          HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 12 to end the infection.</p>
+        <p><strong>Progress:</strong> Each time you fail a Toughness test to
+          recover, take -1 DR to your next test.</p>
+        <p><strong>Immunity:</strong> If you recover from the red death, you can
+          never get it again.</p>
+  - _id: tuPzQzLaVATgffSq
+    name: Shivers
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Exposure:</strong> When exposed, test Toughness DR 12 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Intense chills as heat is drawn from the
+          body.</p>
+        <p><strong>Effect:</strong> At the end of each long rest, lose [[/r d4]]
+          HP instead of recovering HP.</p>
+        <p><strong>Recovery:</strong> Each time you lose HP from your infection,
+          test Toughness DR 12 to end the infection.</p>
+        <p><strong>Immunity:</strong> Once you recover from shivers, you gain a
+          DR -2 bonus to exposure and recovery rolls for the next [[/r d6]]
+          months.</p>
+        <section class="secret">
+          <h2>The Secret of Shivers</h2>
+          <p>Shivers is caused by @UUID[Item.3T9WmCh6g8uMSsr0]{an arcane ritual}
+            that binds the infected (and anyone they go on to infect) to the
+            caster, channeling the heat of their bodies to the caster. It was
+            first created by a coral shoggoth and has been circulated widely
+            amongst them. For coral shoggoths, this transfer of body heat
+            translates directly to HP — every HP that an infected person loses
+            to shivers, the shoggoth gains.</p>
+          <p>If shivers is contracted by some other means, the illness
+            magically connects itself to the nearest shoggoth and begins
+            transferring the victim’s body heat to it.</p>
+          <p>Killing the creature that’s receiving the victims’ body heat will
+            cause everyone that creature was draining to recover.</p>
+          <p>A player character might know this with a Presence DR 18 test.</p>
+        </section>
+  - _id: A9Fn5nrUTNvUhdug
+    name: Midas’s Touch
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Exposure:</strong> When exposed, test Spirit DR 14 or
+          become infected.</p>
+        <p><strong>Symptoms:</strong> Fever, sweating, intense desire to
+          eat gold</p>
+        <p><strong>Effect:</strong> At the end of each long rest, roll
+          for which @UUID[RollTable.5xphzuvGGqoJqBUo]{limb} is affected.
+          First it affects the hands or feet, then the lower arm or leg,
+          and finally the upper arm or leg. Whatever is the next part of that
+          sequence for the limb you rolled turns to gold. If all of your limbs
+          are gone, your abdomen turns to gold, killing you.</p>
+        <p><strong>Recovery:</strong> Each time a part of your body turns to
+          gold, test Spirit DR 14 to end the infection.</p>
+        <p><strong>Progress:</strong> For every 1,000s in gold that you
+          consume, apply DR -1 to your recovery test.</p>
+        <p><strong>Immunity:</strong> Once you have recovered from Midas’s
+          touch, you cannot contract it again unless you are in contact with
+          gold (which can include any gold body parts that are still attached
+          to you).</p>
+        <table>
+          <caption>Body part weights</caption>
+          <thead>
+            <tr>
+              <th>Body part</th>
+              <th>Approx. weight</th>
+              <th>Value as gold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hand</td>
+              <td>1 pound</td>
+              <td>250s</td>
+            </tr>
+            <tr>
+              <td>Lower arm (forearm)</td>
+              <td>4 pounds</td>
+              <td>1,000s</td>
+            </tr>
+            <tr>
+              <td>Upper arm (bicep)</td>
+              <td>6.5 pounds</td>
+              <td>1,625s</td>
+            </tr>
+            <tr>
+              <td>Foot</td>
+              <td>1 pound</td>
+              <td>250s</td>
+            </tr>
+            <tr>
+              <td>Lower leg (calf and shin)</td>
+              <td>10 pounds</td>
+              <td>2,500s</td>
+            </tr>
+            <tr>
+              <td>Upper leg (thigh)</td>
+              <td>21 pounds</td>
+              <td>5,250s</td>
+            </tr>
+            <tr>
+              <td>Abdomen</td>
+              <td>30 pounds</td>
+              <td>7,500s</td>
+            </tr>
+          </tbody>
+        </table>

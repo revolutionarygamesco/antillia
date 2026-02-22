@@ -9,6 +9,7 @@
 - include: ./src/packs/demo/folders/journal/settlements/lesser.yaml
 - include: ./src/packs/demo/folders/rolltables/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/root.yaml
+- include: ./src/packs/demo/folders/rolltables/common/diseases.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/forts.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/governors.yaml

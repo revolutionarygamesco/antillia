@@ -1,0 +1,71 @@
+_id: evDIkBrY4PZBvGej
+_key: "!tables!evDIkBrY4PZBvGej"
+name: Diseases (Chapters 3 & 4)
+description: Diseases of the Dark Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d8
+folder: 49r7Vz1ZztsaAnad
+results:
+  - _id: Wd1iy3kMRe0OmImh
+    _key: "!tables.results!evDIkBrY4PZBvGej.Wd1iy3kMRe0OmImh"
+    range:
+      - 1
+      - 1
+    weight: 1
+    type: document
+    name: Yellow Jack
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.oo0LeabCcf1Vib9w
+  - _id: 0h9njUiUPFbVh5M5
+    _key: "!tables.results!evDIkBrY4PZBvGej.0h9njUiUPFbVh5M5"
+    range:
+      - 2
+      - 2
+    weight: 1
+    type: document
+    name: The Ague
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.yBC12Z0MuObM2lxV
+  - _id: SwOyAh3HeRiuARvD
+    _key: "!tables.results!evDIkBrY4PZBvGej.SwOyAh3HeRiuARvD"
+    range:
+      - 3
+      - 3
+    weight: 1
+    type: document
+    name: The Bloody Flux
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.keMo9a93hahm40rj
+  - _id: XdEDywfsG3l6VP1k
+    _key: "!tables.results!evDIkBrY4PZBvGej.XdEDywfsG3l6VP1k"
+    range:
+      - 4
+      - 4
+    weight: 1
+    type: document
+    name: The Pox
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.XLQWptX0pkKVua1C
+  - _id: ujMmzREQPtN3yJen
+    _key: "!tables.results!evDIkBrY4PZBvGej.ujMmzREQPtN3yJen"
+    range:
+      - 5
+      - 5
+    weight: 1
+    type: document
+    name: Measles
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.OJ8TxsWXxPKvdBK0
+  - _id: DV7ozga2qNAlH90y
+    _key: "!tables.results!evDIkBrY4PZBvGej.DV7ozga2qNAlH90y"
+    range:
+      - 6
+      - 6
+    weight: 1
+    type: document
+    name: Something Less Common
+    documentUuid: RollTable.JWLiNryVILBPcpcF
+  - _id: Vw8PEPILz1WRLZWB
+    _key: "!tables.results!evDIkBrY4PZBvGej.Vw8PEPILz1WRLZWB"
+    range:
+      - 7
+      - 8
+    weight: 2
+    type: document
+    name: Something Unnatural
+    documentUuid: RollTable.WZMvRX9isEtiUHBG

@@ -47,7 +47,20 @@ interface Document {
 }
 
 interface JournalEntry extends Document {
+  pages: JournalEntryPage[]
   create(data?: any, operation?: any): Promise<JournalEntry>
+}
+
+interface JournalEntryPage extends Document {
+  type: string
+  title: {
+    show: boolean
+    level: number
+  }
+  text: {
+    format: number
+    content: string
+  }
 }
 
 interface Item extends Document {

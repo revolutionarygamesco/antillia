@@ -12,6 +12,9 @@ export const UUIDS: Record<string, string> = {
   EMPIRES: 'RollTable.pK3FfgibC1HfBefV',
   FORTS: 'RollTable.XleTdybFWP2znvEq',
   GOVERNORS: 'RollTable.eEVExp6HIqtAc2w9',
+  DISEASES_EARLY: 'RollTable.X7OlS669f67d6RIg',
+  DISEASES_MID: 'RollTable.evDIkBrY4PZBvGej',
+  DISEASES_LATE: 'RollTable.IkSwvdAiCkjrh096',
   JOURNAL_BASSE_TERRE: 'JournalEntry.lEN7e6rNj19n4hy2',
   JOURNAL_BASSETERRE: 'JournalEntry.mQgvU9WB3LP7cda4',
   JOURNAL_BRIDGETOWN: 'JournalEntry.UVjbk8JvSPTyYmSk',
@@ -29,6 +32,7 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_ST_JOHNS: 'JournalEntry.yIlT64rYoAsSwElE',
   JOURNAL_ST_PIERRE: 'JournalEntry.TnqJdxikuJmgyV2Z',
   JOURNAL_GOVERNOR_JAMAICA: 'JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV',
+  JOURNAL_YELLOW_JACK: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.oo0LeabCcf1Vib9w',
   BOTTLE: 'Item.2UylOEF2C19GfRNF',
   ASH_CARGO: 'Item.lDAchtutyqcPJq1h',
   SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed'

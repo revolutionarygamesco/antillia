@@ -1,3 +1,8 @@
 - include: ./src/packs/demo/rolltables/common/factions/empires.yaml
 - include: ./src/packs/demo/rolltables/common/factions/forts/any.yaml
 - include: ./src/packs/demo/rolltables/common/factions/governors/all.yaml
+- include: ./src/packs/demo/rolltables/common/diseases/early.yaml
+- include: ./src/packs/demo/rolltables/common/diseases/late.yaml
+- include: ./src/packs/demo/rolltables/common/diseases/less-common.yaml
+- include: ./src/packs/demo/rolltables/common/diseases/magical.yaml
+- include: ./src/packs/demo/rolltables/common/diseases/mid.yaml

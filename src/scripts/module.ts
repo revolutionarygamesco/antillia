@@ -3,13 +3,15 @@ import createLog from './log/create.ts'
 import { MODULE_ID } from './settings.ts'
 
 import generateBottleMessage from './generators/bottle-messages.ts'
+import getRandomDisease from './random/disease.ts'
 
 Hooks.once('init', async () => {
   const antillia = game.modules.get(MODULE_ID)
   if (!antillia) return
 
   antillia.api = {
-    generateBottleMessage
+    generateBottleMessage,
+    getRandomDisease
   }
 })
 

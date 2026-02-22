@@ -1,0 +1,63 @@
+_id: X7OlS669f67d6RIg
+_key: "!tables!X7OlS669f67d6RIg"
+name: Diseases (Chapters 1 & 2)
+description: A selection of epidemic diseases that plague the Caribbean in the
+  early 18th century.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: 49r7Vz1ZztsaAnad
+results:
+  - _id: bjkU9OVSXVaQ5Ax6
+    _key: "!tables.results!X7OlS669f67d6RIg.bjkU9OVSXVaQ5Ax6"
+    range:
+      - 1
+      - 1
+    weight: 1
+    type: document
+    name: Yellow Jack
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.oo0LeabCcf1Vib9w
+  - _id: DM9JGrv1AG3Pkdem
+    _key: "!tables.results!X7OlS669f67d6RIg.DM9JGrv1AG3Pkdem"
+    range:
+      - 2
+      - 2
+    weight: 1
+    type: document
+    name: The Ague
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.yBC12Z0MuObM2lxV
+  - _id: Ia0DkcZi3GnrhApA
+    _key: "!tables.results!X7OlS669f67d6RIg.Ia0DkcZi3GnrhApA"
+    range:
+      - 3
+      - 3
+    weight: 1
+    type: document
+    name: The Bloody Flux
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.keMo9a93hahm40rj
+  - _id: mgWPPbXKmw3EmFB2
+    _key: "!tables.results!X7OlS669f67d6RIg.mgWPPbXKmw3EmFB2"
+    range:
+      - 4
+      - 4
+    weight: 1
+    type: document
+    name: The Pox
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.XLQWptX0pkKVua1C
+  - _id: Nq2q94rq10LdEG9b
+    _key: "!tables.results!X7OlS669f67d6RIg.Nq2q94rq10LdEG9b"
+    range:
+      - 5
+      - 5
+    weight: 1
+    type: document
+    name: Measles
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.OJ8TxsWXxPKvdBK0
+  - _id: WVNKuuAEvQqa08rV
+    _key: "!tables.results!X7OlS669f67d6RIg.WVNKuuAEvQqa08rV"
+    range:
+      - 6
+      - 6
+    weight: 1
+    type: document
+    name: Something Less Common
+    documentUuid: RollTable.JWLiNryVILBPcpcF

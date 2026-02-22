@@ -1,0 +1,36 @@
+_id: JWLiNryVILBPcpcF
+_key: "!tables!JWLiNryVILBPcpcF"
+name: Less Common Diseases
+description: A selection of the less common epidemic diseases that plagued the
+  Caribbean in the early 18th century.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: 49r7Vz1ZztsaAnad
+results:
+  - _id: 20mUy9e9QTX4S22J
+    _key: "!tables.results!JWLiNryVILBPcpcF.20mUy9e9QTX4S22J"
+    range:
+      - 1
+      - 2
+    weight: 2
+    type: document
+    name: Chin Cough
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.wuocwzON6uBUBDKg
+  - _id: 4cTctIVOVffLULyo
+    _key: "!tables.results!JWLiNryVILBPcpcF.4cTctIVOVffLULyo"
+    range:
+      - 3
+      - 4
+    weight: 2
+    type: document
+    name: Boulogne Sore Throat
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.2VMr6j2n0ybVy0XF
+  - _id: HFO1o4vaYh1oiKV0
+    _key: "!tables.results!JWLiNryVILBPcpcF.HFO1o4vaYh1oiKV0"
+    range:
+      - 5
+      - 6
+    weight: 2
+    type: document
+    name: Yaws
+    documentUuid: JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.wSmiS4CUbjm9c0DF
