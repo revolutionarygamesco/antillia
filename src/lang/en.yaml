@@ -217,10 +217,10 @@ revolutionary-antillia:
       title: Convoy Schedule
       report: |
         <p><strong>Language:</strong> The report is written in {lang}.</p>
-        <p><strong>Convoy Schedule:</strong> The report provides intelligence
-          on a convoy of {size} {colors} merchant frigates loaded with {good},
-          scheduled to depart {origin} for {dest} on {day}, with {escort} naval
-          ships in escort.</p>
+        <p><strong>Convoy Schedule:</strong> This is the schedule for a convoy
+          of {size} {colors} merchant frigates loaded with {good}. They will
+          depart {origin} for {dest} on {day},with {escort} naval vessels
+          in escort.</p>
     corruption:
       title: Allegations of Corruption Against {governor}
       report: |
