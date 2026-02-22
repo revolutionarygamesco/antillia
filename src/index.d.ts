@@ -108,6 +108,9 @@ declare const foundry: {
     ChatMessage: ChatMessage,
     Item: Item,
     JournalEntry: JournalEntry
+  },
+  utils: {
+    deepClone: <T extends object>(orig: T, options?: { strict?: boolean }) => T
   }
 }
 
