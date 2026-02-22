@@ -15,7 +15,7 @@ pages:
       content: |
         <img src="/modules/revolutionary-pbshipgen/images/british.png" alt="The British Empire" class="flag" />
   - _id: Mhit9COxcpohAkEX
-    name: The King of England
+    name: King of England
     type: text
     title:
       show: true
@@ -36,7 +36,7 @@ pages:
           </li>
         </ul>
   - _id: 25wbdpX0qlqRyWaV
-    name: The Governor of Jamaica
+    name: Governor of Jamaica
     type: text
     title:
       show: true

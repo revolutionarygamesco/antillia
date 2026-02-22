@@ -226,7 +226,7 @@ revolutionary-antillia:
           depart {origin} for {dest} on {day},with {escort} naval vessels
           in escort.</p>
     corruption:
-      title: Allegations of Corruption Against {governor}
+      title: Allegations of Corruption Against the {governor}
       report: |
         <p><strong>Language:</strong> The report is written in {lang}.</p>
         <p><strong>Allegations:</strong> {crime}</p>
@@ -236,10 +236,10 @@ revolutionary-antillia:
         hearsay: a collection of rumors suggesting
       crimes:
         skimming: |
-          The report provides {evidence} that {governor} is underreporting
+          The report provides {evidence} that the {governor} is underreporting
           customs collected and keeping the difference for himself.
         selling-offices: |
-          The report provides {evidence} that {governor} is auctioning off
+          The report provides {evidence} that the {governor} is auctioning off
           positions like harbor master, customs inspector, and town magistrate
           to the highest bidder.
         embezzlement: |
@@ -247,46 +247,49 @@ revolutionary-antillia:
           Scourge, sometimes even in battle. When that happens, not all
           governors report the loss as they ought. The dead soldier continues
           to be paid his wage wage, but it all goes directly into the
-          governor’s personal coffers. This report provides {evidence} that
+          governor’s personal coffers. This report provides {evidence} that the
           {governor} is engaged in just such a scheme.
         ash: |
           Defending settlements from the Scourge is dangerous, but it can also
           be a lucrative source of ash from all of the undead that are
           destroyed in the process each night. The governor is
           <em>supposed</em> to send that back to the Old World in regular
-          shipments — but instead, this report provides {evidence} that
+          shipments — but instead, this report provides {evidence} that the
           {governor} has employed a network of his own sellers to distribute
           it on the local black market.
         arms: |
-          The report provides {evidence} that {governor} is selling munitions,
-          gunpowder, and even cannons supplied for the defense of the colony to
-          anyone willing to buy and keeping the profits for himself.
+          The report provides {evidence} that the {governor} is selling
+          munitions, gunpowder, and even cannons supplied for the defense of
+          the colony to anyone willing to buy and keeping the profits for
+          himself.
         privateers: |
-          The report provides {evidence} that {governor} is issuing letters of
-          marque to pirates who offer him a sufficient cut of their profits.
+          The report provides {evidence} that the {governor} is issuing letters
+          of marque to pirates who offer him a sufficient cut of their profits.
         pardons: |
-          The report provides {evidence} that {governor} is selling pardons to
-          pirates and other criminals who offer sufficient bribes.
+          The report provides {evidence} that the {governor} is selling pardons
+          to pirates and other criminals who offer sufficient bribes.
         probate: |
-          The report provides {evidence} that {governor} is manipulating the
-          probate courts to seize the estates of deceased merchants.
+          The report provides {evidence} that the {governor} is manipulating
+          the probate courts to seize the estates of deceased merchants.
         illegal-trade: |
-          The report provides {evidence} that {governor} is engaging in illegal
-          trade with {empire}.
+          The report provides {evidence} that the {governor} is engaging in
+          illegal trade with {rival}.
         extortion-scourge: |
-          The report provides {evidence} that {governor} is refusing to protect
-          settlements from the Scourge unless they pay him exorbitant bribes.
+          The report provides {evidence} that the {governor} is refusing to
+          protect settlements from the Scourge unless they pay him exorbitant
+          bribes.
         extortion-pirates: |
-          The report provides {evidence} that {governor} is refusing to protect
-          settlements from pirates unless they pay him exorbitant bribes.
+          The report provides {evidence} that the {governor} is refusing to
+          protect settlements from pirates unless they pay him exorbitant
+          bribes.
         harboring: |
-          The report provides {evidence} that {governor} is harboring
+          The report provides {evidence} that the {governor} is harboring
           necromancers, sorcerers, and others who can control the undead. In
           exchange for his protection, they not only protect him and his
           properties from the Scourge, but even direct them towards his
           enemies, rivals, and anyone else who challenges him.
         imprisonment: |
-          The report provides {evidence} that {governor} is jailing wealthy
+          The report provides {evidence} that the {governor} is jailing wealthy
           citizens on trumped-up charges until they can pay his exorbitant
           “fines.”
     outbreak:
@@ -364,11 +367,11 @@ revolutionary-antillia:
           earlier, burning through the population. At this point, the people
           hope that it may soon lift, and they can begin rebuilding.
     spies:
-      title: Spies of {spymaster}
+      title: Spies of the {spymaster}
       report: |
         <p><strong>Language:</strong> The report is written in {lang}.</p>
         <p><strong>Spy List:</strong> The report lists spies, informants, and
-          other intelligence assets that the agents of {spymaster} have
+          other intelligence assets that the agents of the {spymaster} have
           cultivated across the West Indies.</p>
         <ul>
           {list}
@@ -376,19 +379,19 @@ revolutionary-antillia:
       listing: |
         {name}, {position}, {motivation}.
       candidates:
-        secretary: a secretary to one of {governor}’s senior officials
+        secretary: a secretary to one of the {governor}’s senior officials
         pilot: a harbor pilot at {port}
         port-master: a master of the port of {port}
         official: an official at the port of {port}
         physician:
-          personal: personal physician to {governor}
+          personal: personal physician to the {governor}
           regimental: regimental physician at {fort}
         merchant: a merchant in {port}
         customs: a customs official in {port}
         army: a lieutenant at {fort}
         navy: a lieutenant of the {navy}
-        servant: a servant in the household of {governor}
-        interpreter: an interpreter for {governor}
+        servant: a servant in the household of the {governor}
+        interpreter: an interpreter for the {governor}
         tavern: a tavern keeper in {port}
       motivation:
         reward:

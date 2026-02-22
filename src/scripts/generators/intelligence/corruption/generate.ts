@@ -28,15 +28,15 @@ const generateCorruptionReport = async (): Promise<{ title: string, report: stri
 
   const otherEmpires = Object.values(empires)
     .filter(empire => empire.flag !== governor.img)
-  const e = selectRandomElement(otherEmpires)
-  const empire = localize([MODULE_ID, 'factions', e.tag, 'lang'])
+  const r = selectRandomElement(otherEmpires)
+  const rival = localize([MODULE_ID, 'factions', r.tag, 'lang'])
 
   const prefix = [MODULE_ID, 'intelligence', 'corruption']
   const evidence = localize([...prefix, 'evidence', ev])
   const crime = localize([...prefix, 'crimes', c], {
     governor: makeLink(governor),
     evidence,
-    empire
+    rival
   })
 
   const title = localize([...prefix, 'title'], { governor: governor.name })
