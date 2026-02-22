@@ -1,0 +1,18 @@
+_id: UugXd5EFP55zrlQN
+_key: "!tables!UugXd5EFP55zrlQN"
+name: Spanish Settlements
+description: A selection of major cities, towns, and ports in the Caribbean that
+  remain loyal to Spain.
+img: icons/svg/d20-grey.svg
+formula: 1d10
+folder: ewIFn0ZovpOwiuM6
+results:
+  - _id: P6YzntLTlulbuKza
+    _key: "!tables.results!UugXd5EFP55zrlQN.P6YzntLTlulbuKza"
+    range:
+      - 1
+      - 10
+    weight: 10
+    type: document
+    documentUuid: JournalEntry.d2FyewZyG7hc4RgP
+    name: Havana

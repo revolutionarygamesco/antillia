@@ -1,0 +1,17 @@
+_id: 8RmIebOSZSE2LNVD
+_key: "!tables!8RmIebOSZSE2LNVD"
+name: Caribbean Islands
+description: A selection of major islands in the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d12
+folder: 9gpR119ML1F4vNXK
+results:
+  - _id: dtQdYIf6S46WXS51
+    _key: "!tables.results!8RmIebOSZSE2LNVD.dtQdYIf6S46WXS51"
+    range:
+      - 1
+      - 5
+    weight: 5
+    type: document
+    documentUuid: RollTable.KcRDBi9tljmHlsPt
+    name: Spanish Islands

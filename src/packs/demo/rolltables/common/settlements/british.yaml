@@ -1,0 +1,18 @@
+_id: KDSsuLuEYg2Ewtet
+_key: "!tables!KDSsuLuEYg2Ewtet"
+name: British Settlements
+description: A selection of major cities, towns, and ports in the Caribbean
+  that remain loyal to the British crown.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: ewIFn0ZovpOwiuM6
+results:
+  - _id: ZprEC8NPMoi9SrFt
+    _key: "!tables.results!KDSsuLuEYg2Ewtet.ZprEC8NPMoi9SrFt"
+    range:
+      - 1
+      - 6
+    weight: 6
+    type: document
+    documentUuid: JournalEntry.swgzi8mEAgfLJOEk
+    name: Kingston

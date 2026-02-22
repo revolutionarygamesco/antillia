@@ -1,0 +1,18 @@
+_id: OamCpt8A1vmr0pON
+_key: "!tables!OamCpt8A1vmr0pON"
+name: French Settlements
+description: A selection of major cities, towns, and ports in the Caribbean
+  that remain loyal to the Kingdom of France.
+img: icons/svg/d20-grey.svg
+formula: 1d6
+folder: ewIFn0ZovpOwiuM6
+results:
+  - _id: U4MB3Y3LVg0uZrVt
+    _key: "!tables.results!OamCpt8A1vmr0pON.U4MB3Y3LVg0uZrVt"
+    range:
+      - 1
+      - 6
+    weight: 6
+    type: document
+    documentUuid: JournalEntry.KaFKJRXB9Zv8MxQd
+    name: Cap-Français

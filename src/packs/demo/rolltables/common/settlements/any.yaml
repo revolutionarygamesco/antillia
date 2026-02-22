@@ -1,0 +1,44 @@
+_id: 9FmgujKMAVZagL5u
+_key: "!tables!9FmgujKMAVZagL5u"
+name: Caribbean Settlements
+description: A selection of major cities, towns, and ports in the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d12
+folder: ewIFn0ZovpOwiuM6
+results:
+  - _id: 3mvrNgxjDxCfp249
+    _key: "!tables.results!9FmgujKMAVZagL5u.3mvrNgxjDxCfp249"
+    range:
+      - 1
+      - 5
+    weight: 5
+    type: document
+    documentUuid: RollTable.UugXd5EFP55zrlQN
+    name: Spanish Settlements
+  - _id: X7fEdQsYPq15ig7W
+    _key: "!tables.results!9FmgujKMAVZagL5u.X7fEdQsYPq15ig7W"
+    range:
+      - 6
+      - 9
+    weight: 4
+    type: document
+    documentUuid: RollTable.KDSsuLuEYg2Ewtet
+    name: British Settlements
+  - _id: SviiGibmEXewZxkk
+    _key: "!tables.results!9FmgujKMAVZagL5u.SviiGibmEXewZxkk"
+    range:
+      - 10
+      - 11
+    weight: 2
+    type: document
+    documentUuid: RollTable.OamCpt8A1vmr0pON
+    name: French Settlements
+  - _id: g6uug80HyK67lt39
+    _key: "!tables.results!9FmgujKMAVZagL5u.g6uug80HyK67lt39"
+    range:
+      - 12
+      - 12
+    weight: 1
+    type: document
+    documentUuid: RollTable.xeiicDwD3jNHFEz1
+    name: Dutch Settlements

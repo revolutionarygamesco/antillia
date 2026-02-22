@@ -1,6 +1,7 @@
 - include: ./src/packs/demo/journal/how-to.yaml
 - include: ./src/packs/demo/journal/diseases.yaml
 - include: ./src/packs/demo/journal/empires/british.yaml
+- include: ./src/packs/demo/journal/islands/greater-antilles/jamaica.yaml
 - include: ./src/packs/demo/journal/settlements/europe/bordeaux.yaml
 - include: ./src/packs/demo/journal/settlements/europe/cadiz.yaml
 - include: ./src/packs/demo/journal/settlements/europe/la-rochelle.yaml

@@ -7,12 +7,16 @@
 - include: ./src/packs/demo/folders/journal/settlements/greater/jamaica.yaml
 - include: ./src/packs/demo/folders/journal/settlements/europe.yaml
 - include: ./src/packs/demo/folders/journal/settlements/lesser.yaml
+- include: ./src/packs/demo/folders/journal/islands/root.yaml
+- include: ./src/packs/demo/folders/journal/islands/greater.yaml
 - include: ./src/packs/demo/folders/rolltables/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/diseases.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/forts.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/governors.yaml
+- include: ./src/packs/demo/folders/rolltables/common/islands.yaml
+- include: ./src/packs/demo/folders/rolltables/common/settlements.yaml
 - include: ./src/packs/demo/folders/items/root.yaml
 - include: ./src/packs/demo/folders/items/cargo.yaml
 - include: ./src/packs/demo/folders/items/messages/root.yaml

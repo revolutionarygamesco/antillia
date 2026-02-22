@@ -6,3 +6,9 @@
 - include: ./src/packs/demo/rolltables/common/diseases/less-common.yaml
 - include: ./src/packs/demo/rolltables/common/diseases/magical.yaml
 - include: ./src/packs/demo/rolltables/common/diseases/mid.yaml
+- include: ./src/packs/demo/rolltables/common/settlements/any.yaml
+- include: ./src/packs/demo/rolltables/common/settlements/british.yaml
+- include: ./src/packs/demo/rolltables/common/settlements/dutch.yaml
+- include: ./src/packs/demo/rolltables/common/settlements/french.yaml
+- include: ./src/packs/demo/rolltables/common/settlements/spanish.yaml
+- include: ./src/packs/demo/rolltables/common/islands/any.yaml

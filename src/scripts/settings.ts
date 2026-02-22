@@ -35,5 +35,10 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_YELLOW_JACK: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.oo0LeabCcf1Vib9w',
   BOTTLE: 'Item.2UylOEF2C19GfRNF',
   ASH_CARGO: 'Item.lDAchtutyqcPJq1h',
-  SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed'
+  SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed',
+  SETTLEMENTS_ANY: 'RollTable.9FmgujKMAVZagL5u',
+  SETTLEMENTS_BRITISH: 'RollTable.KDSsuLuEYg2Ewtet',
+  SETTLEMENTS_DUTCH: 'RollTable.xeiicDwD3jNHFEz1',
+  SETTLEMENTS_FRENCH: 'RollTable.OamCpt8A1vmr0pON',
+  SETTLEMENTS_SPANISH: 'RollTable.UugXd5EFP55zrlQN'
 }

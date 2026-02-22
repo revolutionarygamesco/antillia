@@ -285,3 +285,77 @@ revolutionary-antillia:
           The report provides {evidence} that {governor} is jailing wealthy
           citizens on trumped-up charges until they can pay his exorbitant
           “fines.”
+    outbreak:
+      title: "{disease} in {settlement}"
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        <p><strong>Outbreak:</strong> {situation}</p>
+        <p><strong>Reaction:</strong> {reaction}</p>
+        <p><strong>Twist:</strong> {twist}</p>
+      fumigants:
+        sulphur: brimstone
+        gunpowder: gunpowder
+        tar: tar
+        tobacco: tobacco
+        ash: ash
+        mix:
+          volatile:
+            two: a volatile mix of {fumigant1 } and ash
+            three: a volatile mix of {fumigant1}, {fumigant2}, and ash
+          regular:
+            two: a mixture of {fumigant1} and {fumigant2}
+            three: a mixture of {fumigant1}, {fumigant2} and {fumigant3}
+      reactions:
+        ignore: |
+          The authorities ignored the problem, hoping that it would resolve
+          itself.
+        prayer: |
+          Religious authorities responded by calling for prayer and fasting.
+        fumigation: |
+          The townspeople have responded with extensive fumigation, burning
+          {fumigants}, splashing vinegar on every surface they can find, and
+          distributing smelling bottles filled with camphor and aromatic herbs.
+        quarantine: |
+          Civil authorities responded by marking the houses of the afflicted
+          and forbidding them from leaving their homes unless and until they
+          could be verified as healthy by a physician.
+        closure: |
+          The authorities responded by shutting down the local markets.
+      twists:
+        faith-healer: |
+          A faith healer named {name} is reputed to have miraculously cured
+          dozens of individuals afflicted with the disease.
+        doctor: |
+          A skilled physician named {name} worked tirelessly to save as many
+          lives as possible.
+        witch-hunt: |
+          Accusations are made that certain members of the community used black
+          magic to spread the disease, sparking a witch hunt.
+        price-gouging: |
+          Certain merchants take advantage of the situation by raising prices.
+        authorities-fled: |
+          The authorities have fled the town for fear of catching the disease,
+          leaving it in a lawless state.
+        undefended: |
+          The disease has fallen most heavily on the garrison and militia,
+          leaving the settlement virtually undefended.
+        slave: |
+          An African healer is applying some unorthodox techniques that have
+          proven surprisingly effective for those patients willing to be
+          treated by a slave.
+      situations:
+        early: |
+          The report describes the early days of an outbreak of {disease} in
+          {settlement} in {month} {year}. Several individuals had contracted
+          the disease, with fear spreading that whatever miasma had fallen upon
+          them would soon take the entire settlement.
+        mid: |
+          The report describes an outbreak of {disease} in {settlement} in
+          {month} {year}. At the time of writing, the disease was running
+          rampant throughout the settlement, claiming new victims with each
+          passing day.
+        late: |
+          The report describes an outbreak of {disease} in {settlement} in
+          {month} {year}. The miasma had fallen on the settlement weeks
+          earlier, burning through the population. At this point, the people
+          hope that it may soon lift, and they can begin rebuilding.
