@@ -84,18 +84,22 @@ revolutionary-antillia:
       name: The Spanish Empire
       adj: Spanish
       lang: Spanish
+      navy: Spanish Royal Armada
     british:
       name: The British Empire
       adj: British
       lang: English
+      navy: British Royal Navy
     french:
       name: The Kingdom of France
       adj: French
       lang: French
+      navy: French Royal Navy
     dutch:
       name: The Dutch West India Company
       adj: Dutch
       lang: Dutch
+      navy: Dutch West India Company
   bottle-messages:
     bottle: bottle
     flavor: Message in a Bottle
@@ -359,3 +363,211 @@ revolutionary-antillia:
           {month} {year}. The miasma had fallen on the settlement weeks
           earlier, burning through the population. At this point, the people
           hope that it may soon lift, and they can begin rebuilding.
+    spies:
+      title: Spies of {spymaster}
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        <p><strong>Spy List:</strong> The report lists spies, informants, and
+          other intelligence assets that the agents of {spymaster} have
+          cultivated across the West Indies.</p>
+        <ul>
+          {list}
+        </ul>
+      listing: |
+        {name}, {position}, {motivation}.
+      candidates:
+        secretary: a secretary to one of {governor}’s senior officials
+        pilot: a harbor pilot at {port}
+        port-master: a master of the port of {port}
+        official: an official at the port of {port}
+        physician:
+          personal: personal physician to {governor}
+          regimental: regimental physician at {fort}
+        merchant: a merchant in {port}
+        customs: a customs official in {port}
+        army: a lieutenant at {fort}
+        navy: a lieutenant of the {navy}
+        servant: a servant in the household of {governor}
+        interpreter: an interpreter for {governor}
+        tavern: a tavern keeper in {port}
+      motivation:
+        reward:
+          money: |
+            paid for {his} services. If necessary, {his} past collaboration
+            could be leveraged as blackmail against {him}, but use this option
+            judiciously
+          pardon: |
+            offered a pardon. To cultivate, heighten {his} fear of punishment.
+            As a last resort, we could threaten to reveal evidence of {his}
+            crimes to the authorities
+          promise:
+            fulfilled: |
+              provided aid in a personal endeavor. Gratitude won’t last
+              forever, though. If {he} proves unwilling to continue, we can
+              switch to blackmail with {his} past cooperation as evidence, or
+              harm to {his} family
+            unfulfilled: |
+              promised aid in a personal endeavor. We can’t put off fulfillment
+              indefinitely, but we’ll get what we need from {him} first
+        ideology:
+          spanish:
+            british:
+              protestant: |
+                eager to help {his} fellow Protestants against the Catholic
+                Monarchy
+              trade: |
+                opposed to the Spanish <em>flota</em> system and royal
+                monopolies
+              intellectual: |
+                opposed to the Inquisition and its stifling of intellectual
+                pursuits
+            french:
+              catholic: |
+                motivated by an opposition to ultramontanism and a desire to
+                see episcopal independence as we have in France extend to the
+                Iberian peninsula
+              francophile: |
+                motivated by a belief in the superiority of French culture
+              corruption: |
+                motivated by opposition to the corruption of the Spanish
+                colonial system
+            dutch:
+              trade: |
+                a disciple of Grotius who opposes Spanish mercantilism
+              religious: |
+                motivated by sympathies for the religious minorities
+                persecuted by the Inquisition, particularly contrasted against
+                the religious tolerance of the Dutch Republic
+              intellectual: |
+                motivated by an opposition to Spanish scholasticism and the way
+                it stifles the flourishing of natural philosophy and sciences
+          british:
+            spanish:
+              catholic: |
+                motivated by loyalty to {his} fellow Catholics
+              jacobite: |
+                a loyal Jacobite
+              illegal: |
+                a student of Francisco Suárez, Francisco de Vitoria, and their
+                concepts of natural law; {he} believes that the British conquest
+                of the West Indies was a violation of that law
+            french:
+              jacobite: |
+                a loyal Jacobite
+              francophile: |
+                motivated by a belief in the superiority of French culture
+              leveller: |
+                motivated not by any love for France but commitment to the old
+                radical causes of the English Civil War, which {he} feels the
+                Restoration and even the new Hanoverian regime have betrayed
+            dutch:
+              trade: |
+                a disciple of Grotius opposed to British mercantilism
+              religious: |
+                motivated by a desire to bring Dutch religious tolerance to
+                the British Empire
+              aristocrat: |
+                motivated by a belief that society should be ruled by commerce
+                and citizenship rather than ancient bloodlines
+          french:
+            spanish:
+              catholic: |
+                motivated by a belief that Gallicanism is heretical
+              unionist: |
+                motivated by a belief that Philip V is the rightful king of
+                France as well as Spain
+              bull: |
+                motivated by a belief that France’s presence in the New World
+                violates the 1493 Bulls of Donation
+            british:
+              lockean: |
+                a disciple of Locke opposed to France’s absolute monarchy
+              tolerance: |
+                a student of Bayle’s, convinced to provide intelligence against
+                France by cultivating {his} animosity to the kingdom’s religious
+                intolerance
+              intellectual: |
+                motivated by an antipathy for French censorship and an
+                admiration for the free circulation of ideas in England
+            dutch:
+              republican: |
+                motivated by an opposition to France’s absolute monarchy and a
+                preference for republicanism as practiced in the Netherlands
+              tolerance: |
+                motivated by sympathies for the religious minorities
+                persecuted by the Kingdom of France, particularly contrasted
+                against the religious tolerance found in the Dutch Republic
+              trade: |
+                a disciple of Grotius opposed to French mercantilism
+          dutch:
+            spanish:
+              usurper: |
+                motivated by a belief that the Eighty Years’ War was an
+                illegitimate usurpation and Spain should rule the Netherlands
+                once again
+              morality: |
+                motivated by a belief that the tolerance of the Dutch Republic
+                has led to moral decay
+              commerce: |
+                motivated by a belief that the Dutch Republic’s commitment to
+                free trade undermines the proper moral order of commerce as
+                subservient to the common good
+            british:
+              corruption: |
+                motivated by a belief that Britain’s constitutional monarchy is
+                superior to the corrupt Dutch oligarchy
+              recompense: |
+                motivated by a belief that the Netherlands’ trading with
+                enemies during wartime was a betrayal. We have cultivated
+                {him} with a belief that providing intelligence is one way
+                in which {he} can personally help right that wrong
+              religion: |
+                motivated by a belief that Dutch Reformed theology has erred
+                and the moderate Calvinism of the Church of England is correct
+            french:
+              francophile: |
+                motivated by a belief in the superiority of French culture
+              monarchist: |
+                motivated by a belief that the Dutch Republic’s factional
+                disorder proves the need for an absolute monarch
+              catholic: |
+                motivated by connections to the Catholic Flemish and Walloon
+                populations in the Dutch Republic and the belief that they are
+                owed protection by the King of France as fellow Catholics and
+                speakers of the <em>langues d'oïl</em>
+        coercion:
+          homosexual: |
+            blackmailed with evidence of {his} homosexual activities
+          affair: |
+            blackmailed with evidence of {his} affair
+          illegitimate:
+            son: |
+              blackmailed with evidence of {his} illegitimate son
+            daughter: |
+              blackmailed with evidence of {his} illegitimate daughter
+          threatened:
+            son: |
+              coerced with threats against {his} son
+            daughter: |
+              coerced with threats against {his} daughter
+            mother: |
+              coerced with threats against {his} mother
+            father: |
+              coerced with threats against {his} father
+        ego:
+          grievance: |
+            motivated by personal grievance. Cultivate by returning to the
+            unfairness of the injury done to {him} and how you can set it
+            right
+          thrill: |
+            motivated by the thrill of involvement in clandestine activities.
+            Cultivate with exaggerated tales of skullduggery. Make {him} feel
+            like {he} is part of something elaborate and exciting
+          vanity: |
+            motivated by the vanity of possessing secrets others desire.
+            Cultivate with flattery and the reassurance that {he} is a
+            person that powerful men quietly depend upon
+          validation: |
+            motivated by feelings of validation. Cultivate with reassurances
+            of {his} value and importance, that even if {his} superiors fail to
+            recognize {his} worth, <em>you</em> see it

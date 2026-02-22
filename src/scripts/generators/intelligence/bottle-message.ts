@@ -8,14 +8,21 @@ import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
 import generateRandomConvoySchedule from './convoys/generate.ts'
 import generateCorruptionReport from './corruption/generate.ts'
 import generateOutbreakReport from './outbreak/generate.ts'
+import generateSpyList from './spies/generate.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
   const reporters: Array<() => Promise<BottleMessageIntel>> = [
     generateRandomConvoySchedule,
     generateRandomConvoySchedule,
+    generateRandomConvoySchedule,
+    generateRandomConvoySchedule,
+    generateCorruptionReport,
     generateCorruptionReport,
     generateRandomFortUpgradeReport,
-    generateOutbreakReport
+    generateRandomFortUpgradeReport,
+    generateOutbreakReport,
+    generateOutbreakReport,
+    generateSpyList
   ]
 
   const reporter = selectRandomElement(reporters)
