@@ -40,12 +40,10 @@ const generateRandomConvoySchedule = async (): Promise<BottleMessageIntel> => {
 
   // Pick a route
   const route = selectRandomElement(routes)
-  console.log(route)
 
   // Origin
   const o = selectRandomElement(route.origins)
   const origin = makeLinkFromRef(o)
-  console.log(origin)
 
   // Destination
   const d = selectRandomElement(route.dests)

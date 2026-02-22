@@ -1,4 +1,5 @@
 - include: ./src/packs/demo/folders/journal/root.yaml
+- include: ./src/packs/demo/folders/journal/empires.yaml
 - include: ./src/packs/demo/folders/journal/settlements/root.yaml
 - include: ./src/packs/demo/folders/journal/settlements/greater/root.yaml
 - include: ./src/packs/demo/folders/journal/settlements/greater/cuba.yaml
@@ -10,6 +11,7 @@
 - include: ./src/packs/demo/folders/rolltables/common/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/root.yaml
 - include: ./src/packs/demo/folders/rolltables/common/factions/forts.yaml
+- include: ./src/packs/demo/folders/rolltables/common/factions/governors.yaml
 - include: ./src/packs/demo/folders/items/root.yaml
 - include: ./src/packs/demo/folders/items/cargo.yaml
 - include: ./src/packs/demo/folders/items/messages/root.yaml

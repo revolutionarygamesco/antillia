@@ -61,6 +61,7 @@ interface RollTable extends Document {
 interface TableResult extends Document {
   type: string
   documentUuid?: string
+  img?: string
 }
 
 interface User {

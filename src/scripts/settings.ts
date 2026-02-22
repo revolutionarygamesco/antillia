@@ -11,6 +11,7 @@ export const UUIDS: Record<string, string> = {
   ENCRYPTED_INTEL_MESSAGES: 'etmda0JUHwKk4vfl',
   EMPIRES: 'RollTable.pK3FfgibC1HfBefV',
   FORTS: 'RollTable.XleTdybFWP2znvEq',
+  GOVERNORS: 'RollTable.eEVExp6HIqtAc2w9',
   JOURNAL_BASSE_TERRE: 'JournalEntry.lEN7e6rNj19n4hy2',
   JOURNAL_BASSETERRE: 'JournalEntry.mQgvU9WB3LP7cda4',
   JOURNAL_BRIDGETOWN: 'JournalEntry.UVjbk8JvSPTyYmSk',
@@ -27,6 +28,7 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_NANTES: 'JournalEntry.N3MR8auFW217jFEN',
   JOURNAL_ST_JOHNS: 'JournalEntry.yIlT64rYoAsSwElE',
   JOURNAL_ST_PIERRE: 'JournalEntry.TnqJdxikuJmgyV2Z',
+  JOURNAL_GOVERNOR_JAMAICA: 'JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV',
   BOTTLE: 'Item.2UylOEF2C19GfRNF',
   ASH_CARGO: 'Item.lDAchtutyqcPJq1h',
   SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed'

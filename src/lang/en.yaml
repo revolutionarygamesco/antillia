@@ -221,3 +221,67 @@ revolutionary-antillia:
           on a convoy of {size} {colors} merchant frigates loaded with {good},
           scheduled to depart {origin} for {dest} on {day}, with {escort} naval
           ships in escort.</p>
+    corruption:
+      title: Allegations of Corruption Against {governor}
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        <p><strong>Allegations:</strong> {crime}</p>
+      evidence:
+        solid: all of the documents needed to prove
+        testimony: testimony from several key witnesses alleging
+        hearsay: a collection of rumors suggesting
+      crimes:
+        skimming: |
+          The report provides {evidence} that {governor} is underreporting
+          customs collected and keeping the difference for himself.
+        selling-offices: |
+          The report provides {evidence} that {governor} is auctioning off
+          positions like harbor master, customs inspector, and town magistrate
+          to the highest bidder.
+        embezzlement: |
+          Soldiers die all the time in the Caribbean — from disease, from the
+          Scourge, sometimes even in battle. When that happens, not all
+          governors report the loss as they ought. The dead soldier continues
+          to be paid his wage wage, but it all goes directly into the
+          governor’s personal coffers. This report provides {evidence} that
+          {governor} is engaged in just such a scheme.
+        ash: |
+          Defending settlements from the Scourge is dangerous, but it can also
+          be a lucrative source of ash from all of the undead that are
+          destroyed in the process each night. The governor is
+          <em>supposed</em> to send that back to the Old World in regular
+          shipments — but instead, this report provides {evidence} that
+          {governor} has employed a network of his own sellers to distribute
+          it on the local black market.
+        arms: |
+          The report provides {evidence} that {governor} is selling munitions,
+          gunpowder, and even cannons supplied for the defense of the colony to
+          anyone willing to buy and keeping the profits for himself.
+        privateers: |
+          The report provides {evidence} that {governor} is issuing letters of
+          marque to pirates who offer him a sufficient cut of their profits.
+        pardons: |
+          The report provides {evidence} that {governor} is selling pardons to
+          pirates and other criminals who offer sufficient bribes.
+        probate: |
+          The report provides {evidence} that {governor} is manipulating the
+          probate courts to seize the estates of deceased merchants.
+        illegal-trade: |
+          The report provides {evidence} that {governor} is engaging in illegal
+          trade with {empire}.
+        extortion-scourge: |
+          The report provides {evidence} that {governor} is refusing to protect
+          settlements from the Scourge unless they pay him exorbitant bribes.
+        extortion-pirates: |
+          The report provides {evidence} that {governor} is refusing to protect
+          settlements from pirates unless they pay him exorbitant bribes.
+        harboring: |
+          The report provides {evidence} that {governor} is harboring
+          necromancers, sorcerers, and others who can control the undead. In
+          exchange for his protection, they not only protect him and his
+          properties from the Scourge, but even direct them towards his
+          enemies, rivals, and anyone else who challenges him.
+        imprisonment: |
+          The report provides {evidence} that {governor} is jailing wealthy
+          citizens on trumped-up charges until they can pay his exorbitant
+          “fines.”

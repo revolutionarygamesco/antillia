@@ -6,11 +6,13 @@ import { MODULE_ID, UUIDS } from '../../settings.ts'
 
 import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
 import generateRandomConvoySchedule from './convoys/generate.ts'
+import generateCorruptionReport from './corruption/generate.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
   const reporters: Array<() => Promise<BottleMessageIntel>> = [
     generateRandomConvoySchedule,
     generateRandomConvoySchedule,
+    generateCorruptionReport,
     generateRandomFortUpgradeReport
   ]
 
@@ -50,8 +52,6 @@ const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
     },
     ownership: { default: 0 }
   })
-
-  console.log({ decrypted, encrypted, uuid: decrypted.uuid })
 
   return { contents: [encrypted] }
 }

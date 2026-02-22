@@ -1,0 +1,49 @@
+_id: 13SE7XeNQmMvODNV
+name: The British Empire
+folder: BbbnSQpNUoYA54OY
+ownership:
+  default: 0
+pages:
+  - _id: s38exmEHDTDCNk9w
+    name: Background
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <img src="/modules/revolutionary-pbshipgen/images/british.png" alt="The British Empire" class="flag" />
+  - _id: Mhit9COxcpohAkEX
+    name: The King of England
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Claimed Territory:</strong> The British Isles, with colonies in North America, India, and the West Indies</p>
+        <p><strong>Capital:</strong> @UUID[JournalEntry.MYQUmzkqzParvGYs]{London}</p>
+        <ul class="vertical-org-chart">
+          <li>
+            <p>@UUID[JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.Mhit9COxcpohAkEX]{King of England}</p>
+            <ul>
+              <li>
+                <p>@UUID[JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV]{Governor of Jamaica}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+  - _id: 25wbdpX0qlqRyWaV
+    name: The Governor of Jamaica
+    type: text
+    title:
+      show: true
+      level: 1
+    text:
+      format: 1
+      content: |
+        <p><strong>Claimed Territory:</strong> The island of Jamaica</p>
+        <p><strong>Capital:</strong> Spanish Town</p>
+        <p><strong>Overlord:</strong> @UUID[JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.Mhit9COxcpohAkEX]{The King of England}</p>

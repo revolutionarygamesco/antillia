@@ -1,0 +1,18 @@
+_id: eEVExp6HIqtAc2w9
+_key: "!tables!eEVExp6HIqtAc2w9"
+name: Governors
+description: Governors appointed by the imperial powers of the Old World to rule
+  over the Caribbean in their name.
+img: icons/svg/d20-grey.svg
+formula: 1d12
+folder: sA9TxoBm65wTEzP6
+results:
+  - _id: ONXX9spWG4QJwg06
+    _key: "!tables.results!eEVExp6HIqtAc2w9.ONXX9spWG4QJwg06"
+    range:
+      - 1
+      - 12
+    weight: 12
+    img: modules/revolutionary-pbshipgen/images/british.png
+    documentUuid: JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV
+    name: The Governor of Jamaica
