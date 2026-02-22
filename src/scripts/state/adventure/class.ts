@@ -60,6 +60,16 @@ class AdventureState {
     } catch (_err) { return false }
   }
 
+  getChapter (seconds: number): AdventureChapterData {
+    for (const chapter of this.chapters) {
+      const { start, end } = chapter
+      if (start === null) continue
+      if (seconds >= start && (end === null || seconds <= end)) return chapter
+    }
+
+    return this.chapters[0]
+  }
+
   static deserialize (serialized: string): AdventureState | null {
     try {
       const data = JSON.parse(serialized)

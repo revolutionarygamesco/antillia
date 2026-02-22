@@ -65,6 +65,28 @@ describe('AdventureState', () => {
         expect(actual).toContain(`"id":"${state.playing}"`)
       })
     })
+
+    describe('getChapter', () => {
+      let state: AdventureState
+
+      beforeEach(() => {
+        state = new AdventureState()
+        state.chapters[0].end = 10
+        state.chapters[1].start = 10
+        state.chapters[1].end = 20
+        state.chapters[2].start = 20
+      })
+
+      it('returns the chapter at a given world time', () => {
+        const actual = state.getChapter(15)
+        expect(actual).toEqual({ n: 2, start: 10, end: 20 })
+      })
+
+      it('can get a chapter that hasn’t ended yet', () => {
+        const actual = state.getChapter(60)
+        expect(actual).toEqual({ n: 3, start: 20, end: null })
+      })
+    })
   })
 
   describe('Class methods', () => {
