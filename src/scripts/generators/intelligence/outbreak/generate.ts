@@ -10,45 +10,16 @@ import selectRandomBetween from '../../../random/between.ts'
 import shuffleArray from '../../../random/shuffle.ts'
 import checkVersion from '../../../utilities/check-version.ts'
 import makeLink from '../../../utilities/make-link.ts'
+import empires, { type EmpireData } from '../shared-data/empires.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 const prefix = [MODULE_ID, 'intelligence', 'outbreak']
 
-interface OutbreakContext {
-  tag: string
-  uuid: string
-  nationalities: string[]
-}
-
-const spanishContext: OutbreakContext = {
-  tag: 'spanish',
-  uuid: UUIDS.SETTLEMENTS_SPANISH,
-  nationalities: ['Spanish']
-}
-
-const britishContext: OutbreakContext = {
-  tag: 'british',
-  uuid: UUIDS.SETTLEMENTS_BRITISH,
-  nationalities: ['English', 'English', 'English', 'Welsh', 'Scottish', 'Irish']
-}
-
-const frenchContext: OutbreakContext = {
-  tag: 'french',
-  uuid: UUIDS.SETTLEMENTS_FRENCH,
-  nationalities: ['French']
-}
-
-const dutchContext: OutbreakContext = {
-  tag: 'dutch',
-  uuid: UUIDS.SETTLEMENTS_DUTCH,
-  nationalities: ['Dutch']
-}
-
-const contexts: Array<{ tag: string, uuid: string, nationalities: string[] }> = [
-  spanishContext, spanishContext, spanishContext, spanishContext, spanishContext,
-  britishContext, britishContext, britishContext, britishContext,
-  frenchContext, frenchContext,
-  dutchContext
+const contexts: Array<EmpireData> = [
+  empires.spanish, empires.spanish, empires.spanish, empires.spanish, empires.spanish,
+  empires.british, empires.british, empires.british, empires.british,
+  empires.french, empires.french,
+  empires.dutch
 ]
 
 const situations: Array<{ tag: string, reactions: string[], twists: string[] }> = [
@@ -98,7 +69,7 @@ const generateOutbreakReport = async (): Promise<BottleMessageIntel> => {
   const lang = localize([MODULE_ID, 'factions', agent, 'lang'])
 
   const c = selectRandomElement(contexts)
-  const result = await drawFirst(c.uuid) ?? { name: 'Kingston', uuid: UUIDS.JOURNAL_KINGSTON } as TableResult
+  const result = await drawFirst(c.settlements) ?? { name: 'Kingston', uuid: UUIDS.JOURNAL_KINGSTON } as TableResult
   const settlement = makeLink(result)
 
   const namer = game?.modules?.get('revolutionary-piratenames')?.api

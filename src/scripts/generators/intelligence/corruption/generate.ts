@@ -2,6 +2,7 @@ import drawFirst from '../../../utilities/draw-first.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import selectRandomElement from '../../../random/el.ts'
+import empires from '../shared-data/empires.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 const govJamaica: TableResult = {
@@ -11,13 +12,6 @@ const govJamaica: TableResult = {
   id: 'ONXX9spWG4QJwg06',
   name: 'The Governor of Jamaica'
 } as TableResult
-
-const flags: Record<string, string> = {
-  spanish: 'modules/revolutionary-pbshipgen/images/spanish.png',
-  british: 'modules/revolutionary-pbshipgen/images/british.png',
-  french: 'modules/revolutionary-pbshipgen/images/french.png',
-  dutch: 'modules/revolutionary-pbshipgen/images/dutch.png'
-}
 
 const generateCorruptionReport = async (): Promise<{ title: string, report: string }> => {
   const drawn = await drawFirst(UUIDS.GOVERNORS)
@@ -29,13 +23,13 @@ const generateCorruptionReport = async (): Promise<{ title: string, report: stri
     'imprisonment'])
   const ev = selectRandomElement(['solid', 'testimony', 'testimony',
     'hearsay', 'hearsay', 'hearsay'])
-  const l = selectRandomElement(Object.keys(flags))
+  const l = selectRandomElement(Object.keys(empires))
   const lang = localize([MODULE_ID, 'factions', l, 'lang'])
 
-  const otherEmpires = Object.keys(flags)
-    .filter(empire => flags[empire] !== governor.img)
-  const empireCode = selectRandomElement(otherEmpires)
-  const empire = localize([MODULE_ID, 'factions', empireCode, 'lang'])
+  const otherEmpires = Object.values(empires)
+    .filter(empire => empire.flag !== governor.img)
+  const e = selectRandomElement(otherEmpires)
+  const empire = localize([MODULE_ID, 'factions', e.tag, 'lang'])
 
   const prefix = [MODULE_ID, 'intelligence', 'corruption']
   const evidence = localize([...prefix, 'evidence', ev])
