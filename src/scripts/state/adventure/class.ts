@@ -1,11 +1,17 @@
+import {
+  type AdventureChapterData,
+  type AdventureStateData,
+  isAdventureStateData
+} from './data.ts'
+
 import GameState from '../game/class.ts'
 import CrewState from '../crew/class.ts'
-import { type AdventureStateData, isAdventureStateData } from './data.ts'
 import getLog from '../../log/get.ts'
 import { MODULE_ID, ADVENTURE_STATE_FLAG } from '../../settings.ts'
 
 class AdventureState {
   playing: string
+  chapters: AdventureChapterData[]
   history: GameState[]
 
   constructor(data?: AdventureState | AdventureStateData) {
@@ -23,11 +29,20 @@ class AdventureState {
       : [new GameState()]
 
     this.playing = Array.from(this.history[this.history.length - 1].crews.keys())[0]
+    this.chapters = data?.chapters ?? [
+      { n: 1, start: 0, end: null },
+      { n: 2, start: null, end: null },
+      { n: 3, start: null, end: null },
+      { n: 4, start: null, end: null },
+      { n: 5, start: null, end: null },
+      { n: 6, start: null, end: null }
+    ]
   }
 
   toObject (): AdventureStateData {
     return {
       playing: this.playing,
+      chapters: this.chapters,
       history: this.history.map(state => state.toObject())
     }
   }

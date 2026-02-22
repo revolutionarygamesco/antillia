@@ -10,6 +10,34 @@ describe('AdventureState', () => {
       const state = new AdventureState()
       expect(state.history[0].crews.has(state.playing)).toBe(true)
     })
+
+    it('initializes chapter start and end dates', () => {
+      const state = new AdventureState()
+      expect(state.chapters).toEqual([
+        { n: 1, start: 0, end: null },
+        { n: 2, start: null, end: null },
+        { n: 3, start: null, end: null },
+        { n: 4, start: null, end: null },
+        { n: 5, start: null, end: null },
+        { n: 6, start: null, end: null }
+      ])
+    })
+
+    it('can load existing chapter start and end dates', () => {
+      const before = new AdventureState()
+      before.chapters[0].end = 10
+      before.chapters[1].start = 10
+
+      const actual = new AdventureState(before)
+      expect(actual.chapters).toEqual([
+        { n: 1, start: 0, end: 10 },
+        { n: 2, start: 10, end: null },
+        { n: 3, start: null, end: null },
+        { n: 4, start: null, end: null },
+        { n: 5, start: null, end: null },
+        { n: 6, start: null, end: null }
+      ])
+    })
   })
 
   describe('Instance methods', () => {
