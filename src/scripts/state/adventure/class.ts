@@ -14,8 +14,8 @@ class AdventureState {
   chapters: AdventureChapterData[]
   history: GameState[]
 
-  constructor(data?: AdventureState | AdventureStateData) {
-    this.history = data
+  constructor(data?: AdventureState | Partial<AdventureStateData>) {
+    this.history = data?.history
       ? data.history
           .map(item => {
             if (item instanceof GameState) return item

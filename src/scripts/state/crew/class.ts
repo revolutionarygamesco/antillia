@@ -4,7 +4,7 @@ import { type CrewStateData, isCrewStateData } from './data.ts'
 class CrewState {
   id: string
 
-  constructor(data?: CrewStateData) {
+  constructor(data?: Partial<CrewStateData>) {
     this.id = typeof data?.id === 'string' ? data.id : generateID()
   }
 
