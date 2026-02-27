@@ -15,7 +15,15 @@ describe('isCrewPosition', () => {
   })
 
   it('accepts crew position', () => {
-    expect(isCrewPosition({ id: 'captain', assigned: ['rackham'] })).toBe(true)
+    expect(isCrewPosition({
+      id: 'captain',
+      assigned: ['rackham'],
+      max: 1,
+      shares: 2,
+      exempt: true,
+      exclusive: true,
+      required: true
+    })).toBe(true)
   })
 })
 
