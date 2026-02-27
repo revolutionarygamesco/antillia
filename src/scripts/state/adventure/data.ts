@@ -1,7 +1,8 @@
-import { type GameStateData } from '../game/data.ts'
+import { type GameStateData, isGameStateDataArray } from '../game/data.ts'
+import { type ExploitRecordData, isExploitRecordDataDictionary } from '../exploits/data.ts'
 import isNumber from '../../utilities/guards/number.ts'
+import isString from '../../utilities/guards/string.ts'
 import isObject from '../../utilities/guards/object.ts'
-import { isGameStateDataArray } from '../game/data.ts'
 
 export interface AdventureChapterData {
   n: number
@@ -13,6 +14,7 @@ export interface AdventureStateData {
   playing: string
   history: GameStateData[]
   chapters: AdventureChapterData[]
+  exploits: Record<string, ExploitRecordData>
 }
 
 export const isAdventureChapterData = (
@@ -21,9 +23,11 @@ export const isAdventureChapterData = (
   if (!isObject(candidate)) return false
   const obj = candidate as Record<string, unknown>
 
-  if (!isNumber(obj.start) && obj.start !== null) return false
-  if (!isNumber(obj.end) && obj.end !== null) return false
-  return isNumber(obj.n)
+  return [
+    obj.start === null || isNumber(obj.start),
+    obj.end === null || isNumber(obj.end),
+    isNumber(obj.n)
+  ].every(test => test === true)
 }
 
 export const isAdventureChapterDataArray = (
@@ -39,7 +43,10 @@ export const isAdventureStateData = (
   if (!isObject(candidate)) return false
   const obj = candidate as Record<string, unknown>
 
-  if (typeof obj.playing !== 'string') return false
-  if (!isAdventureChapterDataArray(obj.chapters)) return false
-  return isGameStateDataArray(obj.history)
+  return [
+    isString(obj.playing),
+    isAdventureChapterDataArray(obj.chapters),
+    isGameStateDataArray(obj.history),
+    isExploitRecordDataDictionary(obj.exploits)
+  ].every(test => test === true)
 }

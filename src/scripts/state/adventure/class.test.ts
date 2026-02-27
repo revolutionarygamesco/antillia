@@ -1,3 +1,4 @@
+import ExploitRecord from '../exploits/class.ts'
 import AdventureState from './class.ts'
 
 describe('AdventureState', () => {
@@ -37,6 +38,21 @@ describe('AdventureState', () => {
         { n: 5, start: null, end: null },
         { n: 6, start: null, end: null }
       ])
+    })
+
+    it('initializes exploit records', () => {
+      const state = new AdventureState()
+      expect(state.exploits.size).toBe(0)
+    })
+
+    it('can load exploits', () => {
+      const id = 'rackham'
+      const before = new AdventureState()
+      before.exploits.set(id, new ExploitRecord({ id }))
+
+      const actual = new AdventureState(before)
+      expect(actual.exploits.size).toBe(1)
+      expect(actual.exploits.get(id)).toEqual({ id, exploits: [] })
     })
   })
 

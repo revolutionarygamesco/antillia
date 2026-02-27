@@ -6,6 +6,7 @@ import {
 
 import GameState from '../game/class.ts'
 import CrewState from '../crew/class.ts'
+import ExploitRecord from '../exploits/class.ts'
 import getLog from '../../log/get.ts'
 import { MODULE_ID, ADVENTURE_STATE_FLAG } from '../../settings.ts'
 
@@ -13,6 +14,7 @@ class AdventureState {
   playing: string
   chapters: AdventureChapterData[]
   history: GameState[]
+  exploits: Map<string, ExploitRecord>
 
   constructor(data?: AdventureState | Partial<AdventureStateData>) {
     this.history = data?.history
@@ -37,13 +39,24 @@ class AdventureState {
       { n: 5, start: null, end: null },
       { n: 6, start: null, end: null }
     ]
+
+    if (data instanceof AdventureState) {
+      this.exploits = data.exploits
+    } else if (data?.exploits) {
+      const iterable = Object.entries(data.exploits)
+        .map(([key, value]) => [key, new ExploitRecord(value)] as [string, ExploitRecord])
+      this.exploits = new Map<string, ExploitRecord>(iterable)
+    } else {
+      this.exploits = new Map<string, ExploitRecord>()
+    }
   }
 
   toObject (): AdventureStateData {
     return {
       playing: this.playing,
       chapters: this.chapters,
-      history: this.history.map(state => state.toObject())
+      history: this.history.map(state => state.toObject()),
+      exploits: Object.fromEntries(this.exploits)
     }
   }
 
