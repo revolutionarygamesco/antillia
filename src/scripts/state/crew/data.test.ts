@@ -1,6 +1,23 @@
 import { primitives, getPrimitivesExcept } from '../../utilities/testing/primitives.ts'
 import CrewState from './class.ts'
-import { isCrewStateData, isCrewStateDataArray } from './data.ts'
+import {
+  isCrewPosition,
+  isCrewStateData,
+  isCrewStateDataArray
+} from './data.ts'
+
+describe('isCrewPosition', () => {
+  it.each([
+    ...primitives,
+    ['an invalid object', { a: 1 }]
+  ] as Array<[string, unknown]>)('rejects %s', (_label, candidate) => {
+    expect(isCrewPosition(candidate)).toBe(false)
+  })
+
+  it('accepts crew position', () => {
+    expect(isCrewPosition({ id: 'captain', assigned: ['rackham'] })).toBe(true)
+  })
+})
 
 describe('isCrewStateData', () => {
   it.each([
