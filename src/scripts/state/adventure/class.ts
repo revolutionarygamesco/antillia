@@ -60,13 +60,19 @@ class AdventureState {
     }
   }
 
-  get mostRecentState(): GameState {
+  get mostRecentState (): GameState {
     return this.history[this.history.length - 1]
   }
 
-  get firstCrew(): CrewState | undefined {
+  get firstCrew (): CrewState | undefined {
     const crews = this.mostRecentState.crews.values()
     return crews.next().value
+  }
+
+  get chapter (): number {
+    const time = game?.time?.worldTime ?? 0
+    const { n } = this.getChapter(time)
+    return n
   }
 
   toObject (): AdventureStateData {

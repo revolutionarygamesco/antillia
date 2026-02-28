@@ -78,6 +78,15 @@ describe('AdventureState', () => {
         expect(actual?.id).toBe(crews[0].id)
       })
     })
+
+    describe('chapter', () => {
+      it('returns the chapter at the current world time', () => {
+        (global as any).game = { time: { worldTime: 0 }}
+        const state = new AdventureState()
+        expect(state.chapter).toBe(1)
+        delete (global as any).game
+      })
+    })
   })
 
   describe('Instance methods', () => {
