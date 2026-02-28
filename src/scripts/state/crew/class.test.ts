@@ -10,6 +10,11 @@ describe('CrewState', () => {
       const crew = new CrewState()
       expect(crew.id).toHaveLength(16)
     })
+
+    it('initializes crew positions', () => {
+      const crew = new CrewState()
+      expect(crew.positions.get('captain')?.max).toBe(1)
+    })
   })
 
   describe('Instance methods', () => {

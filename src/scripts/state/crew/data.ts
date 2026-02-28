@@ -6,7 +6,7 @@ import isObject from '../../utilities/guards/object.ts'
 export interface CrewPosition {
   id: string
   assigned: string[]
-  max: number
+  max?: number
   shares: number
   exempt: boolean
   exclusive: boolean
@@ -27,7 +27,7 @@ export const isCrewPosition = (
   return [
     isString(obj.id),
     isStringArray(obj.assigned),
-    isNumber(obj.max),
+    isNumber(obj.max) || obj.max === undefined,
     isNumber(obj.shares),
     typeof obj.exempt === 'boolean',
     typeof obj.exclusive === 'boolean',
