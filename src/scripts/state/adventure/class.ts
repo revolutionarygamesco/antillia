@@ -75,6 +75,12 @@ class AdventureState {
     return n
   }
 
+  get captainExploits (): ExploitRecord | undefined {
+    const captain = this.playing?.positions.get('captain')
+    if (!captain) return undefined
+    return this.exploits.get(captain.assigned[0])
+  }
+
   toObject (): AdventureStateData {
     return {
       playing: this.playing?.id ?? '',

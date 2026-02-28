@@ -87,6 +87,27 @@ describe('AdventureState', () => {
         delete (global as any).game
       })
     })
+
+    describe('captainExploits', () => {
+      it('returns undefined if the current crew has no captain', () => {
+        const state = new AdventureState()
+        expect(state.captainExploits).toBeUndefined()
+      })
+
+      it('returns exploits record of current crew’s captain', () => {
+        const state = new AdventureState()
+        const id = 'rackham'
+
+        const data = state.playing!.positions.get('captain')!
+        data.assigned = [id]
+        state.playing!.positions.set('captain', data)
+
+        const record = new ExploitRecord({ id, exploits: [['Original 1']] })
+        state.exploits.set(id, record)
+
+        expect(state.captainExploits).toBeInstanceOf(ExploitRecord)
+      })
+    })
   })
 
   describe('Instance methods', () => {
