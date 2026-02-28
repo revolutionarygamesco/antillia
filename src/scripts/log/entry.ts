@@ -17,6 +17,13 @@ class LogEntry {
     this.location = data?.location ?? undefined
     this.storyline = data?.storyline ?? undefined
   }
+
+  toObject (): LogEntryData {
+    const obj: LogEntryData = { at: this.at, text: this.text }
+    if (this.location) obj.location = this.location
+    if (this.storyline) obj.storyline = this.storyline
+    return obj
+  }
 }
 
 export default LogEntry
