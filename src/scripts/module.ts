@@ -1,5 +1,5 @@
 import AdventureState from './state/adventure/class.ts'
-import createLog from './log/create.ts'
+import createLog from './log/create-journal.ts'
 import { MODULE_ID } from './settings.ts'
 
 import generateBottleMessage from './generators/bottle-messages.ts'
