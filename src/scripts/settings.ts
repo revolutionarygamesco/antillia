@@ -25,6 +25,7 @@ export const UUIDS: Record<string, string> = {
   SETTLEMENTS_DUTCH: 'RollTable.xeiicDwD3jNHFEz1',
   SETTLEMENTS_FRENCH: 'RollTable.OamCpt8A1vmr0pON',
   SETTLEMENTS_SPANISH: 'RollTable.UugXd5EFP55zrlQN',
+  PIRATES: 'RollTable.cJsVMCuw9ch545LX',
   GOVERNORS: 'RollTable.eEVExp6HIqtAc2w9',
   GOVERNORS_BRITISH: 'RollTable.8vhF6q953mMFPfUW',
   GOVERNORS_DUTCH: 'RollTable.6RRExTZxFrMtwZN5',

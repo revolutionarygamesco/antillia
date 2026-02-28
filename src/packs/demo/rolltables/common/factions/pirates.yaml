@@ -1,0 +1,188 @@
+_id: cJsVMCuw9ch545LX
+_key: "!tables!cJsVMCuw9ch545LX"
+name: Infamous Pirates
+description: Some of the most infamous corsairs plying the Caribbean.
+img: icons/svg/d20-grey.svg
+formula: 1d20
+folder: EiDbIfT55yJaolFf
+results:
+  - _id: cglbqcNz62cXKBYN
+    _key: "!tables.results!cJsVMCuw9ch545LX.cglbqcNz62cXKBYN"
+    range:
+      - 1
+      - 1
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.hV071ucstSnEcBBr
+    name: Thomas Anstis
+  - _id: vgFuZtnqd05NFfnR
+    _key: "!tables.results!cJsVMCuw9ch545LX.vgFuZtnqd05NFfnR"
+    range:
+      - 2
+      - 2
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.BnTBkXPdrtvZg2zg
+    name: Thomas Cocklyn
+  - _id: AVNkcdas2SanDhX2
+    _key: "!tables.results!cJsVMCuw9ch545LX.AVNkcdas2SanDhX2"
+    range:
+      - 3
+      - 3
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.pBhT6vAsNNprcXWb
+    name: “Billy One-Hand” Condent
+  - _id: hUmHetL6Xq7oTrWl
+    _key: "!tables.results!cJsVMCuw9ch545LX.hUmHetL6Xq7oTrWl"
+    range:
+      - 4
+      - 4
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.gRBOBox2vS6GwDke
+    name: Robert Deal
+  - _id: yQMCdD7hpcv4yKUu
+    _key: "!tables.results!cJsVMCuw9ch545LX.yQMCdD7hpcv4yKUu"
+    range:
+      - 5
+      - 5
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.fWNxmkXPVz9XMbBi
+    name: Edward England
+  - _id: YYEY3gjPDEdUxrBF
+    _key: "!tables.results!cJsVMCuw9ch545LX.YYEY3gjPDEdUxrBF"
+    range:
+      - 6
+      - 6
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.fWNxmkXPVz9XMbBi
+    name: William Fox
+  - _id: xy4ToEdlolvr096Q
+    _key: "!tables.results!cJsVMCuw9ch545LX.xy4ToEdlolvr096Q"
+    range:
+      - 7
+      - 7
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.nyMxqiH0g6beBO54
+    name: Henry Jennings
+  - _id: LKjPs8zj8ASAG6LL
+    _key: "!tables.results!cJsVMCuw9ch545LX.LKjPs8zj8ASAG6LL"
+    range:
+      - 8
+      - 8
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.huLPfjIcp3HkhUgT
+    name: John Julian
+  - _id: zMAryKOVuxbZ05xT
+    _key: "!tables.results!cJsVMCuw9ch545LX.zMAryKOVuxbZ05xT"
+    range:
+      - 9
+      - 9
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.XHO7RGKDPjqUxye0
+    name: Francis Leslie
+  - _id: mhqbAUefPpRtMqmi
+    _key: "!tables.results!cJsVMCuw9ch545LX.mhqbAUefPpRtMqmi"
+    range:
+      - 10
+      - 10
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.c1XpXXqpMlka8Anb
+    name: Olivier “La Buse” Levasseur
+  - _id: HITOsmom2YcciUle
+    _key: "!tables.results!cJsVMCuw9ch545LX.HITOsmom2YcciUle"
+    range:
+      - 11
+      - 11
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.chiwqrgfKKIxEtLB
+    name: Israel Hands
+  - _id: DrOmlyHr779glkZ3
+    _key: "!tables.results!cJsVMCuw9ch545LX.DrOmlyHr779glkZ3"
+    range:
+      - 12
+      - 12
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.WRBU9kYTri0utC66
+    name: Edward Miller
+  - _id: 7SVBBtMcAnIXb8Pa
+    _key: "!tables.results!cJsVMCuw9ch545LX.7SVBBtMcAnIXb8Pa"
+    range:
+      - 13
+      - 13
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.XEXqFXHcUaNmiiUe
+    name: Montigny la Palisse
+  - _id: WpN4jgCgmfNF1muR
+    _key: "!tables.results!cJsVMCuw9ch545LX.WpN4jgCgmfNF1muR"
+    range:
+      - 14
+      - 14
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.wUgKO9QLogV1NOqg
+    name: Francis Blood
+  - _id: 0qTyB4d65W1P7MCw
+    _key: "!tables.results!cJsVMCuw9ch545LX.0qTyB4d65W1P7MCw"
+    range:
+      - 15
+      - 15
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.a3J09hGT8MU3nH5e
+    name: Daniel Porter
+  - _id: vsHJuRrIhyDpkJAq
+    _key: "!tables.results!cJsVMCuw9ch545LX.vsHJuRrIhyDpkJAq"
+    range:
+      - 16
+      - 16
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.twRTJuSLh9pYjzDk
+    name: “Calico Jack” Rackham
+  - _id: 4uYBrhYVKlXJhV1k
+    _key: "!tables.results!cJsVMCuw9ch545LX.4uYBrhYVKlXJhV1k"
+    range:
+      - 17
+      - 17
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.kBmToOlFZcvft2vP
+    name: “Black Bart” Roberts
+  - _id: Epik4dBcE24q9qld
+    _key: "!tables.results!cJsVMCuw9ch545LX.Epik4dBcE24q9qld"
+    range:
+      - 18
+      - 18
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.1eBkkzuYuJC3aUP1
+    name: Ceridwen Lloyd
+  - _id: dLfIAiUee7JQQbFi
+    _key: "!tables.results!cJsVMCuw9ch545LX.dLfIAiUee7JQQbFi"
+    range:
+      - 19
+      - 19
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.Dw1zLctmwgBiHWNk
+    name: Paulsgrave Williams
+  - _id: Kph8Ht6vtt2UR8nh
+    _key: "!tables.results!cJsVMCuw9ch545LX.Kph8Ht6vtt2UR8nh"
+    range:
+      - 20
+      - 20
+    weight: 1
+    type: document
+    documentUuid: JournalEntry.GIJgdezx157WKmRI
+    name: Thomas Richards

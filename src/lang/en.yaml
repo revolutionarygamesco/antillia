@@ -574,3 +574,35 @@ revolutionary-antillia:
             motivated by feelings of validation. Cultivate with reassurances
             of {his} value and importance, that even if {his} superiors fail to
             recognize {his} worth, <em>you</em> see it
+    pirate:
+      title: Captain {name}, {month} {year}
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        <p><strong>Report:</strong> The report was written in {month} {year},
+          detailing the latest activities of Captain {link} and crew as of
+          that time. {detail}</p>
+      fallback:
+        name: '“Black Bart” Roberts'
+        link: '@UUID[JournalEntry.kBmToOlFZcvft2vP]{“Black Bart” Roberts}'
+      details:
+        infiltrated: |
+          It is detailed and specific, suggesting that the agents must have a
+          source on the ship providing them with information.
+        hostile: |
+          It seems to compile all of the information that a pirate hunter would
+          need, suggesting that the {empire} will be commissioning (or already
+          has commissioned) privateers to hunt them down.
+        unsurprising: |
+          It doesn’t reveal anything you didn’t already know.
+        secret: |
+          It reveals one of {name}’s secrets.
+        commercial: |
+          It focuses on the captain and crew’s ambitions and desires, like a
+          business report, suggesting that {empire} plans to approach (or has
+          already approached) the captain with a business proposal, bribe, or
+          arrangement for mutual profit.
+        bad: |
+          The information in it is so inaccurate and/or out of date that it
+          leads you to believe that {empire} has no idea what this crew is up
+          to — or that its intelligence on this matter has even been actively
+          compromised.
