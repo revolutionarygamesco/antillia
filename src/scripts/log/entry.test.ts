@@ -29,24 +29,14 @@ describe('LogEntry', () => {
       expect(entry.text).toBe('tested')
     })
 
-    it('defaults to no location', () => {
+    it('defaults to no payload', () => {
       const entry = new LogEntry()
-      expect(entry.location).toBeUndefined()
+      expect(entry.payload).toBeUndefined()
     })
 
-    it('can be set to a location', () => {
-      const entry = new LogEntry({ location: 'here' })
-      expect(entry.location).toBe('here')
-    })
-
-    it('defaults to no storyline', () => {
-      const entry = new LogEntry()
-      expect(entry.location).toBeUndefined()
-    })
-
-    it('can be tied to a storyline', () => {
-      const entry = new LogEntry({ storyline: 'testing' })
-      expect(entry.storyline).toBe('testing')
+    it('can be given a payload', () => {
+      const entry = new LogEntry({ payload: { a: 1 } })
+      expect((entry.payload as any)?.a).toBe(1)
     })
   })
 
@@ -57,23 +47,10 @@ describe('LogEntry', () => {
         expect(entry.html).toBe('')
       })
 
-      it.each([
-        [
-          'at and location',
-          { at: 600, location: 'here' },
-          '<dt hidden data-at="600" data-location="here"></dt><dd hidden></dd>'
-        ],
-        [
-          'at and storyline',
-          { at: 600, storyline: 'testing' },
-          '<dt hidden data-at="600" data-storyline="testing"></dt><dd hidden></dd>'
-        ],
-        [
-          'at, location, and storyline',
-          { at: 600, location: 'here', storyline: 'testing' },
-          '<dt hidden data-at="600" data-location="here" data-storyline="testing"></dt><dd hidden></dd>'
-        ]
-      ] as Array<[string, LogEntryData, string]>)('returns a hidden entry if there’s only %s', (_label, data, expected) => {
+      it('returns a hidden entry if there’s only a payload', () => {
+        const data: Partial<LogEntryData> = { at: 600, payload: { a: 1 } }
+        const escapedPayload = encodeURIComponent('{"a":1}')
+        const expected = `<dt hidden data-at="600" data-payload="${escapedPayload}"></dt><dd hidden></dd>`
         const entry = new LogEntry(data)
         expect(entry.html).toBe(expected)
       })
@@ -81,10 +58,9 @@ describe('LogEntry', () => {
       it('returns the HTML form of the entry', () => {
         const at = 600
         const text = 'Hello, world!'
-        const location = 'here'
-        const storyline = 'testing'
-        const entry = new LogEntry({ at, text, location, storyline })
-        const expected = `<dt data-at="${at}" data-location="${location}" data-storyline="${storyline}">${getDay(at, { weekday: true })}</dt><dd>${text}</dd>`
+        const escapedPayload = encodeURIComponent('{"a":1}')
+        const entry = new LogEntry({ at, text, payload: { a: 1 } })
+        const expected = `<dt data-at="${at}" data-payload="${escapedPayload}">${getDay(at, { weekday: true })}</dt><dd>${text}</dd>`
         expect(entry.html).toBe(expected)
       })
     })
@@ -96,8 +72,7 @@ describe('LogEntry', () => {
 
       it.each([
         ['', core],
-        [' with a location', { ...core, location: 'here' }],
-        [' with a storyline', { ...core, storyline: 'testing' }]
+        [' with a payload', { ...core, payload: { a: 1 } }]
       ] as Array<[string, LogEntryData]>)('returns an object%s', (_label, data) => {
         const entry = new LogEntry(data)
         expect(entry.toObject()).toEqual(data)
@@ -140,12 +115,11 @@ describe('LogEntry', () => {
       it('parses valid HTML into a log entry', () => {
         const at = 600
         const text = 'Hello, world!'
-        const location = 'here'
-        const storyline = 'testing'
-        const html = `<dt data-at="${at}" data-location="${location}" data-storyline="${storyline}">${getDay(at, { weekday: true })}</dt><dd>${text}</dd>`
+        const escapedPayload = encodeURIComponent('{"a":1}')
+        const html = `<dt data-at="${at}" data-payload="${escapedPayload}">${getDay(at, { weekday: true })}</dt><dd>${text}</dd>`
         const actual = LogEntry.parse(html)
         expect(actual?.html).toEqual(html)
-        expect(actual?.toObject()).toEqual((new LogEntry({ at, text, location, storyline }).toObject()))
+        expect(actual?.toObject()).toEqual((new LogEntry({ at, text, payload: { a: 1 } }).toObject()))
       })
     })
   })

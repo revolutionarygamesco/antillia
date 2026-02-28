@@ -1,29 +1,26 @@
 import { type LogEntryData, isLogEntryData } from './data.ts'
 import getDay from '../time/day.ts'
+import isObject from '../utilities/guards/object.ts'
 
 class LogEntry {
   at: number
   text: string
-  location?: string
-  storyline?: string
+  payload?: object
 
   constructor (data?: LogEntry | Partial<LogEntryData>) {
     this.at = data?.at ?? 0
     this.text = data?.text ?? ''
-    this.location = data?.location ?? undefined
-    this.storyline = data?.storyline ?? undefined
+    this.payload = data?.payload
   }
 
   get html (): string {
-    if (this.text.length < 1 && !this.location && !this.storyline) return ''
+    if (this.text.length < 1 && !this.payload) return ''
 
     const data: Record<string, string> = {
       at: this.at.toString()
     }
 
-    if (this.location) data.location = this.location
-    if (this.storyline) data.storyline = this.storyline
-
+    if (this.payload) data.payload = encodeURIComponent(JSON.stringify(this.payload))
     if (this.text.length < 0 && Object.keys(data).length < 2) return ''
 
     const attrs = Object.keys(data)
@@ -41,8 +38,7 @@ class LogEntry {
 
   toObject (): LogEntryData {
     const obj: LogEntryData = { at: this.at, text: this.text }
-    if (this.location) obj.location = this.location
-    if (this.storyline) obj.storyline = this.storyline
+    if (this.payload) obj.payload = this.payload
     return obj
   }
 
@@ -69,10 +65,12 @@ class LogEntry {
       if (isNaN(at)) return null
 
       const text = dd.hidden ? '' : (dd.textContent ?? '')
-      const location = dt.dataset.location
-      const storyline = dt.dataset.storyline
+      const parsed = dt.dataset.payload
+        ? JSON.parse(decodeURIComponent(dt.dataset.payload))
+        : undefined
+      const payload = isObject(parsed) ? parsed : undefined
 
-      return new LogEntry({ at, text, location, storyline })
+      return new LogEntry({ at, text, payload })
     } catch (_err) { return null }
   }
 

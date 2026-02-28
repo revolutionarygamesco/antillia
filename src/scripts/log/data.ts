@@ -5,8 +5,7 @@ import isString from '../utilities/guards/string.ts'
 export interface LogEntryData {
   at: number
   text: string
-  location?: string
-  storyline?: string
+  payload?: object
 }
 
 export const isLogEntryData = (
@@ -18,7 +17,6 @@ export const isLogEntryData = (
   return [
     isNumber(obj.at),
     isString(obj.text),
-    obj.location === undefined || isString(obj.location),
-    obj.storyline === undefined || isString(obj.storyline)
+    obj.payload === undefined || isObject(obj.payload)
   ].every(test => test === true)
 }
