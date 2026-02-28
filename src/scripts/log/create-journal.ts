@@ -1,12 +1,8 @@
 import getLog from './get.ts'
+import getId from '../utilities/get-id.ts'
 import localize from '../utilities/wrappers/localize.ts'
 import LogEntry from './entry.ts'
 import { MODULE_ID, UUIDS } from '../settings.ts'
-
-const getId = (uuid: string): string => {
-  const elements = uuid.split('.')
-  return elements.pop() ?? uuid
-}
 
 const createLog = async (): Promise<JournalEntry> => {
   const existing = await getLog()
