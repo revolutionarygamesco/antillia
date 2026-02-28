@@ -4,7 +4,12 @@ export const ADVENTURE_STATE_FLAG = 'adventure-state'
 export const ZERO_HOUR = -7827019199
 export const UUIDS: Record<string, string> = {
   LOG: 'JournalEntry.bhjmsYTe3uIoHyd9',
-  TIMELINE: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.ONIKQ49Szsbcy0J3',
+  TIMELINE_CH1: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.ONIKQ49Szsbcy0J3',
+  TIMELINE_CH2: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.FsVyjdAcsSOumtPz',
+  TIMELINE_CH3: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.iHaUyp6MUUfI1wLm',
+  TIMELINE_CH4: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.iGrY5plcil5za8FW',
+  TIMELINE_CH5: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.T110PO9m3O5trFY2',
+  TIMELINE_CH6: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.NB1uM2D0zxEB3KlF',
   INTRO: 'JournalEntry.LF0tUW5xSU8tn8cz.JournalEntryPage.woSCZnMC67RNawLv',
   JOURNAL_ROOT: 'lGxWU3hj8j30VY0P',
   DECRYPTED_INTEL_MESSAGES: 'qqrvDHxpjZn5FYW2',
