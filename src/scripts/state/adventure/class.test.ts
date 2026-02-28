@@ -68,6 +68,16 @@ describe('AdventureState', () => {
         expect(actual.at).toBe(newStateAt)
       })
     })
+
+    describe('firstCrew', () => {
+      it('returns the first crew found in the most recent game state', () => {
+        const adventure = new AdventureState()
+        const crews = [...adventure.history[0].crews.values()]
+        adventure.history.push(new GameState(600, adventure.history[0], ...crews))
+        const actual = adventure.firstCrew
+        expect(actual?.id).toBe(crews[0].id)
+      })
+    })
   })
 
   describe('Instance methods', () => {

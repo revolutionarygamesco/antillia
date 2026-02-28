@@ -55,6 +55,11 @@ class AdventureState {
     return this.history[this.history.length - 1]
   }
 
+  get firstCrew(): CrewState | undefined {
+    const crews = this.mostRecentState.crews.values()
+    return crews.next().value
+  }
+
   toObject (): AdventureStateData {
     return {
       playing: this.playing,
