@@ -1,5 +1,5 @@
 import AdventureState from './state/adventure/class.ts'
-import createLog from './log/create-journal.ts'
+import initLog from './log/init.ts'
 import { MODULE_ID } from './settings.ts'
 
 import generateBottleMessage from './generators/bottle-messages.ts'
@@ -16,7 +16,7 @@ Hooks.once('init', async () => {
 })
 
 Hooks.once('ready', async () => {
-  await createLog()
+  await initLog()
   const state = await AdventureState.load()
   await state.save()
 })
