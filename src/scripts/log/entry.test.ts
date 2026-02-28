@@ -1,4 +1,5 @@
 import { type LogEntryData } from './data.ts'
+import getDay from '../time/day.ts'
 import LogEntry from './entry.ts'
 
 describe('LogEntry', () => {
@@ -45,6 +46,46 @@ describe('LogEntry', () => {
     it('can be tied to a storyline', () => {
       const entry = new LogEntry({ storyline: 'testing' })
       expect(entry.storyline).toBe('testing')
+    })
+  })
+
+  describe('Accessor methods', () => {
+    describe('html', () => {
+      it('returns a null string if there’s nothing to write', () => {
+        const entry = new LogEntry()
+        expect(entry.html).toBe('')
+      })
+
+      it.each([
+        [
+          'at and location',
+          { at: 600, location: 'here' },
+          '<dt hidden data-at="600" data-location="here"></dt><dd hidden></dd>'
+        ],
+        [
+          'at and storyline',
+          { at: 600, storyline: 'testing' },
+          '<dt hidden data-at="600" data-storyline="testing"></dt><dd hidden></dd>'
+        ],
+        [
+          'at, location, and storyline',
+          { at: 600, location: 'here', storyline: 'testing' },
+          '<dt hidden data-at="600" data-location="here" data-storyline="testing"></dt><dd hidden></dd>'
+        ]
+      ] as Array<[string, LogEntryData, string]>)('returns a hidden entry if there’s only %s', (_label, data, expected) => {
+        const entry = new LogEntry(data)
+        expect(entry.html).toBe(expected)
+      })
+
+      it('returns the HTML form of the entry', () => {
+        const at = 600
+        const text = 'Hello, world!'
+        const location = 'here'
+        const storyline = 'testing'
+        const entry = new LogEntry({ at, text, location, storyline })
+        const expected = `<dt data-at="${at}" data-location="${location}" data-storyline="${storyline}">${getDay(at, { weekday: true })}</dt><dd>${text}</dd>`
+        expect(entry.html).toBe(expected)
+      })
     })
   })
 

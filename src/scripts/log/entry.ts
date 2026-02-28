@@ -1,4 +1,5 @@
 import { type LogEntryData, isLogEntryData } from './data.ts'
+import getDay from '../time/day.ts'
 
 class LogEntry {
   at: number
@@ -11,6 +12,31 @@ class LogEntry {
     this.text = data?.text ?? ''
     this.location = data?.location ?? undefined
     this.storyline = data?.storyline ?? undefined
+  }
+
+  get html (): string {
+    if (this.text.length < 1 && !this.location && !this.storyline) return ''
+
+    const data: Record<string, string> = {
+      at: this.at.toString()
+    }
+
+    if (this.location) data.location = this.location
+    if (this.storyline) data.storyline = this.storyline
+
+    if (this.text.length < 0 && Object.keys(data).length < 2) return ''
+
+    const attrs = Object.keys(data)
+      .map(key => `data-${key}="${data[key]}"`)
+      .join(' ')
+
+    const day = this.text.length > 0
+      ? getDay(this.at, { weekday: true })
+      : ''
+
+    return this.text.length > 0
+      ? `<dt ${attrs}>${day}</dt><dd>${this.text}</dd>`
+      : `<dt hidden ${attrs}>${day}</dt><dd hidden></dd>`
   }
 
   toObject (): LogEntryData {
