@@ -34,6 +34,41 @@ describe('CrewState', () => {
         expect(actual).toContain(`{"id":"${crew.id}"`)
       })
     })
+
+    describe('getCaptain', () => {
+      const jack = { id: 'rackham', name: 'Calico Jack', uuid: 'Actor.rackham' } as unknown as Actor
+
+      beforeEach(() => {
+        (global as any).fromUuid = async (uuid: string): Promise<Actor | undefined> => {
+          return uuid === jack.uuid ? jack : undefined
+        }
+      })
+
+      afterEach(() => {
+        delete (global as any).fromUuid
+      })
+
+      it('returns undefined if there is no captain', async () => {
+        const crew = new CrewState()
+        expect(await crew.getCaptain()).toBeUndefined()
+      })
+
+      it('returns undefined if there is no such actor', async () => {
+        const crew = new CrewState()
+        const data = crew.positions.get('captain')!
+        data.assigned = ['jack']
+        crew.positions.set('captain', data)
+        expect(await crew.getCaptain()).toBeUndefined()
+      })
+
+      it('returns the captain actor', async () => {
+        const crew = new CrewState()
+        const data = crew.positions.get('captain')!
+        data.assigned = [jack.id]
+        crew.positions.set('captain', data)
+        expect(await crew.getCaptain()).toEqual(jack)
+      })
+    })
   })
 
   describe('Class methods', () => {

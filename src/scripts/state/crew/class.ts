@@ -1,5 +1,6 @@
 import generateID from '../../utilities/generate-id.ts'
 import { type CrewStateData, type CrewPosition, isCrewStateData } from './data.ts'
+import fromUuid from '../../utilities/wrappers/from-uuid.ts'
 
 const defaultPositions: Array<[string, CrewPosition]> = [
   ['captain', {
@@ -190,6 +191,12 @@ class CrewState {
 
   serialize (): string {
     return JSON.stringify(this.toObject())
+  }
+
+  async getCaptain (): Promise<Actor | undefined> {
+    const data = this.positions.get('captain')
+    if (!data) return undefined
+    return fromUuid(`Actor.${data.assigned[0]}`)
   }
 
   static deserialize(serialized: string): CrewState | null {

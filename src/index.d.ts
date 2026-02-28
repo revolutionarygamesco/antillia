@@ -46,6 +46,8 @@ interface Document {
   setFlag<T>(scope: string, key: string, value: T): void
 }
 
+interface Actor extends Document {}
+
 interface JournalEntry extends Document {
   pages: JournalEntryPage[]
   create(data?: any, operation?: any): Promise<JournalEntry>
