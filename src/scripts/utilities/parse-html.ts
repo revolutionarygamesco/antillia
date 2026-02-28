@@ -1,6 +1,6 @@
 const parseHTML = (
   html: string
-): Pick<Document, 'querySelector'> => {
+): Pick<Document, 'querySelector' | 'querySelectorAll'> => {
   return new DOMParser().parseFromString(html, 'text/html')
 }
 
