@@ -1,4 +1,3 @@
-import { parseHTML } from 'linkedom'
 import { type LogEntryData } from './data.ts'
 import getDay from '../time/day.ts'
 import LogEntry from './entry.ts'
@@ -103,10 +102,6 @@ describe('LogEntry', () => {
     })
 
     describe('parse', () => {
-      LogEntry.parseHTML = (html: string) => {
-        return parseHTML(`<html><body><dl>${html}</dl></body></html>`).document as unknown as Pick<Document, 'querySelector'>
-      }
-
       it('returns null if given an invalid string', () => {
         const actual = LogEntry.parse('lol nope')
         expect(actual).toBeNull()

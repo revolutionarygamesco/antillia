@@ -1,5 +1,6 @@
 import { type LogEntryData, isLogEntryData } from './data.ts'
 import getDay from '../time/day.ts'
+import parseHTML from '../utilities/parse-html.ts'
 import isObject from '../utilities/guards/object.ts'
 
 class LogEntry {
@@ -56,7 +57,7 @@ class LogEntry {
 
   static parse (html: string): LogEntry | null {
     try {
-      const doc = LogEntry.parseHTML(html)
+      const doc = parseHTML(html)
       const dt = doc.querySelector('dt')
       const dd = doc.querySelector('dd')
       if (!dt || !dd) return null
@@ -72,10 +73,6 @@ class LogEntry {
 
       return new LogEntry({ at, text, payload })
     } catch (_err) { return null }
-  }
-
-  static parseHTML: (html: string) => Pick<Document, 'querySelector'> = (html: string) => {
-    return new DOMParser().parseFromString(`<dl>${html}</dl>`, 'text/html')
   }
 }
 
