@@ -1,9 +1,4 @@
-export interface LogEntryData {
-  at: number
-  text: string
-  location?: string
-  storyline?: string
-}
+import { type LogEntryData, isLogEntryData } from './data.ts'
 
 class LogEntry {
   at: number

@@ -1,4 +1,5 @@
-import LogEntry, { type LogEntryData } from './entry.ts'
+import { type LogEntryData } from './data.ts'
+import LogEntry from './entry.ts'
 
 describe('LogEntry', () => {
   describe('constructor', () => {
