@@ -24,6 +24,10 @@ class LogEntry {
     if (this.storyline) obj.storyline = this.storyline
     return obj
   }
+
+  serialize (): string {
+    return JSON.stringify(this.toObject())
+  }
 }
 
 export default LogEntry

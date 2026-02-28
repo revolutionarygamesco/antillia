@@ -60,5 +60,13 @@ describe('LogEntry', () => {
         expect(entry.toObject()).toEqual(data)
       })
     })
+
+    describe('serialize', () => {
+      it('serializes log entry', () => {
+        const entry = new LogEntry()
+        const actual = entry.serialize()
+        expect(actual).toBe('{"at":0,"text":""}')
+      })
+    })
   })
 })
