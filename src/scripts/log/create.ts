@@ -1,6 +1,6 @@
 import getLog from './get.ts'
 import localize from '../utilities/wrappers/localize.ts'
-import getDay from '../time/day.ts'
+import LogEntry from './entry.ts'
 import { MODULE_ID, UUIDS } from '../settings.ts'
 
 const getId = (uuid: string): string => {
@@ -12,7 +12,7 @@ const createLog = async (): Promise<JournalEntry> => {
   const existing = await getLog()
   if (existing) return existing
 
-  const first = localize([MODULE_ID, 'log', 'first'])
+  const first = new LogEntry({ at: 0, text: localize([MODULE_ID, 'log', 'first']) })
   return await foundry.documents.JournalEntry.create({
     _id: getId(UUIDS.LOG),
     name: localize([MODULE_ID, 'log', 'title']),
@@ -26,7 +26,7 @@ const createLog = async (): Promise<JournalEntry> => {
         title: { show: true, level: 1 },
         text: {
           format: 1,
-          content: `<dl><dt data-at="0">${getDay(0, { weekday: true })}</dt><dd>${first}</dd></dl>`
+          content: `<dl>${first.html}</dl>`
         }
       }
     ]
