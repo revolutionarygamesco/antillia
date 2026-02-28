@@ -1,3 +1,4 @@
+import { parseHTML } from 'linkedom'
 import { type LogEntryData } from './data.ts'
 import getDay from '../time/day.ts'
 import LogEntry from './entry.ts'
@@ -123,6 +124,28 @@ describe('LogEntry', () => {
         const before = new LogEntry()
         const actual = LogEntry.deserialize(before.serialize())
         expect(actual).toEqual(before)
+      })
+    })
+
+    describe('parse', () => {
+      LogEntry.parseHTML = (html: string) => {
+        return parseHTML(`<html><body><dl>${html}</dl></body></html>`).document as unknown as Pick<Document, 'querySelector'>
+      }
+
+      it('returns null if given an invalid string', () => {
+        const actual = LogEntry.parse('lol nope')
+        expect(actual).toBeNull()
+      })
+
+      it('parses valid HTML into a log entry', () => {
+        const at = 600
+        const text = 'Hello, world!'
+        const location = 'here'
+        const storyline = 'testing'
+        const html = `<dt data-at="${at}" data-location="${location}" data-storyline="${storyline}">${getDay(at, { weekday: true })}</dt><dd>${text}</dd>`
+        const actual = LogEntry.parse(html)
+        expect(actual?.html).toEqual(html)
+        expect(actual?.toObject()).toEqual((new LogEntry({ at, text, location, storyline }).toObject()))
       })
     })
   })

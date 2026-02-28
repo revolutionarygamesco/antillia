@@ -57,6 +57,28 @@ class LogEntry {
       return new LogEntry(data)
     } catch (_err) { return null }
   }
+
+  static parse (html: string): LogEntry | null {
+    try {
+      const doc = LogEntry.parseHTML(html)
+      const dt = doc.querySelector('dt')
+      const dd = doc.querySelector('dd')
+      if (!dt || !dd) return null
+
+      const at = parseInt(dt.dataset.at ?? '0', 10)
+      if (isNaN(at)) return null
+
+      const text = dd.hidden ? '' : (dd.textContent ?? '')
+      const location = dt.dataset.location
+      const storyline = dt.dataset.storyline
+
+      return new LogEntry({ at, text, location, storyline })
+    } catch (_err) { return null }
+  }
+
+  static parseHTML: (html: string) => Pick<Document, 'querySelector'> = (html: string) => {
+    return new DOMParser().parseFromString(`<dl>${html}</dl>`, 'text/html')
+  }
 }
 
 export default LogEntry
