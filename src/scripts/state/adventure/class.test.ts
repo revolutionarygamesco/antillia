@@ -11,7 +11,7 @@ describe('AdventureState', () => {
 
     it('sets the initial crew state as playing', () => {
       const state = new AdventureState()
-      expect(state.history[0].crews.has(state.playing)).toBe(true)
+      expect(state.history[0].crews.has(state.playing?.id ?? '')).toBe(true)
     })
 
     it('initializes chapter start and end dates', () => {
@@ -86,7 +86,7 @@ describe('AdventureState', () => {
         const state = new AdventureState()
         const actual = state.toObject()
 
-        expect(actual.playing).toBe(state.playing)
+        expect(actual.playing).toBe(state.playing?.id)
         expect(actual.history).toHaveLength(1)
 
         for (const [index, history] of actual.history.entries()) {
@@ -100,9 +100,9 @@ describe('AdventureState', () => {
         const state = new AdventureState()
         const actual = state.serialize()
 
-        expect(actual).toContain(`"playing":"${state.playing}"`)
+        expect(actual).toContain(`"playing":"${state.playing?.id}"`)
         expect(actual).toContain('"chapter":1')
-        expect(actual).toContain(`"id":"${state.playing}"`)
+        expect(actual).toContain(`"id":"${state.playing?.id}"`)
       })
     })
 

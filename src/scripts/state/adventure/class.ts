@@ -11,7 +11,7 @@ import getLog from '../../log/get.ts'
 import { MODULE_ID, ADVENTURE_STATE_FLAG } from '../../settings.ts'
 
 class AdventureState {
-  playing: string
+  playing?: CrewState
   chapters: AdventureChapterData[]
   history: GameState[]
   exploits: Map<string, ExploitRecord>
@@ -30,7 +30,16 @@ class AdventureState {
           .sort((a, b) => a.at - b.at)
       : [new GameState()]
 
-    this.playing = Array.from(this.history[this.history.length - 1].crews.keys())[0]
+    if (data instanceof AdventureState) {
+      this.playing = data.playing
+    } else if (data?.playing) {
+      const id = data.playing
+      const mostRecent = this.history[this.history.length - 1]
+      this.playing = mostRecent.crews.get(id) ?? this.firstCrew
+    } else {
+      this.playing = this.firstCrew
+    }
+
     this.chapters = data?.chapters ?? [
       { n: 1, start: 0, end: null },
       { n: 2, start: null, end: null },
@@ -62,7 +71,7 @@ class AdventureState {
 
   toObject (): AdventureStateData {
     return {
-      playing: this.playing,
+      playing: this.playing?.id ?? '',
       chapters: this.chapters,
       history: this.history.map(state => state.toObject()),
       exploits: Object.fromEntries(this.exploits)
