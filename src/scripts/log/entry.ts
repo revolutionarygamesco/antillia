@@ -23,6 +23,14 @@ class LogEntry {
   serialize (): string {
     return JSON.stringify(this.toObject())
   }
+
+  static deserialize (serialized: string): LogEntry | null {
+    try {
+      const data = JSON.parse(serialized)
+      if (!isLogEntryData(data)) return null
+      return new LogEntry(data)
+    } catch (_err) { return null }
+  }
 }
 
 export default LogEntry

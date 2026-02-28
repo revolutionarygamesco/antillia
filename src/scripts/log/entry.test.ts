@@ -70,4 +70,19 @@ describe('LogEntry', () => {
       })
     })
   })
+
+  describe('Class methods', () => {
+    describe('deserialize', () => {
+      it('returns null if given an invalid string', () => {
+        const actual = LogEntry.deserialize('lol nope')
+        expect(actual).toBeNull()
+      })
+
+      it('deserializes log entry object', () => {
+        const before = new LogEntry()
+        const actual = LogEntry.deserialize(before.serialize())
+        expect(actual).toEqual(before)
+      })
+    })
+  })
 })
