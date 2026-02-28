@@ -51,6 +51,10 @@ class AdventureState {
     }
   }
 
+  get mostRecentState(): GameState {
+    return this.history[this.history.length - 1]
+  }
+
   toObject (): AdventureStateData {
     return {
       playing: this.playing,

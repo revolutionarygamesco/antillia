@@ -1,4 +1,6 @@
+import selectRandomBetween from '../../random/between.ts'
 import ExploitRecord from '../exploits/class.ts'
+import GameState from '../game/class.ts'
 import AdventureState from './class.ts'
 
 describe('AdventureState', () => {
@@ -53,6 +55,18 @@ describe('AdventureState', () => {
       const actual = new AdventureState(before)
       expect(actual.exploits.size).toBe(1)
       expect(actual.exploits.get(id)).toEqual({ id, exploits: [] })
+    })
+  })
+
+  describe('Accessor methods', () => {
+    describe('mostRecentState', () => {
+      it('returns the most recent game state in the history', () => {
+        const newStateAt = selectRandomBetween(300, 600)
+        const adventure = new AdventureState()
+        adventure.history.push(new GameState(newStateAt, adventure.history[0]))
+        const actual = adventure.mostRecentState
+        expect(actual.at).toBe(newStateAt)
+      })
     })
   })
 
