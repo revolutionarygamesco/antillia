@@ -1,5 +1,7 @@
+import { changeInitialCase } from './capital.ts'
+
 const decapitalize = (str: string): string => {
-  return str.charAt(0).toLowerCase() + str.slice(1)
+  return changeInitialCase(str, 'lower')
 }
 
 export default decapitalize
