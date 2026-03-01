@@ -270,9 +270,10 @@ revolutionary-antillia:
           Soldiers die all the time in the Caribbean — from disease, from the
           Scourge, sometimes even in battle. When that happens, not all
           governors report the loss as they ought. The dead soldier continues
-          to be paid his wage wage, but it all goes directly into the
-          governor’s personal coffers. This report provides {evidence} that the
-          {governor} is engaged in just such a scheme.
+          to be paid his wage, but it all goes directly into the governor’s
+          personal coffers. This report provides {evidence} that the {governor}
+          is engaged in just such a scheme, with at least [[d100]] dead soldiers
+          still listed in the rolls.
         ash: |
           Defending settlements from the Scourge is dangerous, but it can also
           be a lucrative source of ash from all of the undead that are
@@ -297,7 +298,7 @@ revolutionary-antillia:
           the probate courts to seize the estates of deceased merchants.
         illegal-trade: |
           The report provides {evidence} that the {governor} is engaging in
-          illegal trade with {rival}.
+          illegal trade with the {rival}.
         extortion-scourge: |
           The report provides {evidence} that the {governor} is refusing to
           protect settlements from the Scourge unless they pay him exorbitant
