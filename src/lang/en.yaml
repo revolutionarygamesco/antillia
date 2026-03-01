@@ -86,6 +86,10 @@ revolutionary-antillia:
         alias: "{alias} Entry text"
         description: |
           Add an entry to the adventure log.
+      response:
+        speaker: Adventure Log
+        content: |
+          The @UUID[{uuid}] has been updated.
   factions:
     spanish:
       name: The Spanish Empire
