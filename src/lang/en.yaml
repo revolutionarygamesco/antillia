@@ -26,6 +26,19 @@ revolutionary-antillia:
     18: Eighteen
     19: Nineteen
     20: Twenty
+  pronouns:
+    masculine:
+      sub: he
+      obj: him
+      pos:
+        adj: his
+        pro: his
+    feminine:
+      sub: she
+      obj: her
+      pos:
+        adj: her
+        pro: hers
   chapters:
     ch1: Chapter I.
     ch2: Chapter II.
