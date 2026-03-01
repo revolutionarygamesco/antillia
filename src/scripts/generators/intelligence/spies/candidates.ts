@@ -1,14 +1,9 @@
 import stockArray from '../../../random/stock.ts'
+import { type Gender, feminine, masculine } from '../../../utilities/genders.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 const prefix = [MODULE_ID, 'intelligence', 'spies']
 
-interface Gender {
-  naming: 'Masculine' | 'Feminine'
-  sub: 'he' | 'she'
-  obj: 'him' | 'her'
-  pos: 'his' | 'her'
-}
 
 export interface Position {
   path: string[]
@@ -16,24 +11,21 @@ export interface Position {
   needs: string[]
 }
 
-const f: Gender = { naming: 'Feminine', sub: 'she', obj: 'her', pos: 'her' }
-const m: Gender = { naming: 'Masculine', sub: 'he', obj: 'him', pos: 'his' }
-
 export const positions: Array<Position | Position[]> = [
-  { path: [...prefix, 'candidates', 'merchant'], genders: [m], needs: ['port'] },
-  { path: [...prefix, 'candidates', 'servant'], genders: [m, f], needs: ['governor'] },
-  { path: [...prefix, 'candidates', 'tavern'], genders: [m], needs: ['port'] },
+  { path: [...prefix, 'candidates', 'merchant'], genders: [masculine], needs: ['port'] },
+  { path: [...prefix, 'candidates', 'servant'], genders: [masculine, feminine], needs: ['governor'] },
+  { path: [...prefix, 'candidates', 'tavern'], genders: [masculine], needs: ['port'] },
   [
-    { path: [...prefix, 'candidates', 'secretary'], genders: [m], needs: ['governor'] },
-    { path: [...prefix, 'candidates', 'pilot'], genders: [m], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'port-master'], genders: [m], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'official'], genders: [m], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'physician', 'personal'], genders: [m], needs: ['governor'] },
-    { path: [...prefix, 'candidates', 'physician', 'regimental'], genders: [m], needs: ['fort'] },
-    { path: [...prefix, 'candidates', 'customs'], genders: [m], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'army'], genders: [m], needs: ['fort'] },
-    { path: [...prefix, 'candidates', 'navy'], genders: [m], needs: ['navy'] },
-    { path: [...prefix, 'candidates', 'interpreter'], genders: [m], needs: ['governor'] },
+    { path: [...prefix, 'candidates', 'secretary'], genders: [masculine], needs: ['governor'] },
+    { path: [...prefix, 'candidates', 'pilot'], genders: [masculine], needs: ['port'] },
+    { path: [...prefix, 'candidates', 'port-master'], genders: [masculine], needs: ['port'] },
+    { path: [...prefix, 'candidates', 'official'], genders: [masculine], needs: ['port'] },
+    { path: [...prefix, 'candidates', 'physician', 'personal'], genders: [masculine], needs: ['governor'] },
+    { path: [...prefix, 'candidates', 'physician', 'regimental'], genders: [masculine], needs: ['fort'] },
+    { path: [...prefix, 'candidates', 'customs'], genders: [masculine], needs: ['port'] },
+    { path: [...prefix, 'candidates', 'army'], genders: [masculine], needs: ['fort'] },
+    { path: [...prefix, 'candidates', 'navy'], genders: [masculine], needs: ['navy'] },
+    { path: [...prefix, 'candidates', 'interpreter'], genders: [masculine], needs: ['governor'] },
   ]
 ]
 

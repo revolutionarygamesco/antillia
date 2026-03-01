@@ -65,11 +65,7 @@ const generateSpyList = async (): Promise<BottleMessageIntel> => {
       : ''
 
     // Select a gender
-    const g = selectRandomElement(p.genders)
-    const gender = g.naming
-    const he = g.sub
-    const him = g.obj
-    const his = g.pos
+    const gender = selectRandomElement(p.genders)
 
     // Get the position string
     const position = localize(p.path, { governor, port, fort, navy })
@@ -89,13 +85,13 @@ const generateSpyList = async (): Promise<BottleMessageIntel> => {
     const motivationCategories: string[][][] = [rewards, ideological, coercion, ego]
     const motivationCategory: string[][] = selectRandomElement(motivationCategories)
     const motivationPath: string[] = selectRandomElement(motivationCategory)
-    const motivation = localize(motivationPath, { he, him, his }).trim()
+    const motivation = localize(motivationPath, gender).trim()
 
     // Generate a name
     const namer = game?.modules?.get('revolutionary-piratenames')?.api
     const nationality = selectRandomElement(rival.nationalities)
     const name: string = namer?.generateName
-      ? await namer.generateName(nationality, gender)
+      ? await namer.generateName(nationality, gender.naming)
       : 'John Doe'
 
     // Write our spy’s story

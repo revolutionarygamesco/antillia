@@ -420,22 +420,22 @@ revolutionary-antillia:
       motivation:
         reward:
           money: |
-            paid for {his} services. If necessary, {his} past collaboration
-            could be leveraged as blackmail against {him}, but use this option
+            paid for {pos.} services. If necessary, {pa} past collaboration
+            could be leveraged as blackmail against {o}, but use this option
             judiciously
           pardon: |
-            offered a pardon. To cultivate, heighten {his} fear of punishment.
-            As a last resort, we could threaten to reveal evidence of {his}
+            offered a pardon. To cultivate, heighten {pa} fear of punishment.
+            As a last resort, we could threaten to reveal evidence of {pa}
             crimes to the authorities
           promise:
             fulfilled: |
               provided aid in a personal endeavor. Gratitude won’t last
-              forever, though. If {he} proves unwilling to continue, we can
-              switch to blackmail with {his} past cooperation as evidence, or
-              harm to {his} family
+              forever, though. If {s} proves unwilling to continue, we can
+              switch to blackmail with {pa} past cooperation as evidence, or
+              harm to {pa} family
             unfulfilled: |
               promised aid in a personal endeavor. We can’t put off fulfillment
-              indefinitely, but we’ll get what we need from {him} first
+              indefinitely, but we’ll get what we need from {o} first
         ideology:
           spanish:
             british:
@@ -471,7 +471,7 @@ revolutionary-antillia:
           british:
             spanish:
               catholic: |
-                motivated by loyalty to {his} fellow Catholics
+                motivated by loyalty to {pa} fellow Catholics
               jacobite: |
                 a loyal Jacobite
               illegal: |
@@ -485,7 +485,7 @@ revolutionary-antillia:
                 motivated by a belief in the superiority of French culture
               leveller: |
                 motivated not by any love for France but commitment to the old
-                radical causes of the English Civil War, which {he} feels the
+                radical causes of the English Civil War, which {s} feels the
                 Restoration and even the new Hanoverian regime have betrayed
             dutch:
               trade: |
@@ -511,7 +511,7 @@ revolutionary-antillia:
                 a disciple of Locke opposed to France’s absolute monarchy
               tolerance: |
                 a student of Bayle’s, convinced to provide intelligence against
-                France by cultivating {his} animosity to the kingdom’s religious
+                France by cultivating {pa} animosity to the kingdom’s religious
                 intolerance
               intellectual: |
                 motivated by an antipathy for French censorship and an
@@ -546,8 +546,8 @@ revolutionary-antillia:
               recompense: |
                 motivated by a belief that the Netherlands’ trading with
                 enemies during wartime was a betrayal. We have cultivated
-                {him} with a belief that providing intelligence is one way
-                in which {he} can personally help right that wrong
+                {o} with a belief that providing intelligence is one way
+                in which {s} can personally help right that wrong
               religion: |
                 motivated by a belief that Dutch Reformed theology has erred
                 and the moderate Calvinism of the Church of England is correct
@@ -564,40 +564,40 @@ revolutionary-antillia:
                 speakers of the <em>langues d'oïl</em>
         coercion:
           homosexual: |
-            blackmailed with evidence of {his} homosexual activities
+            blackmailed with evidence of {pa} homosexual activities
           affair: |
-            blackmailed with evidence of {his} affair
+            blackmailed with evidence of {pa} affair
           illegitimate:
             son: |
-              blackmailed with evidence of {his} illegitimate son
+              blackmailed with evidence of {pa} illegitimate son
             daughter: |
-              blackmailed with evidence of {his} illegitimate daughter
+              blackmailed with evidence of {pa} illegitimate daughter
           threatened:
             son: |
-              coerced with threats against {his} son
+              coerced with threats against {pa} son
             daughter: |
-              coerced with threats against {his} daughter
+              coerced with threats against {pa} daughter
             mother: |
-              coerced with threats against {his} mother
+              coerced with threats against {pa} mother
             father: |
-              coerced with threats against {his} father
+              coerced with threats against {pa} father
         ego:
           grievance: |
             motivated by personal grievance. Cultivate by returning to the
-            unfairness of the injury done to {him} and how you can set it
+            unfairness of the injury done to {o} and how you can set it
             right
           thrill: |
             motivated by the thrill of involvement in clandestine activities.
-            Cultivate with exaggerated tales of skullduggery. Make {him} feel
-            like {he} is part of something elaborate and exciting
+            Cultivate with exaggerated tales of skullduggery. Make {o} feel
+            like {s} is part of something elaborate and exciting
           vanity: |
             motivated by the vanity of possessing secrets others desire.
-            Cultivate with flattery and the reassurance that {he} is a
+            Cultivate with flattery and the reassurance that {s} is a
             person that powerful men quietly depend upon
           validation: |
             motivated by feelings of validation. Cultivate with reassurances
-            of {his} value and importance, that even if {his} superiors fail to
-            recognize {his} worth, <em>you</em> see it
+            of {his} value and importance, that even if {pa} superiors fail to
+            recognize {pa} worth, <em>you</em> see it
     pirate:
       title: Captain {name}, {month} {year}
       report: |
