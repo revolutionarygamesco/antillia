@@ -631,3 +631,42 @@ revolutionary-antillia:
           leads you to believe that {empire} has no idea what this crew is up
           to — or that its intelligence on this matter has even been actively
           compromised.
+    ash-kingpin:
+      title:
+        new: New Ash Kingpin of {location}
+        vacuum: Ash Kingpin of {location} Deposed
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        <p><strong>Dated:</strong> The report is dated {day}.</p>
+        <p><strong>Ash Kingpin:</strong> {details}</p>
+      details:
+        consolidated: |
+          One {name} has, through intimidation, violence, and scheming,
+          cornered the black market trade in ash in {location}.
+        killed:
+          coup: |
+            The ash kingpin of {location}, {former}, has been killed in a coup
+            orchestrated by {pa} rival, {name}.
+          succeeded: |
+            The ash kingpin of {location}, {former}, has been killed. {PA}
+            appointed successor, {name}, has stepped into {pa} role, but there
+            could be a moment of vulnerability here for a rival to strike.
+          vacuum: |
+            The ash kingpin of {location}, {former}, has been killed, leaving a
+            power vacuum in the local underworld. Will a new kingpin emerge, or
+            will this eventually settle into a network of smaller, less
+            ambitious dealers?
+        captured:
+          succeeded: |
+            The ash kingpin of {location}, {former}, has been taken into
+            custody by the governor’s men, given a speedy trial, and hanged.
+            {PA} appointed successor, {name}, has stepped into {pa} role, but
+            there could be a moment of vulnerability here for a rival to
+            strike, or for the governor to press harder.
+          vacuum: |
+            The ash kingpin of {location}, {former}, has been taken into
+            custody by the governor’s men, given a speedy trial, and hanged.
+            With no clear successor or rival in a position to claim {pa}
+            position, there is a power vacuum in the local underworld. Will a
+            new kingpin emerge, or will this eventually settle into a network
+            of smaller, less ambitious dealers?
