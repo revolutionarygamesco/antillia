@@ -5,14 +5,14 @@ import isString from '../utilities/guards/string.ts'
 export interface LogEntryData {
   at: number
   text: string
-  payload?: object
+  payload?: Record<string, any>
 }
 
 export const isLogEntryData = (
   candidate: unknown
 ): candidate is LogEntryData => {
   if (!isObject(candidate)) return false
-  const obj = candidate as Record<string, unknown>
+  const obj = candidate as Record<string, any>
 
   return [
     isNumber(obj.at),

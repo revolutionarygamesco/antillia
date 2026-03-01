@@ -4,11 +4,11 @@ import LogEntry from './entry.ts'
 
 const addLog = async (
   text: string,
-  payload?: object
+  payload?: Record<string, any>
 ): Promise<JournalEntry | null> => {
   const entry = new LogEntry({ at: game?.time?.worldTime ?? 0, text, payload })
-  const exisiting = await readLog()
-  const entries = [...exisiting, entry]
+  const existing = await readLog()
+  const entries = [...existing, entry]
     .sort((a, b) => a.at - b.at)
   return await writeLog(...entries)
 }

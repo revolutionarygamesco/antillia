@@ -6,7 +6,7 @@ import isObject from '../utilities/guards/object.ts'
 class LogEntry {
   at: number
   text: string
-  payload?: object
+  payload?: Record<string, any>
 
   constructor (data?: LogEntry | Partial<LogEntryData>) {
     this.at = data?.at ?? 0
@@ -69,7 +69,9 @@ class LogEntry {
       const parsed = dt.dataset.payload
         ? JSON.parse(decodeURIComponent(dt.dataset.payload))
         : undefined
-      const payload = isObject(parsed) ? parsed : undefined
+      const payload = isObject(parsed)
+        ? parsed as Record<string, any>
+        : undefined
 
       return new LogEntry({ at, text, payload })
     } catch (_err) { return null }
