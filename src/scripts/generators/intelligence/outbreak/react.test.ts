@@ -2,7 +2,7 @@ import { isOutbreakReaction } from './types.ts'
 import react from './react.ts'
 
 describe('react', () => {
-  it('chooses a reaction', () => {
+  it('chooses reactions for each stage of the outbreak', () => {
     const { early, mid, late } = react()
     expect(isOutbreakReaction(early)).toBe(true)
     expect(isOutbreakReaction(mid)).toBe(true)
