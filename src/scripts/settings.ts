@@ -2,6 +2,9 @@ export const MODULE_NAME = 'Shadows of Antillia'
 export const MODULE_ID = 'revolutionary-antillia'
 export const ADVENTURE_STATE_FLAG = 'adventure-state'
 export const ZERO_HOUR = -7827019199
+export const SECONDS_PER_MINUTE = 60
+export const SECONDS_PER_HOUR = 60 * SECONDS_PER_MINUTE
+export const SECONDS_PER_DAY = 24 * SECONDS_PER_HOUR
 export const UUIDS: Record<string, string> = {
   LOG: 'JournalEntry.bhjmsYTe3uIoHyd9',
   TIMELINE_CH1: 'JournalEntry.bhjmsYTe3uIoHyd9.JournalEntryPage.ONIKQ49Szsbcy0J3',
