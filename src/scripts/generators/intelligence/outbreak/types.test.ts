@@ -1,9 +1,10 @@
 import { primitives, getPrimitivesExcept } from '../../../utilities/testing/primitives.ts'
+import { SECONDS_PER_DAY } from '../../../settings.ts'
 import {
   isOutbreakReaction, isOutbreakReactionArray, outbreakReactions,
   isOutbreakTwist, isOutbreakTwistArray, outbreakTwists,
   isOutbreakStage, isOutbreakStageArray, outbreakStages,
-  isOutbreakStageDays, isOutbreakStageReactions, isOutbreakStageTwists,
+  isOutbreakStageSpans, isOutbreakStageReactions, isOutbreakStageTwists,
   isOutbreakDisease, isOutbreakSituation
 } from './types.ts'
 
@@ -94,15 +95,15 @@ describe('isOutbreakStageArray', () => {
   })
 })
 
-describe('isOutbreakStageDays', () => {
+describe('isOutbreakStageSpans', () => {
   it.each([
     ...primitives
   ] as Array<[string, unknown]>)('rejects %s', (_label, candidate) => {
-    expect(isOutbreakStageDays(candidate)).toBe(false)
+    expect(isOutbreakStageSpans(candidate)).toBe(false)
   })
 
   it('accepts an outbreak stage days record', () => {
-    expect(isOutbreakStageDays({
+    expect(isOutbreakStageSpans({
       early: [1, 7],
       mid: [8, 28],
       late: [29, 49]
@@ -182,8 +183,11 @@ describe('isOutbreakSituation', () => {
           late: [29, 49]
         }
       },
-      onset: 0,
-      impact: 0,
+      course: {
+        early: [SECONDS_PER_DAY, 7 * SECONDS_PER_DAY],
+        mid: [8 * SECONDS_PER_DAY, 28 * SECONDS_PER_DAY],
+        late: [29 * SECONDS_PER_DAY, 49 * SECONDS_PER_DAY]
+      },
       reactions: {
         early: 'ignore',
         mid: 'fumigation',

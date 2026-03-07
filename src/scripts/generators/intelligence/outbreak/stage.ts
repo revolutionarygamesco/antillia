@@ -1,20 +1,8 @@
 import { type OutbreakSituation, type OutbreakStage } from './types.ts'
-import { SECONDS_PER_DAY } from '../../../settings.ts'
 import isWithinRange from '../../../utilities/range.ts'
 
-const calculateTimeline = (
-  onset: number,
-  impact: number,
-  original: number[]
-): number[] => {
-  return original.map(d => onset + (d * impact * SECONDS_PER_DAY))
-}
-
-const getOutbreakStage = (situation: OutbreakSituation, at: number): OutbreakStage | null => {
-  const { onset, impact, disease } = situation
-  const early = calculateTimeline(onset, impact, disease.stages.early)
-  const mid = calculateTimeline(onset, impact, disease.stages.mid)
-  const late = calculateTimeline(onset, impact, disease.stages.late)
+const getOutbreakStage = (outbreak: OutbreakSituation, at: number): OutbreakStage | null => {
+  const { early, mid, late } = outbreak.course
 
   if (isWithinRange(at, early)) return 'early'
   if (isWithinRange(at, mid)) return 'mid'

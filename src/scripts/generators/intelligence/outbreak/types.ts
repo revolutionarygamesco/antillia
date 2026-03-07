@@ -34,7 +34,7 @@ const makeOutbreakStageRecordGuard = <T>(
 }
 
 const isStageTuple = makeTupleGuard(isNumber, isNumber)
-export const isOutbreakStageDays = makeOutbreakStageRecordGuard(isStageTuple)
+export const isOutbreakStageSpans = makeOutbreakStageRecordGuard(isStageTuple)
 export const isOutbreakStageReactions = makeOutbreakStageRecordGuard(isOutbreakReaction)
 export const isOutbreakStageTwists = makeOutbreakStageRecordGuard(isOutbreakTwist)
 
@@ -52,7 +52,7 @@ export const isOutbreakDisease = (
   return [
     isString(obj.tag),
     isString(obj.uuid),
-    isOutbreakStageDays(obj.stages)
+    isOutbreakStageSpans(obj.stages)
   ].every(test => test === true)
 }
 
@@ -60,8 +60,7 @@ export interface OutbreakSituation {
   storyline: 'outbreak'
   location: string
   disease: OutbreakDisease
-  onset: number
-  impact: number
+  course: Record<OutbreakStage, [number, number]>
   reactions: Record<OutbreakStage, OutbreakReaction>
   twists: Record<OutbreakStage, OutbreakTwist>
 }
@@ -76,8 +75,7 @@ export const isOutbreakSituation = (
     obj.storyline === 'outbreak',
     isString(obj.location),
     isOutbreakDisease(obj.disease),
-    isNumber(obj.onset),
-    isNumber(obj.impact),
+    isOutbreakStageSpans(obj.course),
     isOutbreakStageReactions(obj.reactions),
     isOutbreakStageTwists(obj.twists)
   ].every(test => test === true)

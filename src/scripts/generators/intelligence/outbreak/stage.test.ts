@@ -1,15 +1,18 @@
 import { type OutbreakSituation } from './types.ts'
 import diseases from './diseases.ts'
-import getOutbreakStage from './stage.ts'
 import { SECONDS_PER_DAY } from '../../../settings.ts'
+import getOutbreakStage from './stage.ts'
 
 describe('getOutbreakStage', () => {
   const situation: OutbreakSituation = {
     storyline: 'outbreak',
     location: 'kingston',
     disease: diseases.get('dysentery')!,
-    onset: 0,
-    impact: 1,
+    course: {
+      early: [SECONDS_PER_DAY, 7 * SECONDS_PER_DAY],
+      mid: [8 * SECONDS_PER_DAY, 28 * SECONDS_PER_DAY],
+      late: [29 * SECONDS_PER_DAY, 49 * SECONDS_PER_DAY]
+    },
     reactions: {
       early: 'ignore',
       mid: 'fumigation',
@@ -21,10 +24,6 @@ describe('getOutbreakStage', () => {
       late: 'authorities-fled'
     }
   }
-
-  beforeEach(() => {
-    situation.impact = 1
-  })
 
   it.each([
     ['early', 5],
@@ -41,15 +40,5 @@ describe('getOutbreakStage', () => {
   ] as Array<[string, number]>)('returns null when %s outbreak', (_label, days) => {
     const actual = getOutbreakStage(situation, days * SECONDS_PER_DAY)
     expect(actual).toBeNull()
-  })
-
-  it.each([
-    ['early', 3],
-    ['late', 20],
-    [null, 40]
-  ] as Array<[string | null, number]>)('returns %s at %d days (impact)', (expected, days) => {
-    situation.impact = 0.5
-    const actual = getOutbreakStage(situation, days * SECONDS_PER_DAY)
-    expect(actual).toBe(expected)
   })
 })
