@@ -2,7 +2,7 @@ import { primitives, getPrimitivesExcept } from '../../../utilities/testing/prim
 import { SECONDS_PER_DAY } from '../../../settings.ts'
 import {
   isOutbreakReactionTag, isOutbreakReactionTagArray, outbreakReactionTags, isOutbreakReaction,
-  isOutbreakTwist, isOutbreakTwistArray, outbreakTwists,
+  isOutbreakTwist, isOutbreakTwistOrNull, isOutbreakTwistArray, outbreakTwists,
   isOutbreakStage, isOutbreakStageArray, outbreakStages,
   isOutbreakStageSpans, isOutbreakStageReactions, isOutbreakStageTwists,
   isOutbreakDisease, isOutbreakSituation
@@ -58,6 +58,22 @@ describe('isOutbreakTwist', () => {
 
   it.each(outbreakTwists)('accepts %s', (candidate) => {
     expect(isOutbreakTwist(candidate)).toBe(true)
+  })
+})
+
+describe('isOutbreakTwistOrNull', () => {
+  it.each([
+    ...getPrimitivesExcept('null')
+  ] as Array<[string, unknown]>)('rejects %s', (_label, candidate) => {
+    expect(isOutbreakTwistOrNull(candidate)).toBe(false)
+  })
+
+  it.each(outbreakTwists)('accepts %s', (candidate) => {
+    expect(isOutbreakTwistOrNull(candidate)).toBe(true)
+  })
+
+  it('accepts null', () => {
+    expect(isOutbreakTwistOrNull(null)).toBe(true)
   })
 })
 

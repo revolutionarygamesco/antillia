@@ -32,6 +32,11 @@ export const outbreakTwists = stringUnion('faith-healer', 'doctor',
 export type OutbreakTwist = typeof outbreakTwists[number]
 export const isOutbreakTwist = makeStringUnionGuard<OutbreakTwist>(outbreakTwists)
 export const isOutbreakTwistArray = makeArrayGuard<OutbreakTwist>(isOutbreakTwist)
+export const isOutbreakTwistOrNull = (
+  candidate: unknown
+): candidate is OutbreakTwist | null => {
+  return candidate === null || isOutbreakTwist(candidate)
+}
 
 export const outbreakStages = stringUnion('early', 'mid', 'late')
 export type OutbreakStage = typeof outbreakStages[number]
@@ -52,7 +57,7 @@ const makeOutbreakStageRecordGuard = <T>(
 const isStageTuple = makeTupleGuard(isNumber, isNumber)
 export const isOutbreakStageSpans = makeOutbreakStageRecordGuard(isStageTuple)
 export const isOutbreakStageReactions = makeOutbreakStageRecordGuard(isOutbreakReaction)
-export const isOutbreakStageTwists = makeOutbreakStageRecordGuard(isOutbreakTwist)
+export const isOutbreakStageTwists = makeOutbreakStageRecordGuard(isOutbreakTwistOrNull)
 
 export interface OutbreakDisease {
   tag: string
@@ -78,7 +83,7 @@ export interface OutbreakSituation {
   disease: OutbreakDisease
   course: Record<OutbreakStage, [number, number]>
   reactions: Record<OutbreakStage, OutbreakReaction>
-  twists: Record<OutbreakStage, OutbreakTwist>
+  twists: Record<OutbreakStage, OutbreakTwist | null>
 }
 
 export const isOutbreakSituation = (
