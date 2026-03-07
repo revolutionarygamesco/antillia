@@ -8,8 +8,8 @@ const stringUnion = <T extends string>(
 
 export const makeStringUnionGuard = <T extends string>(
   values: readonly T[]
-) => {
-  return (candidate: unknown) => {
+): (candidate: unknown) => candidate is T => {
+  return (candidate: unknown): candidate is T => {
     const ro = values as readonly string[]
     return isString(candidate) && ro.includes(candidate)
   }

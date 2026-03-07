@@ -3,6 +3,7 @@ import { type ExploitRecordData, isExploitRecordDataDictionary } from '../exploi
 import isNumber from '../../utilities/guards/number.ts'
 import isString from '../../utilities/guards/string.ts'
 import isObject from '../../utilities/guards/object.ts'
+import makeArrayGuard from '../../utilities/guards/array.ts'
 
 export interface AdventureChapterData {
   n: number
@@ -30,12 +31,7 @@ export const isAdventureChapterData = (
   ].every(test => test === true)
 }
 
-export const isAdventureChapterDataArray = (
-  candidate: unknown
-): candidate is AdventureChapterData[] => {
-  if (!Array.isArray(candidate)) return false
-  return candidate.every(item => isAdventureChapterData(item))
-}
+export const isAdventureChapterDataArray = makeArrayGuard<AdventureChapterData>(isAdventureChapterData)
 
 export const isAdventureStateData = (
   candidate: unknown

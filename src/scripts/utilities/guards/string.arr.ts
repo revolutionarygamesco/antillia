@@ -1,8 +1,6 @@
 import isString from './string.ts'
+import makeArrayGuard from './array.ts'
 
-const isStringArray = (candidate: unknown): candidate is string[] => {
-  if (!Array.isArray(candidate)) return false
-  return candidate.every(item => isString(item))
-}
+const isStringArray = makeArrayGuard<string>(isString)
 
 export default isStringArray

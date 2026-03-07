@@ -2,6 +2,7 @@ import isNumber from '../../utilities/guards/number.ts'
 import isString from '../../utilities/guards/string.ts'
 import isStringArray from '../../utilities/guards/string.arr.ts'
 import isObject from '../../utilities/guards/object.ts'
+import makeArrayGuard from '../../utilities/guards/array.ts'
 
 export interface CrewPosition {
   id: string
@@ -43,9 +44,4 @@ export const isCrewStateData = (
   return typeof obj.id === 'string'
 }
 
-export const isCrewStateDataArray = (
-  candidate: unknown
-): candidate is CrewStateData[] => {
-  if (!Array.isArray(candidate)) return false
-  return candidate.every(obj => isCrewStateData(obj))
-}
+export const isCrewStateDataArray = makeArrayGuard<CrewStateData>(isCrewStateData)
