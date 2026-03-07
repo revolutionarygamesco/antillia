@@ -225,7 +225,8 @@ describe('isOutbreakSituation', () => {
         early: 'faith-healer',
         mid: 'doctor',
         late: 'witch-hunt'
-      }
+      },
+      characters: []
     })).toBe(true)
   })
 })
