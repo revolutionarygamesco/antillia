@@ -57,6 +57,12 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_ST_PIERRE: 'JournalEntry.TnqJdxikuJmgyV2Z',
   JOURNAL_GOVERNOR_JAMAICA: 'JournalEntry.13SE7XeNQmMvODNV.JournalEntryPage.25wbdpX0qlqRyWaV',
   JOURNAL_YELLOW_JACK: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.oo0LeabCcf1Vib9w',
+  JOURNAL_GRIPPE: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.EPDXHrUqpzidD5Uc',
+  JOURNAL_FLUX: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.keMo9a93hahm40rj',
+  JOURNAL_POX: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.XLQWptX0pkKVua1C',
+  JOURNAL_COUGH: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.wuocwzON6uBUBDKg',
+  JOURNAL_MEASLES: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.OJ8TxsWXxPKvdBK0',
+  JOURNAL_BOULOGNE: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.2VMr6j2n0ybVy0XF',
   BOTTLE: 'Item.2UylOEF2C19GfRNF',
   ASH_CARGO: 'Item.lDAchtutyqcPJq1h',
   SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed'
