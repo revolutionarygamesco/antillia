@@ -5,11 +5,27 @@ import isObject from '../../../utilities/guards/object.ts'
 import isNumber from '../../../utilities/guards/number.ts'
 import isString from '../../../utilities/guards/string.ts'
 
-export const outbreakReactions = stringUnion('ignore', 'prayer', 'fumigation',
-  'quarantine', 'closure')
-export type OutbreakReaction = typeof outbreakReactions[number]
-export const isOutbreakReaction = makeStringUnionGuard<OutbreakReaction>(outbreakReactions)
-export const isOutbreakReactionArray = makeArrayGuard<OutbreakReaction>(isOutbreakReaction)
+export const outbreakReactionTags = stringUnion('ignore', 'prayer',
+  'fumigation', 'quarantine', 'closure')
+export type OutbreakReactionTag = typeof outbreakReactionTags[number]
+export const isOutbreakReactionTag = makeStringUnionGuard<OutbreakReactionTag>(outbreakReactionTags)
+export const isOutbreakReactionTagArray = makeArrayGuard<OutbreakReactionTag>(isOutbreakReactionTag)
+
+export interface OutbreakReaction {
+  tag: OutbreakReactionTag
+  effect: number
+}
+
+export const isOutbreakReaction = (
+  candidate: unknown
+): candidate is OutbreakReactionTag => {
+  if (!isObject(candidate)) return false
+  const obj = candidate as Record<string, unknown>
+  return [
+    isOutbreakReactionTag(obj.tag),
+    isNumber(obj.effect)
+  ].every(test => test === true)
+}
 
 export const outbreakTwists = stringUnion('faith-healer', 'doctor',
   'witch-hunt', 'price-gouging', 'authorities-fled', 'undefended', 'slave')

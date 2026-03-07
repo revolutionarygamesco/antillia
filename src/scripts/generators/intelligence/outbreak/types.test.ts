@@ -1,12 +1,41 @@
 import { primitives, getPrimitivesExcept } from '../../../utilities/testing/primitives.ts'
 import { SECONDS_PER_DAY } from '../../../settings.ts'
 import {
-  isOutbreakReaction, isOutbreakReactionArray, outbreakReactions,
+  isOutbreakReactionTag, isOutbreakReactionTagArray, outbreakReactionTags, isOutbreakReaction,
   isOutbreakTwist, isOutbreakTwistArray, outbreakTwists,
   isOutbreakStage, isOutbreakStageArray, outbreakStages,
   isOutbreakStageSpans, isOutbreakStageReactions, isOutbreakStageTwists,
   isOutbreakDisease, isOutbreakSituation
 } from './types.ts'
+
+describe('isOutbreakReactionTag', () => {
+  it.each([
+    ...primitives
+  ] as Array<[string, unknown]>)('rejects %s', (_label, candidate) => {
+    expect(isOutbreakReactionTag(candidate)).toBe(false)
+  })
+
+  it.each(outbreakReactionTags)('accepts %s', (candidate) => {
+    expect(isOutbreakReactionTag(candidate)).toBe(true)
+  })
+})
+
+describe('isOutbreakReactionTagArray', () => {
+  it.each([
+    ...getPrimitivesExcept('an array'),
+    ['an array of strings', ['hello', 'world']],
+    ['an array that contains reactions alongside other elements', ['ignore', 'hello']]
+  ] as Array<[string, unknown]>)('rejects %s', (_label, candidate) => {
+    expect(isOutbreakReactionTagArray(candidate)).toBe(false)
+  })
+
+  it.each([
+    ['an empty array', []],
+    ['an array of outbreak reactions', ['ignore']]
+  ] as Array<[string, unknown]>)('accepts %s', (_label, candidate) => {
+    expect(isOutbreakReactionTagArray(candidate)).toBe(true)
+  })
+})
 
 describe('isOutbreakReaction', () => {
   it.each([
@@ -15,25 +44,8 @@ describe('isOutbreakReaction', () => {
     expect(isOutbreakReaction(candidate)).toBe(false)
   })
 
-  it.each(outbreakReactions)('accepts %s', (candidate) => {
-    expect(isOutbreakReaction(candidate)).toBe(true)
-  })
-})
-
-describe('isOutbreakReactionArray', () => {
-  it.each([
-    ...getPrimitivesExcept('an array'),
-    ['an array of strings', ['hello', 'world']],
-    ['an array that contains reactions alongside other elements', ['ignore', 'hello']]
-  ] as Array<[string, unknown]>)('rejects %s', (_label, candidate) => {
-    expect(isOutbreakReactionArray(candidate)).toBe(false)
-  })
-
-  it.each([
-    ['an empty array', []],
-    ['an array of outbreak reactions', ['ignore']]
-  ] as Array<[string, unknown]>)('accepts %s', (_label, candidate) => {
-    expect(isOutbreakReactionArray(candidate)).toBe(true)
+  it.each(outbreakReactionTags)('accepts a %s reaction', (tag) => {
+    expect(isOutbreakReaction({ tag, effect: 0 })).toBe(true)
   })
 })
 
@@ -120,9 +132,9 @@ describe('isOutbreakStageReactions', () => {
 
   it('accepts an outbreak stage reactions record', () => {
     expect(isOutbreakStageReactions({
-      early: 'ignore',
-      mid: 'fumigation',
-      late: 'quarantine'
+      early: { tag: 'ignore', effect: 10 },
+      mid: { tag: 'fumigation', effect: -5 },
+      late: { tag: 'quarantine', effect: -5 }
     })).toBe(true)
   })
 })
@@ -189,9 +201,9 @@ describe('isOutbreakSituation', () => {
         late: [29 * SECONDS_PER_DAY, 49 * SECONDS_PER_DAY]
       },
       reactions: {
-        early: 'ignore',
-        mid: 'fumigation',
-        late: 'quarantine'
+        early: { tag: 'ignore', effect: 10 },
+        mid: { tag: 'fumigation', effect: -5 },
+        late: { tag: 'quarantine', effect: -5 }
       },
       twists: {
         early: 'faith-healer',

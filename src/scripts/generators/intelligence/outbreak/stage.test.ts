@@ -14,9 +14,9 @@ describe('getOutbreakStage', () => {
       late: [29 * SECONDS_PER_DAY, 49 * SECONDS_PER_DAY]
     },
     reactions: {
-      early: 'ignore',
-      mid: 'fumigation',
-      late: 'ignore'
+      early: { tag: 'ignore', effect: 10 },
+      mid: { tag: 'fumigation', effect: -5 },
+      late: { tag: 'quarantine', effect: -5 }
     },
     twists: {
       early: 'doctor',
