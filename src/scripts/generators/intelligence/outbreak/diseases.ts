@@ -1,5 +1,6 @@
 import { type OutbreakDisease } from './types.ts'
 import { UUIDS } from '../../../settings.ts'
+import selectRandomElement from '../../../random/el.ts'
 
 const diseases = new Map<string, OutbreakDisease>()
 
@@ -42,5 +43,9 @@ diseases.set('diphtheria', {
     late: [43, 84]
   }
 })
+
+export const pickRandomOutbreakDisease = () => {
+  return selectRandomElement([...diseases.values()])
+}
 
 export default diseases
