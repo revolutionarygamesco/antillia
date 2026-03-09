@@ -1,6 +1,7 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import checkVersion from '../../../utilities/check-version.ts'
 import drawFirst from '../../../utilities/draw-first.ts'
+import generatePersonalName from '../../../utilities/name.personal.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import selectRandomBetween from '../../../random/between.ts'
@@ -88,11 +89,8 @@ const generateSpyList = async (): Promise<BottleMessageIntel> => {
     const motivation = localize(motivationPath, gender).trim()
 
     // Generate a name
-    const namer = game?.modules?.get('revolutionary-piratenames')?.api
     const nationality = selectRandomElement(rival.nationalities)
-    const name: string = namer?.generateName
-      ? await namer.generateName(nationality, gender.naming)
-      : 'John Doe'
+    const name = await generatePersonalName(nationality, gender.naming)
 
     // Write our spy’s story
     spies.push(localize([MODULE_ID, 'intelligence', 'spies', 'listing'], {

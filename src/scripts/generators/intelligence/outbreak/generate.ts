@@ -1,5 +1,6 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import drawFirst from '../../../utilities/draw-first.ts'
+import generatePersonalName from '../../../utilities/name.personal.ts'
 import getRandomDisease from '../../../random/disease.ts'
 import getTime from '../../../time/get.ts'
 import getMonth from '../../../time/month.ts'
@@ -79,11 +80,8 @@ const generateOutbreakReport = async (): Promise<BottleMessageIntel> => {
   const result = await drawFirst(settlements) ?? { name: 'Kingston', uuid: UUIDS.JOURNAL_KINGSTON } as TableResult
   const settlement = makeLink(result)
 
-  const namer = game?.modules?.get('revolutionary-piratenames')?.api
   const nationality = selectRandomElement(nationalities)
-  const name = namer?.generateName
-    ? await namer.generateName(nationality, 'Masculine')
-    : 'John Doe'
+  const name = await generatePersonalName(nationality)
 
   const d = await getRandomDisease()
   const disease = `@UUID[${d.uuid}]{${d.name}}`

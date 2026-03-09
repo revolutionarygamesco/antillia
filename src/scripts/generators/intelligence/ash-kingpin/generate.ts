@@ -3,6 +3,7 @@ import { type AshKingpin, type AshKingpinStoryline } from './type.ts'
 import LogEntry from '../../../log/entry.ts'
 import checkExistingKingpin from './check.ts'
 import drawFirst from '../../../utilities/draw-first.ts'
+import generatePersonalName from '../../../utilities/name.personal.ts'
 import getPronouns from '../../../utilities/get-pronouns.ts'
 import fromUuid from '../../../utilities/wrappers/from-uuid.ts'
 import generateReportAge from '../shared-data/age.ts'
@@ -50,12 +51,8 @@ const generateAshKingpinReport = async (): Promise<BottleMessageIntel> => {
     const gender = selectRandomElement(stockArray(options))
 
     // Generate a name
-    const namer = game?.modules?.get('revolutionary-piratenames')?.api
     const nationality = selectRandomElement(target.nationalities)
-    const name: string = namer?.generateName
-      ? await namer.generateName(nationality, gender)
-      : 'John Doe'
-
+    const name = await generatePersonalName(nationality, gender)
     resident = { name, gender }
   }
 
