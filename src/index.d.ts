@@ -123,10 +123,3 @@ interface BottleMessage {
   additional?: string // Additional items to show in chat
   contents: Item[] // The items found in the bottle; usually at least the message
 }
-
-interface StorylineCharacter {
-  name: string
-  uuid: string
-  tag: string
-  date?: number
-}

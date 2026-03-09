@@ -4,7 +4,6 @@ import makeTupleGuard from '../../../utilities/guards/tuple.ts'
 import isObject from '../../../utilities/guards/object.ts'
 import isNumber from '../../../utilities/guards/number.ts'
 import isString from '../../../utilities/guards/string.ts'
-import { isStorylineCharacterArray } from '../../../utilities/guards/storyline-character.ts'
 
 export const outbreakReactionTags = stringUnion('ignore', 'prayer',
   'fumigation', 'quarantine', 'closure')
@@ -85,7 +84,6 @@ export interface OutbreakSituation {
   course: Record<OutbreakStage, [number, number]>
   reactions: Record<OutbreakStage, OutbreakReaction>
   twists: Record<OutbreakStage, OutbreakTwist | null>
-  characters: StorylineCharacter[]
 }
 
 export const isOutbreakSituation = (
@@ -100,7 +98,6 @@ export const isOutbreakSituation = (
     isOutbreakDisease(obj.disease),
     isOutbreakStageSpans(obj.course),
     isOutbreakStageReactions(obj.reactions),
-    isOutbreakStageTwists(obj.twists),
-    isStorylineCharacterArray(obj.characters)
+    isOutbreakStageTwists(obj.twists)
   ].every(test => test === true)
 }

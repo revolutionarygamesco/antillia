@@ -22,8 +22,7 @@ describe('getOutbreakStage', () => {
       early: 'doctor',
       mid: 'doctor',
       late: 'authorities-fled'
-    },
-    characters: []
+    }
   }
 
   it.each([
