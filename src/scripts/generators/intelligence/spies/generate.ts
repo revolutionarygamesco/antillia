@@ -8,7 +8,7 @@ import selectRandomBetween from '../../../random/between.ts'
 import selectRandomElement from '../../../random/el.ts'
 import empires, { type EmpireData } from '../../empires.ts'
 import {
-  positions,
+  getPositions,
   rewards,
   baseCoercion,
   historicalCoercion,
@@ -46,7 +46,7 @@ const generateSpyList = async (): Promise<BottleMessageIntel> => {
     const rival = empires[r]
 
     // Pick a position
-    const p1 = selectRandomElement(positions)
+    const p1 = selectRandomElement(getPositions())
     const p = Array.isArray(p1)
       ? selectRandomElement(p1)
       : p1

@@ -1,5 +1,5 @@
 import stockArray from '../../../random/stock.ts'
-import { type Gender, feminine, masculine } from '../../../utilities/genders.ts'
+import getGenders, { type Gender } from '../../../utilities/genders.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 const prefix = [MODULE_ID, 'intelligence', 'spies']
@@ -11,23 +11,26 @@ export interface Position {
   needs: string[]
 }
 
-export const positions: Array<Position | Position[]> = [
-  { path: [...prefix, 'candidates', 'merchant'], genders: [masculine], needs: ['port'] },
-  { path: [...prefix, 'candidates', 'servant'], genders: [masculine, feminine], needs: ['governor'] },
-  { path: [...prefix, 'candidates', 'tavern'], genders: [masculine], needs: ['port'] },
-  [
-    { path: [...prefix, 'candidates', 'secretary'], genders: [masculine], needs: ['governor'] },
-    { path: [...prefix, 'candidates', 'pilot'], genders: [masculine], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'port-master'], genders: [masculine], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'official'], genders: [masculine], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'physician', 'personal'], genders: [masculine], needs: ['governor'] },
-    { path: [...prefix, 'candidates', 'physician', 'regimental'], genders: [masculine], needs: ['fort'] },
-    { path: [...prefix, 'candidates', 'customs'], genders: [masculine], needs: ['port'] },
-    { path: [...prefix, 'candidates', 'army'], genders: [masculine], needs: ['fort'] },
-    { path: [...prefix, 'candidates', 'navy'], genders: [masculine], needs: ['navy'] },
-    { path: [...prefix, 'candidates', 'interpreter'], genders: [masculine], needs: ['governor'] },
+export const getPositions = (): Array<Position | Position[]> => {
+  const { masculine, feminine } = getGenders()
+  return [
+    { path: [...prefix, 'candidates', 'merchant'], genders: [masculine], needs: ['port'] },
+    { path: [...prefix, 'candidates', 'servant'], genders: [masculine, feminine], needs: ['governor'] },
+    { path: [...prefix, 'candidates', 'tavern'], genders: [masculine], needs: ['port'] },
+    [
+      { path: [...prefix, 'candidates', 'secretary'], genders: [masculine], needs: ['governor'] },
+      { path: [...prefix, 'candidates', 'pilot'], genders: [masculine], needs: ['port'] },
+      { path: [...prefix, 'candidates', 'port-master'], genders: [masculine], needs: ['port'] },
+      { path: [...prefix, 'candidates', 'official'], genders: [masculine], needs: ['port'] },
+      { path: [...prefix, 'candidates', 'physician', 'personal'], genders: [masculine], needs: ['governor'] },
+      { path: [...prefix, 'candidates', 'physician', 'regimental'], genders: [masculine], needs: ['fort'] },
+      { path: [...prefix, 'candidates', 'customs'], genders: [masculine], needs: ['port'] },
+      { path: [...prefix, 'candidates', 'army'], genders: [masculine], needs: ['fort'] },
+      { path: [...prefix, 'candidates', 'navy'], genders: [masculine], needs: ['navy'] },
+      { path: [...prefix, 'candidates', 'interpreter'], genders: [masculine], needs: ['governor'] },
+    ]
   ]
-]
+}
 
 export const rewards: string[][] = stockArray([
   { n: 4, item: [...prefix, 'motivation', 'reward', 'money'] },

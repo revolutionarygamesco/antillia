@@ -4,5 +4,10 @@ export interface Gender extends Pronouns {
   naming: 'Masculine' | 'Feminine'
 }
 
-export const feminine: Gender = { naming: 'Feminine', ...getPronouns('Feminine') }
-export const masculine: Gender = { naming: 'Masculine', ...getPronouns('Masculine') }
+const getGenders = (): { masculine: Gender, feminine: Gender } => {
+  const feminine: Gender = { naming: 'Feminine', ...getPronouns('Feminine') }
+  const masculine: Gender = { naming: 'Masculine', ...getPronouns('Masculine') }
+  return { masculine, feminine }
+}
+
+export default getGenders
