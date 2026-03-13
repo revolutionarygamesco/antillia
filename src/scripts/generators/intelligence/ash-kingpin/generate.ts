@@ -13,7 +13,7 @@ import makeLink from '../../../utilities/make-link.ts'
 import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
 import writeLog from '../../../log/write.ts'
-import { pickRandomEmpire } from '../shared-data/empires.ts'
+import { pickRandomEmpire } from '../../empires.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 const generateAshKingpinReport = async (): Promise<BottleMessageIntel> => {

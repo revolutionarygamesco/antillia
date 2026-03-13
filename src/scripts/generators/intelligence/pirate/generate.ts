@@ -9,7 +9,7 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import selectRandomElement from '../../../random/el.ts'
 import drawFirst from '../../../utilities/draw-first.ts'
 import makeLink from '../../../utilities/make-link.ts'
-import empires from '../shared-data/empires.ts'
+import empires from '../../empires.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 const generatePirateReport = async (): Promise<BottleMessageIntel> => {

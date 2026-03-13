@@ -1,5 +1,5 @@
 import localize from '../../utilities/wrappers/localize.ts'
-import empires from './shared-data/empires.ts'
+import empires from '../empires.ts'
 import { MODULE_ID } from '../../settings.ts'
 
 const getImperialLanguage = (

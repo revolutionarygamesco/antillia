@@ -1,7 +1,7 @@
 import { describe, it, expect } from '@jest/globals'
 import localize from '../../utilities/wrappers/localize.ts'
 import { MODULE_ID } from '../../settings.ts'
-import empires from './shared-data/empires.ts'
+import empires from '../empires.ts'
 import getImperialLanguage from './imperial-language.ts'
 
 describe('getImperialLanguage', () => {

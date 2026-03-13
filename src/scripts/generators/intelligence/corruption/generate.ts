@@ -3,7 +3,7 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
-import empires from '../shared-data/empires.ts'
+import empires from '../../empires.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 const govJamaica: TableResult = {

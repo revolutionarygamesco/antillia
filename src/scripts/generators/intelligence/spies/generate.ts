@@ -6,7 +6,7 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import selectRandomBetween from '../../../random/between.ts'
 import selectRandomElement from '../../../random/el.ts'
-import empires, { type EmpireData } from '../shared-data/empires.ts'
+import empires, { type EmpireData } from '../../empires.ts'
 import {
   positions,
   rewards,
