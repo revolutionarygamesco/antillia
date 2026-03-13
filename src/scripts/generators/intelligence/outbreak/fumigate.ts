@@ -22,7 +22,7 @@ const fumigate = (): {
 
   const volatile = fumigants.includes('ash')
   const volatileTag = volatile ? 'volatile' : 'regular'
-  const fumigation = localize([...prefix, 'mix', num, volatileTag, num], context)
+  const fumigation = localize([...prefix, 'mix', volatileTag, num], context)
 
   return { fumigants, volatile, fumigation }
 }
