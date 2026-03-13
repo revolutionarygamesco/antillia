@@ -4,20 +4,25 @@ import drawSettlement from '../../settlement.ts'
 import checkExistingOutbreak from './check.ts'
 import react from './react.ts'
 
-const generateOutbreak = async (): Promise<OutbreakSituation> => {
+const generateOutbreak = async (
+  at: number = game?.time?.worldTime ?? 0
+): Promise<{ situation: OutbreakSituation, existing: boolean }> => {
   const settlement = await drawSettlement()
-  const existing = await checkExistingOutbreak(settlement.uuid)
-  if (existing) return existing
+  const existing = await checkExistingOutbreak(settlement.uuid, at)
+  if (existing) return { situation: existing, existing: true }
 
   const disease = pickRandomOutbreakDisease()
   const reaction = react()
 
   return {
-    storyline: 'outbreak',
-    location: settlement.uuid,
-    disease,
-    reaction,
-    course: disease.stages
+    situation: {
+      storyline: 'outbreak',
+      location: settlement.uuid,
+      disease,
+      reaction,
+      course: disease.stages
+    },
+    existing: false
   }
 }
 
