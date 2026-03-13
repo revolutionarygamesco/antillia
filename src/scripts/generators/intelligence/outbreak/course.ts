@@ -13,12 +13,12 @@ const getDuration = (
 const setCourse = (
   onset: number,
   disease: OutbreakDisease,
-  reactions: Record<OutbreakStage, OutbreakReaction>
+  reaction: OutbreakReaction
 ): Record<OutbreakStage, [number, number]> => {
   const durations: Record<OutbreakStage, number> = {
     early: getDuration(disease.stages.early),
-    mid: getDuration(disease.stages.mid, reactions.early),
-    late: getDuration(disease.stages.late, reactions.mid)
+    mid: getDuration(disease.stages.mid, reaction),
+    late: getDuration(disease.stages.late, reaction)
   }
 
   const earlyEnds = onset + durations.early

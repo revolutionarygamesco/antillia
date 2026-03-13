@@ -27,17 +27,6 @@ export const isOutbreakReaction = (
   ].every(test => test === true)
 }
 
-export const outbreakTwists = stringUnion('faith-healer', 'doctor',
-  'witch-hunt', 'price-gouging', 'authorities-fled', 'undefended', 'slave')
-export type OutbreakTwist = typeof outbreakTwists[number]
-export const isOutbreakTwist = makeStringUnionGuard<OutbreakTwist>(outbreakTwists)
-export const isOutbreakTwistArray = makeArrayGuard<OutbreakTwist>(isOutbreakTwist)
-export const isOutbreakTwistOrNull = (
-  candidate: unknown
-): candidate is OutbreakTwist | null => {
-  return candidate === null || isOutbreakTwist(candidate)
-}
-
 export const outbreakStages = stringUnion('early', 'mid', 'late')
 export type OutbreakStage = typeof outbreakStages[number]
 export const isOutbreakStage = makeStringUnionGuard(outbreakStages)
@@ -56,8 +45,6 @@ const makeOutbreakStageRecordGuard = <T>(
 
 const isStageTuple = makeTupleGuard(isNumber, isNumber)
 export const isOutbreakStageSpans = makeOutbreakStageRecordGuard(isStageTuple)
-export const isOutbreakStageReactions = makeOutbreakStageRecordGuard(isOutbreakReaction)
-export const isOutbreakStageTwists = makeOutbreakStageRecordGuard(isOutbreakTwistOrNull)
 
 export interface OutbreakDisease {
   tag: string
@@ -81,9 +68,8 @@ export interface OutbreakSituation {
   storyline: 'outbreak'
   location: string
   disease: OutbreakDisease
+  reaction: OutbreakReaction
   course: Record<OutbreakStage, [number, number]>
-  reactions: Record<OutbreakStage, OutbreakReaction>
-  twists: Record<OutbreakStage, OutbreakTwist | null>
 }
 
 export const isOutbreakSituation = (
@@ -96,8 +82,7 @@ export const isOutbreakSituation = (
     obj.storyline === 'outbreak',
     isString(obj.location),
     isOutbreakDisease(obj.disease),
-    isOutbreakStageSpans(obj.course),
-    isOutbreakStageReactions(obj.reactions),
-    isOutbreakStageTwists(obj.twists)
+    isOutbreakReaction(obj.reaction),
+    isOutbreakStageSpans(obj.course)
   ].every(test => test === true)
 }
