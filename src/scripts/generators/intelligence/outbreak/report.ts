@@ -22,10 +22,6 @@ const reportOutbreak = async (): Promise<BottleMessageIntel> => {
   const reporter = pickRandomEmpire()
   const lang = localize([MODULE_ID, 'factions', reporter.tag, 'lang'])
 
-  const age = generateReportAge() * SECONDS_PER_DAY
-  const month = getMonth(age)
-  const year = getYear(age)
-
   const situation = await generateOutbreak()
   const { fumigation: fumigants } = fumigate()
   const { disease, reaction } = situation
@@ -43,8 +39,14 @@ const reportOutbreak = async (): Promise<BottleMessageIntel> => {
     { n: 1, item: 'early' }
   ]))
 
-  const onset = calculateOnset(disease, age, stage, reaction)
+  const age = generateReportAge() * SECONDS_PER_DAY
+  const now = game?.time?.worldTime ?? 0
+  const relative = now - age
+  const onset = calculateOnset(disease, relative, stage, reaction)
   situation.course = setCourse(onset, disease, reaction)
+
+  const month = getMonth(relative)
+  const year = getYear(relative)
 
   const s = localize([...prefix, 'situations', stage], {
     disease: diseaseLink,
