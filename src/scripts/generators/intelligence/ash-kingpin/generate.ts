@@ -2,10 +2,9 @@ import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import { type AshKingpin, type AshKingpinStoryline } from './type.ts'
 import LogEntry from '../../../log/entry.ts'
 import checkExistingKingpin from './check.ts'
-import drawFirst from '../../../utilities/draw-first.ts'
+import drawSettlement from '../../settlement.ts'
 import generatePersonalName from '../../../utilities/name.personal.ts'
 import getPronouns from '../../../utilities/get-pronouns.ts'
-import fromUuid from '../../../utilities/wrappers/from-uuid.ts'
 import generateReportAge from '../shared-data/age.ts'
 import getDay from '../../../time/day.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
@@ -14,7 +13,7 @@ import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
 import writeLog from '../../../log/write.ts'
 import { pickRandomEmpire } from '../../empires.ts'
-import { MODULE_ID, UUIDS } from '../../../settings.ts'
+import { MODULE_ID } from '../../../settings.ts'
 
 const generateAshKingpinReport = async (): Promise<BottleMessageIntel> => {
   const prefix = [MODULE_ID, 'intelligence', 'ash-kingpin']
@@ -27,8 +26,7 @@ const generateAshKingpinReport = async (): Promise<BottleMessageIntel> => {
 
   // What location are we talking about?
   const target = pickRandomEmpire()
-  const drawnLocation = await drawFirst(target.settlements)
-  const location = (await fromUuid(drawnLocation?.documentUuid ?? UUIDS.JOURNAL_KINGSTON)) as JournalEntry
+  const location = await drawSettlement(target)
 
   // Is there already a kingpin there?
   const existing = await checkExistingKingpin(location.uuid)
