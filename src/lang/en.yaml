@@ -327,10 +327,18 @@ revolutionary-antillia:
         <p><strong>Outbreak:</strong> {situation}</p>
         <p><strong>Reaction:</strong> {reaction}</p>
       diseases:
-        dysentery: the bloody flux
-        smallpox: the pox
-        measles: measles
-        diphtheria: Boulogne sore throat
+        dysentery:
+          title: The Bloody Flux
+          sentence: the bloody flux
+        smallpox:
+          title: The Pox
+          sentence: the pox
+        measles:
+          title: Measles
+          sentence: measles
+        diphtheria:
+          title: Boulogne Sore Throat
+          sentence: Boulogne sore throat
       fumigants:
         sulphur: brimstone
         gunpowder: gunpowder

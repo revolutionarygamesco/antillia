@@ -5,6 +5,7 @@ import generateOutbreak from './generate.ts'
 import calculateOnset from './onset.ts'
 import setCourse from './course.ts'
 import fumigate from './fumigate.ts'
+import logOutbreak from './log.ts'
 import generateReportAge from '../shared-data/age.ts'
 import getMonth from '../../../time/month.ts'
 import getYear from '../../../time/year.ts'
@@ -14,7 +15,6 @@ import makeLink from '../../../utilities/make-link.ts'
 import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
 import { MODULE_ID, SECONDS_PER_DAY } from '../../../settings.ts'
-import logOutbreak from './log.ts'
 
 const reportOutbreak = async (): Promise<BottleMessageIntel> => {
   const prefix = [MODULE_ID, 'intelligence', 'outbreak']
@@ -30,7 +30,8 @@ const reportOutbreak = async (): Promise<BottleMessageIntel> => {
   const { fumigation: fumigants } = fumigate()
   const { disease, reaction } = situation
 
-  const diseaseName = localize([...prefix, 'diseases', disease.tag])
+  const diseaseName = localize([...prefix, 'diseases', disease.tag, 'sentence'])
+  const diseaseTitle = localize([...prefix, 'diseases', disease.tag, 'title'])
   const diseaseLink = `@UUID[${disease.uuid}]{${diseaseName}}`
 
   const settlement = await fromUuid(situation.location) as JournalEntry
@@ -57,7 +58,7 @@ const reportOutbreak = async (): Promise<BottleMessageIntel> => {
   await logOutbreak(situation, settlement, r)
 
   const title = localize([...prefix, 'title'], {
-    disease: diseaseName,
+    disease: diseaseTitle,
     settlement: settlementName
   })
 
