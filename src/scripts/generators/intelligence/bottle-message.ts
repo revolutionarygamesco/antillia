@@ -7,7 +7,6 @@ import { MODULE_ID, UUIDS } from '../../settings.ts'
 import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
 import generateRandomConvoySchedule from './convoys/generate.ts'
 import generateCorruptionReport from './corruption/generate.ts'
-import generateOutbreakReport from './outbreak/generate.ts'
 import generateSpyList from './spies/generate.ts'
 import generatePirateReport from './pirate/generate.ts'
 import generateAshKingpinReport from './ash-kingpin/generate.ts'
@@ -17,7 +16,6 @@ const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
     { n: 4, item: generateRandomConvoySchedule },
     { n: 2, item: generateCorruptionReport },
     { n: 2, item: generateRandomFortUpgradeReport },
-    { n: 2, item: generateOutbreakReport },
     { n: 2, item: generatePirateReport },
     { n: 1, item: generateSpyList },
     { n: 1, item: generateAshKingpinReport }
