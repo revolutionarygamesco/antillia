@@ -5,9 +5,9 @@ import LogEntry from './entry.ts'
 const addLog = async (
   text: string,
   payload?: Record<string, any>,
-  at: number = 0
+  at: number = game?.time?.worldTime ?? 0
 ): Promise<JournalEntry | null> => {
-  const entry = new LogEntry({ at: game?.time?.worldTime ?? at, text, payload })
+  const entry = new LogEntry({ at, text, payload })
   const existing = await readLog()
   const entries = [...existing, entry]
     .sort((a, b) => a.at - b.at)
