@@ -12,7 +12,7 @@ const logOutbreak = async (
 ): Promise<void> => {
   const disease = localize([MODULE_ID, 'intelligence', 'outbreak', 'diseases', situation.disease.tag])
   const text = localize([MODULE_ID, 'log', 'events', 'outbreak'], {
-    disease: `@UUID[JournalEntry.${situation.disease.uuid}]{${capitalize(disease)}}`,
+    disease: `@UUID[${situation.disease.uuid}]{${capitalize(disease)}}`,
     location: makeLink(settlement),
     reaction
   })
