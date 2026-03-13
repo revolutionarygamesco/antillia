@@ -1,14 +1,5 @@
 import { type OutbreakStage, type OutbreakDisease, type OutbreakReaction } from './types.ts'
-import { SECONDS_PER_DAY } from '../../../settings.ts'
-
-const getDuration = (
-  stage: [number, number],
-  reaction?: OutbreakReaction
-): number => {
-  const effect = reaction?.effect ?? 0
-  const days = Math.max(0, Math.max(...stage) - Math.min(...stage) + effect)
-  return days * SECONDS_PER_DAY
-}
+import getStageDuration from './stage-duration.ts'
 
 const setCourse = (
   onset: number,
@@ -16,9 +7,9 @@ const setCourse = (
   reaction: OutbreakReaction
 ): Record<OutbreakStage, [number, number]> => {
   const durations: Record<OutbreakStage, number> = {
-    early: getDuration(disease.stages.early),
-    mid: getDuration(disease.stages.mid, reaction),
-    late: getDuration(disease.stages.late, reaction)
+    early: getStageDuration(disease, 'early', reaction),
+    mid: getStageDuration(disease, 'mid', reaction),
+    late: getStageDuration(disease, 'late', reaction)
   }
 
   const earlyEnds = onset + durations.early
