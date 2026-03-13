@@ -103,6 +103,9 @@ revolutionary-antillia:
         speaker: Adventure Log
         content: |
           The @UUID[{uuid}] has been updated.
+    events:
+      outbreak: |
+        <p>{disease} grips {location}. {reaction}</p>
   factions:
     spanish:
       name: The Spanish Empire
@@ -124,34 +127,6 @@ revolutionary-antillia:
       adj: Dutch
       lang: Dutch
       navy: Dutch West India Company
-  storylines:
-    outbreaks:
-      diseases:
-        dysentery: 'the bloody flux'
-        smallpox: 'the pox'
-        measles: 'measles'
-        diphtheria: 'Boulogne sore throat'
-      stages:
-        early: in the first days of
-        mid: at the height of
-        late: in the latter days of
-      characters:
-        faith-healer: |
-          <p>{name} is a faith healer who gained prominence in {location}
-            {stage} the {disease} outbreak of {year}.</p>
-        doctor: |
-          <p>{name} is a physician in {location} whose work {stage} the
-            {disease} outbreak of {year} saved many lives.</p>
-        witch: |
-          <p>{name} was a woman from {location} who was tried for witchcraft
-            and burned alive on {day}, {stage} the {disease} outbreak of
-            {year}.</p>
-        slave: |
-          <p>{name} is a slave whose unorthodox methods saved countless lives
-            {stage} the {disease} outbreak that afflicted {location} in {year}
-            — or at least among those willing to be treated by a slave.
-            {slaver}, a resident of {location}, still claims ownership of
-            {s}.</p>
   bottle-messages:
     bottle: bottle
     flavor: Message in a Bottle
@@ -351,7 +326,11 @@ revolutionary-antillia:
         <p><strong>Language:</strong> The report is written in {lang}.</p>
         <p><strong>Outbreak:</strong> {situation}</p>
         <p><strong>Reaction:</strong> {reaction}</p>
-        <p><strong>Twist:</strong> {twist}</p>
+      diseases:
+        dysentery: the bloody flux
+        smallpox: the pox
+        measles: measles
+        diphtheria: Boulogne sore throat
       fumigants:
         sulphur: brimstone
         gunpowder: gunpowder
@@ -381,28 +360,6 @@ revolutionary-antillia:
           could be verified as healthy by a physician.
         closure: |
           The authorities responded by shutting down the local markets.
-      twists:
-        faith-healer: |
-          A faith healer named {name} is reputed to have miraculously cured
-          dozens of individuals afflicted with the disease.
-        doctor: |
-          A skilled physician named {name} worked tirelessly to save as many
-          lives as possible.
-        witch-hunt: |
-          Accusations are made that certain members of the community used black
-          magic to spread the disease, sparking a witch hunt.
-        price-gouging: |
-          Certain merchants take advantage of the situation by raising prices.
-        authorities-fled: |
-          The authorities have fled the town for fear of catching the disease,
-          leaving it in a lawless state.
-        undefended: |
-          The disease has fallen most heavily on the garrison and militia,
-          leaving the settlement virtually undefended.
-        slave: |
-          An African healer is applying some unorthodox techniques that have
-          proven surprisingly effective for those patients willing to be
-          treated by a slave.
       situations:
         early: |
           The report describes the early days of an outbreak of {disease} in
