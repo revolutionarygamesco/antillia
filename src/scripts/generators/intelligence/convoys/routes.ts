@@ -1,26 +1,14 @@
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
-
-export interface ConvoyRouteRef {
-  uuid: string
-  name: string[]
-}
-
-interface ConvoyRoute {
-  good: ConvoyRouteRef
-  origins: ConvoyRouteRef[]
-  dests: ConvoyRouteRef[]
-  empire: string
-  ships: string | number
-  escort: string | number
-}
+import type { ConvoyRouteRef, ConvoyRoute } from './types.ts'
+import empires from '../../empires.ts'
 
 const goods: Record<string, ConvoyRouteRef> = {
   ash: {
-    uuid: 'Item.lDAchtutyqcPJq1h',
+    uuid: UUIDS.ASH_CARGO,
     name: [MODULE_ID, 'intelligence', 'convoys', 'goods', 'ash']
   },
   sugar: {
-    uuid: 'Item.Q9clnxDy1Otm00Ed',
+    uuid: UUIDS.SUGAR_CARGO,
     name: [MODULE_ID, 'intelligence', 'convoys', 'goods', 'sugar']
   }
 }
@@ -93,7 +81,7 @@ const spanishAsh: ConvoyRoute = {
   good: goods.ash,
   origins: [ports.havana],
   dests: [ports.cadiz],
-  empire: 'spanish',
+  empire: empires.spanish,
   ships: 2,
   escort: 2
 }
@@ -102,7 +90,7 @@ const britishAsh: ConvoyRoute = {
   good: goods.ash,
   origins: [ports.basseterre, ports.bridgetown, ports.kingston, ports.stjohn],
   dests: [ports.london],
-  empire: 'british',
+  empire: empires.british,
   ships: 2,
   escort: 2
 }
@@ -111,7 +99,7 @@ const frenchAsh: ConvoyRoute = {
   good: goods.ash,
   origins: [ports.basseTerre, ports.capFrancais, ports.stpierre],
   dests: [ports.lorient],
-  empire: 'french',
+  empire: empires.french,
   ships: 2,
   escort: 2
 }
@@ -120,7 +108,7 @@ const britishSugar: ConvoyRoute = {
   good: goods.sugar,
   origins: [ports.basseterre, ports.bridgetown, ports.kingston, ports.stjohn],
   dests: [ports.london],
-  empire: 'british',
+  empire: empires.british,
   ships: '1d4',
   escort: '1d2'
 }
@@ -129,7 +117,7 @@ const frenchSugar: ConvoyRoute = {
   good: goods.sugar,
   origins: [ports.basseTerre, ports.capFrancais, ports.stpierre],
   dests: [ports.bordeaux, ports.laRochelle, ports.leHavre, ports.nantes],
-  empire: 'french',
+  empire: empires.french,
   ships: '1d4',
   escort: '1d2'
 }
