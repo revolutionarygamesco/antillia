@@ -5,7 +5,7 @@ import stockArray from '../../random/stock.ts'
 import { MODULE_ID, UUIDS } from '../../settings.ts'
 
 import generateRandomFortUpgradeReport from './fort-upgrades/generate.ts'
-import generateRandomConvoySchedule from './convoys/generate.ts'
+import generateConvoySchedule from './convoys/report.ts'
 import generateCorruptionReport from './corruption/generate.ts'
 import generateSpyList from './spies/generate.ts'
 import generatePirateReport from './pirate/generate.ts'
@@ -14,7 +14,7 @@ import reportOutbreak from './outbreak/report.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
   const reporters = stockArray([
-    { n: 4, item: generateRandomConvoySchedule },
+    { n: 4, item: generateConvoySchedule },
     { n: 2, item: generateCorruptionReport },
     { n: 2, item: generateRandomFortUpgradeReport },
     { n: 2, item: generatePirateReport },

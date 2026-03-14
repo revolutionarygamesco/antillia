@@ -1,86 +1,55 @@
-import getDay from '../../../time/day.ts'
-import getTime from '../../../time/get.ts'
+import type { Convoy } from './types.ts'
+import capitalize from '../../../utilities/capital.ts'
+import fromUuid from '../../../utilities/wrappers/from-uuid.ts'
 import isNumber from '../../../utilities/guards/number.ts'
-import selectRandomBetween from '../../../random/between.ts'
+import loadCargo from '../../../utilities/load-cargo.ts'
 import selectRandomElement from '../../../random/el.ts'
-import stockArray from '../../../random/stock.ts'
 import roll from '../../../utilities/roll.ts'
-import generateReportAge from '../shared-data/age.ts'
-import routes, { type ConvoyRouteRef } from './routes.ts'
-import localize from '../../../utilities/wrappers/localize.ts'
-import { type BottleMessageIntel } from '../bottle-message-intel.ts'
-import { MODULE_ID } from '../../../settings.ts'
+import routes from './routes.ts'
 
-const makeLinkFromRef = (ref: ConvoyRouteRef): string => {
-  const name = localize(ref.name)
-  return `@UUID[${ref.uuid}]{${name}}`
-}
-
-const generateRandomConvoySchedule = async (): Promise<BottleMessageIntel> => {
-  const present = getTime()
-
-  // How old is this intelligence?
-  const age = generateReportAge()
-
-  // And how far out was it predicting?
-  const high: [number, number] = [60, 90]
-  const mid: [number, number] = [30, 60]
-  const low: [number, number] = [5, 30]
-  const intel = selectRandomBetween(...selectRandomElement(stockArray([
-    { n: 1, item: high },
-    { n: 2, item: mid },
-    { n: 3, item: low }
-  ])))
-
-  // So the convoy is leaving...
-  const days = intel - age
-  const seconds = present + (days * 24 * 60 * 60)
-  const day = getDay(seconds)
+const generateRandomConvoy = async (
+  departure: number = game?.time?.worldTime ?? 0
+): Promise<Convoy> => {
+  const api = game!.modules!.get('revolutionary-pbshipgen')!.api
+  const rollShip = api.rollShip
+  const generateShip = api.generateShip
 
   // Pick a route
   const route = selectRandomElement(routes)
+  const { empire } = route
+  const nationality = capitalize(empire.tag)
+  const base = { nationality, pirate: false, type: 'Frigate' }
 
-  // Origin
-  const o = selectRandomElement(route.origins)
-  const origin = makeLinkFromRef(o)
+  // Origin, destination, and good
+  const origin = selectRandomElement(route.origins)
+  const dest = selectRandomElement(route.dests)
+  const good = await fromUuid(route.good.uuid) as Item
 
-  // Destination
-  const d = selectRandomElement(route.dests)
-  const dest = makeLinkFromRef(d)
-
-  // Good being shipped
-  const good = makeLinkFromRef(route.good)
-
-  // Colors of the convoy
-  const colors = localize([MODULE_ID, 'factions', route.empire, 'adj'])
-
-  // Number of ships in the convoy
+  // Generate merchant ships
+  const ships: Actor[] = []
   const n = isNumber(route.ships)
     ? route.ships
     : Math.min(2, await roll(route.ships))
-  const size = n < 21
-    ? localize([MODULE_ID, 'numbers', n.toString()]).toLowerCase()
-    : n.toString()
+  for (let i = 0; i < n; i++) {
+    const { details, captain } = await rollShip({ use: 'Merchant', ...base })
+    const ship = await generateShip(details, captain) as Actor
+    await loadCargo(ship, good)
+    ships.push(ship)
+  }
 
-  // Number of escort ships
+  // Generate escort
+  const escort: Actor[] = []
   const w = isNumber(route.escort)
     ? route.escort
     : Math.min(1, await roll(route.escort))
-  const adjusted = Math.min(n, w)
-  const escort = adjusted < 21
-    ? localize([MODULE_ID, 'numbers', adjusted.toString()]).toLowerCase()
-    : adjusted.toString()
+  const wa = Math.min(n, w)
+  for (let i = 0; i < wa; i++) {
+    const { details, captain } = await rollShip({ use: 'Naval', ...base })
+    const ship = await generateShip(details, captain) as Actor
+    escort.push(ship)
+  }
 
-  // Language the report is written in
-  const empires = ['spanish', 'british', 'french', 'dutch']
-  const lang = localize([MODULE_ID, 'factions', selectRandomElement(empires), 'lang'])
-
-  const title = localize([MODULE_ID, 'intelligence', 'convoys', 'title'])
-  const report = localize([MODULE_ID, 'intelligence', 'convoys', 'report'], {
-    day, origin, dest, good, colors, size, escort, lang
-  })
-
-  return { title, report }
+  return { ships, escort, empire, good, origin, dest, departure }
 }
 
-export default generateRandomConvoySchedule
+export default generateRandomConvoy

@@ -250,8 +250,12 @@ revolutionary-antillia:
         <p><strong>Language:</strong> The report is written in {lang}.</p>
         <p><strong>Convoy Schedule:</strong> This is the schedule for a convoy
           of {size} {colors} merchant frigates loaded with {good}. They will
-          depart {origin} for {dest} on {day},with {escort} naval vessels
+          depart {origin} for {dest} on {day}, with {escort} naval vessels
           in escort.</p>
+        <p><strong>Ships:</strong></p>
+        <ul class="link-list">{ships}</ul>
+        <p><strong>Escort:</strong></p>
+        <ul class="link-list">{escortShips}</ul>
     corruption:
       title: Allegations of Corruption Against the {governor}
       report: |
