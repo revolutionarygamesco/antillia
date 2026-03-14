@@ -62,7 +62,7 @@ const generateSpyList = async (): Promise<BottleMessageIntel> => {
       ? await pickElement(rival, 'forts')
       : ''
     const navy = p.needs.includes('navy')
-      ? localize([MODULE_ID, 'factions', rival.tag, 'navy'])
+      ? localize([MODULE_ID, 'factions', rival.tag, 'navy', 'name'])
       : ''
 
     // Select a gender

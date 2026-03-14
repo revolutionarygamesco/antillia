@@ -113,22 +113,26 @@ revolutionary-antillia:
       name: The Spanish Empire
       adj: Spanish
       lang: Spanish
-      navy: Spanish Royal Armada
+      navy:
+        name: Spanish Royal Armada
     british:
       name: The British Empire
       adj: British
       lang: English
-      navy: British Royal Navy
+      navy:
+        name: British Royal Navy
     french:
       name: The Kingdom of France
       adj: French
       lang: French
-      navy: French Royal Navy
+      navy:
+        name: French Royal Navy
     dutch:
       name: The Dutch West India Company
       adj: Dutch
       lang: Dutch
-      navy: Dutch West India Company
+      navy:
+        name: Dutch West India Company
   bottle-messages:
     bottle: bottle
     flavor: Message in a Bottle
