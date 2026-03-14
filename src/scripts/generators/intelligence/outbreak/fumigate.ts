@@ -16,7 +16,7 @@ const fumigate = (): {
   const fumigant1 = localize([...prefix, fumigants[0]])
   const fumigant2 = localize([...prefix, fumigants[1]])
   const fumigant3 = fumigants.length > 2
-    ? localize([...prefix, fumigants[0]])
+    ? localize([...prefix, fumigants[2]])
     : ''
   const context = { fumigant1, fumigant2, fumigant3 }
 

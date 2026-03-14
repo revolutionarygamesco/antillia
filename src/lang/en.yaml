@@ -347,8 +347,8 @@ revolutionary-antillia:
         ash: ash
         mix:
           volatile:
-            two: a volatile mix of {fumigant1 } and ash
-            three: a volatile mix of {fumigant1}, {fumigant2}, and ash
+            two: a volatile mix of {fumigant1} and {fumigant2}
+            three: a volatile mix of {fumigant1}, {fumigant2}, and {fumigant3}
           regular:
             two: a mixture of {fumigant1} and {fumigant2}
             three: a mixture of {fumigant1}, {fumigant2} and {fumigant3}
