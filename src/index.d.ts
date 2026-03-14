@@ -44,9 +44,19 @@ interface Document {
   uuid: string
   getFlag<T>(scope: string, key: string): T
   setFlag<T>(scope: string, key: string, value: T): void
+  createEmbeddedDocuments(type: string, data?: any, operation?: any): Promise<Document>
 }
 
-interface Actor extends Document {}
+interface Actor extends Document {
+  system?: {
+    attributes: {
+      cargo?: {
+        max: number
+        value: number
+      }
+    }
+  }
+}
 
 interface JournalEntry extends Document {
   pages: JournalEntryPage[]
