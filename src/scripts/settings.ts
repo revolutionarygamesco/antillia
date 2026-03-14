@@ -48,6 +48,7 @@ export const UUIDS: Record<string, string> = {
   DISEASES_EARLY: 'RollTable.X7OlS669f67d6RIg',
   DISEASES_MID: 'RollTable.evDIkBrY4PZBvGej',
   DISEASES_LATE: 'RollTable.IkSwvdAiCkjrh096',
+  JOURNAL_JAMAICA: 'JournalEntry.5x9QoJSjO9XFEazK',
   JOURNAL_BASSE_TERRE: 'JournalEntry.lEN7e6rNj19n4hy2',
   JOURNAL_BASSETERRE: 'JournalEntry.mQgvU9WB3LP7cda4',
   JOURNAL_BRIDGETOWN: 'JournalEntry.UVjbk8JvSPTyYmSk',
