@@ -107,7 +107,42 @@ revolutionary-antillia:
           The @UUID[{uuid}] has been updated.
     events:
       outbreak: |
-        <p>{disease} grips {location}. {reaction}</p>
+        {disease} grips {location}. {reaction}
+      uprising:
+        sea: |
+          Prisoners aboard the {ship} seize control of the ship, forcing
+          the crew to take them to {island}. {response}
+        port: |
+          While being taken ashore, the prisoners aboard the {ship} break free
+          and fight their way to freedom in the wilderness of {island}.
+          {response}
+        plantation: |
+          Slaves on a sugar plantation in {island} rise up and claim their
+          freedom. {response}
+        maroons: |
+          A maroon community in {island} mounts a raid on a sugar plantation,
+          freeing those held in bondage there. {response}
+        rebellion: |
+          On several sugar plantations across {island}, the slaves rise up on
+          the same night in a coordinated rebellion. {response}
+        responses:
+          patrols: |
+            The governor orders increased patrols around all plantations and
+            in the vicinity of all known maroon settlements.
+          lockdown: |
+            The governor orders a lockdown of plantations across the island,
+            forbidding the movement of slaves and requiring them to be confined
+            and carefully watched by armed overseers.
+          bounties: |
+            The governor offers a reward for the capture of all escaped slaves,
+            and larger rewards for the ringleaders.
+          threshold: |
+            As the latest of several such disruptions, the governor responds by
+            raising the militia and ordering {x} soldiers from the garrison to
+            crush the insurrection.
+          emergency: |
+            The governor calls up the militia and orders {x} soldiers from the
+            garrison to crush the rebellion.
   factions:
     spanish:
       name: The Spanish Empire
@@ -673,3 +708,130 @@ revolutionary-antillia:
             position, there is a power vacuum in the local underworld. Will a
             new kingpin emerge, or will this eventually settle into a network
             of smaller, less ambitious dealers?
+    uprising:
+      title: Slave Uprising in {island}
+      report: |
+        <p><strong>Language:</strong> The report is written in {lang}.</p>
+        {situation}
+        {twist}
+        {response}
+      situations:
+        sea: |
+          <p><strong>Slave Ship Uprising:</strong> On {uprising}, the slaves
+            being transported across the Atlantic by the {ship} escaped the
+            hold and took control of the ship. They forced its crew to take
+            them to {island} (the nearest point of landfall at the time),
+            arriving on {day}, whereupon they disembarked and ran into the
+            wilderness.</p>
+        transfer: |
+          <p><strong>Port Uprising:</strong> On {day}, the {ship} was pulling
+            into the main port on {island} with a hold full of human cargo. As
+            they would soon discover, though, their prisoners had spent the
+            long weeks of that awful voyage preparing for this moment. They
+            seized the opportunity provided by the transition to rise up and
+            fight their way off the boat, through the port and the town,
+            killing anyone who stood in their way until they reached the safety
+            of the wilderness beyond.</p>
+        plantation: |
+          <p><strong>Plantation Uprising:</strong> On {day}, the slaves on one
+            of the sugar plantations in {island} rose up, killed the owners and
+            overseers, burned the plantation, and disappeared into the
+            surrounding wilderness.</p>
+        maroons: |
+          <p><strong>Maroon Raid:</strong> On {day}, a nearby maroon community
+            raided one of the sugar plantations on {island}, killing the owners
+            and overseers, razing the plantation, and liberating those held
+            in bondage there. The report notes evidence that the slaves knew
+            the raid was coming and were prepared to assist it.</p>
+        rebellion: |
+          <p><strong>Slave Rebellion:</strong> On {day}, slaves held by sugar
+            plantations across {island} rose up all at once, killing the owners
+            and overseers and razing the plantations. While the women and
+            children seem to have been secreted off to some secure location,
+            those prepared to fight have come together to form a large,
+            well-armed force on the island.</p>
+      twists:
+        cult:
+          premium: |
+            <p><strong>Wretched Cult:</strong> In their desperation, the slaves
+              turned to the teachings of the Sunken One and the cult of the
+              Wretched. @UUID[Actor.XFS1vFzYOZPDOTLd] emerged from the sea to
+              to aid their uprising.</p>
+          base: |
+            <p><strong>Wretched Cult:</strong> In their desperation, the slaves
+              turned to the teachings of the Sunken One and the cult of the
+              Wretched. Piscine creatures emerged from the sea to aid their
+              uprising.</p>
+        necrosmith:
+          premium: |
+            <p><strong>Necrosmith:</strong> One of the slaves was a necrosmith
+              employed by a particularly cruel and violent slaver. {S}
+              carefully collected the bones of {pa} fellows who were so
+              callously slaughtered and, in secret, assembled them into a
+              terrible @UUID[Actor.irqTdv3HtGGBOR2A] driven solely by its
+              desperate need for vengeance against the monstrous slaver whose
+              cruelty was woven into its creation.</p>
+          base: |
+            <p><strong>Necrosmith:</strong> One of the slaves was a necrosmith
+              employed by a particularly cruel and violent slaver. {S}
+              carefully collected the bones of {pa} fellows who were so
+              callously slaughtered and, in secret, assembled them into a
+              terrible marrow cannon driven solely by its desperate need for
+              vengeance against the monstrous slaver whose cruelty was woven
+              into its creation.</p>
+        forger: |
+          <p><strong>Forger:</strong> One of the slaves secretly taught {self}
+            how to read and write. Besides radicalizing {pa} fellow slaves with
+            what {o} read, {o} also used {pa} skills to forge papers to help
+            plan and facilitate the uprising, including correspondence with a
+            network of far-flung supporters, sympathizers, and collaborators.</p>
+        priest: |
+          <p><strong>Priest:</strong> The uprising was led by a priest of a
+            West African religion, promising that their gods and ancestors
+            would assist them.</p>
+        priestess: |
+          <p><strong>Priestess:</strong> The uprising was led by a priestess of
+            a West African religion, promising that their gods and ancestors
+            would assist them.</p>
+        warlord: |
+          <p><strong>Warlord:</strong> The uprising was led by a man who had
+            been a celebrated and respected military commander in his homeland.
+            He is a brilliant tactician who has clearly brought a degree of
+            military sophistication to the uprising that few European generals
+            could match.</p>
+        prince: |
+          <p><strong>Prince:</strong> The uprising was led by a man descended
+            from a prestigious royal line from West Africa. He is a charismatic
+            leader whose lineage commands respect among the slaves. The story
+            of how he ended up in bondage has only helped to spread his
+            legend.</p>
+        princess: |
+          <p><strong>Princess:</strong> The uprising was led by a woman
+            descended from a prestigious royal line from West Africa. She is a
+            charismatic leader whose lineage commands respect among the slaves.
+            The story of how she ended up in bondage has only helped to spread
+            her legend.</p>
+      responses:
+        patrols: |
+          <p><strong>Increased Patrols:</strong> The governor has responded by
+            ordering the militia and the island’s garrison to increase patrols
+            around all sugar plantations and near known maroon settlements.</p>
+        lockdown: |
+          <p><strong>Lockdown:</strong> The governor has responded by ordering
+            a strict lockdown across all of the island’s plantations. Slaves
+            are to be confined when not at work, overseers are to be armed on
+            watch, and any movement of enslaved persons between plantations is
+            strictly forbidden.</p>
+        bounties: |
+          <p><strong>Bounties:</strong> The governor is offering a bounty of
+            20s for the return of any of the escaped slaves, or 100s for one
+            of the ringleaders.</p>
+        threshold: |
+          <p><strong>Military Response:</strong> This is the latest of several
+            similar events over the past year in {island}. In response, the
+            governor has raised the island’s militia and ordered {x} troops
+            from the garrison to hunt down the fugitives.</p>
+        emergency: |
+          <p><strong>Military Response:</strong> In response, the governor has
+            raised the island’s militia and ordered {x} troops from the
+            garrison to hunt down the fugitives.</p>

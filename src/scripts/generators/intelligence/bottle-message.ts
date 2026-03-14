@@ -1,3 +1,4 @@
+import checkVersion from '../../utilities/check-version.ts'
 import getDay from '../../time/day.ts'
 import localize from '../../utilities/wrappers/localize.ts'
 import selectRandomElement from '../../random/el.ts'
@@ -11,6 +12,7 @@ import generateSpyList from './spies/generate.ts'
 import generatePirateReport from './pirate/generate.ts'
 import generateAshKingpinReport from './ash-kingpin/generate.ts'
 import reportOutbreak from './outbreak/report.ts'
+import reportUprising from './uprising/report.ts'
 
 const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
   const reporters = stockArray([
@@ -22,6 +24,9 @@ const generateIntelligenceBottleMessage = async (): Promise<BottleMessage> => {
     { n: 1, item: generateSpyList },
     { n: 1, item: generateAshKingpinReport }
   ])
+
+  const { historical } = await checkVersion()
+  if (historical) reporters.push(reportUprising)
 
   const reporter = selectRandomElement(reporters)
   const { title, report } = await reporter()
