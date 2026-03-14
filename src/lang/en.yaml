@@ -30,12 +30,14 @@ revolutionary-antillia:
     masculine:
       sub: he
       obj: him
+      self: himself
       pos:
         adj: his
         pro: his
     feminine:
       sub: she
       obj: her
+      self: herself
       pos:
         adj: her
         pro: hers

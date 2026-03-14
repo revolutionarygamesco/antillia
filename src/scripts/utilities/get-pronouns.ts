@@ -7,6 +7,8 @@ export interface Pronouns {
   S: string // Subjective (capitalized)
   o: string // Objective
   O: string // Objective (capitalized)
+  self: string // himself/herself
+  Self: string // Himself/Herself (capitalized)
   pa: string // Possessive adjective
   PA: string // Possessive adjective (capitalized)
   pp: string // Possessive pronoun
@@ -21,15 +23,17 @@ const getPronouns = (gender: string): Pronouns => {
 
   const s = localize([...prefix, 'sub'])
   const o = localize([...prefix, 'obj'])
+  const self = localize([...prefix, 'self'])
   const pa = localize([...prefix, 'pos', 'adj'])
   const pp = localize([...prefix, 'pos', 'pro'])
 
   const S = capitalize(s)
   const O = capitalize(o)
+  const Self = capitalize(self)
   const PA = capitalize(pa)
   const PP = capitalize(pp)
 
-  return { s, S, o, O, pa, PA, pp, PP }
+  return { s, S, o, O, pa, PA, pp, PP, self, Self }
 }
 
 export default getPronouns
