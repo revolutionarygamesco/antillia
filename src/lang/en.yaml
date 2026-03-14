@@ -414,7 +414,7 @@ revolutionary-antillia:
       motivation:
         reward:
           money: |
-            paid for {pos.} services. If necessary, {pa} past collaboration
+            paid for {pa} services. If necessary, {pa} past collaboration
             could be leveraged as blackmail against {o}, but use this option
             judiciously
           pardon: |
