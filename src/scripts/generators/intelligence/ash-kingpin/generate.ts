@@ -1,6 +1,6 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import { type AshKingpin, type AshKingpinStoryline } from './type.ts'
-import LogEntry from '../../../log/entry.ts'
+import addLog from '../../../log/add.ts'
 import checkExistingKingpin from './check.ts'
 import drawSettlement from '../../settlement.ts'
 import generatePersonalName from '../../../utilities/name.personal.ts'
@@ -11,7 +11,6 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
-import writeLog from '../../../log/write.ts'
 import { pickRandomEmpire } from '../../empires.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
@@ -56,7 +55,8 @@ const generateAshKingpinReport = async (): Promise<BottleMessageIntel> => {
 
   // Write to the log
   const payload: AshKingpinStoryline = { location: location.uuid, storyline: 'ash-kingpin', resident }
-  await writeLog(new LogEntry({ at, payload }))
+  await addLog('', payload, at)
+  console.log('kingpin')
 
   // Generate the report
   const day= getDay(at)
