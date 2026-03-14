@@ -9,6 +9,7 @@ export interface EmpireData {
   others: string[]
   forts: string
   governors: string
+  islands: string
   ports: string
   settlements: string
 }
@@ -21,6 +22,7 @@ const empires: Record<string, EmpireData> = {
     others: ['british', 'french', 'dutch'],
     forts: UUIDS.FORTS_SPANISH,
     governors: UUIDS.GOVERNORS_SPANISH,
+    islands: UUIDS.ISLANDS_SPANISH,
     ports: UUIDS.PORTS_SPANISH,
     settlements: UUIDS.SETTLEMENTS_SPANISH
   },
@@ -31,6 +33,7 @@ const empires: Record<string, EmpireData> = {
     others: ['spanish', 'french', 'dutch'],
     forts: UUIDS.FORTS_BRITISH,
     governors: UUIDS.GOVERNORS_BRITISH,
+    islands: UUIDS.ISLANDS_BRITISH,
     ports: UUIDS.PORTS_BRITISH,
     settlements: UUIDS.SETTLEMENTS_BRITISH
   },
@@ -41,6 +44,7 @@ const empires: Record<string, EmpireData> = {
     others: ['spanish', 'british', 'dutch'],
     forts: UUIDS.FORTS_FRENCH,
     governors: UUIDS.GOVERNORS_FRENCH,
+    islands: UUIDS.ISLANDS_FRENCH,
     ports: UUIDS.PORTS_FRENCH,
     settlements: UUIDS.SETTLEMENTS_FRENCH
   },
@@ -51,6 +55,7 @@ const empires: Record<string, EmpireData> = {
     others: ['spanish', 'british', 'french'],
     forts: UUIDS.FORTS_DUTCH,
     governors: UUIDS.GOVERNORS_DUTCH,
+    islands: UUIDS.ISLANDS_DUTCH,
     ports: UUIDS.PORTS_DUTCH,
     settlements: UUIDS.SETTLEMENTS_DUTCH
   }
