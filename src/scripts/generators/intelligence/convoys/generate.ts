@@ -1,4 +1,5 @@
 import type { Convoy } from './types.ts'
+import generateShip from '../../../utilities/generate-ship.ts'
 import capitalize from '../../../utilities/capital.ts'
 import fromUuid from '../../../utilities/wrappers/from-uuid.ts'
 import isNumber from '../../../utilities/guards/number.ts'
@@ -10,10 +11,6 @@ import routes from './routes.ts'
 const generateRandomConvoy = async (
   departure: number = game?.time?.worldTime ?? 0
 ): Promise<Convoy> => {
-  const api = game!.modules!.get('revolutionary-pbshipgen')!.api
-  const rollShip = api.rollShip
-  const generateShip = api.generateShip
-
   // Pick a route
   const route = selectRandomElement(routes)
   const { empire } = route
@@ -31,8 +28,7 @@ const generateRandomConvoy = async (
     ? route.ships
     : Math.min(2, await roll(route.ships))
   for (let i = 0; i < n; i++) {
-    const { details, captain } = await rollShip({ use: 'Merchant', ...base })
-    const ship = await generateShip(details, captain) as Actor
+    const ship = await generateShip({ use: 'Merchant', ...base })
     await loadCargo(ship, good)
     ships.push(ship)
   }
@@ -44,8 +40,7 @@ const generateRandomConvoy = async (
     : Math.min(1, await roll(route.escort))
   const wa = Math.min(n, w)
   for (let i = 0; i < wa; i++) {
-    const { details, captain } = await rollShip({ use: 'Naval', ...base })
-    const ship = await generateShip(details, captain) as Actor
+    const ship = await generateShip({ use: 'Naval', ...base })
     escort.push(ship)
   }
 
