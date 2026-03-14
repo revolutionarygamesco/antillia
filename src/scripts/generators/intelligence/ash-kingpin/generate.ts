@@ -56,7 +56,6 @@ const generateAshKingpinReport = async (): Promise<BottleMessageIntel> => {
   // Write to the log
   const payload: AshKingpinStoryline = { location: location.uuid, storyline: 'ash-kingpin', resident }
   await addLog('', payload, at)
-  console.log('kingpin')
 
   // Generate the report
   const day= getDay(at)
