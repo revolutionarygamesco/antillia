@@ -24,6 +24,11 @@ const sermonDirectory: Record<string, { deity: string, base: string[], historica
     deity: 'gods',
     base: ['old', 'neptune', 'thor', 'odin'],
     historical: ['ezili-dantor', 'guabancex']
+  },
+  chaos: {
+    deity: 'chaos',
+    base: ['folly', 'hurricane', 'dice', 'ship'],
+    historical: ['eustasius', 'primordial']
   }
 }
 
@@ -43,7 +48,8 @@ const selectRandomSermon = (
   const { deity, base, historical } = selectRandomElement(stockArray([
     //{ n: 6, item: sermonDirectory.god },
     //{ n: 3, item: sermonDirectory.nature },
-    { n: 1, item: sermonDirectory.gods }
+    // { n: 1, item: sermonDirectory.gods },
+    { n: 1, item: sermonDirectory.chaos }
   ]))
 
   const sermons = isPremium ? [...base, ...historical] : base
@@ -91,6 +97,25 @@ const generateBottleSermon = async (): Promise<BottleMessage> => {
     const uuid = UUIDS.TOBACCO
     context.tobacco = makeLink({ name, uuid  })
     message.contents.push(await fromUuid(uuid))
+  }
+
+  if (isSermon(path, 'chaos', 'dice')) {
+    const name = localize([...path, 'dice'])
+    const uuid = UUIDS.DICE
+    context.dice = makeLink({ name, uuid  })
+    message.contents.push(await fromUuid(uuid))
+  }
+
+  if (isSermon(path, 'chaos', 'hurricane')) {
+    const name = localize([...path, 'handout'])
+    const uuid = UUIDS.JOURNAL_HURRICANE
+    context.handout = makeLink({ name, uuid  })
+  }
+
+  if (isSermon(path, 'chaos', 'eustasius')) {
+    const name = localize([...path, 'eustasius'])
+    const uuid = UUIDS.JOURNAL_SINT_EUSTASIUS
+    context.eustasius = makeLink({ name, uuid  })
   }
 
   const note = await createNote(path, context)

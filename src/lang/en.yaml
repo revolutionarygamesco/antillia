@@ -1268,3 +1268,133 @@ revolutionary-antillia:
         additional: |
           <p><strong>Page:</strong> Spanish in a trembling and uncertain
             hand.</p>
+    chaos:
+      folly:
+        title: The Folly of Meaning
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in English with a wild and
+            scrawling hand. It is an exhortation to embrace the meaninglessness
+            of existence.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Cowards and fools cling to the childish idea that
+            anything in this world means anything. There is no order or
+            significance to what happens to us. We are buffeted by the tides of
+            chaos. It is a tale told by an idiot, full of sound and fury,
+            signifying nothing. Embrace the meaninglessness of your existence,
+            brother! Live for the moment and the whims that seize you, for all
+            else is but pretense and lies! The past is gone and the future will
+            never be. We have only this, the incoherent scream of the
+            present.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English in a wild and scrawling hand.</p>
+      hurricane:
+        title: The Hurricane
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It’s covered in writing, written in English in a
+            cramped and shaky hand, spiraling from the edges of the page
+            towards the center, like a maelstrom pulling you in.</p>
+          <p>{handout}</p>
+        handout: Reading the Hurricane
+      dice:
+        title: Sacrament of Dice
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}, along with two small {dice}. It is written in
+            French with a scratchy and untrained hand. It is a sermon on the
+            holiness of dice as the voice with which chaos speaks.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>It was common among the ancients to cast lots to
+            divine the will of the gods. Even the high priest in Jerusalem kept
+            the Urim and Thummim in the Breastplate of Justice to divine the
+            will of Jehovah. Where the ancients perceived Providence, Blaise
+            Pascal and Pierre de Fermat glimpsed mathematical laws of chance
+            that govern the universe — and after all, is that not the same
+            thing? What the philosopher apprehends in numbers, we experience
+            with the knuckle bones in our clasped hands or tumbling cups. They
+            reveal the lie of our certainty and the pretensions of our ordered
+            universe. It is chaos that rules the world, chaos that is the one
+            true god, and in the dice he makes his will known to us.</p></blockquote>
+        hint: two other objects clanking around
+        dice: lead dice
+        additional: |
+          <p><strong>Page:</strong> French in a scratchy and untrained
+            hand.</p>
+      ship:
+        title: Ship of Fools
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Dutch with a scrawling and
+            uneven hand. It is a sermon concerning the ship of fools.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Saint Grobian, pray for us, witless, flatulent,
+            drunken, and crude as we are, cast adrift upon the waves of fate in
+            this ship of fools. We are all of us fools after all, and none more
+            foolish than the ones who call themselves wise. They set themselves
+            as the captains of our ship, and vie against one another for
+            command, and so many of us are fool enough to follow. Saint
+            Grobian, though foolish it may be to beg thee, patron of fools, to
+            bless us with a shred of wisdom, yet am I fool enough to ask: help
+            them to understand the truth that there is no wise man to find, no
+            better ship to imagine on its straight course, naught but each
+            other upon this rickety boat and the endless waters of chaos upon
+            which we sail. It is a tale told by an idiot, full of sound and
+            fury, signifying nothing.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Dutch in a scrawling and uneven hand.</p>
+      eustasius:
+        title: The Revelation of Sint Eustasius
+        note: |
+          <p>This note was rolled up inside an old rum bottle that you plucked
+            from the sea on {date}. It is written in Dutch with a calm and
+            careful hand. It is a chilling, matter-of-fact account of the
+            cruelty that the author has witnessed at the slave house and
+            warehouses of {eustasius}.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>I say that I saw these things, and I did, though in
+            truth some of them I did. Fewer of those at the start of my
+            account, but more as one progresses, for even when it was my own
+            hand that moved, I felt as if one observing another. I can still
+            remember that the screams bothered me when I first came here, but
+            in time I became accustomed to it. Some of my fellows deal with it
+            by convincing themselves that there is some distinction to be made
+            between us and them, but that is too obvious a lie for me to
+            accept. No, I reconciled myself to this by recognizing that all
+            life is empty and meaningless, my own very much included. We are
+            but rotting meat, all of us. I was once a Christian, pitiful and
+            naïve in my child-like faith in “compassion” and “mercy.” Such
+            foolishness! If there were a just god in heaven, every one of us
+            here would be taken by the Angel of Death like the firstborn of
+            Egypt and cast into the deepest pit of hell. Yet I sleep soundly
+            each night on a comfortable bed with soft linens and my masters are
+            rewarded with wealth beyond measure, because God was butchered long
+            ago and the world is a slaughter bench.</p></blockquote>
+        eustasius: Sint Eustasius
+        additional: |
+          <p><strong>Page:</strong> Dutch in a calm and careful hand.</p>
+      primordial:
+        title: Primordial Chaos
+        note: |
+          <p>This page was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is page is torn from a relatively recent
+            Spanish printing of <em>Liber Chaos</em>, a book by Ramon Llull, a
+            14th century Mallorcan theologian. The page argues that his ternary
+            correlatives (agent, patient, and act) must have also existed even
+            within the primordial chaos that existed before creation. There is
+            a long note scrawled in the margin, also in Spanish.</p>
+          <h3>Note</h3>
+          <blockquote><p>But the system of correlatives is itself an order, and
+            so the primordial chaos would not have been chaos, but just the
+            divine order of God — but how can God's order exist before God
+            created order? So Llull must be wrong. Chaos must be without agent,
+            patient, or act. But if it is even without agent, then how can it
+            be at all? I feel my mind being swallowed by a great morass of
+            contradiction, beyond space and time and being, an eternal infinite
+            of nothingness and contradiction that must even subsume God. Am I
+            damned already for such a thought? And yet, how can I unthink
+            it?</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> A page torn from a printed manuscript, with
+            a long note scrawled in the margin. Both the printing and the
+            marginalia are written in Spanish.</p>
