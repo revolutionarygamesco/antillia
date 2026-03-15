@@ -1398,3 +1398,144 @@ revolutionary-antillia:
           <p><strong>Page:</strong> A page torn from a printed manuscript, with
             a long note scrawled in the margin. Both the printing and the
             marginalia are written in Spanish.</p>
+    deep:
+      call:
+        title: Call of the Deep
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in English with a shaking and
+            uneven hand. It is a haunting note about the call of the deep.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>You found me upon the waves, for you hear it, too.
+            That's why you were out here, where you could find me, because the
+            depths call to you. There is Something in that murky abyss,
+            something known only to the creatures who dwell far beyond the
+            sun's light and the drowned who go down to join them. Are you also
+            torn between that call and the fear of what you might find down
+            there — and what it will cost you to follow it? Fear not, brother.
+            I go before you, and when you are ready, I will be there to greet
+            you.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English in a shaking and uneven hand.</p>
+      song:
+        title: Song of the Prophets
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in French with a looping and
+            ornate hand. It is a sermon claiming that whales are prophets of
+            the deep.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>To behold these vast beings is to apprehend why our
+            ancestors believed in gods. To hear their song is to know that they
+            were right. There is a depth to it that you might feel in your
+            chest that your human ears, accustomed to the thin air of our
+            world, cannot perceive. To live in the deep as they do, would we
+            hear the ocean entire echoing with their great song? Or is the deep
+            naught but that song, a song as old as the foundations of the
+            earth, a song upon which our petty kingdoms of dirt are perched, a
+            song from which all life has sprung, and a song to which all life
+            must one day return?</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> French in a looping and ornate hand.</p>
+      baptism:
+        title: True Baptism
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a wild and
+            scratching hand. It is a sermon on the sanctity of drowning.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Do you think a few drops of water on a newborn babe’s
+            forehead is truly enough to save its soul? The Baptist submerged
+            Jesus fully in the River Jordan, and I tell you even that was
+            insufficient — a pale mockery of the true baptism. The Jordan seeks
+            the sea as all rivers do, but never finds it, and the Mediterranean
+            itself is but a pond of the great, wide Ocean. Only within its
+            unfathomable depths can you return to the womb that birthed all
+            life. Let its brine burn your lungs and submit to the endless dark
+            that envelopes you. Only then will you have the true baptism. That
+            which is dead can never die.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Spanish in a wild and scratching hand.</p>
+      sirens:
+        title: Sirens’ Song
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Dutch with a wild and
+            undisciplined hand. It is an exhortation to seek out and give
+            yourself over to sirens.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Homer tells us that when his ship passed by the
+            sirens, Odysseus, “of many devices,” stuffed the ears of his
+            sailors with beeswax, but he himself wished to hear their song, and
+            so had himself lashed to the mast. Ah, but how he regretted that
+            decision once he heard their song and could not swim out to them!
+            Homer considers this a wise act of forethought because it spared
+            Odysseus his life, but in that moment the son of Laertes learned
+            that there are things more precious than life. No doubt the man of
+            many sorrows wished that he could have traded his glorious return
+            and all the years he spent reigning in peace as king of Ithaca for
+            a chance to go back to that moment and swim out to the sirens. For
+            it is only those who cling too strongly to this fleeting mortal
+            life who would call it a trick to lure you to your doom. To hear
+            that song is to know the truth, that there is no sweeter fate than
+            to surrender yourself entirely to the daughters of Achelous — to
+            surrender yourself to the briny depths of the sea. Learn from the
+            folly of Odysseus, sailor, and be wiser than the man who thought
+            himself wise. If you are blessed to hear the sirens’ song, answer
+            it with a joyful heart. And if you are truly wise, seek them
+            out.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Dutch in a wild and undisciplined hand.</p>
+      bones:
+        title: City of Bones
+        note: |
+          <p>This note was rolled up inside an old rum bottle that you plucked
+            from the sea on {date}. It is written in English with a confident
+            but unpracticed hand. It was written by a slave named Esther about
+            a place called “the City of Bones,” found in the middle of the
+            Atlantic, at the bottom of the ocean, where those who chose to
+            drown rather than face a life in bondage found a new home.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>It’s only a half mile by a half mile but that’s a
+            city. It’s made of bones. Pearly white bones. All the buildings and
+            everything is made of bones. I seen it. I been there. My mother
+            live there. I got an aunt and three uncles live down there in that
+            city made of bones. That’s the center of the world. In time it will
+            all come to light. The people made a kingdom out of nothing. They
+            were the people that didn’t make it across the water. They sat down
+            right there. They say, “Let’s make a kingdom. Let’s make a city of 
+            ones.” The people got a burning tongue. Their mouths are on fire
+            with song. That water can’t put it out. That song is powerful. It
+            rise up and come across the water. Ten thousand tongues and ten
+            thousand chariots coming across the water. They on their way. They
+            coming across the water. Ten thousand hands and feet coming across
+            the water. They on their way.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English in a confident but unpracticed
+            hand.</p>
+      nautilus:
+        title: Nautilus
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a cramped and
+            undisciplined hand. It is a sermon on the mysteries of the
+            nautilus.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>The ancients studied the mysteries of the divine ratio
+            and built it into their greatest feats of architecture, yet we see
+            the same jewel in the shell of a lowly nautilus. This spiral of
+            natural perfection pulls us into itself, the genius of the
+            thalassic depths etched even upon its Neptunian shores. We walk
+            about the earth, holding this salted water within our flash, a wave
+            that thought to walk about inland for a time, but trapped in this
+            form we are cut off from the pelagic intelligence from which our
+            own meager reason is borrowed. In the spiraling shape of the
+            nautilus we see a map to take us back to the primordial waters in
+            which we have our source, for as every river runs eventually to the
+            ocean, so too does every life, and when our dry sojourn is done, we
+            shall rejoin the endless tidal mind from which this life was
+            briefly borrowed, and know again the true wisdom of the
+            ages.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Spanish in a cramped and undisciplined
+            hand.</p>
