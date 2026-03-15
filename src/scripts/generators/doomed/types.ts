@@ -18,6 +18,7 @@ export interface DoomedShip {
   }
   tale: string
   complication: string
+  isHaunted: boolean
   includeMap: boolean
   kin: DoomedKin[]
 }
