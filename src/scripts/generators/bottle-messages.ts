@@ -28,7 +28,7 @@ const generateBottleMessage = async (): Promise<void> => {
     description = localize([...descPath, 'describedWith'], { ...msg, bottle })
   } else if (msg.description) {
     description = localize([...descPath, 'described'], { ...msg, bottle })
-  } else if (msg.with) {
+  } else if (msg.hint) {
     description = localize([...descPath, 'with'], { ...msg, bottle })
   }
 

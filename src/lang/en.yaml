@@ -1652,3 +1652,146 @@ revolutionary-antillia:
             watch over you, too, if you will but join them in worship.</p></blockquote>
         additional: |
           <p><strong>Page:</strong> Dutch in a steady and careful hand.</p>
+    church:
+      heresy:
+        title: Against Heresy
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a wild and
+            expressive hand. It is an argument that It is a sermon about the
+            sanctity of the Inquisition’s mission.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>For the Church is the Body of Christ, and for
+            centuries has that body been afflicted with many tumors, for that
+            is what heresy truly is. While the Church unites us in one heart
+            and mind before Our Lord, the heretic teaches his own truth, born
+            of his own, imperfect mind, until it can no longer recognize the
+            Body of which it is but one part. Just as cancer errs by failing to
+            recognize its place within the body, so, too, does the heretic err
+            by refusing to recognize its place in the Body of Christ, or the
+            authority of his Vicar, who is our Holy Father, the heir of Saint
+            Peter. As Christ said, "upon this rock shall I build my Church."
+            And now in these last days as heretics hold sway across the world,
+            the Holy Father has sent the Holy Inquisition to every part of it
+            to tend to the Body of Christ as a surgeon tends his patient, for
+            there is naught to be done with cancer but to cut it out of the
+            body.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Spanish in a wild and expressive hand.</p>
+      elmo:
+        title: Prayer to Saint Elmo
+        note: |
+          <p>This note was rolled up inside an old bottle that you found at
+            sea. It is written in Latin with a careful and deliberate hand. It
+            is a prayer to Saint Erasmus of Formia — better known as Saint Elmo
+            — the patron saint of sailors.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Holy martyr Erasmus, who didst willingly and bravely
+            bear the trials and sufferings of life, and by thy charity didst
+            console many fellow-sufferers; I implore thee to remember me in my
+            needs and to intercede for me with God. Staunch confessor of the
+            Faith, victorious vanquisher of all tortures, pray Jesus for me and
+            ask Him to grant me the grace to live and die in the Faith through
+            which thou didst obtain the crown of glory. Amen.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Latin in a careful and deliberate hand.</p>
+      rosary:
+        title: Mysteries of the Rosary
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}, along with a {rosary}. It is written in {lang}
+            and Latin, with a calm and steady hand, and describes how to pray
+            the rosary.</p>
+        rosary: rosary
+        languages:
+          spanish: Spanish
+          french: French
+          irish: Irish Gaelic
+        hint: something else
+        additional: |
+          <p><strong>Page:</strong> {lang} and Latin in a calm and steady
+            hand.</p>
+      judgement:
+        title: Divine Judgement
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a cramped and
+            aggressive hand. It is a sermon arguing that the Scourge is God's
+            punishment for Catholics' failure to destroy Protestantism.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>For twenty-five years alone Christendom knew peace and
+            plenty, from the time when King Ferdinand and Queen Isabella
+            expelled the Mohammedans from Iberia until the German heresiarch
+            nailed his insidious lies to the doors of All Saints' Church on All
+            Saints’ Day, and all the saints wept. For twenty-five years, our
+            Holy Mother Church was indeed one, holy, catholic, and apostolic,
+            but since then it has been riven with heresy. The Habsburgs
+            understood the great crusade to which God had called them and gave
+            these heretics no quarter, but the Bourbon king Philip makes peace
+            with them and bids us live alongside these “Protestants” and
+            tolerate their blasphemies among us. Is it any wonder, then, that
+            so shortly after this illegitimate pretender seized the throne of
+            the Catholic Monarchy, to which God had appointed the defense of
+            His Church and the True Faith, that his divine patience found its
+            end and he gave Satan remit to lay waste to all the earth? Can
+            there be any doubt that the Scourge is God’s righteous judgement
+            upon us, who prove ourselves too cowardly to carry on his holy war
+            against the unfaithful? Only when we find our courage once again,
+            and cleanse the earth of the Protestant stain and send every last
+            one of them to their father, who is the Prince of Lies, will God
+            show us his infinite mercy. There can be no forgiveness, though,
+            while. single Protestant draws breath.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Spanish in a cramped and aggressive
+            hand.</p>
+      nations:
+        title: To All Nations
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a clear and steady
+            hand. It is a call to preach the gospel to the indigenous peoples
+            of the Americas.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>“Therefore go and make disciples of all nations,”
+            Christ commanded us, for He will not come again until all peoples
+            have heard the gospel and had the chance to accept the salvation
+            that is found through Him and the Sacraments of His Holy Church.
+            And so it was that Christ led Spanish sailors to the shores of the
+            New World, where so many nations even now dwell in darkness and
+            ignorance of Christ. Go, therefore, as Christ said to the apostles,
+            and make disciples of all the nations of the New World! Venture
+            into the Florida wilderness and the jungles of Venezuela, the vast
+            deserts north of New Spain, and everywhere else upon the earth
+            where the children of Adam may dwell. For only then shall Christ
+            return in Glory to judge the living and the dead, and His Kingdom
+            will have no end. Amen.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Spanish in a clear and steady hand.</p>
+      charitatis:
+        title: Nostra Domina Charitatis
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a studied and
+            practiced hand. It is a sermon about Our Lady of Charity of
+            {cobre}.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Two indigenous laborers and a slave went out into the
+            Bay of Nipe to gather salt when a terribly storm fell upon them.
+            They prayed to the Blessed Virgin for protection, and she heard
+            their prayers. They saw what at first appeared to be a bird, but
+            was in fact a wooden image of the Virgin Mary carrying the Child
+            Jesus on her right arm, with a gold cross in her left hand. It was
+            fastened to a board inscribed with the words, “I am the Virgin of
+            Charity,” and wrapped in a white material that remained completely
+            dry. The laborers brought the image with them to their home village
+            of Barajagua, from whence it would often disappear, until an
+            artillery captain was dispatched to defend El Copre from pirates
+            and took the image with him. There a shrine was built, and having
+            found its home, it remained, and has been a site of devotion ever
+            since. And so the Blessed Virgin provides proof even to this day
+            and in the Caribbean that when her faithful children cry out to
+            her, she will not forsake them.</p></blockquote>
+        cobre: El Cobre
+        additional: |
+          <p><strong>Page:</strong> Spanish in a studied and practiced
+            hand.</p>
