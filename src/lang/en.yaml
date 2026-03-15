@@ -1961,3 +1961,304 @@ revolutionary-antillia:
             flesh. I am, at last, free.</p></blockquote>
         additional: |
           <p><strong>Page:</strong> English in a calm and practiced hand.</p>
+  last-accounts:
+    title: Last Account of the {ship}
+    note: |
+      <p>This note was rolled up inside an old bottle that you plucked from the 
+        sea on {date}. It is written in {lang} with a {emotional} and
+        {physical} hand. The author identifies himself as {author}, {rank}
+        the {ship}. He tells the tale of that vessel’s final days.</p>
+      {tale}
+      {complication}
+      {request}
+    ranks:
+      captain: captain of
+      bosun: bosun of
+      master: sailing master of
+      purser: purser of
+      sailor: a sailor aboard
+      cook: a cook aboard
+    handwriting:
+      physical:
+        hurried: hurried
+        cramped: cramped
+        jagged: jagged
+        lurching: lurching
+        unsteady: unsteady
+        trembling: trembling
+        sloping: sloping
+      emotional:
+        frantic: frantic
+        desperate: desperate
+        deliberate: deliberate
+        resolute: resolute
+        faltering: faltering
+    description:
+      page: |
+        <p><strong>Page:</strong> {lang} in a {emotional} and {physical}
+          hand.</p>
+      haunted:
+        spirit: wandering spirit
+        text: |
+          <p><strong>Haunting Threat:</strong> Add a {spirit} to the ship’s
+            potential ghosts. If the crew does nothing to notify the ghost’s
+            next of kin, it will begin haunting the ship, continuing until its
+            next of kin are notified as requested.</p>
+      map:
+        link: Generate treasure map
+        base: |
+          <p><strong>Treasure Map:</strong> The bottle also contains a map to
+            the buried treasure that the crew leaves behind, since they will
+            never now be able to retrieve it. Use the treasure map generator
+            on pages 119-121 to create it.</p>
+        premium: |
+          <p><strong>Treasure Map:</strong> The bottle also contains a map
+            to the buried treasure that the crew leaves behind, since they
+            will never now be able to retrieve it.</p>
+          <p>{generator}</p>
+      tales:
+        davy:
+          title: The Ire of Davy Jones
+          link: Davy Jones
+          text: |
+            <p>“We thought it was an island,” {given} writes, “until it
+              started to move.” The message recounts the <em>{ship}</em>’s
+              encounter with the legendary {davy}. Though the creature could
+              have easily destroyed them all, they seem to have earned some its
+              ire somehow. Davy Jones followed them, a dark shadow in the
+              water. It invaded their dreams, drove them mad, and turned them
+              against one another. One faction of the crew has begun to worship
+              Davy Jones, and hopes to appease it by sacrificing those who
+              still refuse to join them.</p>
+        kraken:
+          title: Prey of the Kraken
+          link: the Kraken
+          text: |
+            <p>{given} recounts their encounter with {kraken}. The
+              <em>{ship}</em> was completely destroyed. {given} writes as he
+              and  [[/r d10]] survivors are left stranded on a sand bar. They
+              hope that they die of thirst or exposure, and not by being picked
+              off and eaten by the Kraken.</p>
+        whale:
+          title: The Black Whale
+          link: the Black Whale
+          text: |
+            <p>{given} recounts their encounter with {whale}. The crew of the
+              <em>{ship}</em> tried to kill it, but only angered it. Now the
+              whale is hunting them. It has followed the ship for days, a dark
+              shape beneath the water, always trailing them. It smashes into
+              their hull, weakening it a bit more each time. It’s toying with
+              them, seeming to enjoy their terror. {given} writes that it’s
+              only a matter of time before the whale finishes the job.</p>
+        orcas:
+          title: The Cursed Orcas
+          link: cursed orcas
+          text: |
+            <p>{given} recounts their encounter with a pod of {orcas}. The
+              crew of the <em>{ship}</em> killed a few, thinking that would
+              frighten them off, but it only angered them. Now they’re being
+              hunted. The orcas have been ramming their ship for days. Each
+              impact weakens the hull further. The creatures are intelligent,
+              patient, methodical. They can't outrun them, can't kill them all,
+              and the ship won't hold together much longer.</p>
+        scourge:
+          title: Hunted by the Scourge
+          text: |
+            <p>{given} recounts how the <em>{ship}</em> has been hunted by a
+              ship made of bones and crewed by skeletons. Every night they are
+              pursued relentlessly, always chased into the west. The ship
+              emerges from beneath the waves, and then the skeletons begin
+              climbing up over the gunwales. Few remain now. {given} knows
+              that once the sun sets, the ship will be upon them again, and
+              even if they survive the night, there is little chance that
+              they'll survive the night after, or the night after that.</p>
+        ghosts:
+          title: Hunted by the Dead
+          text: |
+            <p>{given} recounts how the <em>{ship}</em> has been hunted by a
+              ghost ship. Every night they are pursued relentlessly, always
+              chased into the west. The ghosts emerge from the mists, killing
+              more of the crew each night. Few remain now. {given} knows that
+              once the sun sets, the ship will be upon them again, and even if
+              they survive the night, there is little chance that they'll
+              survive the night after, or the night after that.<p>
+        deep:
+          title: Hunted by the Deep
+          text: |
+            <p>{given} recounts how the <em>{ship}</em> has been hunted by a
+              monstrous ship, seemingly made of shipwrecks held together by
+              barnacles, claws, and tentacles. Every night they are pursued
+              relentlessly, always chased into the west. The ship emerges from
+              beneath the waves, and then the misshapen creatures begin
+              climbing up over the gunwales. Few remain now. {given} knows
+              that once the sun sets, the ship will be upon them again, and
+              even if they survive the night, there is little chance that
+              they'll survive the night after, or the night after that.</p>
+        metamorphosis:
+          title: Metamorphosis
+          captain: |
+            <p>{given} writes that he is changing. He first noticed the
+              growths beneath his chin. His skin has become scaly, cold, and
+              clammy. But it wasn’t just him; the whole crew began to change
+              with him. Some of his crew have webbing between their fingers and
+              toes. Others have grown the claws of crabs, bulging fish eyes, or
+              fins. The captain notes that a writhing mass of tentacles has now
+              fully replaced the beard he once had. The ship is covered in
+              barnacles, but it seems to go <em>faster</em> now, rather than
+              slower. The thought of returning to shore disgusts him. Instead,
+              he yearns for the deep. He writes down this message in fear that
+              his humanity is slipping away, hoping to pen one last message
+              before it is gone forever.</p>
+          other: |
+            <p>{given} writes that he is changing. He first noticed the
+              webbing as it began to form between his toes, and then his
+              fingers. His skin has become scaly, cold, and clammy. But it
+              wasn't just him; the whole crew began to change, too.
+              {captain} has grown tentacles where once he had a beard, while
+              others have the claws of crabs, bulging fish eyes, or fins. The
+              ship is covered in barnacles, but it seems to go <em>faster</em>
+              now, rather than slower. The thought of returning to shore
+              disgusts him. Instead, he yearns for the deep. He writes down
+              this message in fear that his humanity is slipping away, hoping
+              to pen one last message before it is gone forever.</p>
+        haunted:
+          title: Ship of the Dead
+          text: |
+            <p>{given} recounts the tale of how, one by one, the
+              <em>{ship}</em> became haunted by more and more ghosts. They
+              appear every night, driving the crew to madness and suicide. The
+              ship sails itself now. The living no longer control their fate.
+              {given} says his life belongs to the dead now, and it is only a
+              matter of time before he joins them.</p>
+        disease:
+          title: Plague Ship
+          text: |
+            <p>{disease} spread through the ship like a fire. Too many have
+              died and the survivors are too weak to bring the ship to
+              port.</p>
+        cannibalism:
+          title: Long Pig in the Doldrums
+          text: |
+            <p>{given} recounts that the <em>{ship}</em> has been becalmed for
+              [[d20+15]] days. When the food ran out, the crew began drawing
+              lots to see which of them would be killed to feed the rest.</p>
+        sacrifice:
+          title: Blood Sacrifice in the Doldrums
+          text: |
+            <p>{given} recounts that the <em>{ship}</em> has been becalmed for
+              [[d20+15]] days. In their desperation, some of the crew became
+              convinced that they might be saved if they turned to {god} and
+              offered up one of their own as a human sacrifice. They chose
+              their sacrifice from among the crew who resisted this idea,
+              turning the ship into a tense battleground between two
+              factions.</p>
+          gods:
+            devil: the Devil
+            davy: Davy Jones
+            thor: Thor
+            aegir: Ægir
+            odin: Odin
+            njordr: Njörðr
+            neptune: Neptune
+            poseidon: Poseidon
+            manannan: Manannán mac Lir
+        drinking:
+          title: Becalmed
+          text: |
+            <p>{given} recounts that the <em>{ship}</em> has been becalmed for
+              [[d20+15]] days. When the water ran out, some of the crew began
+              drinking sea water.</p>
+        meat:
+          title: Rotted Meat in the Doldrums
+          text: |
+            <p>{given} recounts that the <em>{ship}</em> has been becalmed for
+              [[d20+15]] days. After the food ran out, they sighted a whale
+              carcass. Unfortunately, the meat was already rancid, but in their
+              desperation, many of the crew began eating it anyway.</p>
+        lost:
+          title: Lost at Sea
+          text: |
+            <p>{given} writes that the <em>{ship}</em> is off course. They
+              haven’t sighted land in [[d20+15]] days. Provisions are running
+              dangerously low. Hope is running out.</p>
+        reef:
+          title: Run Aground
+          text: |
+            <p>{given} recounts that the <em>{ship}</em> ran aground on an
+              unexpected reef. The hull was breached and the ship began taking
+              on water, with no hope of rescue.</p>
+        infestation:
+          title: Infestation
+          text: |
+            <p>{given} recounts that the hull of the <em>{ship}</em> became
+              riddled with shipworms that they discovered too late. The ship is
+              literally being eaten from within. The crew is bailing water
+              constantly but losing the battle as more holes appear every
+              day.</p>
+        battle:
+          title: Forsaken by Pirates
+          text: |
+            <p>{given} recounts how the <em>{ship}</em> was attacked by
+              {pirates} who destroyed their rigging, leaving them stranded
+              without any ability to make their way back to port. To punish
+              them for putting up a fight, the pirates left them there to
+              die.</p>
+          nameless: pirates
+        storm:
+          title: Tempest-Tossed
+          text: |
+            <p>{given} recounts how the <em>{ship}</em> was caught in a
+              terrible storm that cracked their mainsail and left them lost
+              and without any ability to make their way back to port.</p>
+      complications:
+        mutiny: |
+          <p>Blaming their woes on Captain {captain}, the crew mutinied. They
+            killed the captain, but several others died in the struggle as
+            well, leaving them in an even worse position.</p>
+        traitor: |
+          <p>{given} includes his confession that he is the cause of the
+            ship’s misfortune. He did what he did with full knowledge,
+            accepting that he would die along with everyone else on board, and
+            that was a price he was willing to pay.</p>
+        murderer: |
+          <p>{given} includes a confession that he committed a murder and took
+            to the sea to escape the law and his conscience. One he could
+            elude, but the other he could not.</p>
+        sorcerer: |
+          <p>{given} includes a confession that he is a practitioner of the
+            dark arts, though his magic seems powerless to save him now.</p>
+        adulterer: |
+          <p>{given} includes a confession that he has cheated on his wife,
+            and begs her and God forgiveness for his weakness.</p>
+        cult: |
+          <p>{given} goes on to recount how one of the crew began proclaiming
+            that he had been visited in his dreams by an elder being slumbering
+            in the depths of the ocean, and that those who would follow him
+            would be saved. He’s found a following among some of the desperate
+            crew, while others continue to resist this blasphemy. Tensions are
+            mounting.</p>
+        faustian: |
+          <p>{given} goes on to recount how a member of the crew suggested
+            summoning the Devil to treat with him, offering to serve and
+            worship him if he would rescue them from their plight.</p>
+        paranoia: |
+          <p>{given} recounts how some of the food went bad, whether naturally
+            or by poison he could not say, though others of the crew were quick
+            to make accusations. Last night someone was murdered. The crew
+            seems on the verge of self-annihilation.</p>
+        shadows: |
+          <p>{given} notes the presence of unnatural shadows lurking about the
+            ship, whether they’re ghosts, demons, or something else. They seem
+            to be waiting for the crew to die.</p>
+        carrion:
+          link: carrion gulls
+          text: |
+            <p>{given} notes the unnerving flock of {gulls} circling overhead,
+              and how it seems to grow more larger every day.</p>
+        sharks: |
+          <p>{given} notes that there seems to be more sharks in the water
+            around them with each passing day, as if they can sense the
+            imminence of death.</p>
+        vultures: |
+          <p>{given} notes the unnerving flock of vultures circling overhead
+            that seems to grow larger each day.</p>
