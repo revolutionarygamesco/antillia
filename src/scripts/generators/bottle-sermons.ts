@@ -1,4 +1,6 @@
 import checkVersion from '../utilities/check-version.ts'
+import drawGovernor from './governor.ts'
+import empires from './empires.ts'
 import fromUuid from '../utilities/wrappers/from-uuid.ts'
 import getDay from '../time/day.ts'
 import getTime from '../time/get.ts'
@@ -44,6 +46,11 @@ const sermonDirectory: Record<string, { deity: string, base: string[], historica
     deity: 'church',
     base: ['heresy', 'elmo', 'rosary', 'judgement'],
     historical: ['nations', 'charitatis'],
+  },
+  old: {
+    deity: 'old',
+    base: ['nameless', 'carcosa', 'map', 'atlantis'],
+    historical: ['passage', 'pain']
   }
 }
 
@@ -67,7 +74,8 @@ const selectRandomSermon = (
     // { n: 1, item: sermonDirectory.chaos },
     // { n: 1, item: sermonDirectory.deep },
     // { n: 1, item: sermonDirectory.dark },
-    { n: 6, item: sermonDirectory.church }
+    // { n: 6, item: sermonDirectory.church },
+    { n: 1, item: sermonDirectory.old }
   ]))
 
   const sermons = isPremium ? [...base, ...historical] : base
@@ -160,6 +168,47 @@ const generateBottleSermon = async (): Promise<BottleMessage> => {
     const name = localize([...path, 'cobre'])
     const uuid = UUIDS.JOURNAL_EL_COBRE
     context.cobre = makeLink({ name, uuid  })
+  }
+
+  if (isSermon(path, 'old', 'map')) {
+    const keys: Record<string, { uuid: string, premiumOnly: boolean }> = {
+      ritual: { uuid: UUIDS.PREMIUM_ARCANE_RITUALS, premiumOnly: true },
+      mishap: { uuid: UUIDS.MYSTICAL_MISHAPS, premiumOnly: false }
+    }
+
+    for (const key in keys) {
+      const { uuid, premiumOnly } = keys[key]
+      const name = localize([...path, key])
+      context[key] = premium || premiumOnly === false
+        ? makeLink({ name, uuid })
+        : name
+    }
+  }
+
+  if (isSermon(path, 'old', 'atlantis')) {
+    const keys: Record<string, string> = {
+      paris: UUIDS.JOURNAL_PARIS,
+      amsterdam: UUIDS.JOURNAL_AMSTERDAM,
+      london: UUIDS.JOURNAL_LONDON,
+      madrid: UUIDS.JOURNAL_MADRID
+    }
+
+    for (const key in keys) {
+      const uuid = keys[key]
+      const name = localize([...path, key])
+      context[key] = makeLink({ name, uuid })
+    }
+  }
+
+  if (isSermon(path, 'old', 'passage')) {
+    const name = localize([...path, 'domingue'])
+    const uuid = UUIDS.JOURNAL_HISPANIOLA
+    context.domingue = makeLink({ name, uuid  })
+  }
+
+  if (isSermon(path, 'old', 'pain')) {
+    const governor = await drawGovernor(empires.british)
+    context.governor = makeLink(governor)
   }
 
   const note = await createNote(path, context)

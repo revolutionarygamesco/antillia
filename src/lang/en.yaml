@@ -335,7 +335,7 @@ revolutionary-antillia:
           the probate courts to seize the estates of deceased merchants.
         illegal-trade: |
           The report provides {evidence} that the {governor} is engaging in
-          illegal trade with the {rival}.
+          illegal trade with {rival}.
         extortion-scourge: |
           The report provides {evidence} that the {governor} is refusing to
           protect settlements from the Scourge unless they pay him exorbitant
@@ -1795,3 +1795,169 @@ revolutionary-antillia:
         additional: |
           <p><strong>Page:</strong> Spanish in a studied and practiced
             hand.</p>
+    old:
+      nameless:
+        title: The Nameless City
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in a mad scrawl — some of it in
+            English, some in Spanish, some in French, some in Dutch, some in
+            Portuguese, some in Latin, some in Greek, some in languages you’ve
+            never seen. What you can read appears to be the same couplet,
+            repeated over and over again:</p>
+          <blockquote>
+            <p class="poem">
+              <span style="display: block;">That is not dead which can eternal lie.</span>
+              <span style="display: block;">And with strange aeons even death may die.</span>
+            </p>
+          </blockquote>
+        additional: |
+          <p><strong>Page:</strong> A mad scrawl of many languages.</p>
+      carcosa:
+        title: Lost Carcosa
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It appears to be a poem ripped from a play,
+            written in English.</p>
+          <h3>Poem</h3>
+          <blockquote>
+            <p class="poem">
+              <span style="display: block;">Along the shore the cloud waves break,</span>
+              <span style="display: block;">The twin suns sink behind the lake,</span>
+              <span style="display: block;">The shadows lengthen</span>
+              <span style="display: block; margin-left: 2em;">In Carcosa.</span>
+            </p>
+            <p class="poem">
+              <span style="display: block;">Strange is the night where black stars rise,</span>
+              <span style="display: block;">And strange moons circle through the skies,</span>
+              <span style="display: block;">But stranger still is</span>
+              <span style="display: block; margin-left: 2em;">Lost Carcosa.</span>
+            </p>
+            <p class="poem">
+              <span style="display: block;">Songs that the Hyades shall sing,</span>
+              <span style="display: block;">Where flap the tatters of the King,</span>
+              <span style="display: block;">Must die unheard in</span>
+              <span style="display: block; margin-left: 2em;">Dim Carcosa.</span>
+            </p>
+            <p class="poem">
+              <span style="display: block;">Song of my soul, my voice is dead,</span>
+              <span style="display: block;">Die thou, unsung, as tears unshed</span>
+              <span style="display: block;">Shall dry and die in</span>
+              <span style="display: block; margin-left: 2em;">Lost Carcosa.</span>
+            </p>
+          </blockquote>
+        additional: |
+          <p><strong>Page:</strong> English, ripped from a printed book.</p>
+      map:
+        title: Star Map
+        note: |
+          <p>This star chart was rolled up in an old bottle that you plucked
+            from the sea on {date}. It has a great many notes added to it in a
+            frenzied, anxious hands. Both the chart and the scribbled notes are
+            in Spanish.</p>
+          <p><strong>Observe Stars:</strong> If you spend time staring at one
+            of the stars mentioned on the map at night, test Spirit DR 12. On a
+            success, cast a random {ritual}. On a failure, a {mishap} occurs.</p>
+          <p><strong>Zealot:</strong> If you are a Zealot devoted to the Great
+            Old One, -2 DR.</p>
+        ritual: arcane ritual
+        mishap: mystical mishap
+        additional: |
+          <p><strong>Page:</strong> A star chart with many notes added to it in
+            a frenzied, anxious hands. Both the chart and the scribbled notes
+            are in Spanish.</p>
+      atlantis:
+        title: Atlantis Rising
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in French with a cramped and
+            careful hand. It is a diatribe about the lost city of Atlantis and
+            how it is now returning to the surface.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>{paris}, {amsterdam}, {london}, and {madrid} are all
+            as hamlets compared to the glory of Atlantis. Even Rome is made
+            small by the comparison. Never since has the earth seen so glorious
+            a civilization. It brought order and peace to every shore of the
+            ocean that now bears its name, sharing its wisdom and magic with
+            those who proved themselves of worthy blood. And yet the savages
+            over which they ruled could not appreciate beauty or art or
+            knowledge, and in their envy and ingratitude they rose up in
+            rebellion against their rightful lords and betters, and the
+            treacherous sea sided with them and drank Great Atlantis beneath
+            the waves. But those who remained faithful to the Empire’s rule
+            were transformed. They became the Deep Ones, and they have kept the
+            remnant of that greatest of all civilizations alive. And now, as
+            the End of Days approaches, the benighted age of rebellion into
+            which we were born comes to an end, and Atlantis rises! Bow your
+            heads, unworthy subjects, and greet the righteous lash with
+            gratitude! The Lords of the Earth return to rule over us once
+            more!</p></blockquote>
+        paris: Paris
+        amsterdam: Amsterdam
+        london: London
+        madrid: Madrid
+        additional: |
+          <p><strong>Page:</strong> French in a cramped and careful hand.</p>
+      passage:
+        title: The Middle Passage
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in French with a mad and
+            scratching hand. It is a slave’s harrowing account of his time
+            crossing the Atlantic in the hold of a slave ship.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>It was as if we had all been swallowed, and were now
+            trapped in the belly of that terrible beast. It was hard to tell
+            night from day in that interminable darkness. Every awful odor and
+            noxious fume mixed in that dark, cramped hold until it pervaded
+            you, became part of you. The unceasing cries of agony became my
+            lullaby, and in my dreams I first heard him, the one who slumbers
+            in the deep. He showed me visions of my fate as a slave in
+            {domingue}, to be branded, beaten, and used. He showed me my
+            children, and how they would follow after me, and their children,
+            and when eventually the atrocities had piled so high up to heaven
+            that they rose up and seized their freedom, every king and slaver
+            — cowards all — fell upon them as one, and bound them to pay the
+            men who’d robbed them of their freedom for their lives. And so,
+            though free, they were bound again in chains of poverty and debt
+            and used all the same as slaves by another name — their children,
+            and their children, and their children after them, generation after
+            generation, for centuries on end, until I screamed, “Better to burn
+            the world entire than this future ever come to pass!” And I heard
+            it answer, not a voice as mortals speak, but as a madness that
+            slithered through my brain: “So shall it be.”</p></blockquote>
+        domingue: Saint-Domingue
+        additional: |
+          <p><strong>Page:</strong> French in a mad and scratching hand.</p>
+      pain:
+        title: Revelation of Pain
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from 
+            the sea on {date}. It is written in English with a calm and
+            practiced hand. It is the account of an agent sent by the
+            {governor} to infiltrate a Wretched cult.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>It would seem that there is a distinct difference
+            between the way that a madman raves and the way one pretending to
+            be mad raves, which, though imperceptible to the sensible, is
+            nonetheless clear to the mad, for my performance was quickly
+            detected among the Wretched. I resisted their interrogations, as I
+            had been trained to do, and was quite prepared for their use of
+            torture. I had been subjected to the methods of the Spanish
+            Inquisition to prepare me for this, but they did not employ torture
+            as the Inquisitors do to extract confessions. They understand pain
+            and its proper application far more intimately. They recognize that
+            the sensation of pain is but the grip of flesh, which keeps our
+            spirits chained to the cruelties of this mortal world and our minds
+            mired in its suffering and anguish. It is our prison, and above all
+            wishes for us to remain in bondage, and so it rebels and cries out
+            when someone comes to rescue us. I resisted for a long time, in my
+            obstinance, before I recognized that only through the doors of
+            agony can one find enlightenment. I repented of all the years I
+            spent living mired in the lies of this world. This document is my
+            last confession. Fear not, my Lord Governor, for I shared all with
+            our friends, including how to find you and your family, so they may
+            liberate you as well. Weep not for me, for that is the lie of
+            flesh. I am, at last, free.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English in a calm and practiced hand.</p>
