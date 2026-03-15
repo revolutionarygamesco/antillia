@@ -34,6 +34,11 @@ const sermonDirectory: Record<string, { deity: string, base: string[], historica
     deity: 'deep',
     base: ['call', 'song', 'baptism', 'sirens'],
     historical: ['bones', 'nautilus']
+  },
+  dark: {
+    deity: 'dark',
+    base: ['wolves', 'sins', 'book', 'armada'],
+    historical: ['rebels', 'god']
   }
 }
 
@@ -55,7 +60,8 @@ const selectRandomSermon = (
     //{ n: 3, item: sermonDirectory.nature },
     // { n: 1, item: sermonDirectory.gods },
     // { n: 1, item: sermonDirectory.chaos },
-    { n: 1, item: sermonDirectory.deep }
+    // { n: 1, item: sermonDirectory.deep },
+    { n: 1, item: sermonDirectory.dark }
   ]))
 
   const sermons = isPremium ? [...base, ...historical] : base
