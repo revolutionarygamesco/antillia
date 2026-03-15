@@ -1,22 +1,16 @@
-import drawFirst from '../../../utilities/draw-first.ts'
+import decapitalize from '../../../utilities/decapital.ts'
+import drawGovernor from '../../governor.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
+import { pickRandomEmpire } from '../../empires.ts'
 import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
 import empires from '../../empires.ts'
-import { MODULE_ID, UUIDS } from '../../../settings.ts'
-
-const govJamaica: TableResult = {
-  type: 'document',
-  documentUuid: UUIDS.JOURNAL_GOVERNOR_JAMAICA,
-  img: 'modules/revolutionary-pbshipgen/images/british.png',
-  id: 'ONXX9spWG4QJwg06',
-  name: 'The Governor of Jamaica'
-} as TableResult
+import { MODULE_ID } from '../../../settings.ts'
 
 const generateCorruptionReport = async (): Promise<{ title: string, report: string }> => {
-  const drawn = await drawFirst(UUIDS.GOVERNORS)
-  const governor = drawn ?? govJamaica
+  const empire = pickRandomEmpire()
+  const governor = await drawGovernor(empire)
 
   const c = selectRandomElement(['skimming', 'selling-offices',
     'embezzlement', 'ash', 'arms', 'privateers', 'pardons', 'probate',
@@ -30,10 +24,8 @@ const generateCorruptionReport = async (): Promise<{ title: string, report: stri
   const l = selectRandomElement(Object.keys(empires))
   const lang = localize([MODULE_ID, 'factions', l, 'lang'])
 
-  const otherEmpires = Object.values(empires)
-    .filter(empire => empire.flag !== governor.img)
-  const r = selectRandomElement(otherEmpires)
-  const rival = localize([MODULE_ID, 'factions', r.tag, 'lang'])
+  const r = selectRandomElement(empire.others)
+  const rival = decapitalize(localize([MODULE_ID, 'factions', r, 'name']))
 
   const prefix = [MODULE_ID, 'intelligence', 'corruption']
   const evidence = localize([...prefix, 'evidence', ev])
