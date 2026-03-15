@@ -2016,6 +2016,7 @@ revolutionary-antillia:
             to the buried treasure that the crew leaves behind, since they
             will never now be able to retrieve it.</p>
           <p>{generator}</p>
+    item:
       tales:
         davy:
           title: The Ire of Davy Jones
@@ -2262,3 +2263,41 @@ revolutionary-antillia:
         vultures: |
           <p>{given} notes the unnerving flock of vultures circling overhead
             that seems to grow larger each day.</p>
+      request:
+        notify: |
+          <h3>Final Request</h3>
+          <p>{given} concludes the note with a request. He includes the names
+            of his next of kin, as well as others from the doomed crew of the
+            <em>{ship}</em>, and begs the person who finds this message to
+            notify them that they have died at sea (though perhaps sparing them
+            some of the more grisly details).</p>
+          <ul>
+            {list}
+          </ul>
+        split: |
+          <h3>Final Request</h3>
+          <p>{given} concludes his message with a reference to the other
+            document found in the bottle: a map to where the crew buried a
+            treasure before meeting their terrible fate. Since they’ll never be
+            able to recover it now, they bequeath it to you, with one request:
+            that you distribute half of it to the individuals listed below, the
+            people that he and others among the doomed crew of the
+            <em>{ship}</em> have left behind, along with news of their
+            passing.</p>
+          <ul>
+            {list}
+          </ul>
+        relationships:
+          son: |
+            <li>{name}, a son that {sailor} leaves behind in {location}</li>
+          daughter: |
+            <li>{name}, a daughter that {sailor} leaves behind in {location}</li>
+          mother: |
+            <li>{name}, a mother that {sailor} leaves behind in {location}</li>
+          father: |
+            <li>{name}, a father that {sailor} leaves behind in {location}</li>
+          wife: |
+            <li>{name}, a widow that {sailor} leaves behind in {location}</li>
+          lover: |
+            <li>{name}, a lover that {sailor} leaves behind in {location}</li>
+            
