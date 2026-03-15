@@ -811,3 +811,157 @@ revolutionary-antillia:
           <p><strong>Military Response:</strong> In response, the governor has
             raised the island’s militia and ordered {x} troops from the
             garrison to hunt down the fugitives.</p>
+  bottle-sermons:
+    god:
+      simple:
+        title: On the Simple Life
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in English with a steady and
+            practiced hand. It is a Puritan sermon condemning luxury and
+            extolling the virtues of a simple, ascetic life.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Do not store up for yourselves treasures on earth,
+            where moths and vermin destroy, and where thieves break in and
+            steal, but store up for yourselves treasures in heaven. Spanish
+            plate, fine silks, tobacco, and strong drink may offer comfort to
+            the flesh in this life, but it is frugality and simple living which
+            is the path to the Lord and the eternal comforts that await us in
+            paradise.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English written with a steady and practiced
+            hand.</p>
+      rum:
+        title: Devil's Sacrament
+        note: |
+          <p>This note was rolled up inside an old rum bottle that you plucked
+            from the sea on {date}. It is written in English with a precise and
+            disciplined hand. It is a Quaker sermon condemning the consumption
+            of rum.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Where beer is wholesome to the body and Christ Himself
+            turned water into wine at Cana, rum is an entirely different
+            spirit. While some of my brothers and sisters may say that it may
+            be enjoyed in moderation like any other spirit, what purpose can
+            there be to such strong drink but the sin of drunkenness? For rum
+            is a spirit, aye, but an unclean spirit, a spirit of darkness and
+            wantonness, which comes from its father, who is the Devil! As
+            Christ turned the wine into His blood at the Last Supper, so does
+            the drunk partake in the Devil’s Sacrament when he drinks
+            rum!</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English written with a precise and
+            disciplined hand.</p>
+      enemy:
+        title: Enemy of All Mankind
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in English with a smooth and
+            steady hand. It is a Calvinist sermon condemning pirates and
+            piracy.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Consider then, brothers, what the righteous doctrine
+            of Unconditional Grace means for the case of the wretched pirates
+            who prowl our seas. Our laws deem them <em>hostis humani
+            generis</em>, the enemy of all mankind, but is the enemy of all
+            mankind not the Devil? Yes, but see how regularly these blasphemous
+            corsairs will invoke “Old Roger,” “Old Nick,” or any of the other
+            titles they bestow upon the Father of Lies, for in truth they are
+            his sworn and devoted followers and, like him, enemies of all
+            mankind. Nor was there any other path that they might have tread,
+            for God knows all things and weighs all things and judges all of us
+            righteously for the path He has laid out before us. Before the
+            first day of Creation, the Lord knows us all. He knew these beasts
+            in all their wretchedness and all the sins they would commit, and
+            that they would set their course invariably to the gates of
+            Hell.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English written with a smooth and steady
+            hand.</p>
+      babylon:
+        title: Whore of Babylon
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked
+            from the sea on {date}. It is written in Dutch with a cramped and
+            aggressive hand. It is a sermon arguing that the Scourge is God's
+            punishment for Christians' failure to destroy the Roman Catholic
+            Church.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>“And here is the mind which hath wisdom. The seven
+            heads are seven mountains, on which the woman sitteth” — can there
+            be any doubt that scripture points us here to the famed seven hills
+            of Rome? And who sits there but the pope, “full of names of
+            blasphemy”? Can there be any confusion, then, when those nations to
+            whom God has entrusted the defense of his True Church make peace
+            with Catholic Spain, and Hell itself is rent open and the dead
+            begin to rise from the depths of the Caribbean, which Spain lays
+            claim to? How can we as good Christians tolerate the presence of
+            the Papist rot? How can we tolerate to live alongside them and not
+            make war upon them? Is the apocalypse we see unfolding all around
+            us not God's judgment on us, also, that we lack the courage to wage
+            war relentlessly against the enemies of God until they are utterly
+            destroyed? Have we so easily forgotten the martyrs of our wars of
+            religion, or the holy blood that cries out for justice? God judges
+            us as cowards in the defense of His Church, and it is a charge we
+            cannot deny while a single Papist yet lives.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Dutch written with a cramped and aggressive
+            hand.</p>
+      slavery:
+        title: Sin of Slavery
+        note: |
+          <p>This note was rolled up inside an old rum bottle that you plucked
+            from the sea on {date}. It is written in English with a wild and
+            expressive hand. It is a sermon arguing that the Scourge is God's
+            punishment for the evils of the slave trade.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>They say that Hell has burst forth in the Caribbean,
+            and that is undeniably true. One can scarcely watch the Scourge
+            rise up out of the depths and believe otherwise. But if Hell has
+            indeed burst forth in the Caribbean, is it not merely answering our
+            call? For likewise, who could hear the cries rising from the belly
+            of a guineaman in the Middle Passage and not likewise hear the
+            anguished cries of Hell? Who could bear witness to the cruelties
+            visited upon our fellow sons and daughters of Adam, made in God's
+            sacred image, on plantations across the West Indies and not
+            recognize in that the same Infernal stamp? We made Hell in the
+            Caribbean long before it answered our call. The Scourge is
+            undeniably God's judgment upon us, aye, and it is a judgment we
+            well deserve, for like the Israelites in Egypt, the cries of those
+            we keep in bondage rise up to Heaven. Like the Egyptians, God
+            smites us now with plagues and demands that we let His people go
+            — and like Pharaoh before us, we harden our hearts.</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English written with a wild and expressive
+            hand.</p>
+      cain:
+        title: Sin of Cain
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in English with a careful and
+            confident hand. It is a sermon arguing that the Scourge is God's
+            punishment for the atrocities committed against the indigenous
+            people of the New World.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>This New World was never an empty land for us to take
+            possession of. Long before any Spaniard, Englishman, or anyone else
+            of the Old World set foot here, it already had its own peoples,
+            tribes, nations, and kingdoms, each with their own languages,
+            customs, beliefs, and laws. It is good and right to preach the
+            gospel of Our Lord to these people, of course — for Christ
+            commanded us, “Go ye into all the world, and preach the gospel to
+            every creature” — but in the name of this sacred commission, many
+            terrible sins have also been committed. Heavy bondage has been laid
+            upon the innocent who deserve patient instruction, and the scourge
+            has been employed where reason should have prevailed. In the name
+            of the gospel, greedy men have sought their own profit, and brought
+            misery and death almost beyond belief. For when we first came to
+            these islands, they teemed with Kalinago and Taino, and behold how
+            few of these ancient nations even now remain. In the New World we
+            found our brothers, long lost to us, but rather than share with
+            them the good news of Our Lord and Savior, we were to them as Cain.
+            And now that we bear the mark of Cain, how can we dare to act as if
+            surprised when God sends His righteous judgement upon us?</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> English written with a careful and
+            confident hand.</p>

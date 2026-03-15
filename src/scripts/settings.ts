@@ -18,6 +18,7 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_ROOT: 'lGxWU3hj8j30VY0P',
   DECRYPTED_INTEL_MESSAGES: 'qqrvDHxpjZn5FYW2',
   ENCRYPTED_INTEL_MESSAGES: 'etmda0JUHwKk4vfl',
+  PROPAGANDA: 'B8k0FFzOsEJxrRvg',
   EMPIRES: 'RollTable.pK3FfgibC1HfBefV',
   FORTS: 'RollTable.XleTdybFWP2znvEq',
   FORTS_BRITISH: 'RollTable.oEfVP1A8NzEEPpvA',

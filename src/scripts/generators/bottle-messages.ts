@@ -1,14 +1,17 @@
 import localize from '../utilities/wrappers/localize.ts'
 import selectRandomElement from '../random/el.ts'
+import stockArray from '../random/stock.ts'
 import makeLink from '../utilities/make-link.ts'
 import { MODULE_ID, UUIDS } from '../settings.ts'
 
 import generateIntelligenceBottleMessage from './intelligence/bottle-message.ts'
+import generateBottleSermon from './bottle-sermons.ts'
 
 const generateBottleMessage = async (): Promise<void> => {
-  const generators: Array<() => Promise<BottleMessage>> = [
-    generateIntelligenceBottleMessage
-  ]
+  const generators: Array<() => Promise<BottleMessage>> = stockArray([
+    { n: 1, item: generateIntelligenceBottleMessage },
+    { n: 1, item: generateBottleSermon }
+  ])
 
   const generator = selectRandomElement(generators)
   const msg = await generator()
