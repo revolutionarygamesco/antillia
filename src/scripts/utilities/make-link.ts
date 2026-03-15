@@ -1,4 +1,6 @@
-const makeLink = (doc: Document): string => {
+const makeLink = (
+  doc: {  name: string, uuid: string }
+): string => {
   const { name } = doc
   const uuid = (doc as TableResult).documentUuid ?? doc.uuid
   return `@UUID[${uuid}]{${name}}`

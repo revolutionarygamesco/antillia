@@ -1,16 +1,11 @@
 import type { UprisingSituation } from './types.ts'
 import stockArray from '../../../random/stock.ts'
 
-const getSituations = (
-  isPremium: boolean = false
-): UprisingSituation[] => {
-  const cult = isPremium ? 'cult.premium' : 'cult.base'
-  const necrosmith = isPremium ? 'necrosmith.premium' : 'necrosmith.base'
-
+const getSituations = (): UprisingSituation[] => {
   const sea: UprisingSituation = {
     tag: 'sea',
     twists: stockArray([
-      { n: 2, item: cult },
+      { n: 2, item: 'cult' },
       { n: 1, item: 'priest' },
       { n: 1, item: 'priestess' },
       { n: 2, item: 'warlord' },
@@ -23,7 +18,7 @@ const getSituations = (
   const transfer: UprisingSituation = {
     tag: 'transfer',
     twists: stockArray([
-      { n: 2, item: cult },
+      { n: 2, item: 'cult' },
       { n: 1, item: 'priest' },
       { n: 1, item: 'priestess' },
       { n: 2, item: 'warlord' },
@@ -36,8 +31,8 @@ const getSituations = (
   const plantation: UprisingSituation = {
     tag: 'plantation',
     twists: stockArray([
-      { n: 2, item: cult },
-      { n: 2, item: necrosmith },
+      { n: 2, item: 'cult' },
+      { n: 2, item: 'necrosmith' },
       { n: 1, item: 'priest' },
       { n: 1, item: 'priestess' },
       { n: 2, item: 'forger' },
@@ -51,7 +46,7 @@ const getSituations = (
   const maroons: UprisingSituation = {
     tag: 'maroons',
     twists: stockArray([
-      { n: 2, item: necrosmith },
+      { n: 2, item: 'necrosmith' },
       { n: 1, item: 'priest' },
       { n: 1, item: 'priestess' },
       { n: 2, item: 'forger' },
@@ -65,8 +60,8 @@ const getSituations = (
   const rebellion: UprisingSituation = {
     tag: 'rebellion',
     twists: stockArray([
-      { n: 2, item: cult },
-      { n: 2, item: necrosmith },
+      { n: 2, item: 'cult' },
+      { n: 2, item: 'necrosmith' },
       { n: 1, item: 'priest' },
       { n: 1, item: 'priestess' },
       { n: 2, item: 'forger' },

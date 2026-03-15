@@ -260,28 +260,17 @@ revolutionary-antillia:
             coral stone. As your excellency well knows, such stone compresses
             under cannon fire rather than shattering.</em></p>
           <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
-        undead:
-          premium: |
-            <p><strong>Language:</strong> The report is written in {lang}.</p>
-            <hr />
-            <p><em>Your Excellency,</em></p>
-            <p><em>{evidence} that several chambers have been dug beneath
-              {fort}, and these chambers have been stocked with
-              @UUID[Actor.h7zfo0id60XazmVT]. If the garrison believes that all
-              is lost, a lever can be pulled to release these skeletons,
-              ensuring that if they cannot maintain control of the fort then
-              only the dead will.</em<</p>
-            <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
-          base: |
-            <p><strong>Language:</strong> The report is written in {lang}.</p>
-            <hr />
-            <p><em>Your Excellency,</em></p>
-            <p><em>{evidence} that several chambers have been dug beneath
-              {fort}, and these chambers have been stocked with skeletons. If
-              the garrison believes that all is lost, a lever can be pulled to
-              release these skeletons, ensuring that if they cannot maintain
-              control of the fort then only the dead will.</em></p>
-            <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
+        undead: |
+          <p><strong>Language:</strong> The report is written in {lang}.</p>
+          <hr />
+          <p><em>Your Excellency,</em></p>
+          <p><em>{evidence} that several chambers have been dug beneath
+            {fort}, and these chambers have been stocked with {skeletons}. If
+            the garrison believes that all is lost, a lever can be pulled to
+            release these skeletons, ensuring that if they cannot maintain
+            control of the fort then only the dead will.</em></p>
+          <p><em>Ever your faithful servant,<br />Agent {agent}</em></p>
+        skeletons: skeletons
     convoys:
       goods:
         ash: ash
@@ -751,34 +740,21 @@ revolutionary-antillia:
             those prepared to fight have come together to form a large,
             well-armed force on the island.</p>
       twists:
-        cult:
-          premium: |
-            <p><strong>Wretched Cult:</strong> In their desperation, the slaves
-              turned to the teachings of the Sunken One and the cult of the
-              Wretched. @UUID[Actor.XFS1vFzYOZPDOTLd] emerged from the sea to
-              to aid their uprising.</p>
-          base: |
-            <p><strong>Wretched Cult:</strong> In their desperation, the slaves
-              turned to the teachings of the Sunken One and the cult of the
-              Wretched. Piscine creatures emerged from the sea to aid their
-              uprising.</p>
-        necrosmith:
-          premium: |
-            <p><strong>Necrosmith:</strong> One of the slaves was a necrosmith
-              employed by a particularly cruel and violent slaver. {S}
-              carefully collected the bones of {pa} fellows who were so
-              callously slaughtered and, in secret, assembled them into a
-              terrible @UUID[Actor.irqTdv3HtGGBOR2A] driven solely by its
-              desperate need for vengeance against the monstrous slaver whose
-              cruelty was woven into its creation.</p>
-          base: |
-            <p><strong>Necrosmith:</strong> One of the slaves was a necrosmith
-              employed by a particularly cruel and violent slaver. {S}
-              carefully collected the bones of {pa} fellows who were so
-              callously slaughtered and, in secret, assembled them into a
-              terrible marrow cannon driven solely by its desperate need for
-              vengeance against the monstrous slaver whose cruelty was woven
-              into its creation.</p>
+        cult: |
+          <p><strong>Wretched Cult:</strong> In their desperation, the slaves
+            turned to the teachings of the Sunken One and the cult of the
+            Wretched. {fishfolk} emerged from the sea to to aid their
+            uprising.</p>
+        fishfolk: Piscine creatures
+        necrosmith: |
+          <p><strong>Necrosmith:</strong> One of the slaves was a necrosmith
+            employed by a particularly cruel and violent slaver. {S}
+            carefully collected the bones of {pa} fellows who were so
+            callously slaughtered and, in secret, assembled them into a
+            terrible {marrowCannon} driven solely by its desperate need for
+            vengeance against the monstrous slaver whose cruelty was woven into
+            its creation.</p>
+        marrowCannon: marrow cannon
         forger: |
           <p><strong>Forger:</strong> One of the slaves secretly taught {self}
             how to read and write. Besides radicalizing {pa} fellow slaves with

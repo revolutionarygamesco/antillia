@@ -16,4 +16,11 @@ describe('makeLink', () => {
     const actual = makeLink({ uuid, name, documentUuid } as TableResult)
     expect(actual).toBe(`@UUID[${documentUuid}]{${name}}`)
   })
+
+  it('can make a link from anything with a name and a UUID', () => {
+    const uuid = 'swgzi8mEAgfLJOEk'
+    const name = 'Kingston'
+    const actual = makeLink({ uuid, name })
+    expect(actual).toBe(`@UUID[${uuid}]{${name}}`)
+  })
 })

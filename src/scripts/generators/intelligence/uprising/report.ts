@@ -1,5 +1,6 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import { pickRandomEmpire } from '../../empires.ts'
+import checkVersion from '../../../utilities/check-version.ts'
 import getTime from '../../../time/get.ts'
 import generateReportAge from '../shared-data/age.ts'
 import generateUprising from './generate.ts'
@@ -12,6 +13,8 @@ import reportResponse from './report.response.ts'
 import { MODULE_ID, SECONDS_PER_DAY } from '../../../settings.ts'
 
 const reportUprising = async (): Promise<BottleMessageIntel> => {
+  const { premium } = await checkVersion()
+
   const reporting = pickRandomEmpire()
   const lang = localize([MODULE_ID, 'factions', reporting.tag, 'lang'])
 
@@ -21,7 +24,7 @@ const reportUprising = async (): Promise<BottleMessageIntel> => {
 
   const { uprising, empire, island } = await generateUprising(at)
   const situation = await reportSituation(empire, island, uprising)
-  const twist = reportTwist(uprising)
+  const twist = reportTwist(uprising, premium)
   const response = await reportResponse(island, uprising)
 
   await logUprising(uprising, island, response.log, situation.ship)

@@ -15,8 +15,8 @@ describe('writeFortUpgradeReport', () => {
     ['expansion', true, 'expansion'],
     ['armor', false, 'armor'],
     ['armor', true, 'armor'],
-    ['undead', false, 'undead.base'],
-    ['undead', true, 'undead.premium'],
+    ['undead', false, 'undead'],
+    ['undead', true, 'undead'],
   ] as [string, boolean, string][])('writes a report for %s (premium %s)', (upgrade, premium, expected) => {
     const actual = writeFortUpgradeReport(fort, upgrade, 'Spanish', premium)
     expect(actual).toBe(`revolutionary-antillia.intelligence.fort-upgrades.upgrade.${expected}`)
