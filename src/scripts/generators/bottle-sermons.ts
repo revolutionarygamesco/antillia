@@ -1,7 +1,9 @@
 import checkVersion from '../utilities/check-version.ts'
+import fromUuid from '../utilities/wrappers/from-uuid.ts'
 import getDay from '../time/day.ts'
 import getTime from '../time/get.ts'
 import localize from '../utilities/wrappers/localize.ts'
+import makeLink from '../utilities/make-link.ts'
 import stockArray from '../random/stock.ts'
 import selectRandomElement from '../random/el.ts'
 import { MODULE_ID, UUIDS } from '../settings.ts'
@@ -17,15 +19,31 @@ const sermonDirectory: Record<string, { deity: string, base: string[], historica
     deity: 'nature',
     base: ['gospel', 'lilies', 'green', 'ribbon'],
     historical: ['eden', 'savage']
+  },
+  gods: {
+    deity: 'gods',
+    base: ['old', 'neptune', 'thor', 'odin'],
+    historical: ['ezili-dantor', 'guabancex']
   }
+}
+
+const isSermon = (
+  path: string[],
+  deity: string,
+  sermon: string
+): boolean => {
+  const key = path.join('.')
+  const test = `${deity}.${sermon}`
+  return key.endsWith(test)
 }
 
 const selectRandomSermon = (
   isPremium: boolean = false
 ): { deity: string, sermon: string } => {
   const { deity, base, historical } = selectRandomElement(stockArray([
-    { n: 6, item: sermonDirectory.god },
-    { n: 3, item: sermonDirectory.nature }
+    //{ n: 6, item: sermonDirectory.god },
+    //{ n: 3, item: sermonDirectory.nature },
+    { n: 1, item: sermonDirectory.gods }
   ]))
 
   const sermons = isPremium ? [...base, ...historical] : base
@@ -33,12 +51,11 @@ const selectRandomSermon = (
 }
 
 const createNote = async (
-  at: number,
-  path: string[]
+  path: string[],
+  context: Record<string, string>
 ): Promise<Item> => {
-  const date = getDay(at)
-  const title = localize([...path, 'title'])
-  const note = localize([...path, 'note'], { date })
+  const title = localize([...path, 'title'], context)
+  const note = localize([...path, 'note'], context)
 
   return await foundry.documents.Item.create({
     name: title,
@@ -59,16 +76,35 @@ const generateBottleSermon = async (): Promise<BottleMessage> => {
   const { premium } = await checkVersion()
   const { deity, sermon } = selectRandomSermon(premium)
   const path = [...prefix, deity, sermon]
-  const note = await createNote(at, path)
+  const context: Record<string, string> = { date: getDay(at) }
+  const message: BottleMessage = { contents: [] }
 
-  const w = localize([...path, 'with'])
-  const h = localize([...path, 'hint'])
-  const a = localize([...path, 'additional'])
+  if (isSermon(path, 'gods', 'thor')) {
+    const name = localize([...path, 'mjolnir'])
+    const uuid = UUIDS.MJOLNIR
+    context.mjolnir = makeLink({ name, uuid  })
+    message.contents.push(await fromUuid(uuid))
+  }
 
-  const message: BottleMessage = { contents: [note] }
+  if (isSermon(path, 'gods', 'ezili-dantor')) {
+    const name = localize([...path, 'tobacco'])
+    const uuid = UUIDS.TOBACCO
+    context.tobacco = makeLink({ name, uuid  })
+    message.contents.push(await fromUuid(uuid))
+  }
+
+  const note = await createNote(path, context)
+  message.contents = [note, ...message.contents]
+
+  const w = localize([...path, 'with'], context)
+  const h = localize([...path, 'hint'], context)
+  const a = localize([...path, 'additional'], context)
+  const d = localize([...path, 'description'], context)
+
   if (!w.startsWith(path.join('.'))) message.with = w
   if (!h.startsWith(path.join('.'))) message.hint = h
   if (!a.startsWith(path.join('.'))) message.additional = a
+  if (!d.startsWith(path.join('.'))) message.description = d
 
   return message
 }

@@ -193,7 +193,7 @@ revolutionary-antillia:
         {description} from the sea. There seems to be some paper rolled up
         inside of it.
       describedWith: |
-        You have recovered an onion-shaped bottle of dark olive glass
+        You have recovered an onion-shaped {bottle} of dark olive glass
         {description} from the sea. There seems to be some paper rolled up
         inside of it, as well as {hint}.
     recovered:
@@ -1138,3 +1138,133 @@ revolutionary-antillia:
         additional: |
           <p><strong>Page:</strong> English written with the studied, careful
             hand of a scholar.</p>
+    gods:
+      old:
+        title: The Old Ways
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in French in a nearly illegible
+            scrawl. It implores its readers to forsake Christianity and embrace
+            Hellenistic polytheism.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Look upon the works of your Christian god. You sail
+            upon Poseidon's waves, and are subject to his rule! You beseech
+            Zeus to send the winds, and Hades to tend your immortal soul. Our
+            ancestors understood the ways of the gods; it was only with the
+            onset of the cross that the great empires of old fell into ruin,
+            and now that impious monotheistic superstition has brought us to
+            this. Make sacrifice to Poseidon, sailor, before he takes his
+            due!</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> French in a nearly illegible scrawl.</p>
+      neptune:
+        title: Offering to Neptune
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}, along with a few pieces of eight. It is written
+            in Spanish in a hurried and nervous hand. It is a prayer to the
+            ancient pagan god of the sea, Neptune, for a safe voyage.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Neptune, divine Lord of the Trident, on whose high
+            seas we begin to cross, if my preparations are made justly, grant
+            our ship to sail safely and do not scorn to aid our labors.</p></blockquote>
+        additional: |
+          <p><strong>Coins:</strong> [[d10]] Spanish pieces of eight, minted
+            [[d100+100]] years ago.</p>
+          <p><strong>Page:</strong> Spanish in a hurried and nervous hand.</p>
+        hint: a few coins
+      thor:
+        title: Hammer of Thor
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}, along with a {mjolnir} tied around its neck. It
+            is written in Danish with an emphatic, aggressive hand. It exhorts
+            the reader to make sacrifices to the old heathen god Thor.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>The draugr rise from the depths of the briny sea, and
+            the Shepherd God is nowhere to be found. His flock is scattered and
+            devoured by the wolves of Hel. Who will protect you, Christian, now
+            that Heimdal’s horn is blowing and the shadow of Ragnarok falls
+            upon us? Make blót to Thor, the Lord of Thunder, who has ever
+            protected the children of Midgard from trolls and jötunn! Even now
+            as Bifrost breaks, Thor struggles with Jörmungandr in the
+            tempest-tossed sea. Join him, warrior, in this last, glorious
+            battle! Only by Mjölnir’s might shall the unworthy dead be hammered
+            back into the sea!</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Danish in an emphatic and aggressive
+            hand.</p>
+        description: with a small, silver pendant tied tightly around its neck
+        mjolnir: small, silver pendant
+      odin:
+        title: Odin’s Horse
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in English with a crowded and
+            careful hand. It exhorts the reader to read and follow the
+            teachings of the Hávamál, an ancient text said to have been written
+            by the ancient heathen god Odin.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>The Christians tell us that Adam and Eve ate from the
+            Tree of Knowledge, and this was so great a sin that Christ had to
+            hang from the cross as a sacrifice of himself to himself to set
+            things right. It is an absurd fable because it is a mockery of the
+            truth: the tale of how Odin hung from Yggdrasil, sacrificing
+            himself to himself, to gain wisdom. The Christians say that
+            knowledge is sin. Odin sacrifices himself to gain knowledge for us
+            all, and offers the wisdom so dearly bought in the Hávamál.
+            Christians condemn knowledge and extol ignorance, because in
+            ignorance they may rule over you. Odin sacrifices himself to give
+            you knowledge, that you may rule  your own life, live a life worthy
+            of glory and honor, and find your place among the einherjar in
+            Valhalla!</p></blockquote>
+        additional: |
+          <p><strong>Raven Feather:</strong> The page is rolled around a black
+            raven’s feather.</p>
+          <p><strong>Page:</strong> English in a crowded and careful hand.</p>
+      ezili-dantor:
+        title: Mother of Strength
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}, wrapped in red, blue, and black ribbons, with
+            {tobacco} inside. It is written in French with a rushed and
+            unsteady hand. It is a Vodou prayer.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Ezili Dantor, mother of strength, we call upon you.
+            Hear the cries of your children. See how we suffer. Do not turn
+            your back on us. Come and set us free. Let your wrath fall upon
+            those who torment your children. We know that you hear us, for we
+            are your children, and you are our mother. We know that our
+            tormentors will not be spared your wrath. Come quickly, Mother, and
+            wash this land clean with their blood, so your children can be
+            free!</p></blockquote>
+        description: tied with red, blue, and black ribbons
+        hint: some kind of sediment
+        tobacco: tobacco
+        additional: |
+          <p><strong>Page:</strong> French in a rushed and unsteady hand.</p>
+      guabancex:
+        title: Prayer to Guabancex
+        note: |
+          <p>This note was rolled up inside an old bottle that you plucked from
+            the sea on {date}. It is written in Spanish with a trembling and
+            uncertain hand. It was written by a Taino, imploring one of the
+            foremost zemis to intervene on behalf of his people against the
+            Spanish.</p>
+          <h3>Excerpt</h3>
+          <blockquote><p>Great Atabey, Mother of Us All, I have offered this
+            prayer many times in the language of my ancestors, but you have not
+            heard, so I inscribe it now as the Spaniards do and commend it to
+            Yucajú and pray he delivers it to you. Great Mother Atabey, your
+            children live in bondage and misery! The Spaniards make us their
+            slaves, and press us with hard labor until we perish. Great Mother
+            Atabey, we implore you, come and save your children before we are
+            utterly destroyed! Now is the time to dance with Coatriquie and
+            Guataubá, your arms spiraling! Great Cacique of the Wind, we beg
+            you, visit us as Guabancex, and bring with you your fiercest
+            juracán! The storm of your wrath will wash this island clean of the
+            Spanish invaders, and we will be free. Great Mother of Us All, hear
+            our prayer!</p></blockquote>
+        additional: |
+          <p><strong>Page:</strong> Spanish in a trembling and uncertain
+            hand.</p>

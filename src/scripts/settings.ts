@@ -75,6 +75,8 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_MEASLES: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.OJ8TxsWXxPKvdBK0',
   JOURNAL_BOULOGNE: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.2VMr6j2n0ybVy0XF',
   BOTTLE: 'Item.2UylOEF2C19GfRNF',
+  MJOLNIR: 'Item.EYNgp4j5ZNKuBgmM',
+  TOBACCO: 'Compendium.pirateborg.equipment-gear.Item.evUD546oYBvGyJmb',
   ASH_CARGO: 'Item.lDAchtutyqcPJq1h',
   SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed',
   PREMIUM_SKELETON: 'Actor.h7zfo0id60XazmVT',
