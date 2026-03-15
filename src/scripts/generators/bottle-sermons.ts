@@ -12,6 +12,11 @@ const sermonDirectory: Record<string, { deity: string, base: string[], historica
     deity: 'god',
     base: ['simple', 'rum', 'enemy', 'babylon'],
     historical: ['slavery', 'cain']
+  },
+  nature: {
+    deity: 'nature',
+    base: ['gospel', 'lilies', 'green', 'ribbon'],
+    historical: ['eden', 'savage']
   }
 }
 
@@ -19,7 +24,8 @@ const selectRandomSermon = (
   isPremium: boolean = false
 ): { deity: string, sermon: string } => {
   const { deity, base, historical } = selectRandomElement(stockArray([
-    { n: 6, item: sermonDirectory.god }
+    { n: 6, item: sermonDirectory.god },
+    { n: 3, item: sermonDirectory.nature }
   ]))
 
   const sermons = isPremium ? [...base, ...historical] : base
