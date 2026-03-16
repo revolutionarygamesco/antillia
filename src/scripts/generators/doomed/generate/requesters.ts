@@ -1,10 +1,10 @@
-import type { EmpireData } from '../empires.ts'
-import type { DoomedSailor } from './types.ts'
-import generatePersonalName from '../../utilities/name.personal.ts'
-import selectRandomBetween from '../../random/between.ts'
-import shuffleArray from '../../random/shuffle.ts'
-import stockArray from '../../random/stock.ts'
-import selectRandomElement from '../../random/el.ts'
+import type { EmpireData } from '../../empires.ts'
+import type { DoomedSailor } from '../types.ts'
+import generatePersonalName from '../../../utilities/name.personal.ts'
+import selectRandomBetween from '../../../random/between.ts'
+import shuffleArray from '../../../random/shuffle.ts'
+import stockArray from '../../../random/stock.ts'
+import selectRandomElement from '../../../random/el.ts'
 
 const getRequesters = async (
   author: DoomedSailor,

@@ -1,4 +1,4 @@
-import type { DoomedSituation } from './types.ts'
+import type { DoomedSituation } from '../types.ts'
 
 const pastConfessions = ['murderer', 'sorcerer', 'adulterer']
 const confessions = ['traitor', ...pastConfessions]

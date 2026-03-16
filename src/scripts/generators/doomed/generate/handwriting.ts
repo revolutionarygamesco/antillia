@@ -1,5 +1,5 @@
-import type { DoomedHandwriting } from './types'
-import selectRandomElement from '../../random/el.ts'
+import type { DoomedHandwriting } from '../types.ts'
+import selectRandomElement from '../../../random/el.ts'
 
 const getHandwriting = (): DoomedHandwriting => {
   const physical = selectRandomElement(['hurried', 'cramped', 'jagged',

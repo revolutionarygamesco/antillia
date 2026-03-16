@@ -1,5 +1,5 @@
-import localize from '../../utilities/wrappers/localize.ts'
-import { MODULE_ID } from '../../settings.ts'
+import localize from '../../../utilities/wrappers/localize.ts'
+import { MODULE_ID } from '../../../settings.ts'
 
 const getOldCountry = (): Record<string, string> => {
   const nationalities = ['dutch', 'english', 'french', 'irish', 'scottish', 'spanish', 'welsh']

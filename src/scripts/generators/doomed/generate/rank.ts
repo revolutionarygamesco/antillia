@@ -1,5 +1,5 @@
-import selectRandomElement from '../../random/el.ts'
-import stockArray from '../../random/stock.ts'
+import selectRandomElement from '../../../random/el.ts'
+import stockArray from '../../../random/stock.ts'
 
 const getAuthorRank = (): string => {
   return selectRandomElement(stockArray([
