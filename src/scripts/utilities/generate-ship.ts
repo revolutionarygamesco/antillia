@@ -1,4 +1,4 @@
-interface ShipDetails {
+export interface ShipDetails {
   nationality: string
   use: string
   pirate: boolean
