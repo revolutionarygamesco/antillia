@@ -97,5 +97,6 @@ export const UUIDS: Record<string, string> = {
   PREMIUM_DAVY_JONES: 'Actor.G477EF7G3Qn9zENP',
   PREMIUM_KRAKEN: 'Actor.KMTblmBENRdS8gxq',
   PREMIUM_BLACK_WHALE: 'Actor.a6ubAknxeTYhr2jB',
-  PREMIUM_CURSED_ORCA: 'Actor.OhMCeSIzn4bhnQZn'
+  PREMIUM_CURSED_ORCA: 'Actor.OhMCeSIzn4bhnQZn',
+  PREMIUM_CARRION_GULL: 'Actor.vxhJgvuE2298ZkNd'
 }
