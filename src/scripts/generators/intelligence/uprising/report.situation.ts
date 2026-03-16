@@ -18,7 +18,11 @@ const reportSituation = async (
   let ship: Actor | undefined = undefined
   const involvesShip = ['sea', 'transfer']
   if (involvesShip.includes(uprising.tag)) {
-    ship = await generateShip({ nationality: capitalize(empire.tag), type: 'Frigate' })
+    const result = await generateShip({
+      nationality: capitalize(empire.tag),
+      type: 'Frigate'
+    })
+    ship = result.ship
     context.ship = makeLink(ship)
   }
 
