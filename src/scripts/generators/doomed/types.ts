@@ -9,6 +9,11 @@ export interface DoomedKin {
   location: JournalEntry | string
 }
 
+export interface DoomedHandwriting {
+  physical: string
+  emotional: string
+}
+
 export interface DoomedShip {
   ship: Actor
   captain: Actor
