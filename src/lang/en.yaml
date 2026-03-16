@@ -2287,6 +2287,13 @@ revolutionary-antillia:
           <ul>
             {list}
           </ul>
+        requesters:
+          captain: Captain {name}
+          bosun: {name}, the bosun,
+          master: {name}, the sailing master,
+          purser: {name}, the purser,
+          sailor: a sailor named {name}
+          cook: a ship’s cook named {name}
         relationships:
           son: |
             <li>{name}, a son that {sailor} leaves behind in {location}</li>

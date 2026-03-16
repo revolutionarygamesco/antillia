@@ -3,10 +3,17 @@ export interface DoomedSituation {
   complications: string[]
 }
 
+export interface DoomedSailor {
+  name: string
+  position: string
+  nationality: string
+}
+
 export interface DoomedKin {
   name: string
   relationship: string
   location: JournalEntry | string
+  sailor: DoomedSailor
 }
 
 export interface DoomedHandwriting {
@@ -22,10 +29,7 @@ export interface DoomedContextAdder {
 export interface DoomedShip {
   ship: Actor
   captain: Actor
-  author: {
-    name: string
-    position: string
-  }
+  author: DoomedSailor
   tale: string
   complication: string
   isHaunted: boolean
