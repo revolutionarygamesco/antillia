@@ -1962,15 +1962,6 @@ revolutionary-antillia:
         additional: |
           <p><strong>Page:</strong> English in a calm and practiced hand.</p>
   last-accounts:
-    title: Last Account of the {ship}
-    note: |
-      <p>This note was rolled up inside an old bottle that you plucked from the 
-        sea on {date}. It is written in {lang} with a {emotional} and
-        {physical} hand. The author identifies himself as {author}, {rank}
-        the {ship}. He tells the tale of that vessel’s final days.</p>
-      {tale}
-      {complication}
-      {request}
     ranks:
       captain: captain of
       bosun: bosun of
@@ -2017,6 +2008,15 @@ revolutionary-antillia:
             will never now be able to retrieve it.</p>
           <p>{generator}</p>
     item:
+      title: Last Account of the {ship}
+      description: |
+        <p>This note was rolled up inside an old bottle that you plucked from the 
+          sea on {date}. It is written in {lang} with a {emotional} and
+          {physical} hand. The author identifies himself as {author}, {rank}
+          the {ship}. He tells the tale of the vessel’s final days.</p>
+        {tale}
+        {complication}
+        {request}
       tales:
         davy:
           title: The Ire of Davy Jones
