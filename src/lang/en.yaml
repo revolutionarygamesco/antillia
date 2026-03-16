@@ -2307,4 +2307,12 @@ revolutionary-antillia:
             <li>{name}, a widow that {sailor} leaves behind in {location}</li>
           lover: |
             <li>{name}, a lover that {sailor} leaves behind in {location}</li>
+          old-country:
+            dutch: the Netherlands
+            english: England
+            french: France
+            irish: Ireland
+            scottish: Scotland
+            spanish: Spain
+            wales: Wales
             
