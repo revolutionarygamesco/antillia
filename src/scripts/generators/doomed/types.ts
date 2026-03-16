@@ -14,6 +14,11 @@ export interface DoomedHandwriting {
   emotional: string
 }
 
+export interface DoomedContextAdder {
+  test: (scenario: DoomedShip) => boolean,
+  adder: (context: Record<string, string>, isPremium: boolean) => void
+}
+
 export interface DoomedShip {
   ship: Actor
   captain: Actor
