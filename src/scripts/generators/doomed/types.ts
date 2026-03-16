@@ -16,7 +16,7 @@ export interface DoomedHandwriting {
 
 export interface DoomedContextAdder {
   test: (scenario: DoomedShip) => boolean,
-  adder: (context: Record<string, string>, isPremium: boolean) => void
+  adder: (context: Record<string, string>, isPremium: boolean) => Promise<void>
 }
 
 export interface DoomedShip {

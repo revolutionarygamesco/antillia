@@ -3,9 +3,9 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
-const addHauntedContext = (
+const addHauntedContext = async (
   context: Record<string, string>
-): void => {
+): Promise<void> => {
   const name = localize([MODULE_ID, 'last-accounts', 'description', 'haunted', 'spirit'])
   const uuid = UUIDS.ACTOR_WANDERING_SPIRIT
   context.spirit = makeLink({ name, uuid })

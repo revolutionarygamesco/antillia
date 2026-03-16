@@ -3,10 +3,10 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
-const addDavyJonesContext = (
+const addDavyJonesContext = async (
   context: Record<string, string>,
   isPremium: boolean = false
-): void => {
+): Promise<void> => {
   const name = localize([MODULE_ID, 'last-accounts', 'item', 'tales', 'davy', 'link'])
   const uuid = UUIDS.PREMIUM_DAVY_JONES
   context.davy = isPremium ? makeLink({ name, uuid }) : name

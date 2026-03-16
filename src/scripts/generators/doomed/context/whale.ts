@@ -3,10 +3,10 @@ import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
-const addBlackWhaleContext = (
+const addBlackWhaleContext = async (
   context: Record<string, string>,
   isPremium: boolean = false
-): void => {
+): Promise<void> => {
   const name = localize([MODULE_ID, 'last-accounts', 'item', 'tales', 'whale', 'link'])
   const uuid = UUIDS.PREMIUM_BLACK_WHALE
   context.kraken = isPremium ? makeLink({ name, uuid }) : name

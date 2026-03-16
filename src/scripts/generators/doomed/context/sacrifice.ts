@@ -4,9 +4,9 @@ import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
-const addSacrificeContext = (
+const addSacrificeContext = async (
   context: Record<string, string>
-): void => {
+): Promise<void> => {
   const tag = selectRandomElement(stockArray([
     { n: 21, item: 'devil' },
     { n: 7, item: 'davy' },
