@@ -30,6 +30,7 @@ export interface DoomedShip {
   ship: Actor
   captain: Actor
   author: DoomedSailor
+  handwriting: DoomedHandwriting
   tale: string
   complication: string
   isHaunted: boolean
