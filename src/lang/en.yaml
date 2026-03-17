@@ -1991,7 +1991,7 @@ revolutionary-antillia:
       haunted:
         spirit: wandering spirit
         text: |
-          <p><strong>Haunting Threat:</strong> Add a {spirit} to the ship’s
+          <p><strong>Haunting Plea:</strong> Add a {spirit} to the ship’s
             potential ghosts. If the crew does nothing to notify the ghost’s
             next of kin, it will begin haunting the ship, continuing until its
             next of kin are notified as requested.</p>
