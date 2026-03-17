@@ -2013,7 +2013,7 @@ revolutionary-antillia:
         <p>This note was rolled up inside an old bottle that you plucked from the 
           sea on {date}. It is written in {lang} with a {emotional} and
           {physical} hand. The author identifies himself as {author}, {rank}
-          the {ship}. He tells the tale of the vessel’s final days.</p>
+          the {shipLink}. He tells the tale of the vessel’s final days.</p>
         {tale}
         {complication}
         {request}
@@ -2288,12 +2288,18 @@ revolutionary-antillia:
             {list}
           </ul>
         requesters:
-          captain: Captain {name}
-          bosun: {name}, the bosun,
-          master: {name}, the sailing master,
-          purser: {name}, the purser,
-          sailor: a sailor named {name}
-          cook: a ship’s cook named {name}
+          captain: |
+            Captain {name}
+          bosun: |
+            {name}, the bosun,
+          master: |
+            {name}, the sailing master,
+          purser: |
+            {name}, the purser,
+          sailor: |
+            a sailor named {name}
+          cook: |
+            a ship’s cook named {name}
         relationships:
           son: |
             <li>{name}, a son that {sailor} leaves behind in {location}</li>
