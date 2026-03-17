@@ -1,16 +1,14 @@
 import type { DoomedShip } from '../types.ts'
-import getContext from '../context/get.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import renderTale from '../render/tale.ts'
 import renderRequest from '../render/request.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
 const generateDoomedMessageItem = async (
-  at: number,
+  context: Record<string, string>,
   situation: DoomedShip
 ): Promise<Item> => {
   const prefix = [MODULE_ID, 'last-accounts', 'item']
-  const context = await getContext(at, situation)
 
   const tale = renderTale(context, situation)
   const complication = localize([...prefix, 'complications', situation.complication], context)
