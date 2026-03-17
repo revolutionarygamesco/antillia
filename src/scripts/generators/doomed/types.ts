@@ -17,6 +17,7 @@ export interface DoomedKin {
 }
 
 export interface DoomedHandwriting {
+  lang: string
   physical: string
   emotional: string
 }

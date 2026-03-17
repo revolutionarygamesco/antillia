@@ -41,7 +41,7 @@ const getDoomedSituation = async (): Promise<DoomedShip> => {
     ship,
     captain,
     author,
-    handwriting: getHandwriting(),
+    handwriting: getHandwriting(empire),
     tale: situation.tag,
     complication: selectRandomElement(situation.complications),
     isHaunted: selectRandomElement(roll6),
