@@ -2213,9 +2213,9 @@ revolutionary-antillia:
               and without any ability to make their way back to port.</p>
       complications:
         mutiny: |
-          <p>Blaming their woes on Captain {captain}, the crew mutinied. They
-            killed the captain, but several others died in the struggle as
-            well, leaving them in an even worse position.</p>
+          <p>Blaming their woes on {captain}, the crew mutinied. They killed
+            the captain, but several others died in the struggle as well,
+            leaving them in an even worse position.</p>
         traitor: |
           <p>{given} includes his confession that he is the cause of the
             ship’s misfortune. He did what he did with full knowledge,
