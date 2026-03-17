@@ -10,7 +10,7 @@ const getRequesters = async (
   author: DoomedSailor,
   empire: EmpireData
 ): Promise<DoomedSailor[]> => {
-  const n = selectRandomBetween(2, 10)
+  const n = selectRandomBetween(2, 5)
 
   const sailor = shuffleArray(stockArray([
     { n: 1, item: 'captain' },
