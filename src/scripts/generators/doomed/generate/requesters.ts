@@ -32,7 +32,10 @@ const getRequesters = async (
 
   const requesters: DoomedSailor[] = [author]
   const officers = ['captain', 'bosun', 'master', 'purser']
-  const ranks = officers.includes(author.position) ? officer : sailor
+  const pool = officers.includes(author.position) ? officer : sailor
+  const ranks = author.position !== 'sailor'
+    ? pool.filter(rank => rank !== author.position)
+    : pool
 
   for await (const position of ranks) {
     const nationality = selectRandomElement(empire.nationalities)
