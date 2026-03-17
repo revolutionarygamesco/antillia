@@ -7,7 +7,7 @@ const renderRequest = (
   context: Record<string, string>,
   situation: DoomedShip
 ): string => {
-  const list = situation.kin.map(kin => renderKin(kin)).join('\n')
+  const list = situation.kin.map(kin => renderKin(context, situation, kin)).join('\n')
   const key = situation.includeMap ? 'split' : 'notify'
   return localize([MODULE_ID, 'last-accounts', 'item', 'request', key], { ...context, list })
 }
