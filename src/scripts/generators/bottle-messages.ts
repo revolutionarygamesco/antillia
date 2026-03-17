@@ -4,13 +4,15 @@ import stockArray from '../random/stock.ts'
 import makeLink from '../utilities/make-link.ts'
 import { MODULE_ID, UUIDS } from '../settings.ts'
 
+import generateDoomedBottleMessage from './doomed/generate/bottle.ts'
 import generateIntelligenceBottleMessage from './intelligence/bottle-message.ts'
 import generateBottleSermon from './bottle-sermons.ts'
 
 const generateBottleMessage = async (): Promise<void> => {
   const generators: Array<() => Promise<BottleMessage>> = stockArray([
     { n: 1, item: generateIntelligenceBottleMessage },
-    { n: 1, item: generateBottleSermon }
+    { n: 1, item: generateBottleSermon },
+    { n: 4, item: generateDoomedBottleMessage }
   ])
 
   const generator = selectRandomElement(generators)
