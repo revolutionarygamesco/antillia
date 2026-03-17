@@ -6,13 +6,18 @@ const renderTale = (
   context: Record<string, string>,
   situation: DoomedShip
 ): string => {
-  const prefix = [MODULE_ID, 'last-accounts', 'item', 'tale']
+  const prefix = [MODULE_ID, 'last-accounts', 'item', 'tales']
   const isCaptain = situation.author.position === 'captain'
   const isCaptainKey = isCaptain ? 'captain' : 'other'
   const captainDivergentTales = ['metamorphosis']
-  const taleKey = [situation.tale]
-  if (captainDivergentTales.includes(situation.tale)) taleKey.push(isCaptainKey)
-  return localize([...prefix, ...taleKey], context)
+  const taleKey = captainDivergentTales.includes(situation.tale)
+    ? [situation.tale, isCaptainKey]
+    : [situation.tale, 'text']
+
+  const title = localize([...prefix, situation.tale, 'title'], context)
+  const tale = localize([...prefix, ...taleKey], context)
+
+  return `<h3>${title}</h3>\n${tale}`
 }
 
 export default renderTale
