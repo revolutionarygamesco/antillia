@@ -68,13 +68,13 @@ const selectRandomSermon = (
   isPremium: boolean = false
 ): { deity: string, sermon: string } => {
   const { deity, base, historical } = selectRandomElement(stockArray([
-    //{ n: 6, item: sermonDirectory.god },
-    //{ n: 3, item: sermonDirectory.nature },
-    // { n: 1, item: sermonDirectory.gods },
-    // { n: 1, item: sermonDirectory.chaos },
-    // { n: 1, item: sermonDirectory.deep },
-    // { n: 1, item: sermonDirectory.dark },
-    // { n: 6, item: sermonDirectory.church },
+    { n: 6, item: sermonDirectory.god },
+    { n: 3, item: sermonDirectory.nature },
+    { n: 1, item: sermonDirectory.gods },
+    { n: 1, item: sermonDirectory.chaos },
+    { n: 1, item: sermonDirectory.deep },
+    { n: 1, item: sermonDirectory.dark },
+    { n: 6, item: sermonDirectory.church },
     { n: 1, item: sermonDirectory.old }
   ]))
 
