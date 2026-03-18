@@ -11,7 +11,7 @@ const addDiseaseContext = async (
   const disease = pickRandomOutbreakDisease()
   const name = capitalize(localize([MODULE_ID, 'intelligence', 'outbreak', 'diseases', disease.tag, 'sentence']))
   const uuid = disease.uuid
-  context.kraken = makeLink({ name, uuid })
+  context.disease = makeLink({ name, uuid })
 }
 
 export default {
