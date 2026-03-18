@@ -11,9 +11,9 @@ const renderKin = (
 ): string => {
   const prefix = [MODULE_ID, 'last-accounts', 'item', 'request']
   const location = isString(kin.location) ? kin.location : makeLink(kin.location)
-  const sailor = situation.author.name === kin.sailor.name
-    ? context.given
-    : localize([...prefix, 'requesters', kin.sailor.position], { name: kin.sailor.name })
+  let sailor = localize([...prefix, 'requesters', kin.sailor.position], { name: kin.sailor.name })
+  if (situation.author.name === kin.sailor.name) sailor = context.given
+  if (kin.sailor.position === 'captain') sailor = context.captain
 
   return localize([...prefix, 'relationships', kin.relationship], {
     name: kin.name,
