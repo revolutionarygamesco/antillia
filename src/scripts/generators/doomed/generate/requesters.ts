@@ -8,7 +8,8 @@ import selectRandomElement from '../../../random/el.ts'
 
 const getRequesters = async (
   author: DoomedSailor,
-  empire: EmpireData
+  empire: EmpireData,
+  complication: string
 ): Promise<DoomedSailor[]> => {
   const n = selectRandomBetween(2, 5)
 
@@ -32,7 +33,16 @@ const getRequesters = async (
 
   const requesters: DoomedSailor[] = [author]
   const officers = ['captain', 'bosun', 'master', 'purser']
-  const pool = officers.includes(author.position) ? officer : sailor
+  let pool = officers.includes(author.position) ? officer : sailor
+
+  const removePositions = [
+    { tag: 'mutiny', position: 'captain' }
+  ]
+
+  for (const { tag, position } of removePositions) {
+    if (complication === tag) pool = pool.filter(p => p !== position)
+  }
+
   const ranks = author.position !== 'sailor'
     ? pool.filter(rank => rank !== author.position)
     : pool

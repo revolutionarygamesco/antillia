@@ -34,7 +34,8 @@ const getDoomedSituation = async (): Promise<DoomedShip> => {
 
   const empire = pickRandomEmpire()
   const { ship, captain, author } = await getCrew(empire)
-  const requesters = await getRequesters(author, empire)
+  const complication = selectRandomElement(situation.complications)
+  const requesters = await getRequesters(author, empire, complication)
   const kin = await getKin(requesters, empire)
 
   return {
@@ -43,7 +44,7 @@ const getDoomedSituation = async (): Promise<DoomedShip> => {
     author,
     handwriting: getHandwriting(empire),
     tale: situation.tag,
-    complication: selectRandomElement(situation.complications),
+    complication,
     isHaunted: selectRandomElement(roll6),
     includeMap: selectRandomElement(roll6),
     kin
