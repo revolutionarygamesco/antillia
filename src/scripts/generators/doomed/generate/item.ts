@@ -1,6 +1,7 @@
 import type { DoomedShip } from '../types.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import renderTale from '../render/tale.ts'
+import renderComplication from '../render/complication.ts'
 import renderRequest from '../render/request.ts'
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 
@@ -11,7 +12,7 @@ const generateDoomedMessageItem = async (
   const prefix = [MODULE_ID, 'last-accounts', 'item']
 
   const tale = renderTale(context, situation)
-  const complication = localize([...prefix, 'complications', situation.complication], context)
+  const complication = renderComplication(context, situation)
   const request = renderRequest(context, situation)
 
   const title = localize([...prefix, 'title'], { ship: situation.ship.name })
