@@ -2008,7 +2008,7 @@ revolutionary-antillia:
             will never now be able to retrieve it.</p>
           <p>{generator}</p>
     item:
-      title: Last Account of the {ship}
+      title: Final Voyage of the {ship}
       description: |
         <p>This note was rolled up inside an old bottle that you plucked from the 
           sea on {date}. It is written in {lang} with a {emotional} and
