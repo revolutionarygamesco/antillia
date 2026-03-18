@@ -1,4 +1,5 @@
 import type { DoomedShip, DoomedContextAdder } from '../types.ts'
+import name from './name.ts'
 import battle from './battle.ts'
 import carrion from './carrion.ts'
 import davy from './davy.ts'
@@ -14,6 +15,7 @@ const addContext = async (
   context: Record<string, string>,
   isPremium: boolean = false
 ): Promise<void> => {
+  name(context, scenario)
   const adders: DoomedContextAdder[] = [battle, carrion, davy, disease,
     haunted, kraken, orcas, sacrifice, whale]
 
