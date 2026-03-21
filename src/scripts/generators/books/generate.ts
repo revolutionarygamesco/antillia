@@ -11,7 +11,7 @@ import createIncunable from './incunable.ts'
 const generateRareBook = async (): Promise<void> => {
   const generators: Array<() => Promise<Item>> = stockArray([
     { n: 1, item: createGrimoire },
-    { n: 1, item: createIlluminatedManuscript },
+    { n: 2, item: createIlluminatedManuscript },
     { n: 1, item: createIncunable }
   ])
 
