@@ -2325,6 +2325,29 @@ revolutionary-antillia:
     message:
       speaker: The Archivist
       flavor: Draw a random rare book
+    illuminated:
+      title: Illuminated {book}
+      types:
+        gospel: Book of the Gospels
+        lectionary: Lectionary
+        hours: Book of Hours
+        psalter: Psalter
+      century:
+        12: 12th
+        13: 13th
+        14: 14th
+        15: 15th
+      covers:
+        leather: wooden boards wrapped in leather
+        velvet: wooden boards wrapped in velvet
+        treasure: |
+          intricate gold and silver metalwork set with pearl and precious
+          gems, fixed to wooden boards
+      description: |
+        <p>This {c} century {type} was the product of thousands of hours of
+          pain-staking work by medieval monks or nuns. The pages are vellum
+          decorated with intricate art made with gold leaf, lapis lazuli, and
+          precious inks, bound together with {cover}.</p>
     grimoires:
       transmutation:
         title: The {adj} Codex of {occultist}

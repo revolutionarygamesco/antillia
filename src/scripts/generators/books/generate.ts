@@ -5,10 +5,12 @@ import makeLink from '../../utilities/make-link.ts'
 import { MODULE_ID } from '../../settings.ts'
 
 import createGrimoire from './grimoires/create.ts'
+import createIlluminatedManuscript from './illuminated.ts'
 
 const generateRareBook = async (): Promise<void> => {
   const generators: Array<() => Promise<Item>> = stockArray([
-    { n: 1, item: createGrimoire }
+    { n: 1, item: createGrimoire },
+    { n: 1, item: createIlluminatedManuscript }
   ])
 
   const generator = selectRandomElement(generators)
