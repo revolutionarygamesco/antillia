@@ -2414,6 +2414,96 @@ revolutionary-antillia:
       description: |
         <p>Printed in {year} in {city} by {publisher}, this volume is a rare
           artifact from the earliest days of printing in Europe.</p>
+    pilot:
+      title: Pilot Book
+      description:
+        base: |
+          <p>Pilot books like this one were dominated by Dutch cartographers
+            during much of the 17th century, but English and French
+            cartographers have made significant contributions more recently.
+            This volume is written in {lang} and collects navigation charts and
+            maps of the {region}.</p>
+          {condition}
+        intro: |
+          <p>Pilot books like this one were dominated by Dutch cartographers
+            during much of the 17th century, but English and French
+            cartographers have made significant contributions more recently.
+            This volume is written in {lang} and collects navigation charts and
+            maps of the {region}.</p>
+          <p>It also contains an introduction explaining the basics of the art
+            of navigation. Someone with no experience in navigation could make
+            a rudimentary attempt at it after studying this section.</p>
+          {condition}
+      languages:
+        dutch: Dutch
+        english: English
+        french: French
+        german: German
+        latin: Latin
+      region:
+        europe: |
+          coasts of northern Europe, from the Baltic Sea to the Strait of
+          Gibraltar
+        mediterranean: |
+          the Mediterranean Sea
+        east: |
+          the East Indies and the Indian Ocean
+        west: |
+          the Atlantic Ocean, including the Caribbean, the Gulf of Mexico, and
+          the West Indies
+      condition:
+        new:
+          pristine: |
+            <p>This volume is a more recent edition, with updated maps and
+              charts. It’s in pristine condition, meaning it’s never been taken
+              out to sea before.</p>
+          moderate: |
+            <p>This volume is a more recent edition, with updated maps and
+              charts. It has a bit of weathering to it and a few annotations,
+              meaning that it’s already seen some use.</p>
+        moderate:
+          pristine: |
+            <p>This volume is a few decades old. Its maps and charts have been
+              updated compared to the first editions, but they’re a bit out of
+              date now. It’s in pristine condition despite its age, which means
+              it’s never been taken to sea before. That might increase its
+              value to a collector, but it makes its information questionable
+              to a navigator.</p>
+          moderate: |
+            <p>This volume is a few decades old. Its maps and charts have been
+              updated compared to the first editions, but they’re a bit out of
+              date now. It’s a bit worn from several sea voyages, but with that
+              comes annotations and corrections, making it more valuable as a
+              tool for navigation.</p>
+          worn: |
+            <p>This volume is a few decades old. Its maps and charts have been
+              updated compared to the first editions, but they’re a bit out of
+              date now. It’s heavily worn from many years of use. The
+              annotations and corrections added to it by successive navigators
+              over the years are a treasure trove far more valuable than the
+              original maps.</p>
+        old:
+          pristine: |
+            <p>This volume is a first edition, and in pristine condition. It
+              might be worth quite a bit to a collector, but is likely of
+              little practical value as a navigation tool. Its charts are many
+              decades out of date, and in such fine condition it’s likely never
+              been used before.</p>
+          moderate: |
+            <p>This volume is a first edition, but only moderately used. That
+              might increase its value to a collector, but it’s odd for a pilot
+              book that’s so old to have seen so little use over so long a
+              time. There are a few valuable annotations and corrections that
+              have been added, but not enough to outweigh how outdated the
+              charts are to make it a valuable navigation tool.</p>
+          worn: |
+            <p>This volume is a first edition, and it’s clearly showing its
+              age. Its leather cover is more a folio to keep its vellum charts
+              in than a truly bound book. Those charts are now woefully out of
+              date, but they’ve been used by generations of sailors, pilots,
+              and navigators, several of whom have added their annotations and
+              corrections over the years. This is a treasure trove of collected
+              nautical and maritime knowledge.</p>
     grimoires:
       transmutation:
         title: The {adj} Codex of {occultist}
