@@ -1,4 +1,4 @@
-import type { GrimoireSchoolData } from './types.ts'
+import type {GrimoireSchool, GrimoireSchoolData} from './types.ts'
 import { UUIDS } from '../../../settings.ts'
 
 const rituals: Record<string, GrimoireSchoolData> = {
@@ -102,6 +102,14 @@ const rituals: Record<string, GrimoireSchoolData> = {
       }
     ]
   }
+}
+
+export const grimoireIcons: Record<GrimoireSchool, string> = {
+  transmutation: 'icons/sundries/books/book-eye-purple.webp',
+  evocation: 'icons/sundries/books/book-embossed-spiral-purple-white.webp',
+  conjuration: 'icons/sundries/books/book-symbol-yellow-grey.webp',
+  necromancy: 'icons/sundries/books/book-face-black.webp',
+  enchantment: 'icons/sundries/books/book-purple-gem.webp'
 }
 
 export default rituals

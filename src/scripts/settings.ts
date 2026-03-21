@@ -20,6 +20,7 @@ export const UUIDS: Record<string, string> = {
   ENCRYPTED_INTEL_MESSAGES: 'etmda0JUHwKk4vfl',
   PROPAGANDA: 'B8k0FFzOsEJxrRvg',
   DOOMED_MESSAGES: 's7Lf6qq8CK8EctJV',
+  BOOKS: 'GK4XROipFFa4H91h',
   EMPIRES: 'RollTable.pK3FfgibC1HfBefV',
   FORTS: 'RollTable.XleTdybFWP2znvEq',
   FORTS_BRITISH: 'RollTable.oEfVP1A8NzEEPpvA',
