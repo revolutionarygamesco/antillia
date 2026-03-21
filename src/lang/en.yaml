@@ -2348,6 +2348,72 @@ revolutionary-antillia:
           pain-staking work by medieval monks or nuns. The pages are vellum
           decorated with intricate art made with gold leaf, lapis lazuli, and
           precious inks, bound together with {cover}.</p>
+    incunables:
+      publishers:
+        gutenberg:
+          name: Johann Gutenberg
+          city: Mainz
+        koberger:
+          name: Anton Koberger
+          city: Nuremberg
+        verard:
+          name: Antoine Vérard
+          city: Paris
+        gruninger:
+          name: Johann Grüninger
+          city: Strasbourg
+        amerbach:
+          name: Johann Amerbach
+          city: Basel
+        manutius:
+          name: Aldus Manutius
+          city: Venice
+        jenson:
+          name: Nicolas Jenson
+          city: Venice
+        caxton:
+          name: William Caxton
+          city: Westminster
+        ratdolt:
+          name: Erhard Ratdolt
+          city: Venice
+        zell:
+          name: Ulrich Zell
+          city: Cologne
+        fust-schoffer:
+          name: Johann Fust & Peter Schöffer
+          city: Mainz
+        zainer:
+          name: Günther Zainer
+          city: Augsburg
+        han:
+          name: Ulrich Han
+          city: Rome
+        koelhoff:
+          name: Johann Koelhoff
+          city: Cologne
+        wenssler:
+          name: Michael Wenssler
+          city: Basel
+        sweynheym-pannartz:
+          name: Sweynheym & Pannartz
+          city: Rome
+        mentelin:
+          name: Johann Mentelin
+          city: Strasbourg
+        eggstein:
+          name: Heinrich Eggestein
+          city: Strasbourg
+        ruppel:
+          name: Berthold Ruppel
+          city: Basel
+        valdarfer:
+          name: Christoph Valdarfer
+          city: Venice
+      title: Incunable
+      description: |
+        <p>Printed in {year} in {city} by {publisher}, this volume is a rare
+          artifact from the earliest days of printing in Europe.</p>
     grimoires:
       transmutation:
         title: The {adj} Codex of {occultist}
