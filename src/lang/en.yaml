@@ -2321,4 +2321,189 @@ revolutionary-antillia:
             scottish: Scotland
             spanish: Spain
             welsh: Wales
-            
+  books:
+    grimoires:
+      transmutation:
+        title: The {adj} Codex of {occultist}
+        descriptions:
+          stained: stained
+          salt: salt-crusted
+          hide: hide-bound
+          dusty: dusty old
+          leather: leather-bound
+      evocation:
+        title: The {adj} Tome of {occultist}
+        descriptions:
+          annotated: densely annotated
+          dense: dense
+          ponderous: ponderous
+          arcane: arcane
+          recondite: recondite
+      conjuration:
+        title: The {adj} Grimoire of {occultist}
+        description:
+          unnerving: unnerving
+          unsettling: unsettling
+          otherworldly: otherworldly
+          strange: strange
+          eldritch: eldritch
+      necromancy:
+        title: The {adj} Testament of {occultist}
+        description:
+          black: black
+          ghastly: ghastly
+          grim: grim
+          dour: dour
+          bleak: bleak
+      enchantment:
+        title: The {adj} Enchiridion of {occultist}
+        description:
+          beguiling: beguiling
+          devious: devious
+          artful: artful
+          treacherous: treacherous
+          cunning: cunning
+      description: |
+        <p>This {description} tome claims to be the work of {occultist}. Amidst
+          its long discussions of philosophy and religion, there are {number}
+          arcane rituals:</p>
+        <ul>{rituals}</ul>
+      call:
+        adj: Cerulean
+        occultist: Glaucus
+        description: |
+          Glaucus, a Boeotian fisherman in ancient times who consumed a magical
+          herb that transformed him into an immortal, merman-like being who
+          mastered the arts of prophecy and magic
+      thalassomancy:
+        adj: Thalassic
+        occultist: Gunnhild
+        description: |
+          Gunnhildr Gormsdóttir, the Mother of Kings, the feared witch-queen of
+          the Icelandic sagas and enemy of Egill Skallagrímsson
+      curse:
+        adj: Cursed
+        occultist: Egill
+        description: |
+          Egill Skallagrímsson, the skald-sorcerer of the Icelandic sagas and
+          enemy of Gunnhildr Gormsdóttir
+      mermaid:
+        adj: Red
+        occultist: Trewhella
+        description: |
+          Matthew Trewhella, a chorister from the Cornish village of Zennor.
+          According to local legend, a mermaid fell in love with Trewhella’s
+          singing. The two fell in love, and the chorister went to join her in
+          her home in Pendour Cove. The grimoire claims to contain the magical
+          secrets that Matthew learned among the merfolk
+      divination:
+        adj: Oracular
+        occultist: Nostradamus
+        description: |
+          Nostradamus, a 16th-century French astrologer, apothecary, physician,
+          and seer
+      time:
+        adj: Ageless
+        occultist: Saint Germain
+        description: |
+          a mysterious French courtier who claims to have lived for over five
+          centuries
+      fauna:
+        adj: Wild
+        occultist: Merlin
+        description: |
+          Merlin, the legendary wizard and counselor to King Arthur
+      weathercraft:
+        adj: Gray
+        occultist: the Tempestarii
+        description: |
+          the <em>tempestarii</em> were medieval weather-witches who raised
+          storms or quelled them, often working with the Magonians — people of
+          the cloud realms above who sailed the storm clouds in their aerial
+          vessels
+      eldritch:
+        adj: Eldritch
+        occultist: the Mad Poet
+        description: |
+          Abd al-'Uzza, a mad poet from Sanaá in Yemen who flourished in the
+          8th century under the Umayyad caliphate, said to have also written
+          the Book of the Names of the Dead — better known by its Latin name:
+          the Necronomicon
+      kraken:
+        adj: Abyssal
+        occultist: Gottskálk
+        description: |
+          Gottskálk Nikulásson, called “the Cruel,” the 16th century bishop of
+          Hólar and mad sorcerer credited with writing the <em>Rauðskinna</em>,
+          a legendary grimoire of black magic said to contain spells that allow
+          the caster to summon all manner of dark, powerful creatures
+      light:
+        adj: Celestial
+        occultist: John Dee
+        description: |
+          John Dee, the English mathematician, astronomer, teacher, astrologer,
+          occultist, and alchemist who served Queen Elizabeth and, with Edward
+          Kelley, made contact with the angels and documented their language of
+          Enochian (and also an advocate for colonization in the New World and
+          the one who first coined the term “the British Empire”)
+      ward:
+        adj: Steadfast
+        occultist: Hermes Trismegistus
+        description: |
+          Hermes Trismegistus, the legendary astrologer, sage, and mystic of the
+          ancient world credited with the discovery of nearly all of the esoteric
+          and mystic arts
+      grave:
+        adj: Deathly
+        occultist: Koschei the Deathless
+        description: |
+          Koschei the Deathless, the feared necromancer of Russian legend
+      return:
+        adj: Golden
+        occultist: Simon Magus
+        description: |
+          Simon Magus, a magician denounced by Saint Peter in the Book of Acts
+          for seeking to buy divine power, attributed with all manner of
+          magical and esoteric powers by ancient authors
+      ferryman:
+        adj: Grim
+        occultist: La Voisin
+        description: |
+          Catherine Monvoisin, a 17th century French fortune teller who led a
+          network of witches and poisoners who killed scores of people for her
+          clients in the French aristocracy
+      spot:
+        adj: Black
+        occultist: Nottingham
+        description: |
+          John of Nottingham, a necromancer who conspired to kill King Edward II
+          and Hugh Despenser the Younger in 1324 using wax effigies
+      mists:
+        adj: Arcane
+        occultist: Faust
+        description: |
+          Johann Georg Faust, a 16th-century itinerant German alchemist,
+          astrologer, and magician who sold his soul to the Devil in exchange
+          for knowledge
+      hex:
+        adj: Ardent
+        occultist: Saint Cyprian
+        description: |
+          Saint Cyprian of Antioch, a magician hired to torment Saint Justina,
+          but who repented and burned his books of magic when he witnessed her
+          steadfast faith (the entries in this volume being credited to those
+          pages which the Devil saved from the flames)
+      manacles:
+        adj: Bound
+        occultist: Solomon
+        description: |
+          the Bible’s King Solomon, said to be the wisest man who ever lived,
+          but also said to have built the Temple with the aid of demons by
+          binding them to his service
+      delusions:
+        adj: Dark
+        occultist: Honorius
+        description: |
+          Honorius of Thebes, who is also credited with <em>The Sworn Book of
+          Honorius</em>, or perhaps Pope Honorius II, who is credited with a
+          grimoire of his own
