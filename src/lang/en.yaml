@@ -2322,6 +2322,9 @@ revolutionary-antillia:
             spanish: Spain
             welsh: Wales
   books:
+    message:
+      speaker: The Archivist
+      flavor: Draw a random rare book
     grimoires:
       transmutation:
         title: The {adj} Codex of {occultist}
