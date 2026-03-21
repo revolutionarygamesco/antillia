@@ -13,7 +13,7 @@ describe('isGrimoire', () => {
     expect(isGrimoire({
       school: 'transmutation',
       description: 'stained',
-      rituals: ['call', 'curse'],
+      rituals: [{ tag: 'call', uuid: 'call' }, { tag: 'curse', uuid: 'curse' }],
       adj: 'call',
       occultist: 'curse'
     })).toBe(true)
