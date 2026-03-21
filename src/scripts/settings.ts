@@ -99,7 +99,7 @@ export const UUIDS: Record<string, string> = {
   ARCANE_ELDRITCH: 'Compendium.pirateborg.invokable-arcane-rituals.Item.pxGux1jivInKvMx9',
   ARCANE_HEX: 'Compendium.pirateborg.invokable-arcane-rituals.Item.xhQBrTfC09FYje8q',
   ARCANE_LIGHT: 'Compendium.pirateborg.invokable-arcane-rituals.Item.Qc8lbxQg03PVRkl0',
-  ARCANE_MERMAID: 'Compendium.pirateborg.invokable-arcane-rituals.Item.Qc8lbxQg03PVRkl0',
+  ARCANE_MERMAID: 'Compendium.pirateborg.invokable-arcane-rituals.Item.8qy6kGcq6YfiiWYX',
   ARCANE_MANACLES: 'Compendium.pirateborg.invokable-arcane-rituals.Item.XmNX5qADwgu5oDb8',
   ARCANE_MISTS: 'Compendium.pirateborg.invokable-arcane-rituals.Item.AjfhYyj0bpTUN1hI',
   ARCANE_TIME: 'Compendium.pirateborg.invokable-arcane-rituals.Item.kMuqoc7AI5xGWTdL',
