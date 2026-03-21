@@ -2328,7 +2328,7 @@ revolutionary-antillia:
     grimoires:
       transmutation:
         title: The {adj} Codex of {occultist}
-        descriptions:
+        description:
           stained: stained
           salt: salt-crusted
           hide: hide-bound
@@ -2336,7 +2336,7 @@ revolutionary-antillia:
           leather: leather-bound
       evocation:
         title: The {adj} Tome of {occultist}
-        descriptions:
+        description:
           annotated: densely annotated
           dense: dense
           ponderous: ponderous
@@ -2370,7 +2370,7 @@ revolutionary-antillia:
         <p>This {description} tome claims to be the work of {occultist}. Amidst
           its long discussions of philosophy and religion, there are {number}
           arcane rituals:</p>
-        <ul>{rituals}</ul>
+        <ul class="link-list">{rituals}</ul>
       call:
         adj: Cerulean
         occultist: Glaucus

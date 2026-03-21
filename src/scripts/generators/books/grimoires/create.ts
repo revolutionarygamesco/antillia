@@ -9,12 +9,12 @@ const createGrimoire = async (): Promise<Item> => {
   const len = grimoire.rituals.length
 
   const prefix = [MODULE_ID, 'books', 'grimoires']
-  const d = localize([...prefix, grimoire.school, 'descriptions', grimoire.adj])
+  const d = localize([...prefix, grimoire.school, 'description', grimoire.description])
   const adj = localize([...prefix, grimoire.adj, 'adj'])
   const name = localize([...prefix, grimoire.occultist, 'occultist'])
-  const occultist = localize([...prefix, grimoire.occultist, 'description'])
+  const occultist = localize([...prefix, grimoire.occultist, 'description']).trim()
   const number = decapitalize(localize([MODULE_ID, 'numbers', len.toString()]))
-  const rituals = grimoire.rituals.map(r => `<li>@UUID[${r.uuid}]</li>`)
+  const rituals = grimoire.rituals.map(r => `<li>@UUID[${r.uuid}]</li>`).join('')
 
   const title = localize([...prefix, grimoire.school, 'title'], { adj, occultist: name })
   const description = localize([...prefix, 'description'], { description: d, occultist, number, rituals })
@@ -26,7 +26,7 @@ const createGrimoire = async (): Promise<Item> => {
     folder: UUIDS.BOOKS,
     system: {
       description,
-      value: len * 200,
+      price: len * 250,
       carryWeight: len
     },
     ownership: { default: 0 }
