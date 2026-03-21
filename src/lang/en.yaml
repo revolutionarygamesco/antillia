@@ -2504,6 +2504,53 @@ revolutionary-antillia:
               and navigators, several of whom have added their annotations and
               corrections over the years. This is a treasure trove of collected
               nautical and maritime knowledge.</p>
+    folio:
+      title:
+        natural: A Natural History of the {subject} of {region}
+        observations: Observations Upon the {subject} of {region}
+        description: A Description of the {subject} of {region}
+      description: |
+        <p>This volume details many of the varieties of {pl} found in {region},
+          with {illustrations}.</p>
+      subjects:
+        flora:
+          title: Flora
+          pl: plants
+        birds:
+          title: Birds
+          pl: birds
+        insects:
+          title: Insects
+          pl: insects
+        fish:
+          title: Fish & Sea Creatures
+          pl: marine creatures
+        fauna:
+          title: Fauna
+          pl: animals
+        trees:
+          title: Trees
+          pl: trees
+      regions:
+        west-indies: West Indies
+        spanish-main: Spanish Main
+        new-spain: New Spain
+        brazil: Brazil
+        surinam: Surinam
+        virginia: Virginia & Carolina
+        africa: West Africa
+        east-indies: East Indies
+        levant: Levant
+        europe: Northern Europe
+      illustrations:
+        none: |
+          careful scientific descriptions of each species
+        sketch: |
+          detailed black-and-white sketches accompanying many of the careful
+          scientific descriptions of each species
+        color: |
+          beautiful, hand-colored plates accompanying many of the careful
+          scientific descriptions of each species
     grimoires:
       transmutation:
         title: The {adj} Codex of {occultist}

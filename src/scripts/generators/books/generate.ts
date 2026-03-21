@@ -8,13 +8,15 @@ import createGrimoire from './grimoires/create.ts'
 import createIlluminatedManuscript from './illuminated.ts'
 import createIncunable from './incunable.ts'
 import createPilotBook from './pilot.ts'
+import createNaturalHistoryFolio from './folio.ts'
 
 const generateRareBook = async (): Promise<void> => {
   const generators: Array<() => Promise<Item>> = stockArray([
     { n: 1, item: createGrimoire },
     { n: 2, item: createIlluminatedManuscript },
     { n: 1, item: createIncunable },
-    { n: 4, item: createPilotBook }
+    { n: 4, item: createPilotBook },
+    { n: 4, item: createNaturalHistoryFolio }
   ])
 
   const generator = selectRandomElement(generators)
