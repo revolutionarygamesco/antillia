@@ -85,6 +85,7 @@ export const UUIDS: Record<string, string> = {
   JOURNAL_BOULOGNE: 'JournalEntry.IfI5rrlxoD82fxdt.JournalEntryPage.2VMr6j2n0ybVy0XF',
   JOURNAL_HURRICANE: 'JournalEntry.RXrBQ2NVTwPPe8iY',
   JOURNAL_BLACK_BART: 'JournalEntry.kBmToOlFZcvft2vP',
+  JOURNAL_RULES_BECALMED: 'JournalEntry.LF0tUW5xSU8tn8cz.JournalEntryPage.EYUk0Wp1oEDRKFvx',
   JOURNAL_RULES_STORM: 'JournalEntry.LF0tUW5xSU8tn8cz.JournalEntryPage.W9n5kmRz34i4aLfr',
   ACTOR_WANDERING_SPIRIT: 'Actor.4XZ53dvwaFXDbfWB',
   BOTTLE: 'Item.2UylOEF2C19GfRNF',

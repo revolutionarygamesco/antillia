@@ -93,10 +93,12 @@ revolutionary-antillia:
     level:
       1:
         title: Calm
+        suggestions: Suggested becalmed rules
         description: |
           <p>There is no wind. You are becalmed.</p>
           <p><strong>Becalmed:</strong> Ship speed drops to zero. You’re stuck
             until the wind picks up. Some crews perish like this&hellip;</p>
+          <p>{suggestions}</p>
       2:
         title: Breeze
         description: |
@@ -106,8 +108,8 @@ revolutionary-antillia:
         roll: roll for consequences
         description: |
           <p>The wind is strong.</p>
-          <p><strong>Reef:</strong> Shorten your jib, feather your mainsail,
-            and even reduce to half-sail to maintain normal speed.</p>
+          <p><strong>Reef:</strong> Strike the jib, reef the mainsail, and take
+            in the topgallants to maintain normal speed.</p>
           <p><strong>Full Sail:</strong> Try to maintain full sail to gain a
             speed bonus from the wind. Test crew skill DR 12 to increase speed
             by +1, or {roll}.</p>

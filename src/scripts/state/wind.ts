@@ -21,16 +21,16 @@ class WindState {
   get description () {
     const context: Record<string, string> = {}
 
+    if (this.level === 1 || this.level === 4) {
+      const name = localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'suggestions'])
+      const uuid = this.level === 1 ? UUIDS.JOURNAL_RULES_BECALMED : UUIDS.JOURNAL_RULES_STORM
+      context.suggestions = makeLink({ name, uuid })
+    }
+
     if (this.level === 3) {
       const name = localize([MODULE_ID, 'wind', 'level', '3', 'roll'])
       const uuid = UUIDS.CANVAS
       context.roll = makeLink({ name, uuid })
-    }
-
-    if (this.level === 4) {
-      const name = localize([MODULE_ID, 'wind', 'level', '4', 'suggestions'])
-      const uuid = UUIDS.JOURNAL_RULES_STORM
-      context.suggestions = makeLink({ name, uuid })
     }
 
     return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'description'], context)
