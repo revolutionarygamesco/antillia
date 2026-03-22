@@ -5,6 +5,7 @@ import registerLogCommand from './log/command.ts'
 
 import { MODULE_ID } from './settings.ts'
 
+import drawInfamousPirate from './generators/pirate.ts'
 import generateBottleMessage from './generators/bottle-messages.ts'
 import generateRareBook from './generators/books/generate.ts'
 import generateIntelligence from './generators/intelligence/generate.ts'
@@ -15,6 +16,7 @@ Hooks.once('init', async () => {
   if (!antillia) return
 
   antillia.api = {
+    drawInfamousPirate,
     generateBottleMessage,
     generateRareBook,
     generateIntelligence,
