@@ -1,4 +1,5 @@
 import WindState from './wind.ts'
+import { MODULE_ID } from '../settings.ts'
 
 describe('WindState', () => {
   describe('constructor', () => {
@@ -14,6 +15,15 @@ describe('WindState', () => {
     it('can be set to something else', () => {
       const { level } = new WindState(1)
       expect(level).toBe(1)
+    })
+  })
+
+  describe('Accessor methods', () => {
+    describe('label', () => {
+      it('expresses the wind level', () => {
+        const wind = new WindState()
+        expect(wind.label).toBe(`${MODULE_ID}.wind.level.2.title`)
+      })
     })
   })
 })
