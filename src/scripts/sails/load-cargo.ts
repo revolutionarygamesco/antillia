@@ -1,5 +1,5 @@
-import fromUuid from './wrappers/from-uuid.ts'
-import isString from './guards/string.ts'
+import fromUuid from '../utilities/wrappers/from-uuid.ts'
+import isString from '../utilities/guards/string.ts'
 import selectRandomElement from '../random/el.ts'
 
 /**
