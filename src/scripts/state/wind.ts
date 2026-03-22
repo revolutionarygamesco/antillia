@@ -2,8 +2,9 @@ import getDate from '../time/date.ts'
 import isNumber from '../utilities/guards/number.ts'
 import isWithinRange from '../utilities/range.ts'
 import localize from '../utilities/wrappers/localize.ts'
+import makeLink from '../utilities/make-link.ts'
 import selectRandomBetween from '../random/between.ts'
-import { MODULE_ID } from '../settings.ts'
+import { MODULE_ID, UUIDS } from '../settings.ts'
 
 class WindState {
   level: number
@@ -18,7 +19,21 @@ class WindState {
   }
 
   get description () {
-    return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'description'])
+    const context: Record<string, string> = {}
+
+    if (this.level === 3) {
+      const name = localize([MODULE_ID, 'wind', 'level', '3', 'roll'])
+      const uuid = UUIDS.CANVAS
+      context.roll = makeLink({ name, uuid })
+    }
+
+    if (this.level === 4) {
+      const name = localize([MODULE_ID, 'wind', 'level', '4', 'suggestions'])
+      const uuid = UUIDS.JOURNAL_RULES_STORM
+      context.suggestions = makeLink({ name, uuid })
+    }
+
+    return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'description'], context)
   }
 
   set (l: number) {
