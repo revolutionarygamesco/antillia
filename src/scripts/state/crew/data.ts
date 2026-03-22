@@ -16,6 +16,7 @@ export interface CrewPosition {
 
 export interface CrewStateData {
   id: string
+  wind: number
   positions: Record<string, CrewPosition>
 }
 
@@ -54,6 +55,7 @@ export const isCrewStateData = (
 
   return [
     isString(obj.id),
+    isNumber(obj.wind),
     isCrewPositionRecord(obj.positions)
   ].every(test => test === true)
 }
