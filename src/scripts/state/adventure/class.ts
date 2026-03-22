@@ -96,6 +96,21 @@ class AdventureState {
 
   async save (): Promise<boolean> {
     try {
+      /**
+       * TODO: Right now, this just saves the AdventureState object as a flag
+       * on the log. We need to also be able to pass in a new game state and
+       * add it to the history. We need to figure out a good way to test this,
+       * because this one is tricky. Test assertions:
+       *   1. When we run this, the flag is added to the journal (we could just
+       *      run this with a spy to make sure `setFlag` is called with the
+       *      correct parameters, since this gets fairly deep into the guts
+       *      of Foundry VTT)
+       *   2. Make sure that the states are sorted in chronological order, with
+       *      the oldest state at [0] and the most recent state as the very
+       *      last element in the array.
+       *   3. Make sure that crews are added to a new state only if they've
+       *      already played that far.
+       */
       const log = await getLog()
       if (!log?.setFlag) return false
       log.setFlag(MODULE_ID, ADVENTURE_STATE_FLAG, this.serialize())
