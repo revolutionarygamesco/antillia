@@ -1,8 +1,8 @@
 revolutionary-antillia:
   lookout: Lookout
   sides:
-    Port: Port
-    port: port
+    Port: Larboard
+    port: larboard
     Starboard: Starboard
     starboard: starboard
   numbers:
