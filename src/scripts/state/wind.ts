@@ -11,6 +11,10 @@ class WindState {
   get label () {
     return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'title'])
   }
+
+  get description () {
+    return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'description'])
+  }
 }
 
 export default WindState

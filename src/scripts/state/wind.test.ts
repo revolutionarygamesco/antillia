@@ -25,5 +25,12 @@ describe('WindState', () => {
         expect(wind.label).toBe(`${MODULE_ID}.wind.level.2.title`)
       })
     })
+
+    describe('description', () => {
+      it('expresses the wind description', () => {
+        const wind = new WindState()
+        expect(wind.description).toBe(`${MODULE_ID}.wind.level.2.description`)
+      })
+    })
   })
 })
