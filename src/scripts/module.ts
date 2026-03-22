@@ -11,6 +11,7 @@ import generateBottleMessage from './generators/bottle-messages.ts'
 import generateRareBook from './generators/books/generate.ts'
 import generateIntelligence from './generators/intelligence/generate.ts'
 import getRandomDisease from './random/disease.ts'
+import sightSails from './sails/sight.ts'
 
 Hooks.once('init', async () => {
   const antillia = game.modules.get(MODULE_ID)
@@ -22,7 +23,8 @@ Hooks.once('init', async () => {
     generateBottleMessage,
     generateRareBook,
     generateIntelligence,
-    getRandomDisease
+    getRandomDisease,
+    sightSails
   }
 })
 

@@ -122,6 +122,12 @@ revolutionary-antillia:
   sails:
     flavor: Sails!
     speaker: The Lookout
+    message: |
+      <p><strong>Sighted:</strong> Lookout tests Presence.</p>
+      <p><strong>10 or less:</strong> {low}</p>
+      <p><strong>11-13:</strong> {medium}</p>
+      <p><strong>14 or higher:</strong> {high}</p>
+      <p>{ship}</p>
     classes:
       Sloop:
         name: sloop
