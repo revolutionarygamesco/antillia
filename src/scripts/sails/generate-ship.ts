@@ -14,7 +14,7 @@ export interface ShipDetails {
   }
 }
 
-export const generateShip = async (
+const generateShip = async (
   details: Record<string, any>
 ): Promise<{ ship: Actor, captain: Actor, details: ShipDetails }> => {
   const api = game!.modules!.get('revolutionary-pbshipgen')!.api
