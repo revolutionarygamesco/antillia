@@ -29,7 +29,7 @@ const generateRandomConvoy = async (
     : Math.min(2, await roll(route.ships))
   for (let i = 0; i < n; i++) {
     const { ship } = await generateShip({ use: 'Merchant', ...base })
-    await loadCargo(ship, good)
+    await loadCargo(ship, 1, good)
     ships.push(ship)
   }
 

@@ -1,24 +1,23 @@
 import loadCargo from './load-cargo.ts'
 import drawFirst from '../utilities/draw-first.ts'
-import fromUuid from '../utilities/wrappers/from-uuid.ts'
+import isString from '../utilities/guards/string.ts'
 import { UUIDS } from '../settings.ts'
 
 const loadMundaneCargo = async (
   ship: Actor,
-  heavy: boolean = false
+  ratio: number
 ): Promise<void> => {
   const { max, value } = ship.system?.attributes.cargo ?? { max: 2, value: 0 }
-  const highest = max - value
-  const num = heavy ? highest : Math.ceil(highest / 2)
-  const cargo: Item[] = []
+  const num = Math.ceil((max - value) * ratio)
+  const uuids: (string | null)[] = []
 
   for (let i = 0; i < num; i++) {
     const result = await drawFirst(UUIDS.PREMIUM_MUNDANE_CARGO)
-    const item = await fromUuid(result?.documentUuid!) as Item
-    cargo.push(item)
+    uuids.push(result?.documentUuid ?? null)
   }
 
-  await loadCargo(ship, ...cargo)
+  const cargo = uuids.filter(item => isString(item))
+  await loadCargo(ship, ratio, ...cargo)
 }
 
 export default loadMundaneCargo

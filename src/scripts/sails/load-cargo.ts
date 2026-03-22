@@ -5,6 +5,8 @@ import selectRandomElement from '../random/el.ts'
 /**
  * Loads a ship up with cargo.
  * @param {Actor} ship - The ship being loaded.
+ * @param {number} ratio - A number between 0 and 1, indicating how much of the
+ *   ship’s available space you want to fill.
  * @param {Item | string} cargo - The cargo to load onto the ship. This should
  *   be either the cargo Item directly or the UUID of a cargo item. For each of
  *   the ship's available cargo slots, an item is selected randomly from this
@@ -15,6 +17,7 @@ import selectRandomElement from '../random/el.ts'
 
 const loadCargo = async (
   ship: Actor,
+  ratio: number,
   ...cargo: Array<Item | string>
 ): Promise<void> => {
   const items = await Promise.all(cargo.map(async (c) => {
@@ -23,7 +26,7 @@ const loadCargo = async (
   }))
 
   const { max, value } = ship.system?.attributes.cargo ?? { max: 2, value: 0 }
-  const slots = max - value
+  const slots = Math.ceil((max - value) * ratio)
 
   const shipment: Item[] = []
   for (let i = 0; i < slots; i++) {
