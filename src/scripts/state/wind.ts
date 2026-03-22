@@ -15,6 +15,14 @@ class WindState {
   get description () {
     return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'description'])
   }
+
+  incr () {
+    this.level = Math.min(this.level + 1, 4)
+  }
+
+  decr () {
+    this.level = Math.max(this.level - 1, 1)
+  }
 }
 
 export default WindState
