@@ -94,6 +94,8 @@ export const UUIDS: Record<string, string> = {
   ROSARY: 'Item.dRWVuDDPDbaQE99s',
   ASH_CARGO: 'Item.lDAchtutyqcPJq1h',
   SUGAR_CARGO: 'Item.Q9clnxDy1Otm00Ed',
+  MOLASSES_CARGO: 'Item.i8rM1sOtCuM0HVYc',
+  LOGWOOD_CARGO: 'Item.FZNf4GFFimqTcoJx',
   TOBACCO: 'Compendium.pirateborg.equipment-gear.Item.evUD546oYBvGyJmb',
   MYSTICAL_MISHAPS: 'Compendium.pirateborg.rolls-gamemaster.RollTable.TUUnMUeE28Jwgsqw',
   ARCANE_CALL: 'Compendium.pirateborg.invokable-arcane-rituals.Item.JIcvijvyiIIEFGyV',
