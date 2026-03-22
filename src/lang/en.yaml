@@ -119,6 +119,42 @@ revolutionary-antillia:
         description: |
           <p>You’re caught in a storm!</p>
           <p>{suggestions}</p>
+  sails:
+    flavor: Sails!
+    speaker: The Lookout
+    classes:
+      Sloop:
+        name: sloop
+        masts: single-masted
+      Brigantine:
+        name: brigantine
+        masts: square-rigged, two-masted
+      Fluyt:
+        name: fluyt
+        masts: square-rigged, three-masted
+      Frigate:
+        name: frigrate
+        masts: square-rigged, three-masted
+      Man-of-War:
+        name: man-of-war
+        masts: square-rigged, three-masted
+    report:
+      low: A {masts} vessel.
+      medium: A {class}.
+      high:
+        war: |
+          A {class}, flying {nation} colors, and loaded with cannons.
+        merchant:
+          heavy: |
+            A {class}, flying {nation} colors, riding low on the water — 
+            meaning she’s loaded with cargo.
+          light: |
+            A {class}, flying {nation} colors, riding high on the water —
+            meaning she likely doesn’t have much cargo.
+        slave: |
+          A {class}, flying {nation} colors. Then you notice the ventilation
+          shafts and the nets extending over the sides to make it difficult to
+          jump off. That’s a guineaman — a slave ship.
   log:
     title: Adventure Log
     first: |
