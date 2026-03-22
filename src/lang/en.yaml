@@ -87,6 +87,9 @@ revolutionary-antillia:
     St-Johns: Saint John’s
     St-Pierre: Saint-Pierre
   wind:
+    message:
+      speaker: The Helm
+      flavor: Changing Winds
     level:
       1:
         title: Calm

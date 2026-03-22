@@ -23,6 +23,16 @@ class WindState {
   decr () {
     this.level = Math.max(this.level - 1, 1)
   }
+
+  async sendMessage (whisper: string[] = [game.user.id]) {
+    const prefix = [MODULE_ID, 'wind', 'message']
+    await foundry.documents.ChatMessage.create({
+      speaker: { alias: localize([...prefix, 'speaker']) },
+      flavor: localize([...prefix, 'flavor']),
+      content: `<p><strong>${this.label}</strong></p>${this.description}`,
+      whisper
+    })
+  }
 }
 
 export default WindState
