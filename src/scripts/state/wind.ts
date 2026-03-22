@@ -1,4 +1,5 @@
 import getDate from '../time/date.ts'
+import isNumber from '../utilities/guards/number.ts'
 import isWithinRange from '../utilities/range.ts'
 import localize from '../utilities/wrappers/localize.ts'
 import selectRandomBetween from '../random/between.ts'
@@ -8,7 +9,8 @@ class WindState {
   level: number
 
   constructor(init?: number) {
-    this.level = init ?? 2
+    this.level = 2
+    if (isNumber(init)) this.set(init)
   }
 
   get label () {
@@ -19,12 +21,16 @@ class WindState {
     return localize([MODULE_ID, 'wind', 'level', this.level.toString(), 'description'])
   }
 
+  set (l: number) {
+    this.level = Math.max(1, Math.min(4, l))
+  }
+
   incr () {
-    this.level = Math.min(this.level + 1, 4)
+    this.set(this.level + 1)
   }
 
   decr () {
-    this.level = Math.max(this.level - 1, 1)
+    this.set(this.level - 1)
   }
 
   async sendMessage (whisper: string[] = [game.user.id]) {
@@ -47,13 +53,13 @@ class WindState {
     const roll = selectRandomBetween(1, 20) + modifier
 
     if (roll < 2) {
-      this.level = 1
+      this.set(1)
     } else if (roll < 11) {
       this.decr()
     } else if (roll < 20) {
       this.incr()
     } else {
-      this.level = 4
+      this.set(4)
     }
 
     await this.sendMessage(whisper)

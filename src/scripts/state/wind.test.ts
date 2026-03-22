@@ -16,6 +16,16 @@ describe('WindState', () => {
       const { level } = new WindState(1)
       expect(level).toBe(1)
     })
+
+    it('will set to 1 if given something lower', () => {
+      const { level } = new WindState(0)
+      expect(level).toBe(1)
+    })
+
+    it('will set to 4 if given something bigger', () => {
+      const { level } = new WindState(10)
+      expect(level).toBe(4)
+    })
   })
 
   describe('Accessor methods', () => {
@@ -35,6 +45,26 @@ describe('WindState', () => {
   })
 
   describe('Instance methods', () => {
+    describe('set', () => {
+      it('sets the wind level', () => {
+        const wind = new WindState()
+        wind.set(4)
+        expect(wind.level).toBe(4)
+      })
+
+      it('won’t set the wind level above 4', () => {
+        const wind = new WindState(4)
+        wind.set(10)
+        expect(wind.level).toBe(4)
+      })
+
+      it('won’t set the wind level below 1', () => {
+        const wind = new WindState(4)
+        wind.set(0)
+        expect(wind.level).toBe(1)
+      })
+    })
+
     describe('incr', () => {
       it('increases the wind level', () => {
         const wind = new WindState()
