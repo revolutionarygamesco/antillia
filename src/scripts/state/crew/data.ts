@@ -36,12 +36,26 @@ export const isCrewPosition = (
   ].every(test => test === true)
 }
 
+export const isCrewPositionRecord = (
+  candidate: unknown
+): candidate is Record<string, CrewPosition> => {
+  if (!isObject(candidate)) return false
+  const obj = candidate as Record<string | number | symbol, unknown>
+  return Object.entries(obj).every(([key, value]) => {
+    return isString(key) && isCrewPosition(value)
+  })
+}
+
 export const isCrewStateData = (
   candidate: unknown
 ): candidate is CrewStateData => {
   if (!isObject(candidate)) return false
   const obj = candidate as Record<string, unknown>
-  return typeof obj.id === 'string'
+
+  return [
+    isString(obj.id),
+    isCrewPositionRecord(obj.positions)
+  ].every(test => test === true)
 }
 
 export const isCrewStateDataArray = makeArrayGuard<CrewStateData>(isCrewStateData)
