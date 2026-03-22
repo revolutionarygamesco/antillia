@@ -7,6 +7,7 @@ import { MODULE_ID } from './settings.ts'
 
 import generateBottleMessage from './generators/bottle-messages.ts'
 import generateRareBook from './generators/books/generate.ts'
+import generateIntelligence from './generators/intelligence/generate.ts'
 import getRandomDisease from './random/disease.ts'
 
 Hooks.once('init', async () => {
@@ -16,6 +17,7 @@ Hooks.once('init', async () => {
   antillia.api = {
     generateBottleMessage,
     generateRareBook,
+    generateIntelligence,
     getRandomDisease
   }
 })
