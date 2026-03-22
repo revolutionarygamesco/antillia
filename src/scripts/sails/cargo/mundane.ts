@@ -1,7 +1,7 @@
-import loadCargo from './load-cargo.ts'
-import drawFirst from '../utilities/draw-first.ts'
-import isString from '../utilities/guards/string.ts'
-import { UUIDS } from '../settings.ts'
+import loadCargo from './cargo.ts'
+import drawFirst from '../../utilities/draw-first.ts'
+import isString from '../../utilities/guards/string.ts'
+import { UUIDS } from '../../settings.ts'
 
 const loadMundaneCargo = async (
   ship: Actor,

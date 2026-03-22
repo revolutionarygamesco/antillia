@@ -1,6 +1,6 @@
-import fromUuid from '../utilities/wrappers/from-uuid.ts'
-import isString from '../utilities/guards/string.ts'
-import selectRandomElement from '../random/el.ts'
+import fromUuid from '../../utilities/wrappers/from-uuid.ts'
+import isString from '../../utilities/guards/string.ts'
+import selectRandomElement from '../../random/el.ts'
 
 /**
  * Loads a ship up with cargo.

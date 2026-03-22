@@ -1,5 +1,5 @@
-import loadCargo from './load-cargo.ts'
-import { UUIDS } from '../settings.ts'
+import loadCargo from './cargo.ts'
+import { UUIDS } from '../../settings.ts'
 
 const loadLogwoodCargo = async (
   ship: Actor,

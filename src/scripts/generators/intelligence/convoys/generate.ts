@@ -3,10 +3,12 @@ import generateShip from '../../../sails/generate-ship.ts'
 import capitalize from '../../../utilities/capital.ts'
 import fromUuid from '../../../utilities/wrappers/from-uuid.ts'
 import isNumber from '../../../utilities/guards/number.ts'
-import loadCargo from '../../../sails/load-cargo.ts'
+import loadCargo from '../../../sails/cargo/cargo.ts'
+import loadSugarCargo from '../../../sails/cargo/sugar.ts'
 import selectRandomElement from '../../../random/el.ts'
 import roll from '../../../utilities/roll.ts'
 import routes from './routes.ts'
+import {UUIDS} from '../../../settings.ts'
 
 const generateRandomConvoy = async (
   departure: number = game?.time?.worldTime ?? 0
@@ -29,7 +31,11 @@ const generateRandomConvoy = async (
     : Math.min(2, await roll(route.ships))
   for (let i = 0; i < n; i++) {
     const { ship } = await generateShip({ use: 'Merchant', ...base })
-    await loadCargo(ship, 1, good)
+    if (good.uuid === UUIDS.SUGAR_CARGO) {
+      await loadSugarCargo(ship, 1)
+    } else {
+      await loadCargo(ship, 1, good)
+    }
     ships.push(ship)
   }
 
