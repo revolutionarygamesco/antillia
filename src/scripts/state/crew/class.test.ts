@@ -17,6 +17,15 @@ describe('CrewState', () => {
     })
   })
 
+  describe('Accessor methods', () => {
+    describe('skill', () => {
+      it('returns the crew skill', () => {
+        const crew = new CrewState()
+        expect(crew.skill).toBe(0)
+      })
+    })
+  })
+
   describe('Instance methods', () => {
     describe('toObject', () => {
       it('returns an object', () => {

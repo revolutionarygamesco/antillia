@@ -185,6 +185,11 @@ class CrewState {
       : new Map<string, CrewPosition>(defaultPositions)
   }
 
+  get skill () {
+    // TODO: Actually calculate crew skill.
+    return 0
+  }
+
   toObject (): CrewStateData {
     return {
       id: this.id,
