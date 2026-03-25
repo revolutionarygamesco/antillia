@@ -11,6 +11,7 @@ import generateBottleMessage from './generators/bottle-messages.ts'
 import generateRareBook from './generators/books/generate.ts'
 import generateIntelligence from './generators/intelligence/generate.ts'
 import getRandomDisease from './random/disease.ts'
+import rollBoredom from './api/boredom.ts'
 import sightSails from './sails/sight.ts'
 
 Hooks.once('init', async () => {
@@ -24,6 +25,7 @@ Hooks.once('init', async () => {
     generateRareBook,
     generateIntelligence,
     getRandomDisease,
+    rollBoredom,
     sightSails
   }
 })

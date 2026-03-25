@@ -23,7 +23,7 @@ declare class Roll {
     maximize?: boolean,
     minimize?: boolean
   }): Promise<Roll>
-  result: number
+  total: number
 }
 
 
@@ -85,6 +85,7 @@ interface RollTable extends Document {
 
 interface TableResult extends Document {
   type: string
+  description?: string
   documentUuid?: string
   img?: string
 }

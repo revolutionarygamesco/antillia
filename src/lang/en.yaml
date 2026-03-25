@@ -161,6 +161,23 @@ revolutionary-antillia:
           A {class}, flying {nation} colors. Then you notice the ventilation
           shafts and the nets extending over the sides to make it difficult to
           jump off. That’s a guineaman — a slave ship.
+  boredom:
+    speaker: Endless Hours
+    flavor: Time grinds on&hellip;
+    tedium:
+      name: Tedium
+      link: quarrel
+      description: |
+        <p>All PC’s lose one Devil’s Luck.</p>
+        <p>If the ship has Devil’s Luck, it loses that.</p>
+        <p><strong>Music:</strong> Anyone who has an instrument can attempt a
+          Spirit DR 12 test to avoid this. On a failure, create or advance a
+          {link} against the musician.</p>
+    quarrel:
+      name: Quarrel
+      link: quarrel
+      description: |
+        <p>Create or advance a {link}.</p>
   log:
     title: Adventure Log
     first: |
