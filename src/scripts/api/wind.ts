@@ -1,4 +1,4 @@
-import AdventureState from './adventure/class.ts'
+import AdventureState from '../state/adventure/class.ts'
 
 const changeWinds = async (): Promise<void> => {
   const adventure = await AdventureState.load()
