@@ -1,0 +1,11 @@
+_id: bhFSkw7xVbuuZGTA
+entryId: Oadp1TwWnPo1A1O3
+x: 3400
+y: 2107
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Willemstad
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/dutch.png

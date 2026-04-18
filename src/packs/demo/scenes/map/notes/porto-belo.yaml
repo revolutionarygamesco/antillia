@@ -1,0 +1,11 @@
+_id: r3hNbPpGHRZqWRhd
+entryId: BjlLh3wgNGa3OllI
+x: 2575
+y: 2324
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Porto Belo
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/spanish.png

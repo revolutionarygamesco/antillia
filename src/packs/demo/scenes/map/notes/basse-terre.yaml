@@ -1,0 +1,11 @@
+_id: unZ06QKKhHS9rZrq
+entryId: lEN7e6rNj19n4hy2
+x: 3950
+y: 1848
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Basse-Terre
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/french.png

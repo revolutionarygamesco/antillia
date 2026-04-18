@@ -1,0 +1,11 @@
+_id: ASJmsEDbIZFv9sgB
+entryId: OEzb4hmNKZoonVYW
+x: 3975
+y: 2151
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Ville de Fort Royal
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/french.png

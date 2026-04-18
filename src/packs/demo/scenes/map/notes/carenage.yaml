@@ -1,0 +1,11 @@
+_id: LZA7FzTgL4BygnVp
+entryId: Bpj6YpQBhq1GIIXQ
+x: 4000
+y: 2021
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Carénage
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/french.png

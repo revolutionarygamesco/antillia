@@ -1,0 +1,11 @@
+_id: YImWWOQzem4vZT1N
+entryId: 998pgsuRz8tUXUKd
+x: 2950
+y: 2281
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Cartagena
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/spanish.png

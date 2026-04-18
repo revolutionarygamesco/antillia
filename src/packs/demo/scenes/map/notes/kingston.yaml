@@ -1,0 +1,11 @@
+_id: 82LBhRJymxAMQd3t
+entryId: Bl7kHT6RcJUtBNXz
+x: 2850
+y: 1674
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Kingston
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/british.png

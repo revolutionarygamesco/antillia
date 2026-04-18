@@ -1,0 +1,11 @@
+_id: 5dGNzjOTbuVMpuev
+entryId: wMIE3lxN6fsaY6OG
+x: 3750
+y: 1674
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Charlotte Amalie
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/danish.png

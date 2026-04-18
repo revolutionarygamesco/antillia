@@ -1,0 +1,11 @@
+_id: swY4bQZUPFr1dzrQ
+entryId: hZCFSBFVheZR4cd6
+x: 3625
+y: 1631
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: San Juan
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/spanish.png

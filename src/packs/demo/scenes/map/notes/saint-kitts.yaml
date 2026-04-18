@@ -1,0 +1,11 @@
+_id: eVRM7CLjOdej7Vhg
+entryId: DAuUuZ1kddAu0oVB
+x: 3875
+y: 1718
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Saint Kitts & Nevis
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/british.png

@@ -1,0 +1,11 @@
+_id: aynthPH0JFAo0Skn
+entryId: KaFKJRXB9Zv8MxQd
+x: 3175
+y: 1544
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Cap-Français
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/french.png

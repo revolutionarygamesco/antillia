@@ -1,0 +1,170 @@
+_id: 3JvJSgDc5iwQjKye
+name: Antillia
+thumb: modules/revolutionary-antillia/img/scenes/map/thumb.webp
+folder: 4zGOgNB5Fg2nfTDA
+navigation: true
+background:
+  src: modules/limithron-landingpagekit/assets/Background-Wood-Dark.webp
+height: 2160
+width: 3840
+padding: 0.25
+initial:
+  x: 2882
+  y: 1655
+  scale: 0.6
+backgroundColor: "#949fc1"
+grid:
+  type: 2
+  size: 50
+  style: solidLines
+  thickness: 1
+  color: "#000000"
+  alpha: 0.25
+  distance: 50
+  units: mi
+tokenVision: false
+flags:
+drawings:
+  # Chapter
+  - _id: WXFZxdYUbR0VTWSz
+    interface: false
+    shape:
+      type: r
+      width: 475
+      height: 108
+    x: 1175
+    y: 1775
+    fillType: 0
+    strokeWidth: 0
+    fontFamily: IM_Fell_English
+    fontSize: 48
+    text: Chapter I.
+lights:
+  # Dark-level haunting lights
+  - _id: 48rSPGrfC41uUNL6
+    x: 4288
+    y: 1046
+    elevation: 0
+    hidden: true
+    config:
+      bright: 250.44
+      color: "#ff0000"
+      coloration: 1
+      dim: 500
+      attenuation: 0.5
+      luminosity: 0.5
+      animation:
+        type: ghost
+        speed: 2
+        intensity: 4
+  # Flickering candlelight
+  - _id: X3fVlxfryfd90NRZ
+    x: 1488
+    y: 743
+    elevation: 0
+    config:
+      alpha: 0.2
+      bright: 1327.09
+      color: "#c7c0c8"
+      coloration: 1
+      dim: 2655
+      attenuation: 0.5
+      luminosity: 0.5
+      animation:
+        type: torch
+        speed: 5
+        intensity: 5
+tiles:
+  # The map
+  - _id: UwGKDlzXO77KpHC9
+    x: 1750
+    y: 749
+    width: 2500
+    height: 1768
+    texture:
+      src: modules/revolutionary-antillia/img/scenes/map/map.jpg
+  # Logbook
+  - _id: uVyipQt4CCMV4h3E
+    x: 600
+    y: 1905
+    width: 1319
+    height: 1004
+    texture:
+      src: modules/limithron-landingpagekit/assets/Book-Blue.webp
+  # Candle
+  - _id: auddaDtzi6W32L6C
+    x: 800
+    y: 144
+    width: 1380
+    height: 1362
+    texture:
+      src: modules/limithron-landingpagekit/assets/candle-flame.webp
+  # Bottle
+  - _id: TiJ1VCWYGnxBot7b
+    x: 1075
+    y: 1184
+    width: 623
+    height: 634
+    texture:
+      src: modules/limithron-landingpagekit/assets/bottle-red.webp
+  # Skull: Normal
+  - _id: PnhdnvyA7xh4kFVu
+    x: 4100
+    y: 606
+    width: 731
+    height: 849
+    rotation: 45
+    texture:
+      src: modules/limithron-landingpagekit/assets/skull.webp
+  # Skull: Bloody
+  - _id: ccWf6Xm5vE5W1UaT
+    x: 4100
+    y: 600
+    width: 731
+    height: 849
+    rotation: 45
+    alpha: 0
+    texture:
+      src: modules/limithron-landingpagekit/assets/skull-blood.webp
+  # Skull: Dark
+  - _id: UQsOTtkFJGqjlrKZ
+    x: 4090
+    y: 570
+    width: 754
+    height: 868
+    rotation: 45
+    alpha: 0
+    texture:
+      src: modules/limithron-landingpagekit/assets/skull-evil.webp
+notes:
+  - include: ./src/packs/demo/scenes/map/notes/nassau.yaml
+  - include: ./src/packs/demo/scenes/map/notes/porto-belo.yaml
+  - include: ./src/packs/demo/scenes/map/notes/havana.yaml
+  - include: ./src/packs/demo/scenes/map/notes/santiago.yaml
+  - include: ./src/packs/demo/scenes/map/notes/cap-francais.yaml
+  - include: ./src/packs/demo/scenes/map/notes/petit-goave.yaml
+  - include: ./src/packs/demo/scenes/map/notes/santo-domingo.yaml
+  - include: ./src/packs/demo/scenes/map/notes/tortuga.yaml
+  - include: ./src/packs/demo/scenes/map/notes/kingston.yaml
+  - include: ./src/packs/demo/scenes/map/notes/san-juan.yaml
+  - include: ./src/packs/demo/scenes/map/notes/basse-terre.yaml
+  - include: ./src/packs/demo/scenes/map/notes/saint-kitts.yaml
+  - include: ./src/packs/demo/scenes/map/notes/sint-eustasius.yaml
+  - include: ./src/packs/demo/scenes/map/notes/saint-michael.yaml
+  - include: ./src/packs/demo/scenes/map/notes/carenage.yaml
+  - include: ./src/packs/demo/scenes/map/notes/charlotte-amalie.yaml
+  - include: ./src/packs/demo/scenes/map/notes/fort-royal-grenada.yaml
+  - include: ./src/packs/demo/scenes/map/notes/martinique.yaml
+  - include: ./src/packs/demo/scenes/map/notes/plymouth.yaml
+  - include: ./src/packs/demo/scenes/map/notes/saint-martin.yaml
+  - include: ./src/packs/demo/scenes/map/notes/roseau.yaml
+  - include: ./src/packs/demo/scenes/map/notes/saint-john.yaml
+  - include: ./src/packs/demo/scenes/map/notes/san-jose-oruna.yaml
+  - include: ./src/packs/demo/scenes/map/notes/caracas.yaml
+  - include: ./src/packs/demo/scenes/map/notes/cartagena.yaml
+  - include: ./src/packs/demo/scenes/map/notes/commanders-bay.yaml
+  - include: ./src/packs/demo/scenes/map/notes/fort-oranje.yaml
+  - include: ./src/packs/demo/scenes/map/notes/maracaibo.yaml
+  - include: ./src/packs/demo/scenes/map/notes/willemstad.yaml
+regions:
+  include: ./src/packs/demo/scenes/map/regions/index.base.yaml

@@ -1,0 +1,11 @@
+_id: NYX5tt1llGPN2kJs
+entryId: yIlT64rYoAsSwElE
+x: 3925
+y: 1718
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Saint John’s Town
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/british.png

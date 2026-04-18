@@ -1,0 +1,11 @@
+_id: 7u3bjyAa1O1HRWpF
+entryId: YPoKyeDovlJrVu0r
+x: 3325
+y: 1631
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Santo Domingo
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/spanish.png

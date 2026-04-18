@@ -1,0 +1,11 @@
+_id: 6Fd6elZBoorJgitB
+entryId: neVmKgjL4CQc2ifK
+x: 3150
+y: 1501
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Tortuga
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/pirate.png

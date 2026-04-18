@@ -1,0 +1,11 @@
+_id: gVcX0C1TMgX06hnx
+entryId: d2FyewZyG7hc4RgP
+x: 2450
+y: 1241
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Havana
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/spanish.png

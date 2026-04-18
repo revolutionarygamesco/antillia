@@ -1,0 +1,11 @@
+_id: JbHAcVXhIylSQpLZ
+entryId: JgTsabOyJEopQK3x
+x: 2793
+y: 1112
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Nassau
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/pirate.png

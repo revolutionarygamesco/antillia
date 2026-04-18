@@ -1,0 +1,11 @@
+_id: K2fD2RDl0JdJ3dBl
+entryId: ji93Gvjw1oDMrHUA
+x: 3350
+y: 2107
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Commander’s Bay
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/dutch.png

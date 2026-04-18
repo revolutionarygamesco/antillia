@@ -1,0 +1,11 @@
+_id: qpwoRTy8dto9fSCn
+entryId: lQXujmKs4Op4lNdJ
+x: 3450
+y: 2107
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Fort Oranje
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/dutch.png

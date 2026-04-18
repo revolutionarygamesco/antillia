@@ -1,0 +1,11 @@
+_id: p1XEPr7dRlUD5ei7
+entryId: IaGUqBHHPgwQxLLq
+x: 4000
+y: 1934
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Martinique
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/french.png

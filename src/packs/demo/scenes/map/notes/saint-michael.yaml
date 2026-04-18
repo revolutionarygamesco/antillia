@@ -1,0 +1,11 @@
+_id: daefQB7lVlwcr5vh
+entryId: UVjbk8JvSPTyYmSk
+x: 4125
+y: 2064
+iconSize: 32
+fontSize: 32
+fontFamily: IM_Fell_English
+text: Saint Michael’s Town
+global: true
+texture:
+  src: modules/revolutionary-antillia/img/scenes/map/british.png

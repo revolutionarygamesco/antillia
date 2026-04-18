@@ -12,7 +12,8 @@ items:
   include: ./src/packs/demo/items/index.yaml
 journal:
   include: ./src/packs/demo/journal/index.yaml
-scenes: []
+scenes:
+  include: ./src/packs/demo/scenes/index.yaml
 tables:
   include: ./src/packs/demo/rolltables/index.yaml
 macros:
