@@ -1,5 +1,5 @@
 import type { DoomedShip } from '../types.ts'
-import { pickRandomEmpire } from '../../empires.ts'
+import { pickRandomEmpire } from '../../../random/empires.ts'
 import getCrew from './crew.ts'
 import getHandwriting from './handwriting.ts'
 import getRequesters from './requesters.ts'

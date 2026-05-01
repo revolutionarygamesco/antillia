@@ -1,6 +1,6 @@
 import { MODULE_ID, UUIDS } from '../../../settings.ts'
 import type { ConvoyRouteRef, ConvoyRoute } from './types.ts'
-import empires from '../../empires.ts'
+import empires from '../../../random/empires.ts'
 
 const goods: Record<string, ConvoyRouteRef> = {
   ash: {

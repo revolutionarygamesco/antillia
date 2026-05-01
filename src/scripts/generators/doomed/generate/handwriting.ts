@@ -1,5 +1,5 @@
 import type { DoomedHandwriting } from '../types.ts'
-import type { EmpireData } from '../../empires.ts'
+import type { EmpireData } from '../../../random/empires.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import selectRandomElement from '../../../random/el.ts'
 import { MODULE_ID } from '../../../settings.ts'

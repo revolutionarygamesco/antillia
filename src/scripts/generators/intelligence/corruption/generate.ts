@@ -1,11 +1,11 @@
 import decapitalize from '../../../utilities/decapital.ts'
-import drawGovernor from '../../governor.ts'
+import drawGovernor from '../../../random/governor.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import makeLink from '../../../utilities/make-link.ts'
-import { pickRandomEmpire } from '../../empires.ts'
+import { pickRandomEmpire } from '../../../random/empires.ts'
 import selectRandomElement from '../../../random/el.ts'
 import stockArray from '../../../random/stock.ts'
-import empires from '../../empires.ts'
+import empires from '../../../random/empires.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 const generateCorruptionReport = async (): Promise<{ title: string, report: string }> => {

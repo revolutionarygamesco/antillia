@@ -1,5 +1,5 @@
 import type { UprisingStoryline } from './types.ts'
-import type { EmpireData } from '../../empires.ts'
+import type { EmpireData } from '../../../random/empires.ts'
 import capitalize from '../../../utilities/capital.ts'
 import getDay from '../../../time/day.ts'
 import generateShip from '../../../sails/generate-ship.ts'

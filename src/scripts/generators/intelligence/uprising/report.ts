@@ -1,5 +1,5 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
-import { pickRandomEmpire } from '../../empires.ts'
+import { pickRandomEmpire } from '../../../random/empires.ts'
 import checkVersion from '../../../utilities/check-version.ts'
 import getTime from '../../../time/get.ts'
 import generateReportAge from '../shared-data/age.ts'

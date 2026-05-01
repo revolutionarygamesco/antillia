@@ -1,6 +1,6 @@
 import { type OutbreakSituation } from './types.ts'
 import { pickRandomOutbreakDisease } from './diseases.ts'
-import drawSettlement from '../../settlement.ts'
+import drawSettlement from '../../../random/settlement.ts'
 import checkExistingOutbreak from './check.ts'
 import react from './react.ts'
 

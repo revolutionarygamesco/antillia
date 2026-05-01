@@ -1,4 +1,4 @@
-import { type EmpireData } from '../../empires.ts'
+import { type EmpireData } from '../../../random/empires.ts'
 
 export interface ConvoyRouteRef {
   uuid: string

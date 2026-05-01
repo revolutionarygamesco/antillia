@@ -1,5 +1,5 @@
-import selectRandomElement from '../random/el.ts'
-import stockArray from '../random/stock.ts'
+import selectRandomElement from './el.ts'
+import stockArray from './stock.ts'
 import { UUIDS } from '../settings.ts'
 
 export interface EmpireData {

@@ -1,6 +1,6 @@
 import AdventureState from '../state/adventure/class.ts'
 import fromUuid from '../utilities/wrappers/from-uuid.ts'
-import selectRandomElement from '../random/el.ts'
+import selectRandomElement from './el.ts'
 import drawFirst from '../utilities/draw-first.ts'
 import { UUIDS } from '../settings.ts'
 

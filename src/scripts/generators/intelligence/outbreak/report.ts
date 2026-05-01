@@ -1,6 +1,6 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import { type OutbreakStage } from './types.ts'
-import { pickRandomEmpire } from '../../empires.ts'
+import { pickRandomEmpire } from '../../../random/empires.ts'
 import generateOutbreak from './generate.ts'
 import calculateOnset from './onset.ts'
 import setCourse from './course.ts'

@@ -1,5 +1,5 @@
 import type { DoomedShip } from '../types.ts'
-import type { EmpireData } from '../../empires.ts'
+import type { EmpireData } from '../../../random/empires.ts'
 import generateShip from '../../../sails/generate-ship.ts'
 import generatePersonalName from '../../../utilities/name.personal.ts'
 import capitalize from '../../../utilities/capital.ts'

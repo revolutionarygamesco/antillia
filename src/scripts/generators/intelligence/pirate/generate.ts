@@ -1,13 +1,13 @@
 import { type BottleMessageIntel } from '../bottle-message-intel.ts'
 import decapitalize from '../../../utilities/decapital.ts'
-import drawInfamousPirate from '../../pirate.ts'
+import drawInfamousPirate from '../../../random/pirate.ts'
 import generateReportAge from '../shared-data/age.ts'
 import getMonth from '../../../time/month.ts'
 import getYear from '../../../time/year.ts'
 import localize from '../../../utilities/wrappers/localize.ts'
 import selectRandomElement from '../../../random/el.ts'
 import makeLink from '../../../utilities/make-link.ts'
-import empires from '../../empires.ts'
+import empires from '../../../random/empires.ts'
 import { MODULE_ID } from '../../../settings.ts'
 
 const generatePirateReport = async (): Promise<BottleMessageIntel> => {

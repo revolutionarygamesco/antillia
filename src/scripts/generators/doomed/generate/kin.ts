@@ -1,6 +1,6 @@
 import type { DoomedSailor, DoomedKin } from '../types.ts'
-import type { EmpireData } from '../../empires.ts'
-import drawSettlement from '../../settlement.ts'
+import type { EmpireData } from '../../../random/empires.ts'
+import drawSettlement from '../../../random/settlement.ts'
 import generatePersonalName from '../../../utilities/name.personal.ts'
 import getOldCountry from './old-country.ts'
 import selectRandomElement from '../../../random/el.ts'
