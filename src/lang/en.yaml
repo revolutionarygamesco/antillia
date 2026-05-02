@@ -198,8 +198,6 @@ revolutionary-antillia:
         content: |
           The @UUID[{uuid}] has been updated.
     events:
-      outbreak: |
-        {disease} grips {location}. {reaction}
       uprising:
         sea: |
           Prisoners aboard the {ship} seize control of the ship, forcing
@@ -446,70 +444,6 @@ revolutionary-antillia:
           The report provides {evidence} that the {governor} is jailing wealthy
           citizens on trumped-up charges until they can pay his exorbitant
           “fines.”
-    outbreak:
-      title: "{disease} in {settlement}"
-      report: |
-        <p><strong>Language:</strong> The report is written in {lang}.</p>
-        <p><strong>Outbreak:</strong> {situation}</p>
-        <p><strong>Reaction:</strong> {reaction}</p>
-      diseases:
-        dysentery:
-          title: The Bloody Flux
-          sentence: the bloody flux
-        smallpox:
-          title: The Pox
-          sentence: the pox
-        measles:
-          title: Measles
-          sentence: measles
-        diphtheria:
-          title: Boulogne Sore Throat
-          sentence: Boulogne sore throat
-      fumigants:
-        sulphur: brimstone
-        gunpowder: gunpowder
-        tar: tar
-        tobacco: tobacco
-        ash: ash
-        mix:
-          volatile:
-            two: a volatile mix of {fumigant1} and {fumigant2}
-            three: a volatile mix of {fumigant1}, {fumigant2}, and {fumigant3}
-          regular:
-            two: a mixture of {fumigant1} and {fumigant2}
-            three: a mixture of {fumigant1}, {fumigant2} and {fumigant3}
-      reactions:
-        ignore: |
-          The authorities ignored the problem, hoping that it would resolve
-          itself.
-        prayer: |
-          Religious authorities responded by calling for prayer and fasting.
-        fumigation: |
-          The townspeople have responded with extensive fumigation, burning
-          {fumigants}, splashing vinegar on every surface they can find, and
-          distributing smelling bottles filled with camphor and aromatic herbs.
-        quarantine: |
-          Civil authorities responded by marking the houses of the afflicted
-          and forbidding them from leaving their homes unless and until they
-          could be verified as healthy by a physician.
-        closure: |
-          The authorities responded by shutting down the local markets.
-      situations:
-        early: |
-          The report describes the early days of an outbreak of {disease} in
-          {settlement} in {month} {year}. Several individuals had contracted
-          the disease, with fear spreading that whatever miasma had fallen upon
-          them would soon take the entire settlement.
-        mid: |
-          The report describes an outbreak of {disease} in {settlement} in
-          {month} {year}. At the time of writing, the disease was running
-          rampant throughout the settlement, claiming new victims with each
-          passing day.
-        late: |
-          The report describes an outbreak of {disease} in {settlement} in
-          {month} {year}. The miasma had fallen on the settlement weeks
-          earlier, burning through the population. At this point, the people
-          hope that it may soon lift, and they can begin rebuilding.
     spies:
       title: Spies of the {spymaster}
       report: |
@@ -2229,6 +2163,17 @@ revolutionary-antillia:
             <p>{disease} spread through the ship like a fire. Too many have
               died and the survivors are too weak to bring the ship to
               port.</p>
+          diseases:
+            yellow: yellow jack
+            malaria: the ague
+            dysentery: the bloody flux
+            smallpox: the pox
+            measles: measles
+            influenza: the grippe
+            whooping: chin cough
+            diptheria: Boulogne sore throat
+            yaws: yaws
+            red: the Red Death
         cannibalism:
           title: Long Pig in the Doldrums
           text: |

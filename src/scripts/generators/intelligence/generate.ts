@@ -11,7 +11,6 @@ import generateCorruptionReport from './corruption/generate.ts'
 import generateSpyList from './spies/generate.ts'
 import generatePirateReport from './pirate/generate.ts'
 import generateAshKingpinReport from './ash-kingpin/generate.ts'
-import reportOutbreak from './outbreak/report.ts'
 import reportUprising from './uprising/report.ts'
 
 const generateIntelligence = async (): Promise<Item> => {
@@ -20,7 +19,6 @@ const generateIntelligence = async (): Promise<Item> => {
     { n: 2, item: generateCorruptionReport },
     { n: 2, item: generateRandomFortUpgradeReport },
     { n: 2, item: generatePirateReport },
-    { n: 2, item: reportOutbreak },
     { n: 1, item: generateSpyList },
     { n: 1, item: generateAshKingpinReport }
   ])
